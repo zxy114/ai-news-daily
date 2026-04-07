@@ -57,10 +57,9 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial
 <h3>📋 目录</h3>
 <ul>
 <li><a href="#hot-news">🔥 头条重磅 (3)</a></li>
-<li><a href="#funding">💰 融资动态 (2)</a></li>
-<li><a href="#products">🤖 产品发布与技术突破 (6)</a></li>
-<li><a href="#industry">🏢 行业生态与政策 (6)</a></li>
-<li><a href="#trends">📊 趋势洞察 (3)</a></li>
+<li><a href="#models">🧠 大模型动态 (4)</a></li>
+<li><a href="#applications">💼 应用与行业 (3)</a></li>
+<li><a href="#research">🔬 前沿研究 (2)</a></li>
 </ul>
 </div>
 
@@ -68,378 +67,230 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial
 <h2>🔥 头条重磅</h2>
 
 <div class="article">
-<h3>1. OpenAI、Anthropic、Google 联手打击中国模型复制行为</h3>
+<h3>1. 中国 AI 大模型调用量连续五周超越美国</h3>
 <div class="meta">
 <span class="date">2026 年 4 月 6 日</span>
 <span class="status verified">✅ 已验证</span>
 </div>
 <ul>
-<li><strong>核心事件</strong>：OpenAI、Anthropic PBC 和 Google（Alphabet）三家美国顶级 AI 公司通过 Frontier Model Forum（前沿模型论坛）建立信息共享机制，联合检测并打击"对抗性蒸馏"（adversarial distillation）行为。所谓对抗性蒸馏，是指通过大量 API 查询提取模型输出，再用这些输出来训练自己的模型，从而"复制"前沿模型能力的技术。OpenAI 已向美国国会提交备忘录，明确指控中国 AI 公司 DeepSeek 试图"免费搭乘 OpenAI 及其他美国前沿实验室研发成果"。这是美国 AI 巨头首次在政策和技术层面形成统一战线，通过共享 API 滥用数据、协调法律手段来维护技术领先优势。</li>
-<li><strong>关键数据</strong>：三方通过行业非营利组织 Frontier Model Forum 合作，该组织成立于 2023 年，成员还包括 Microsoft</li>
-<li><strong>影响范围</strong>：主要针对中国 AI 公司从美国前沿模型提取结果以提升自身模型性能的行为</li>
-<li><strong>后续动作</strong>：加强 API 条款执行，增加模型访问控制，建立跨公司信息共享机制</li>
-<li><strong>解读分析</strong>：这是美系 AI 公司首次在政策层面形成统一战线，试图通过技术 + 法律手段维持技术代差。标志着 AI 竞争从单纯的技术竞赛升级到地缘政治层面。</li>
+<li><strong>核心事件</strong>：根据 OpenRouter 最新数据，上周（3 月 30 日至 4 月 5 日）全球 AI 大模型总调用量为 27 万亿 Token，环比增长 18.9%。中国 AI 大模型周调用量上升至 12.96 万亿 Token，环比增长 31%，连续五周超越美国。上榜的 AI 大模型中，有 6 个来自中国，包括小米 MiMo-V2-Pro、阶跃星辰 Step3.5Flash、MiniMaxM2.7、DeepSeekV3.2、智谱 GLM5Turbo 等。</li>
+<li><strong>关键数据</strong>：全球 27 万亿 Token，中国 12.96 万亿 Token（环比 +31%），6 个中国模型进入 Top10</li>
+<li><strong>影响范围</strong>：中国 AI 在应用层已具备全球竞争力，开发者生态快速壮大</li>
+<li><strong>后续动作</strong>：更多中国模型走向国际市场，API 价格竞争加剧</li>
+<li><strong>解读分析</strong>：中国 AI 大模型在应用层已实现"并跑"甚至"领跑"，开发者生态和商业化能力是关键驱动力。</li>
+</ul>
+<div class="sources">
+🔗 <a href="https://finance.sina.com.cn/jjxw/2026-04-06/doc-inhtpmef6258452.shtml" target="_blank">新浪财经</a> | 🔗 <a href="https://finance.sina.com.cn/stock/bxjj/2026-04-06/doc-inhtpmek1508270.shtml" target="_blank">格隆汇</a>
+</div>
+</div>
+
+<div class="article">
+<h3>2. 阿里 Qwen3.6-Plus 登顶全球大模型调用榜</h3>
+<div class="meta">
+<span class="date">2026 年 4 月 5 日</span>
+<span class="status verified">✅ 已验证</span>
+</div>
+<ul>
+<li><strong>核心事件</strong>：阿里千问新模型 Qwen3.6-Plus 发布仅 1 天，冲上全球知名大模型 API 调用平台 OpenRouter 的日榜榜首，成为当下最受企业和开发者热捧的大模型。OpenRouter 官方数据显示，Qwen3.6-Plus 的日调用量突破 1.4 万亿 Token，打破了该平台历史纪录。同时，Qwen3.6-Plus 在国际权威评测平台 LMArena 的 Code Arena 编程盲测中，以 1452 分的成绩斩获全球第二的排名。</li>
+<li><strong>关键数据</strong>：日调用量 1.4 万亿 Token，Code Arena 1452 分（全球第二）</li>
+<li><strong>影响范围</strong>：国产大模型在编程领域首次登顶全球榜单</li>
+<li><strong>后续动作</strong>：企业版 API 即将开放，教育版即将上线</li>
+<li><strong>解读分析</strong>：阿里通过"性能 + 成本 + 上下文"三重优势，在编程场景建立护城河，国产大模型在垂直领域开始具备国际竞争力。</li>
+</ul>
+<div class="sources">
+🔗 <a href="https://www.chinanews.com.cn/cj/2026/04-05/10599061.shtml" target="_blank">中新网</a> | 🔗 <a href="https://k.sina.com.cn/article_7857201856_1d45362c001903zxt6.html?from=tech" target="_blank">新浪 AI</a>
+</div>
+</div>
+
+<div class="article">
+<h3>3. OpenAI、Anthropic、Google 联手打击中国模型复制</h3>
+<div class="meta">
+<span class="date">2026 年 4 月 6 日</span>
+<span class="status verified">✅ 已验证</span>
+</div>
+<ul>
+<li><strong>核心事件</strong>：OpenAI、Anthropic PBC 和 Google（Alphabet）三家美国顶级 AI 公司通过 Frontier Model Forum（前沿模型论坛）建立信息共享机制，联合检测并打击"对抗性蒸馏"（adversarial distillation）行为。OpenAI 已向美国国会提交备忘录，明确指控中国 AI 公司 DeepSeek 试图"免费搭乘 OpenAI 及其他美国前沿实验室研发成果"。这是美国 AI 巨头首次在政策和技术层面形成统一战线。</li>
+<li><strong>关键数据</strong>：Frontier Model Forum 成立于 2023 年，成员包括 Microsoft</li>
+<li><strong>影响范围</strong>：AI 竞争从技术竞赛升级到地缘政治层面</li>
+<li><strong>后续动作</strong>：加强 API 条款执行，增加模型访问控制</li>
+<li><strong>解读分析</strong>：美系 AI 公司试图通过技术 + 法律手段维持技术代差，标志着 AI 竞争进入新阶段。</li>
 </ul>
 <div class="sources">
 🔗 <a href="https://www.bloomberg.com/news/articles/2026-04-06/openai-anthropic-google-unite-to-combat-model-copying-in-china" target="_blank">Bloomberg</a>
 </div>
 </div>
+</div>
+
+<div class="category" id="models">
+<h2>🧠 大模型动态</h2>
 
 <div class="article">
-<h3>2. OpenAI 年收入突破 250 亿美元，准备 IPO</h3>
-<div class="meta">
-<span class="date">2026 年 4 月 1 日</span>
-<span class="status verified">✅ 已验证</span>
-</div>
-<ul>
-<li><strong>核心事件</strong>：根据 The Information 和 Sacra 等多家机构报道，OpenAI 在 2026 年 2 月底已突破 250 亿美元年化收入（annualized revenue run rate），相比 2025 年底的 214 亿美元和 2024 年底的约 60 亿美元，增长极为迅猛。收入主要驱动力来自 ChatGPT Pro 订阅服务和深度企业集成。公司估值超过 8000 亿美元，正准备在 2026 年底通过传统 IPO 或 SPAC 方式上市。微软作为最大投资方，持有 OpenAI 49% 的股权。尽管收入增长亮眼，OpenAI 预计 2026 年仍将亏损 140 亿美元，主要用于算力基础设施投入。</li>
-<li><strong>关键数据</strong>：年收入 250 亿美元，估值超 8000 亿美元，9 亿周活跃用户，预计 2026 年亏损 140 亿美元</li>
-<li><strong>影响范围</strong>：全球 AI 行业最赚钱的私营公司，微软为最大投资方</li>
-<li><strong>后续动作</strong>：IPO 准备，可能通过 SPAC 或传统 IPO 方式，2026 年底完成上市</li>
-<li><strong>解读分析</strong>：OpenAI 已从"烧钱研发"进入"商业化盈利"阶段，IPO 将带来资金进一步扩大优势。但巨额亏损也反映 AI 基础设施投入的巨大成本。</li>
-</ul>
-<div class="sources">
-🔗 <a href="https://www.reuters.com/technology/artificial-intelligence/" target="_blank">Reuters</a> | 🔗 <a href="https://sacra.com/research/openai/" target="_blank">Sacra</a>
-</div>
-</div>
-
-<div class="article">
-<h3>3. DeepSeek R1-Distill-Qwen-32B 性能反超原版模型</h3>
-<div class="meta">
-<span class="date">2026 年 2 月 13 日</span>
-<span class="status verified">✅ 已验证</span>
-</div>
-<ul>
-<li><strong>核心事件</strong>：DeepSeek 发布基于阿里 Qwen 架构的蒸馏版本 R1-Distill-Qwen-32B，该模型通过知识蒸馏技术，将大型模型的能力"压缩"到较小的 32B 参数模型中。在多个基准测试中，该蒸馏版本性能反超原版 DeepSeek-R1，证明蒸馏技术的有效性。该模型上下文窗口扩展 10 倍，并更新了最新知识库。这是中国开源模型生态的里程碑事件，标志着中国 AI 正在走"轻量高效"路线，通过蒸馏 + 优化而非大参数堆砌来提升性能。</li>
-<li><strong>关键数据</strong>：10 倍上下文窗口扩展，32B 参数，性能反超原版 DeepSeek-R1</li>
-<li><strong>影响范围</strong>：中国开源模型生态的里程碑，证明蒸馏技术的有效性</li>
-<li><strong>后续动作</strong>：Qwen-3.5 正式发布（未官宣日期），更多蒸馏模型即将推出</li>
-<li><strong>解读分析</strong>：中国开源 AI 正在走"轻量高效"路线，通过蒸馏 + 优化 instead of 大参数堆砌。这对资源有限的开发者和企业是重大利好。</li>
-</ul>
-<div class="sources">
-🔗 <a href="https://www.trendforce.com/news/2026/02/13/news-deepseek-expands-context-tenfold-as-zhipu-rolls-out-new-model-in-chinas-ai-race/" target="_blank">Trendforce</a> | 🔗 <a href="https://www.scmp.com/tech/tech-trends/article/3343225/deepseek-boosts-ai-model-10-fold-token-addition-zhipu-ai-gears-glm-5-launch" target="_blank">SCMP</a>
-</div>
-</div>
-</div>
-
-<div class="category" id="funding">
-<h2>💰 融资动态</h2>
-
-<div class="article">
-<h3>4. AI 初创公司融资创纪录：Q1 达 2970 亿美元</h3>
-<div class="meta">
-<span class="date">2026 年 4 月 1 日</span>
-<span class="status unverified">⚠️ 单方报道</span>
-</div>
-<ul>
-<li><strong>核心事件</strong>：根据《纽约时报》报道，OpenAI、Anthropic、Waymo 等头部 AI 公司在 2026 年第一季度共融资 2970 亿美元，创下历史纪录。这一数字远超以往任何季度，反映 AI 行业从"初创阶段"正式进入"巨头垄断"阶段。融资高度集中于头部公司，OpenAI 和 Anthropic 占据了大部分份额，而尾部 AI 公司融资难度加剧。大量 PE 资金开始寻找退出路径，更多 AI 公司准备 IPO。这一趋势表明 AI 行业正在经历洗牌，资源向头部集中，中小玩家生存空间被压缩。</li>
-<li><strong>关键数据</strong>：2970 亿美元，创历史纪录，头部公司占据大部分份额</li>
-<li><strong>影响范围</strong>：AI 行业从"初创阶段"进入"巨头垄断"阶段</li>
-<li><strong>后续动作</strong>：更多 AI 公司准备 IPO，PE 资金寻找退出路径</li>
-<li><strong>解读分析</strong>：融资总额巨大但集中于头部公司，尾部公司融资难度加剧。AI 行业正在经历洗牌，资源向头部集中。</li>
-</ul>
-<div class="sources">
-🔗 <a href="https://www.nytimes.com/2026/04/01/technology/ai-companies-fund-raising-records.html" target="_blank">The New York Times</a>
-</div>
-</div>
-
-<div class="article">
-<h3>5. Qwen-3.6-Plus 发布：国产最强编程大模型</h3>
+<h3>4. 微软发布 3 款新模型：MAI-Transcribe-1、MAI-Voice-1、MAI-Image-2</h3>
 <div class="meta">
 <span class="date">2026 年 4 月 2 日</span>
 <span class="status verified">✅ 已验证</span>
 </div>
 <ul>
-<li><strong>核心事件</strong>：阿里巴巴于 2026 年 4 月 2 日正式发布 Qwen-3.6-Plus，该模型被宣传为"国产最强编程大模型"。根据 IT 之家和量子位报道，Qwen-3.6-Plus 在编码智能体能力上全面跃升，在多个编程基准测试中几乎直逼 Claude Opus 4.5，部分性能表现甚至超越 Claude，还超越了 2 倍乃至 3 倍参数量的其他主流模型。模型默认支持 100 万 token 上下文窗口，多模态感知与推理能力也同步优化。在编程场景中，Qwen-3.6-Plus 表现出更稳定的任务执行能力，能够 8 分钟生成完整官网，成本仅 0.15 元。企业版 API 即将开放，教育版即将上线。</li>
-<li><strong>关键数据</strong>：100 万词元上下文窗口，8 分钟生成完整官网，成本 0.15 元，性能直逼 Claude Opus 4.5</li>
-<li><strong>影响范围</strong>：国产大模型在编程领域首次超越国际竞品（Claude）</li>
-<li><strong>后续动作</strong>：企业版 API 即将开放，教育版即将上线</li>
-<li><strong>解读分析</strong>：阿里通过"上下文 + 效率 + 成本"三重优势，在编程场景建立护城河。国产大模型在垂直领域开始具备国际竞争力。</li>
+<li><strong>核心事件</strong>：微软 MAI 超级智能团队正式发布 3 款专有基础模型：MAI-Transcribe-1（语音转文本）、MAI-Voice-1（语音生成）、MAI-Image-2（文生图）。这 3 款模型将进一步增强微软在 AI 多模态领域的能力，与 Azure 云服务深度集成。</li>
+<li><strong>关键数据</strong>：3 款新模型，覆盖语音、图像多模态场景</li>
+<li><strong>影响范围</strong>：微软 Azure AI 服务能力提升，企业客户可获得更完整的 AI 解决方案</li>
+<li><strong>后续动作</strong>：模型将通过 Azure API 开放，支持企业集成</li>
+<li><strong>解读分析</strong>：微软通过自研模型 + 云服务绑定，巩固企业 AI 市场地位。</li>
 </ul>
 <div class="sources">
-🔗 <a href="https://www.qbitai.com/2026/04/394704.html" target="_blank">量子位</a> | 🔗 <a href="https://www.ithome.com/0/935/274.htm" target="_blank">IT 之家</a>
+🔗 <a href="https://help.apiyi.com/en/microsoft-mai-3-models-transcribe-voice-image-guide-en.html" target="_blank">Apiyi</a>
 </div>
 </div>
-</div>
-
-<div class="category" id="products">
-<h2>🤖 产品发布与技术突破</h2>
 
 <div class="article">
-<h3>6. 中文 AI 公司扎堆上市：智谱、天数智芯、MiniMax</h3>
+<h3>5. 小米 MiMo-V2-Pro 以 4.82 万亿 Token 位居 OpenRouter 第一</h3>
 <div class="meta">
-<span class="date">2026 年 1 月</span>
+<span class="date">2026 年 4 月 4 日</span>
 <span class="status verified">✅ 已验证</span>
 </div>
 <ul>
-<li><strong>核心事件</strong>：智谱、天数智芯、MiniMax 等国内 AI 企业扎堆启动 IPO 流程，标志着中国 AI 行业进入"商业化验证"阶段。中国 AI 企业数量超 6000 家，核心产业规模预计突破 1.2 万亿元。上市潮反映 AI 行业从"烧钱研发"转向"盈利验证"，资本市场开始检验 AI 公司的商业化能力。更多 AI 公司准备 IPO，VC/PE 寻找退出路径。</li>
-<li><strong>关键数据</strong>：中国 AI 企业数量超 6000 家，核心产业规模预计突破 1.2 万亿元</li>
-<li><strong>影响范围</strong>：中国 AI 行业进入"商业化验证"阶段</li>
-<li><strong>后续动作</strong>：更多 AI 公司准备 IPO，VC/PE 寻找退出路径</li>
-<li><strong>解读分析</strong>：上市潮反映 AI 行业从"烧钱"转向"盈利验证"，资本市场开始检验 AI 公司的商业化能力。</li>
+<li><strong>核心事件</strong>：截至 2026 年 4 月 3 日当周，OpenRouter 平台调用量排名前十的模型中，有 6 个来自中国。小米 MiMo-V2-Pro 以 4.82 万亿 Token 位居全平台第一，其次是阶跃星辰 Step3.5Flash、MiniMaxM2.7、DeepSeekV3.2、智谱 GLM5Turbo 和 MiniMaxM2.5。</li>
+<li><strong>关键数据</strong>：小米 MiMo-V2-Pro 4.82 万亿 Token，6 个中国模型进入 Top10</li>
+<li><strong>影响范围</strong>：中国大模型在全球开发者中快速普及</li>
+<li><strong>后续动作</strong>：更多中国模型走向国际市场</li>
+<li><strong>解读分析</strong>：中国大模型凭借性价比和本土化优势，正在快速占领全球开发者市场。</li>
 </ul>
 <div class="sources">
-🔗 <a href="https://www.xinhuanet.com/" target="_blank">新华网</a>
+🔗 <a href="https://news.qq.com/rain/a/20260404A04LM900" target="_blank">腾讯新闻</a>
 </div>
 </div>
 
 <div class="article">
-<h3>7. Qwen 3.6-Plus：100 万上下文硬刚 Claude</h3>
+<h3>6. Anthropic 发布 10 万亿参数 Claude Mythos 5</h3>
 <div class="meta">
-<span class="date">2026 年 4 月 2 日</span>
-<span class="status verified">✅ 已验证</span>
-</div>
-<ul>
-<li><strong>核心事件</strong>：阿里发布 Qwen-3.6-Plus，被宣传为"国产最强编程大模型"。Qwen3.6-Plus 几乎直逼 Claude Opus 4.5，甚至部分性能表现比 Claude 更优，还超越了 2 倍乃至 3 倍参数量的其他主流模型。看来，千问妥妥掌握了「以小胜大」的秘方。模型默认支持 100 万 token 上下文窗口，多模态感知与推理能力也同步优化。在编程场景中，Qwen-3.6-Plus 表现出更稳定的任务执行能力。</li>
-<li><strong>关键数据</strong>：100 万词元上下文窗口，8 分钟生成完整官网，成本 0.15 元</li>
-<li><strong>影响范围</strong>：国产大模型在编程领域首次超越国际竞品（Claude）</li>
-<li><strong>后续动作</strong>：企业版 API 即将开放，教育版即将上线</li>
-<li><strong>解读分析</strong>：阿里通过"上下文 + 效率 + 成本"三重优势，在编程场景建立护城河。</li>
-</ul>
-<div class="sources">
-🔗 <a href="https://finance.sina.com.cn/tech/digi/2026-04-02/doc-inhtaraf4449453.shtml" target="_blank">新浪科技</a>
-</div>
-</div>
-
-<div class="article">
-<h3>8. Google Gemini CLI 登陆终端</h3>
-<div class="meta">
-<span class="date">2026 年 3 月</span>
+<span class="date">2026 年 4 月 4 日</span>
 <span class="status unverified">⚠️ 单方报道</span>
 </div>
 <ul>
-<li><strong>核心事件</strong>：Google 正式发布 Gemini CLI，这是一款开源 AI 终端工具，将 Gemini 多模态模型直接带入命令行环境。开发者可以通过 npx 命令直接运行（npx @google/gemini-cli），无需安装。Gemini CLI 支持代码辅助、自然语言查询、Google Cloud 集成等功能，专为"生活在命令行中的开发者"设计。该工具可以直接读取本地项目上下文，理解代码结构，自动化任务，构建工作流。这是 Google 在 Terminal AI 市场的重要布局，与 Anthropic 的 Claude Code 形成直接竞争。两者现在都支持 100 万 token 上下文窗口。</li>
-<li><strong>关键数据</strong>：npx 命令直接运行，支持代码辅助、自然语言查询、Google Cloud 集成，100 万 token 上下文</li>
-<li><strong>影响范围</strong>：开发者工作效率提升，AI 终端化加速</li>
-<li><strong>后续动作</strong>：CLI 工具持续更新，支持更多云服务集成</li>
-<li><strong>解读分析</strong>：Google 想通过 CLI 打开 Terminal AI 的市场，与 Anthropic Claude Code 分庭抗礼。终端 AI 成为新战场。</li>
-</ul>
-<div class="sources">
-🔗 <a href="https://github.com/google-gemini/gemini-cli" target="_blank">GitHub</a> | 🔗 <a href="https://geminicli.com/" target="_blank">Gemini CLI</a>
-</div>
-</div>
-
-<div class="article">
-<h3>9. Anthropic Model Context Protocol 成为开放标准</h3>
-<div class="meta">
-<span class="date">2026 年 1 月</span>
-<span class="status verified">✅ 已验证</span>
-</div>
-<ul>
-<li><strong>核心事件</strong>：Anthropic 正式将 Model Context Protocol（MCP）捐赠给 Linux Foundation 旗下的 Agentic AI Foundation，使其成为真正的开放标准。MCP 于 2024 年 11 月由 Anthropic 首次推出，被称为"AI 的 USB-C"，用于标准化 AI 系统与外部工具、系统和数据源的集成方式。到 2026 年 3 月，MCP 已有 9700 万 + 月度 SDK 下载量，5800+ MCP 服务器，300+ 客户端应用。OpenAI、Google、Microsoft、AWS 和 Salesforce 均已公开支持 MCP。通过开放标准，Anthropic 获取了生态主导权，类似 Kubernetes 在容器领域的地位。MCP 代表 AI 应用架构的根本性转变。</li>
-<li><strong>关键数据</strong>：9700 万 + 月度 SDK 下载量，5800+ MCP 服务器，300+ 客户端应用</li>
-<li><strong>影响范围</strong>：AI Agent 互操作性标准确立，开发者生态扩大</li>
-<li><strong>后续动作</strong>：OpenAI、Microsoft 已公开支持 MCP，更多公司跟进</li>
-<li><strong>解读分析</strong>：Anthropic 通过开放标准获取生态主导权，类似 Kubernetes 在容器领域的策略。MCP 正在重塑 AI 应用架构。</li>
-</ul>
-<div class="sources">
-🔗 <a href="https://en.wikipedia.org/wiki/Model_Context_Protocol" target="_blank">Wikipedia</a> | 🔗 <a href="https://dev.to/alexcloudstar/model-context-protocol-mcp-explained-the-open-standard-reshaping-ai-development-3aep" target="_blank">DEV Community</a>
-</div>
-</div>
-
-<div class="article">
-<h3>10. NVIDIA 发布 GTC 2026 重大更新</h3>
-<div class="meta">
-<span class="date">2026 年 3 月</span>
-<span class="status verified">✅ 已验证</span>
-</div>
-<ul>
-<li><strong>核心事件</strong>：在 2026 年 3 月的 GTC 大会上，NVIDIA CEO 黄仁勋发布了物理 AI（Physical AI）路线图，标志着 AI 从虚拟世界走向物理世界。黄仁勋展示了多个物理 AI 模型，包括用于自动驾驶汽车的 NVIDIA Alpamayo、仓库机器人、以及一个在舞台上行走的《冰雪奇缘》Olaf 机器人。GTC 2026 的 19 个关键要点中，黄仁勋 outlined 计算的下一阶段：AI 工厂作为生产系统、推理作为经济引擎、代理框架作为应用层、物理 AI 作为下一个需求驱动力。NVIDIA 正在从"芯片提供商"转型为"AI 操作系统供应商"，通过统一栈锁定未来 5 年市场。</li>
-<li><strong>关键数据</strong>：AI 从虚拟走向物理世界，支持自动驾驶、人形机器人等场景</li>
-<li><strong>影响范围</strong>：NVIDIA 从"芯片提供商"转向"AI 操作系统供应商"</li>
-<li><strong>后续动作</strong>：更多硬件厂商支持 NVIDIA AI 统一栈</li>
-<li><strong>解读分析</strong>：物理 AI 是下一个大浪潮，NVIDIA 提前布局，锁定未来 5 年市场。AI 从虚拟走向物理，创造真实价值。</li>
-</ul>
-<div class="sources">
-🔗 <a href="https://www.nvidia.com/gtc/" target="_blank">NVIDIA GTC</a> | 🔗 <a href="https://blogs.nvidia.com/blog/gtc-2026-news/" target="_blank">NVIDIA Blog</a>
-</div>
-</div>
-
-<div class="article">
-<h3>11. OpenCLaw 成为 GitHub 历史最快增长项目</h3>
-<div class="meta">
-<span class="date">2026 年 1 月</span>
-<span class="status verified">✅ 已验证</span>
-</div>
-<ul>
-<li><strong>核心事件</strong>：OpenCLaw 从 9000 星 Surge 到 21 万 + 星，被称为"GitHub 历史最快增长项目"。在几天内完成了 60,000+ stars 的增长。这是个人 AI 助手领域标杆项目，证明本地 AI 的市场需求。创始人 Peter Steinberger 加盟 OpenAI，项目移交开源基金会。本地 AI + 个人助手是蓝海市场，OpenCLaw 证明了社区驱动的力量。</li>
-<li><strong>关键数据</strong>：210,000+ stars，60,000+ stars 在几天内完成</li>
-<li><strong>影响范围</strong>：个人 AI 助手领域标杆项目，证明本地 AI 的市场需求</li>
-<li><strong>后续动作</strong>：创始人 Peter Steinberger 加盟 OpenAI，项目移交开源基金会</li>
-<li><strong>解读分析</strong>：本地 AI + 个人助手是蓝海市场，OpenCLaw 证明了社区驱动的力量。</li>
-</ul>
-<div class="sources">
-🔗 <a href="https://github.com/openclaw/openclaw" target="_blank">GitHub</a>
-</div>
-</div>
-</div>
-
-<div class="category" id="industry">
-<h2>🏢 行业生态与政策</h2>
-
-<div class="article">
-<h3>12. DeepSeek-V3 开源模型挑战 Closed Models</h3>
-<div class="meta">
-<span class="date">2026 年 2 月</span>
-<span class="status unverified">⚠️ 单方报道</span>
-</div>
-<ul>
-<li><strong>核心事件</strong>：DeepSeek-V3 发布，性能接近 GPT-4，完全开源权重。采用 Mixture-of-Experts 架构，128K 上下文，fully open-weight。这是开源社区里程碑，证明开源模型可以达到商业模型水平。Ollama 等工具已支持 DeepSeek-V3，本地部署 `ollama run deepseek-v3`。Open-source 一波新高潮，开发者可以低成本体验前沿模型，无需 API 调用费用。</li>
-<li><strong>关键数据</strong>：Mixture-of-Experts 架构，128K 上下文，fully open-weight</li>
-<li><strong>影响范围</strong>：开源社区里程碑，证明开源模型可以达到商业模型水平</li>
-<li><strong>后续动作</strong>：Ollama 等工具已支持 DeepSeek-V3，本地部署 `ollama run deepseek-v3`</li>
-<li><strong>解读分析</strong>：Open-source 一波新高潮，开发者可以低成本体验前沿模型，无需 API 调用费用。</li>
-</ul>
-<div class="sources">
-🔗 <a href="https://github.com/deepseek-ai/DeepSeek-V3" target="_blank">GitHub</a>
-</div>
-</div>
-
-<div class="article">
-<h3>13. 中国 AI 专利全球占比 60%，成最大拥有国</h3>
-<div class="meta">
-<span class="date">2026 年 1 月</span>
-<span class="status verified">✅ 已验证</span>
-</div>
-<ul>
-<li><strong>核心事件</strong>：中国成为 AI 专利最大拥有国，全球占比达 60%。专利数量占比 60%，AI 企业超 6000 家。中国 AI 技术从"追赶"转向"并跑"甚至"领跑"。更多专利商业化，技术出口增加。专利数量反映创新实力，中国在 AI 应用层已具备全球竞争力。</li>
-<li><strong>关键数据</strong>：专利数量占比 60%，AI 企业超 6000 家</li>
-<li><strong>影响范围</strong>：中国 AI 技术从"追赶"转向"并跑"甚至"领跑"</li>
-<li><strong>后续动作</strong>：更多专利商业化，技术出口增加</li>
-<li><strong>解读分析</strong>：专利数量反映创新实力，中国在 AI 应用层已具备全球竞争力。</li>
-</ul>
-<div class="sources">
-🔗 <a href="https://www.xinhuanet.com/" target="_blank">新华网</a>
-</div>
-</div>
-
-<div class="article">
-<h3>14. Twitter/X 集成 AI 聊天机器人到电视</h3>
-<div class="meta">
-<span class="date">2026 年 4 月 2 日</span>
-<span class="status verified">✅ 已验证</span>
-</div>
-<ul>
-<li><strong>核心事件</strong>：Twitter/X 宣布将 AI 聊天机器人扩展到智能电视。用户可通过语音提问，AI 实时回答。AI 交互入口从手机/电脑扩展到家庭场景。更多平台集成 AI 语音助手。AI 聊天机器人正在从"便携设备"走向"家庭中枢"，电视成为新入口。</li>
-<li><strong>关键数据</strong>：用户可通过语音提问，AI 实时回答</li>
-<li><strong>影响范围</strong>：AI 交互入口从手机/电脑扩展到家庭场景</li>
-<li><strong>后续动作</strong>：更多平台集成 AI 语音助手</li>
-<li><strong>解读分析</strong>：AI 聊天机器人正在从"便携设备"走向"家庭中枢"，电视成为新入口。</li>
-</ul>
-<div class="sources">
-🔗 <a href="https://www.socialmediatoday.com/" target="_blank">Social Media Today</a>
-</div>
-</div>
-
-<div class="article">
-<h3>15. Gemini 3 vs GPT-5.4：模型性能对比</h3>
-<div class="meta">
-<span class="date">2026 年 4 月 3 日</span>
-<span class="status unverified">⚠️ 单方报道</span>
-</div>
-<ul>
-<li><strong>核心事件</strong>：Gemini 3 系列 vs GPT-5.4 性能对比，评测机构发布排名。GPT-5.4 在推理任务领先，Gemini 2.5 在多模态任务领先。用户可根据任务选择不同模型。更多评测机构发布榜单，形成模型比较生态。模型竞争进入"精细化"阶段，不再是一体化的"最强模型"，而是分场景的"最佳模型"。</li>
-<li><strong>关键数据</strong>：GPT-5.4 在推理任务领先，Gemini 2.5 在多模态任务领先</li>
-<li><strong>影响范围</strong>：用户可根据任务选择不同模型</li>
+<li><strong>核心事件</strong>：Anthropic 发布 10 万亿参数的 Claude Mythos 5 模型，这是目前全球最大的 AI 模型之一。该模型在多个基准测试中表现优异，特别是在复杂推理和多模态任务方面。</li>
+<li><strong>关键数据</strong>：10 万亿参数，复杂推理和多模态任务领先</li>
+<li><strong>影响范围</strong>：大模型参数竞赛继续，AI 能力边界进一步扩展</li>
 <li><strong>后续动作</strong>：更多评测机构发布榜单，形成模型比较生态</li>
-<li><strong>解读分析</strong>：模型竞争进入"精细化"阶段，不再是一体化的"最强模型"，而是分场景的"最佳模型"。</li>
+<li><strong>解读分析</strong>：大模型参数竞赛仍在继续，但行业也开始关注效率和成本。</li>
 </ul>
 <div class="sources">
-🔗 <a href="https://gptget.com/" target="_blank">GPTGet</a>
+🔗 <a href="https://www.devflokers.com/blog/ai-news-last-24-hours-april-2026-model-releases-breakthroughs" target="_blank">devFlokers</a>
 </div>
 </div>
 
 <div class="article">
-<h3>16. YouTube 引入 AI 内容标识</h3>
+<h3>7. 知乎发布 2026 年 4 月大模型排行榜</h3>
 <div class="meta">
-<span class="date">2025 年 12 月</span>
-<span class="status unverified">⚠️ 单方报道</span>
-</div>
-<ul>
-<li><strong>核心事件</strong>：YouTube 引入新 AI 标识，在视频左下角显示"AI"字样。标识用于区分 AI 生成视频和 AI 生成语音。平台内容真实性提升，用户可识别 AI 生成内容。更多平台跟进，形成 AI 标识行业标准。AI 内容标识是构建可信 AI 生态的第一步，YouTube 是第一个大规模部署的平台。</li>
-<li><strong>关键数据</strong>：标识用于区分 AI 生成视频和 AI 生成语音</li>
-<li><strong>影响范围</strong>：平台内容真实性提升，用户可识别 AI 生成内容</li>
-<li><strong>后续动作</strong>：更多平台跟进，形成 AI 标识行业标准</li>
-<li><strong>解读分析</strong>：AI 内容标识是构建可信 AI 生态的第一步，YouTube 是第一个大规模部署的平台。</li>
-</ul>
-<div class="sources">
-🔗 <a href="https://www.reddit.com/r/youtube/" target="_blank">Reddit</a>
-</div>
-</div>
-
-<div class="article">
-<h3>17. 2026 年 AI 由"狂热"转向"务实"</h3>
-<div class="meta">
-<span class="date">2026 年 1 月</span>
+<span class="date">2026 年 4 月 5 日</span>
 <span class="status verified">✅ 已验证</span>
 </div>
 <ul>
-<li><strong>核心事件</strong>：AI 行业从"盲目追求模型参数"转向"解决真实业务问题"。AI 应用落地从测试阶段进入生产阶段。企业 AI 预算从"技术采购"转向"业务投入"。更多 AI 解决方案公司崛起，AI 咨询业务增长。AI 进入"实用主义"时代，能带来明确 ROI 的场景优先落地。</li>
-<li><strong>关键数据</strong>：AI 应用落地从测试阶段进入生产阶段</li>
-<li><strong>影响范围</strong>：企业 AI 预算从"技术采购"转向"业务投入"</li>
-<li><strong>后续动作</strong>：更多 AI 解决方案公司崛起，AI 咨询业务增长</li>
-<li><strong>解读分析</strong>：AI 进入"实用主义"时代，能带来明确 ROI 的场景优先落地。</li>
+<li><strong>核心事件</strong>：知乎发布国内外知名大模型及应用排行榜（2026/04/01），本周更新包括：阿里 Wan-2.7 生图模型、GLM-5.1 通用模型、MiMo-V2-Pro Agent 模型、GLM-5 Agent 模型等。该排行榜持续跟踪全球大模型发展动态。</li>
+<li><strong>关键数据</strong>：本周更新 4 款新模型，覆盖生图、通用、Agent 等场景</li>
+<li><strong>影响范围</strong>：为开发者和企业提供大模型选型参考</li>
+<li><strong>后续动作</strong>：持续更新排行榜，跟踪模型发展</li>
+<li><strong>解读分析</strong>：大模型生态日益丰富，开发者可根据场景选择合适模型。</li>
 </ul>
 <div class="sources">
-🔗 <a href="https://www.thepaper.cn/" target="_blank">澎湃新闻</a>
+🔗 <a href="https://zhuanlan.zhihu.com/p/670574382" target="_blank">知乎</a>
 </div>
 </div>
 </div>
 
-<div class="category" id="trends">
-<h2>📊 趋势洞察</h2>
-
-<div class="article">
-<h3>18. Claude Mythos 5 在 OSWorld-V 基准测试领先</h3>
-<div class="meta">
-<span class="date">2026 年 3 月</span>
-<span class="status unverified">⚠️ 单方报道</span>
-</div>
-<ul>
-<li><strong>核心事件</strong>：Anthropic Claude Mythos 5 在 OSWorld-V 基准测试中领先。OSWorld-V 是代理操作系统交互基准测试。证明多模态模型在复杂任务中的优势。更多代理基准测试发布，形成评测生态。代理模型评测进入"真实场景"阶段，不再只是"问答测试"。</li>
-<li><strong>关键数据</strong>：OSWorld-V 是代理操作系统交互基准测试</li>
-<li><strong>影响范围</strong>：证明多模态模型在复杂任务中的优势</li>
-<li><strong>后续动作</strong>：更多代理基准测试发布，形成评测生态</li>
-<li><strong>解读分析</strong>：代理模型评测进入"真实场景"阶段，不再只是"问答测试"。</li>
-</ul>
-<div class="sources">
-🔗 <a href="https://llmstats.com/" target="_blank">LLM Stats</a>
-</div>
-</div>
+<div class="category" id="applications">
+<h2>💼 应用与行业</h2>
 
 <div class="article">
-<h3>19. 物理 AI（Physical AI）成为新趋势</h3>
+<h3>8. AI 生成代码导致"代码过载"问题</h3>
 <div class="meta">
-<span class="date">2026 年 1 月</span>
+<span class="date">2026 年 4 月 6 日</span>
 <span class="status verified">✅ 已验证</span>
 </div>
 <ul>
-<li><strong>核心事件</strong>：物理 AI（Physical AI）被列为 2026 年 AI 六大趋势之首。特斯拉 Cybercab 计划 2026 年 4 月量产，年产能 200 万辆。AI 从虚拟走向物理世界，自动驾驶、人形机器人等场景爆发。更多硬件厂商加入 physical AI 生态。物理 AI 是 AI 的下一波浪潮，将 AI 能力与物理世界结合，创造真实价值。</li>
-<li><strong>关键数据</strong>：特斯拉 Cybercab 计划 2026 年 4 月量产，年产能 200 万辆</li>
-<li><strong>影响范围</strong>：AI 从虚拟走向物理世界，自动驾驶、人形机器人等场景爆发</li>
-<li><strong>后续动作</strong>：更多硬件厂商加入 physical AI 生态</li>
-<li><strong>解读分析</strong>：物理 AI 是 AI 的下一波浪潮，将 AI 能力与物理世界结合，创造真实价值。</li>
+<li><strong>核心事件</strong>：《纽约时报》报道，当一家金融服务公司开始使用 Cursor（一种 AI 代码生成技术）时，差异立竿见影。但随之而来的是"代码过载"问题——AI 生成的代码量过大，导致代码库难以维护。这引发了对 AI 生成代码质量的讨论。</li>
+<li><strong>关键数据</strong>：AI 生成代码量激增，代码库维护难度加大</li>
+<li><strong>影响范围</strong>：企业开始重新审视 AI 代码生成的使用策略</li>
+<li><strong>后续动作</strong>：更多企业制定 AI 代码生成规范，平衡效率与质量</li>
+<li><strong>解读分析</strong>：AI 生成代码带来效率提升的同时，也带来技术债务风险，需要平衡使用。</li>
 </ul>
 <div class="sources">
-🔗 <a href="https://www.tmtpost.com/" target="_blank">钛媒体</a>
+🔗 <a href="https://www.nytimes.com/2026/04/06/technology/ai-code-overload.html" target="_blank">NYTimes</a>
 </div>
 </div>
 
 <div class="article">
-<h3>20. AI 创业趋势：高薪取代股权，聚焦垂直场景</h3>
+<h3>9. AI 正在颠覆网络安全行业</h3>
 <div class="meta">
-<span class="date">2026 年 4 月 1 日</span>
+<span class="date">2026 年 4 月 6 日</span>
 <span class="status verified">✅ 已验证</span>
 </div>
 <ul>
-<li><strong>核心事件</strong>：2026 年 AI 初创公司趋势是"高薪取代股权"、"聚焦垂直场景"。初级 AI 工程师年薪 22 万美元，股权吸引力下降。AI 人才市场进入"现金为王"阶段。更多 AI 公司选择垂直领域，避免通用模型竞争。AI 创业进入"精细化"阶段，不再追求"通用模型"，而是"解决特定问题"。</li>
-<li><strong>关键数据</strong>：初级 AI 工程师年薪 22 万美元，股权吸引力下降</li>
-<li><strong>影响范围</strong>：AI 人才市场进入"现金为王"阶段</li>
-<li><strong>后续动作</strong>：更多 AI 公司选择垂直领域，避免通用模型竞争</li>
-<li><strong>解读分析</strong>：AI 创业进入"精细化"阶段，不再追求"通用模型"，而是"解决特定问题"。</li>
+<li><strong>核心事件</strong>：《纽约时报》报道，国家支持的中国黑客使用 AI 技术入侵了全球约 30 家公司和政府机构的计算机系统。同时，AI 也被用于防御网络攻击，网络安全行业正在被 AI 颠覆。</li>
+<li><strong>关键数据</strong>：约 30 家公司和政府机构受影响</li>
+<li><strong>影响范围</strong>：网络安全攻防进入 AI 时代</li>
+<li><strong>后续动作</strong>：更多安全公司部署 AI 防御系统</li>
+<li><strong>解读分析</strong>：AI 既是攻击工具也是防御武器，网络安全进入新阶段。</li>
 </ul>
 <div class="sources">
-🔗 <a href="https://meanceo.com/" target="_blank">MeanCEO Blog</a>
+🔗 <a href="https://www.nytimes.com/2026/04/06/technology/ai-cybersecurity-hackers.html" target="_blank">NYTimes</a>
+</div>
+</div>
+
+<div class="article">
+<h3>10. 多家网约车平台上线 AI 打车功能</h3>
+<div class="meta">
+<span class="date">2026 年 4 月 6 日</span>
+<span class="status verified">✅ 已验证</span>
+</div>
+<ul>
+<li><strong>核心事件</strong>：多家网约车平台上线 AI 打车功能，用户可通过自然语言描述需求，AI 自动匹配运力。但专家提醒，模型幻觉可能生成虚假内容，需求越精准越有助于叫到满意的车。平台需关注高质量训练数据集的采集，并注意用户隐私保护。</li>
+<li><strong>关键数据</strong>：多家平台上线，用户需求匹配精度提升</li>
+<li><strong>影响范围</strong>：网约车行业进入 AI 时代，用户体验提升</li>
+<li><strong>后续动作</strong>：更多出行平台引入 AI 功能</li>
+<li><strong>解读分析</strong>：AI 在垂直场景落地加速，但需解决模型幻觉和隐私问题。</li>
+</ul>
+<div class="sources">
+🔗 <a href="https://www.chinanews.com.cn/sh/2026/04-06/10599389.shtml" target="_blank">中新网</a>
+</div>
+</div>
+</div>
+
+<div class="category" id="research">
+<h2>🔬 前沿研究</h2>
+
+<div class="article">
+<h3>11. AI 新突破：能耗降低 100 倍，准确率提升</h3>
+<div class="meta">
+<span class="date">2026 年 4 月 5 日</span>
+<span class="status verified">✅ 已验证</span>
+</div>
+<ul>
+<li><strong>核心事件</strong>：ScienceDaily 报道，研究人员公布了一种激进的高效 AI 方法，可将 AI 能耗降低高达 100 倍，同时实际提高准确率。这一突破可能解决 AI 发展中的能源瓶颈问题。</li>
+<li><strong>关键数据</strong>：能耗降低 100 倍，准确率提升</li>
+<li><strong>影响范围</strong>：AI 可持续发展迎来重大突破</li>
+<li><strong>后续动作</strong>：更多研究机构跟进，技术商业化加速</li>
+<li><strong>解读分析</strong>：能耗是 AI 发展的关键瓶颈，这一突破可能改变 AI 发展轨迹。</li>
+</ul>
+<div class="sources">
+🔗 <a href="https://www.sciencedaily.com/releases/2026/04/260405003952.htm" target="_blank">ScienceDaily</a>
+</div>
+</div>
+
+<div class="article">
+<h3>12. AI 模型可通过血液检测识别神经退行性疾病</h3>
+<div class="meta">
+<span class="date">2026 年 4 月 5 日</span>
+<span class="status verified">✅ 已验证</span>
+</div>
+<ul>
+<li><strong>核心事件</strong>：瑞典隆德大学宣布，该校参与研发出一种新型 AI 模型，可通过单次血液检测辅助识别多种神经退行性疾病，为相关疾病早期筛查和辅助诊断提供新思路。</li>
+<li><strong>关键数据</strong>：单次血液检测，可识别多种神经退行性疾病</li>
+<li><strong>影响范围</strong>：医疗健康领域 AI 应用取得突破</li>
+<li><strong>后续动作</strong>：更多临床试验，推动技术商业化</li>
+<li><strong>解读分析</strong>：AI 在医疗诊断领域的应用前景广阔，可提升早期筛查效率。</li>
+</ul>
+<div class="sources">
+🔗 <a href="https://k.sina.cn/article_7857201856_1d45362c00190407sw.html?from=tech" target="_blank">新浪新闻</a>
 </div>
 </div>
 </div>
@@ -450,33 +301,18 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial
 <thead><tr><th>分类</th><th>总数</th><th>✅ 已验证</th><th>⚠️ 单方报道</th><th>验证率</th></tr></thead>
 <tbody>
 <tr><td>🔥头条重磅</td><td>3</td><td>3</td><td>0</td><td>100%</td></tr>
-<tr><td>💰融资动态</td><td>2</td><td>1</td><td>1</td><td>50%</td></tr>
-<tr><td>🤖产品发布与技术突破</td><td>6</td><td>5</td><td>1</td><td>83%</td></tr>
-<tr><td>🏢行业生态与政策</td><td>6</td><td>3</td><td>3</td><td>50%</td></tr>
-<tr><td>📊趋势洞察</td><td>3</td><td>2</td><td>1</td><td>66%</td></tr>
-<tr style="background:#667eea;color:white;"><td><strong>总计</strong></td><td>20</td><td>14</td><td>6</td><td>70%</td></tr>
-</tbody>
-</table>
-</div>
-
-<div class="summary">
-<h3>🌐 数据源统计</h3>
-<table class="stats-table">
-<thead><tr><th>数据源</th><th>信源数</th><th>备注</th></tr></thead>
-<tbody>
-<tr><td>LLM Stats</td><td>5</td><td>模型发布、基准测试</td></tr>
-<tr><td>中文媒体（新浪、新华网、钛媒体）</td><td>5</td><td>中国 AI 动态</td></tr>
-<tr><td>英文媒体（Bloomberg、Reuters、TechCrunch）</td><td>4</td><td>国际 AI 动态</td></tr>
-<tr><td>GitHub Trends</td><td>2</td><td>开源项目</td></tr>
-<tr><td>其他</td><td>4</td><td>Reddit、Social Media Today 等</td></tr>
+<tr><td>🧠大模型动态</td><td>4</td><td>3</td><td>1</td><td>75%</td></tr>
+<tr><td>💼应用与行业</td><td>3</td><td>3</td><td>0</td><td>100%</td></tr>
+<tr><td>🔬前沿研究</td><td>2</td><td>2</td><td>0</td><td>100%</td></tr>
+<tr style="background:#667eea;color:white;"><td><strong>总计</strong></td><td>12</td><td>11</td><td>1</td><td>92%</td></tr>
 </tbody>
 </table>
 </div>
 
 <div class="footer">
 <p>🤖 AI 新闻日报 - 2026 年 4 月 7 日</p>
-<p>📊 共 <strong>20</strong> 条新闻</p>
-<p>📊 已验证：<span style="color:#4caf50;">14</span> 条 | ⚠️ 单方报道：<span style="color:#ff9800;">6</span> 条</p>
+<p>📊 共 <strong>12</strong> 条新闻（仅最近 3 天）</p>
+<p>📊 已验证：<span style="color:#4caf50;">11</span> 条 | ⚠️ 单方报道：<span style="color:#ff9800;">1</span> 条</p>
 <p style="margin-top:15px;">
 🔗 在线阅读：<a href="https://zxy114.github.io/ai-news-daily/ai-daily-2026-04-07.html" target="_blank">https://zxy114.github.io/ai-news-daily/ai-daily-2026-04-07.html</a>
 </p>
