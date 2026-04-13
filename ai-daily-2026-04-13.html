@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI 新闻日报 | 2026-04-13</title>
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --accent: #2563eb;
+      --verified-bg: #e8f7ee;
+      --verified-text: #15803d;
+      --single-bg: #fff4e5;
+      --single-text: #b45309;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background: linear-gradient(180deg, #eef4ff 0%, var(--bg) 220px);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 32px 20px 56px;
+    }
+    .hero {
+      background: linear-gradient(135deg, #1d4ed8, #2563eb 55%, #60a5fa);
+      color: #fff;
+      border-radius: 24px;
+      padding: 32px;
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: 34px;
+      line-height: 1.2;
+    }
+    .hero p {
+      margin: 6px 0;
+      color: rgba(255,255,255,.9);
+    }
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .summary-card, .card {
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,.65);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+    .summary-card {
+      padding: 20px;
+    }
+    .summary-card h3 {
+      margin: 0 0 10px;
+      font-size: 16px;
+    }
+    .summary-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .section-title {
+      margin: 28px 0 14px;
+      font-size: 22px;
+    }
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      padding: 22px;
+    }
+    .card h2 {
+      margin: 0 0 12px;
+      font-size: 20px;
+      line-height: 1.4;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+    .verified {
+      background: var(--verified-bg);
+      color: var(--verified-text);
+    }
+    .single {
+      background: var(--single-bg);
+      color: var(--single-text);
+    }
+    .dim {
+      margin: 10px 0;
+      font-size: 14px;
+      color: var(--text);
+    }
+    .dim strong {
+      color: #111827;
+    }
+    .sources {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+      font-size: 14px;
+    }
+    .sources a {
+      color: var(--accent);
+      text-decoration: none;
+      word-break: break-all;
+    }
+    .sources a:hover { text-decoration: underline; }
+    .footer {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+    @media (max-width: 640px) {
+      .hero { padding: 24px; border-radius: 18px; }
+      .hero h1 { font-size: 28px; }
+      .card, .summary-card { padding: 18px; }
+      .news-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>AI 新闻日报</h1>
+      <p><strong>日期：</strong>2026-04-13</p>
+      <p><strong>统计窗口：</strong>2026-04-10 至 2026-04-13（UTC）</p>
+      <p>本期优先保留近 3 天内、可交叉验证或具备公司原始信源的 AI 新闻，聚焦大模型、Agent、AI 应用、产品发布与融资动态。</p>
+    </section>
+
+    <section class="summary">
+      <div class="summary-card">
+        <h3>产品发布主线</h3>
+        <p>Meta 把新模型直接推向消费级入口，模型竞争进一步产品化。</p>
+      </div>
+      <div class="summary-card">
+        <h3>安全能力主线</h3>
+        <p>Anthropic 把高风险前沿模型优先锁定在防御性网络安全合作中。</p>
+      </div>
+      <div class="summary-card">
+        <h3>融资主线</h3>
+        <p>中国市场资金继续流向世界模型、多模态视频和 AI Infra。</p>
+      </div>
+      <div class="summary-card">
+        <h3>Agent 主线</h3>
+        <p>竞争重心从“会不会做”转向接口、支付、身份、入口和编排。</p>
+      </div>
+    </section>
+
+    <h2 class="section-title">重点新闻</h2>
+    <section class="news-grid">
+      <article class="card">
+        <div class="badge verified">✅ 已验证</div>
+        <h2>1. Meta 发布 Muse Spark，并把新模型直接推入 Meta AI 应用</h2>
+        <p class="dim"><strong>核心事件：</strong>Meta 发布由 Meta Superintelligence Labs 打造的首个 Muse 系列模型，并同步升级 Meta AI App 与 meta.ai，强调多模态推理、模式切换和多子 Agent 并行处理。</p>
+        <p class="dim"><strong>关键数据：</strong>Meta 预计 2026 年资本开支为 1150 亿至 1350 亿美元。TechCrunch 援引数据显示，Meta AI App 在美国 App Store 从第 57 位升至第 5 位，美国 iOS 下载量单日增长 87%。</p>
+        <p class="dim"><strong>影响范围：</strong>Meta 正把模型直接绑到社交与硬件生态入口，和 OpenAI、Anthropic、Google 在消费级 AI 助手市场正面交锋。</p>
+        <p class="dim"><strong>后续动作：</strong>后续将扩展到 WhatsApp、Instagram、Facebook、Messenger 与 AI 眼镜，API 目前仅小范围预览。</p>
+        <p class="dim"><strong>解读分析：</strong>真正的变化不只是模型发布，而是 Meta 试图用分发优势把“多模态 + 推理 + 子智能体编排”做成默认入口，先抢占用户时长。</p>
+        <div class="sources">
+          <a href="https://about.fb.com/news/2026/04/introducing-muse-spark-meta-superintelligence-labs/">Meta 官方</a><br />
+          <a href="https://techcrunch.com/2026/04/09/meta-ai-app-climbs-to-no-5-on-the-app-store-after-muse-spark-launch/">TechCrunch</a><br />
+          <a href="https://www.21jingji.com/article/20260409/herald/d002db9562424c49692b984f1216cebd.html">21 世纪经济报道</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="badge verified">✅ 已验证</div>
+        <h2>2. Anthropic 启动 Project Glasswing，将高风险前沿模型用于防御性网络安全</h2>
+        <p class="dim"><strong>核心事件：</strong>Anthropic 联合 AWS、Apple、Google、Microsoft、NVIDIA 等机构推出 Project Glasswing，将 Claude Mythos Preview 用于关键软件与基础设施的防御性漏洞发现与修复。</p>
+        <p class="dim"><strong>关键数据：</strong>Anthropic 表示模型已发现数千个高危漏洞，覆盖主要操作系统与浏览器，并承诺最高 1 亿美元使用额度和 400 万美元开源安全捐赠。</p>
+        <p class="dim"><strong>影响范围：</strong>前沿模型竞争进入“高能力、高风险”的专业场景，网络安全成为最早承接强 Agent/强代码能力封闭试点的行业之一。</p>
+        <p class="dim"><strong>后续动作：</strong>关注 Mythos Preview 是否继续非公开、合作方是否披露防御效果，以及监管是否提高前沿模型部署边界要求。</p>
+        <p class="dim"><strong>解读分析：</strong>Anthropic 在给行业演示一种新范式，即把最危险也最有价值的能力先锁进防御场景，先建立可信使用样板。</p>
+        <div class="sources">
+          <a href="https://www.anthropic.com/glasswing">Anthropic 官方</a><br />
+          <a href="https://www.anthropic.com/claude-mythos-preview-risk-report">风险报告页</a><br />
+          <a href="https://www.reuters.com/legal/litigation/anthropic-touts-ai-cybersecurity-project-with-big-tech-partners-2026-04-07/">Reuters</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="badge verified">✅ 已验证</div>
+        <h2>3. 生数科技完成近 20 亿元 B 轮融资，继续押注通用世界模型</h2>
+        <p class="dim"><strong>核心事件：</strong>生数科技 4 月 10 日宣布完成近 20 亿元人民币 B 轮融资，由阿里云领投，继续加码多模态视频模型与通用世界模型战略。</p>
+        <p class="dim"><strong>关键数据：</strong>Vidu Q3 支持 16 秒声画同出和 1080P 生成，业务覆盖全球 200 多个国家和地区，2025 年用户和收入实现 10 倍以上增长。</p>
+        <p class="dim"><strong>影响范围：</strong>资本继续向“视频模型 → 世界模型 → 具身智能底座”路线集中，说明多模态和物理世界建模仍是中国 AI 投资热点。</p>
+        <p class="dim"><strong>后续动作：</strong>关注 MaaS/SaaS 商业化兑现速度，以及 Motus 等世界行动模型是否进入机器人、工业或自动驾驶场景。</p>
+        <p class="dim"><strong>解读分析：</strong>世界模型是今年最热的新叙事之一，但估值最终要靠商业化和真实场景验证，不能只停留在 AGI 故事层面。</p>
+        <div class="sources">
+          <a href="https://www.stcn.com/article/detail/3740628.html">证券时报</a><br />
+          <a href="https://www.reuters.com/world/asia-pacific/chinese-startup-shengshu-raises-293-million-advance-artificial-general-2026-04-10/">Reuters</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="badge verified">✅ 已验证</div>
+        <h2>4. Reuters 从国际视角确认生数科技融资，显示中国 AGI 竞赛仍在加速</h2>
+        <p class="dim"><strong>核心事件：</strong>Reuters 确认 ShengShu Technology 完成 20 亿元人民币融资，阿里云领投，表明中国多模态与 AGI 创业公司继续获得产业资本支持。</p>
+        <p class="dim"><strong>关键数据：</strong>Reuters 给出融资规模约 2.93 亿美元，并点名多家投资方与老股东继续追加投资。</p>
+        <p class="dim"><strong>影响范围：</strong>这条消息向海外市场传递出明确信号，中国 AI 竞争没有放缓，而是继续向多模态、视频生成和 AGI 延伸。</p>
+        <p class="dim"><strong>后续动作：</strong>关注阿里云与生数是否形成更深云和模型生态绑定，以及产品收入结构是否进一步国际化。</p>
+        <p class="dim"><strong>解读分析：</strong>国内外报道互证后，可信度更高，也能看出大厂投资正从财务动作转向提前卡位下一代模型能力。</p>
+        <div class="sources">
+          <a href="https://www.reuters.com/world/asia-pacific/chinese-startup-shengshu-raises-293-million-advance-artificial-general-2026-04-10/">Reuters</a><br />
+          <a href="https://www.stcn.com/article/detail/3740628.html">证券时报</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="badge single">⚠️ 单方报道</div>
+        <h2>5. 硅基流动完成近亿元天使+轮融资，AI Infra 继续升温</h2>
+        <p class="dim"><strong>核心事件：</strong>36 氪报道称，AI Infra 创业公司硅基流动完成近 1 亿元人民币天使+轮融资，投资方包括智谱 AI、360、水木清华校友基金等。</p>
+        <p class="dim"><strong>关键数据：</strong>公司称 SiliconCloud 在公测数周后每日 Token 生成量达到数十亿，调用 DeepSeek V2 的响应速度可达 50 Tokens/s。</p>
+        <p class="dim"><strong>影响范围：</strong>资金持续回流推理加速、统一 API、低成本调用等基础设施层，说明 AI 应用爆发对底层服务要求越来越高。</p>
+        <p class="dim"><strong>后续动作：</strong>关注其公开客户规模、ARR 或调用量披露，以及与国产芯片、云厂商协同是否进一步公开化。</p>
+        <p class="dim"><strong>解读分析：</strong>2026 年市场明显开始重新重视 AI Infra，不过当前仍以单一媒体首发为主，需等待更多公开信源佐证。</p>
+        <div class="sources">
+          <a href="https://www.36kr.com/p/2844943140309637">36 氪</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="badge single">⚠️ 单方报道</div>
+        <h2>6. B.AI 上线，试图补齐 AI Agent 的支付、身份与统一接口层</h2>
+        <p class="dim"><strong>核心事件：</strong>B.AI 正式上线，定位为 AI Agent 的基础设施层，整合多模型接入、统一 API、支付和身份体系，而非单纯聊天产品。</p>
+        <p class="dim"><strong>关键数据：</strong>报道援引 Gartner 预测，到 2028 年至少 15% 的日常工作决策将由 Agentic AI 自主完成，33% 的企业软件将内置相关能力。</p>
+        <p class="dim"><strong>影响范围：</strong>若 Agent 真正进入企业工作流，支付结算、权限管理、身份治理与审计追踪会成为关键基础能力。</p>
+        <p class="dim"><strong>后续动作：</strong>重点观察开发者接入规模，以及支付、身份、审计是否真正落到实际使用场景而非概念展示。</p>
+        <p class="dim"><strong>解读分析：</strong>B.AI 代表的是 Agent 经济里的“水电煤”层，长期可能比前台助手更具粘性，但当下真实使用数据仍偏少。</p>
+        <div class="sources">
+          <a href="https://finance.sina.com.cn/jjxw/2026-04-11/doc-inhucmta4229238.shtml">新浪财经</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="badge single">⚠️ 单方报道</div>
+        <h2>7. Poke 试图把 AI Agent 做成“发短信就能用”的消费级入口</h2>
+        <p class="dim"><strong>核心事件：</strong>TechCrunch 报道，Poke 正把 AI Agent 做成可通过 iMessage、SMS、Telegram 等消息界面直接访问的个人助理。</p>
+        <p class="dim"><strong>关键数据：</strong>公司在去年的 1500 万美元种子轮基础上新增 1000 万美元融资，投后估值约 3 亿美元，团队规模约 10 人。</p>
+        <p class="dim"><strong>影响范围：</strong>这说明 Agent 正从技术玩家工具，向更普适的消费级消息入口迁移，竞争将扩展到渠道、模板生态与信任体系。</p>
+        <p class="dim"><strong>后续动作：</strong>观察其留存、任务成功率，以及多平台消息入口下的权限和安全处理能力。</p>
+        <p class="dim"><strong>解读分析：</strong>这类产品未必技术最强，但很可能最先教育用户。一旦“消息式 Agent”跑通，消费级智能体普及速度会明显加快。</p>
+        <div class="sources">
+          <a href="https://techcrunch.com/2026/04/08/poke-makes-ai-agents-as-easy-as-sending-a-text/">TechCrunch</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="card" style="margin-top: 22px;">
+      <h2>结论</h2>
+      <p class="dim"><strong>第一，</strong>模型竞争继续升级，但发布方式明显变化，Meta 走消费入口，Anthropic 走封闭高风险场景。</p>
+      <p class="dim"><strong>第二，</strong>资本继续向“下一层能力”下注，中国市场尤其重视世界模型、多模态视频和 AI Infra。</p>
+      <p class="dim"><strong>第三，</strong>2026 年真正值得追踪的，不只是哪个模型排第一，而是谁先把 Agent 的编排、权限、支付、审计和用户入口做顺。</p>
+    </section>
+
+    <div class="footer">生成时间：2026-04-13 · AI News Daily</div>
+  </div>
+</body>
+</html>
