@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🤖 AI 新闻日报 — 2026-04-02</title>
+<style>
+  :root {
+    --bg: #0f1117;
+    --surface: #1a1d27;
+    --surface2: #232734;
+    --border: #2d3148;
+    --text: #e4e6f0;
+    --text-dim: #8b8fa8;
+    --accent: #6c5ce7;
+    --accent-glow: rgba(108, 92, 231, 0.15);
+    --verified: #00b894;
+    --verified-bg: rgba(0, 184, 148, 0.1);
+    --unverified: #fdcb6e;
+    --unverified-bg: rgba(253, 203, 110, 0.1);
+    --fire: #e17055;
+    --fire-bg: rgba(225, 112, 85, 0.1);
+    --money: #00cec9;
+    --product: #0984e3;
+    --policy: #a29bfe;
+    --trend: #fd79a8;
+    --github: #6e40c9;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans SC', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 0;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 48px 24px 32px;
+    background: linear-gradient(135deg, var(--surface) 0%, var(--accent-glow) 100%);
+    border-bottom: 1px solid var(--border);
+    border-radius: 0 0 24px 24px;
+    margin-bottom: 32px;
+  }
+  .header h1 { font-size: 2em; margin-bottom: 8px; }
+  .header .subtitle { color: var(--text-dim); font-size: 0.95em; }
+  
+  /* Stats bar */
+  .stats-bar {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .stat {
+    background: var(--surface2);
+    padding: 8px 20px;
+    border-radius: 12px;
+    font-size: 0.9em;
+    border: 1px solid var(--border);
+  }
+  .stat .num { font-weight: 700; font-size: 1.1em; }
+  
+  /* Section */
+  .section { margin-bottom: 40px; }
+  .section-title {
+    font-size: 1.4em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  /* Cards */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 16px;
+    transition: border-color 0.2s;
+  }
+  .card:hover { border-color: var(--accent); }
+  .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; }
+  .card h3 { font-size: 1.1em; font-weight: 600; flex: 1; }
+  .card .date { color: var(--text-dim); font-size: 0.85em; white-space: nowrap; }
+  
+  /* Badge */
+  .badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.75em;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  .badge-verified { background: var(--verified-bg); color: var(--verified); border: 1px solid rgba(0,184,148,0.3); }
+  .badge-unverified { background: var(--unverified-bg); color: var(--unverified); border: 1px solid rgba(253,203,110,0.3); }
+  
+  .card-body { margin-top: 12px; }
+  .card-body ul { list-style: none; padding: 0; }
+  .card-body li { padding: 4px 0; padding-left: 16px; position: relative; }
+  .card-body li::before { content: '▸'; position: absolute; left: 0; color: var(--accent); }
+  .card-body .highlight { color: var(--accent); font-weight: 500; }
+  
+  .sources { margin-top: 12px; font-size: 0.85em; color: var(--text-dim); }
+  .sources a { color: var(--accent); text-decoration: none; }
+  .sources a:hover { text-decoration: underline; }
+  
+  /* Category colors */
+  .cat-fire { color: var(--fire); }
+  .cat-money { color: var(--money); }
+  .cat-product { color: var(--product); }
+  .cat-policy { color: var(--policy); }
+  .cat-trend { color: var(--trend); }
+  .cat-github { color: var(--github); }
+  
+  .cat-bg-fire { background: var(--fire-bg); }
+  .cat-bg-money { background: rgba(0,206,201,0.1); }
+  .cat-bg-product { background: rgba(9,132,227,0.1); }
+  .cat-bg-policy { background: rgba(162,155,254,0.1); }
+  .cat-bg-trend { background: rgba(253,121,168,0.1); }
+  .cat-bg-github { background: rgba(110,64,201,0.1); }
+  
+  /* Mini cards for funding */
+  .mini-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+  .mini-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+  }
+  .mini-card h4 { font-size: 0.95em; margin-bottom: 6px; }
+  .mini-card p { font-size: 0.85em; color: var(--text-dim); }
+  
+  /* Table */
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.9em; }
+  th, td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); }
+  th { background: var(--surface2); font-weight: 600; }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 32px 16px;
+    color: var(--text-dim);
+    font-size: 0.85em;
+    border-top: 1px solid var(--border);
+    margin-top: 40px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 640px) {
+    .header h1 { font-size: 1.5em; }
+    .card { padding: 16px; }
+    .stats-bar { flex-direction: column; align-items: center; }
+    .mini-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🤖 AI 新闻日报</h1>
+  <div class="subtitle">AI Daily — 2026 年 4 月 2 日 (周四) | 10:21 UTC</div>
+  <div class="stats-bar">
+    <div class="stat">📄 共 <span class="num">18</span> 条新闻</div>
+    <div class="stat">✅ 已验证 <span class="num" style="color:var(--verified)">15</span> 条</div>
+    <div class="stat">⚠️ 单方报道 <span class="num" style="color:var(--unverified)">3</span> 条</div>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- 🔥 头条重磅 -->
+<div class="section">
+  <div class="section-title cat-fire">🔥 头条重磅</div>
+  
+  <div class="card cat-bg-fire">
+    <div class="card-header">
+      <h3>OpenAI 完成创纪录 $1220 亿融资，估值 $8520 亿，构建 AI 超级应用</h3>
+      <span class="badge badge-verified">✅ 已验证</span>
+    </div>
+    <div class="date">2026年3月31日</div>
+    <div class="card-body">
+      <ul>
+        <li>史上最大规模风投轮，软银领投，亚马逊和英伟达锚定投资</li>
+        <li>年化收入已突破 <span class="highlight">$250 亿</span>，预计 Q4 2026 IPO</li>
+        <li>构建 "AI 超级应用"，整合 ChatGPT、Codex、AI Agent</li>
+        <li>企业收入预计年底与消费者收入持平</li>
+      </ul>
+      <div class="sources">
+        🔗 <a href="https://www.cnbc.com/2026/03/31/openai-funding-round-ipo.html">CNBC</a> · 
+        <a href="https://www.reuters.com/technology/artificial-intelligence/artificial-intelligencer-openais-852-billion-problem-finding-focus-2026-04-01/">Reuters</a> · 
+        <a href="https://www.theguardian.com/technology/2026/mar/31/openai-raises-122-billion-ai-boom">Guardian</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="card cat-bg-fire">
+    <div class="card-header">
+      <h3>Anthropic 连爆安全事件：Claude Code 源码泄露 + Mythos 模型意外曝光</h3>
+      <span class="badge badge-verified">✅ 已验证</span>
+    </div>
+    <div class="date">2026年3月30日–4月1日</div>
+    <div class="card-body">
+      <ul>
+        <li><span class="highlight">50 万行代码/1900 个文件</span>通过 npm sourcemap 泄露</li>
+        <li>Mythos 模型（代号 "Capybara"）被描述为"史上最强 AI 模型"</li>
+        <li>泄露代码暴露 "Undercover mode"——AI 匿名贡献开源代码</li>
+        <li>以安全著称的 Anthropic 品牌形象受到严重冲击</li>
+      </ul>
+      <div class="sources">
+        🔗 <a href="https://www.bloomberg.com/news/articles/2026-04-01/anthropic-accidentally-releases-source-code-for-claude-ai-agent">Bloomberg</a> · 
+        <a href="https://fortune.com/2026/03/31/anthropic-source-code-claude-code-data-leak-second-security-lapse-days-after-accidentally-revealing-mythos/">Fortune</a> · 
+        <a href="https://arstechnica.com/ai/2026/04/heres-what-that-claude-code-source-leak-reveals-about-anthropics-plans/">Ars Technica</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="card cat-bg-fire">
+    <div class="card-header">
+      <h3>Q1 2026 全球 AI 融资创纪录：$2970 亿，同比暴涨 150%</h3>
+      <span class="badge badge-verified">✅ 已验证</span>
+    </div>
+    <div class="date">2026年4月1日</div>
+    <div class="card-body">
+      <ul>
+        <li>史上最大 5 笔风投中 <span class="highlight">4 笔在 Q1</span>：OpenAI $1220 亿、Anthropic $300 亿、xAI $200 亿、Waymo $160 亿</li>
+        <li>AI seed 轮估值飙升至 $4000–4500 万</li>
+        <li>四大前沿实验室吞噬 64% 的总资金</li>
+      </ul>
+      <div class="sources">
+        🔗 <a href="https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/">Crunchbase</a> · 
+        <a href="https://www.nytimes.com/2026/04/01/technology/ai-companies-fund-raising-records.html">NYT</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 💰 融资动态 -->
+<div class="section">
+  <div class="section-title cat-money">💰 融资动态</div>
+  <div class="mini-grid">
+    <div class="mini-card cat-bg-money">
+      <h4>🇫🇷 Mistral AI — $8.3 亿债务融资</h4>
+      <p>7 大银行联合融资，采购 13800 块 Nvidia GPU，欧洲最大 AI 债务融资</p>
+      <span class="badge badge-verified">✅ 已验证</span>
+    </div>
+    <div class="mini-card cat-bg-money">
+      <h4>🛡️ Shield AI — $20 亿 / $127 亿估值</h4>
+      <p>国防 AI 初创，自主无人机 AI 软件，融资规模创纪录</p>
+      <span class="badge badge-verified">✅ 已验证</span>
+    </div>
+    <div class="mini-card cat-bg-money">
+      <h4>🔢 Axiom AI — $2 亿 A 轮 / $16 亿估值</h4>
+      <p>可验证 AI 技术，确保 AI 输出数学正确性，发布免费数学研究工具</p>
+      <span class="badge badge-verified">✅ 已验证</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🤖 产品发布与技术突破 -->
+<div class="section">
+  <div class="section-title cat-product">🤖 产品发布与技术突破</div>
+  
+  <div class="card cat-bg-product">
+    <div class="card-header">
+      <h3>OpenAI 宣布关闭 Sora — AI 视频遭遇"现实检验"</h3>
+      <span class="badge badge-verified">✅ 已验证</span>
+    </div>
+    <div class="date">2026年3月29日</div>
+    <div class="card-body">
+      <ul>
+        <li>App/Web 于 <span class="highlight">4 月 26 日</span> 下线，API 于 9 月 24 日下线</li>
+        <li>Sora 上线仅 6 个月即被关闭；Disney 取消 $1.5 亿合作</li>
+        <li>战略转向：视频能力将整合进 SuperApp</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="card cat-bg-product">
+    <div class="card-header">
+      <h3>Microsoft Copilot Health 上线 + GPT+Claude 混合架构</h3>
+      <span class="badge badge-verified">✅ 已验证</span>
+    </div>
+    <div class="date">2026年3月底</div>
+    <div class="card-body">
+      <ul>
+        <li>Copilot Health：连接医疗记录，提供个性化健康洞察</li>
+        <li>内部架构：<span class="highlight">GPT 起草 + Claude 事实检查</span></li>
+        <li>Copilot 从助手升级为 Agent 工作层</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="card cat-bg-product">
+    <div class="card-header">
+      <h3>Google Gemini 3.1 Flash Live — 语音交互革命</h3>
+      <span class="badge badge-verified">✅ 已验证</span>
+    </div>
+    <div class="date">2026年3月底</div>
+    <div class="card-body">
+      <ul>
+        <li>最先进语音优先 AI 模型，对话上下文保持时间翻倍</li>
+        <li>Deep Think 模式面向 Ultra 订阅用户</li>
+        <li>4 月 1 日起 Gemini API 全面改革计费体系</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="card cat-bg-product">
+    <div class="card-header">
+      <h3>NASA 毅力号完成首次 AI 自主规划火星驾驶</h3>
+      <span class="badge badge-verified">✅ 已验证</span>
+    </div>
+    <div class="date">2026年3月30日</div>
+    <div class="card-body">
+      <ul>
+        <li>使用 <span class="highlight">Anthropic Claude</span> 视觉语言模型分析轨道图像</li>
+        <li>AI 首次在地外行星任务中承担核心导航决策</li>
+        <li>JPL 与 Anthropic 合作完成</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="card cat-bg-product">
+    <div class="card-header">
+      <h3>Nvidia GTC 2026：Vera Rubin 全栈平台发布</h3>
+      <span class="badge badge-verified">✅ 已验证</span>
+    </div>
+    <div class="date">2026年3月16-31日</div>
+    <div class="card-body">
+      <ul>
+        <li>Blackwell 继任者：7 款新芯片 + 5 种机架级系统</li>
+        <li>Vision AI 性能提升 <span class="highlight">100 倍</span></li>
+        <li>Nvidia 从 GPU 公司向全栈 AI 计算公司转型</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="card cat-bg-product">
+    <div class="card-header">
+      <h3>中国开源模型崛起：GLM-5、Qwen3.5、Kimi K2.5</h3>
+      <span class="badge badge-verified">✅ 已验证</span>
+    </div>
+    <div class="date">2026年3月</div>
+    <div class="card-body">
+      <ul>
+        <li>GLM-5 登顶中文榜单（78 分），AIME 2025 达 <span class="highlight">92.7%</span></li>
+        <li>Cursor 被曝未披露使用 Kimi K2.5 作为底层模型</li>
+        <li>Qwen3.5 聚焦原生多模态 Agent</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 🏢 行业生态与政策 -->
+<div class="section">
+  <div class="section-title cat-policy">🏢 行业生态与政策</div>
+  
+  <div class="card cat-bg-policy">
+    <div class="card-header">
+      <h3>白宫发布《国家 AI 政策框架》，推动联邦立法</h3>
+      <span class="badge badge-verified">✅ 已验证</span>
+    </div>
+    <div class="date">2026年3月20日</div>
+    <div class="card-body">
+      <ul>
+        <li>四页框架涵盖未成年人保护、IP 权利、言论自由、创新促进</li>
+        <li>呼吁联邦法规<span class="highlight">优先于州法</span></li>
+        <li>参议员 Blackburn 发布 TRUMP AMERICA AI Act 讨论草案</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="card cat-bg-policy">
+    <div class="card-header">
+      <h3>Nvidia 中国市场份额降至 60% 以下</h3>
+      <span class="badge badge-verified">✅ 已验证</span>
+    </div>
+    <div class="date">2026年3月底</div>
+    <div class="card-body">
+      <ul>
+        <li>中国芯片商已交付 <span class="highlight">165 万块</span> AI GPU</li>
+        <li>政府推动数据中心使用国产芯片</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="card cat-bg-policy">
+    <div class="card-header">
+      <h3>全球 AI 诈骗达 $4000 亿产业规模</h3>
+      <span class="badge badge-verified">✅ 已验证</span>
+    </div>
+    <div class="date">2026年3月28日</div>
+    <div class="card-body">
+      <ul>
+        <li>GenAI 将诈骗时间从 16 小时缩短至 <span class="highlight">5 分钟以内</span></li>
+        <li>银行反欺诈系统跟不上 AI 诈骗进化速度</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="card cat-bg-policy">
+    <div class="card-header">
+      <h3>AI 客服投诉激增：消费者不满聊天机器人退款体验</h3>
+      <span class="badge badge-verified">✅ 已验证</span>
+    </div>
+    <div class="date">2026年4月1日</div>
+    <div class="card-body">
+      <ul>
+        <li>企业过度部署 AI 客服但设置过多防护栏</li>
+        <li>AI 既不够智能也不够灵活，消费者体验恶化</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 📊 趋势洞察 -->
+<div class="section">
+  <div class="section-title cat-trend">📊 趋势洞察</div>
+  <div class="card cat-bg-trend">
+    <div class="card-header">
+      <h3>Agentic AI 推动 CPU 需求爆发，Arm 发布首款 AI CPU</h3>
+      <span class="badge badge-verified">✅ 已验证</span>
+    </div>
+    <div class="date">2026年3月26日</div>
+    <div class="card-body">
+      <ul>
+        <li>Agent AI 需要大量 CPU 推理支持</li>
+        <li>Nvidia 同步发布 Vera CPU 机架</li>
+        <li>GPU 主导 → CPU+GPU 混合架构演进</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- GitHub 趋势 -->
+<div class="section">
+  <div class="section-title cat-github">📈 GitHub 趋势</div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>项目</th><th>说明</th><th>趋势</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>LangChain</strong></td><td>突破 10 万星，最快增长开发者工具</td><td>🔥</td></tr>
+        <tr><td><strong>Superpowers</strong></td><td>智能 Agent 开发框架</td><td>🆕</td></tr>
+        <tr><td><strong>Oh-My-ClaudeCode</strong></td><td>多 Agent 编排，团队工作流</td><td>📈</td></tr>
+        <tr><td><strong>Claude Code Best Practice</strong></td><td>v2.1.87，Claude 编码最佳实践</td><td>📈</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</div>
+
+<div class="footer">
+  数据来源：CNBC · Reuters · Guardian · TechCrunch · NYT · Crunchbase · Bloomberg · Fortune · Forbes · Google Blog · Microsoft AI · ScienceDaily · Nvidia Blog · Tom's Hardware · TechRadar<br>
+  中英双语交叉验证 | 自动生成 | 2026-04-02
+</div>
+
+</body>
+</html>
