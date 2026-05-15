@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 日报 2026-05-15 | 星期五</title>
+<style>
+:root { --bg: #0f172a; --card: #1e293b; --text: #e2e8f0; --accent: #38bdf8; --accent2: #a78bfa; --muted: #94a3b8; --green: #34d399; --orange: #fb923c; --red: #f87171; --border: #334155; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; max-width: 900px; margin: 0 auto; padding: 24px 16px; }
+h1 { font-size: 28px; margin-bottom: 4px; }
+.date-line { color: var(--muted); font-size: 14px; margin-bottom: 24px; }
+.section-title { font-size: 20px; color: var(--accent); margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--border); }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 16px; }
+.card.featured { border-left: 4px solid var(--accent); }
+.card-headline { font-size: 20px; font-weight: 700; margin-bottom: 6px; line-height: 1.4; }
+.card-meta { font-size: 12px; color: var(--muted); margin-bottom: 12px; display: flex; gap: 12px; flex-wrap: wrap; }
+.card-meta span { display: inline-flex; align-items: center; gap: 4px; }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.badge-verified { background: rgba(52,211,153,0.15); color: var(--green); }
+.badge-hot { background: rgba(251,146,60,0.15); color: var(--orange); }
+.badge-breaking { background: rgba(248,113,113,0.15); color: var(--red); }
+.badge-new { background: rgba(56,189,248,0.15); color: var(--accent); }
+.dim { color: var(--muted); }
+.dim5 { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+.dim-item { padding: 8px 12px; background: rgba(15,23,42,0.6); border-radius: 8px; }
+.dim-label { font-weight: 600; color: var(--accent2); font-size: 13px; }
+.link { color: var(--accent); text-decoration: none; font-size: 13px; }
+.link:hover { text-decoration: underline; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 12px; }
+.toc { background: var(--card); border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+.toc h3 { font-size: 14px; color: var(--muted); margin-bottom: 8px; }
+.toc ol { padding-left: 20px; }
+.toc li { margin-bottom: 4px; }
+.toc a { color: var(--text); text-decoration: none; font-size: 14px; }
+.toc a:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<h1>🤖 AI 新闻日报</h1>
+<div class="date-line">2026年5月15日 星期五 | 过去3天全球AI热点（5/12 - 5/15）</div>
+
+<div class="toc">
+<h3>📑 目录</h3>
+<ol>
+<li><a href="#s1">🏆 Cerebras 天量 IPO：募资 $55 亿，首日暴涨 108%</a></li>
+<li><a href="#s2">🏆 OpenAI Codex 登陆 ChatGPT 手机 App</a></li>
+<li><a href="#s3">🏆 Musk v. Altman 庭审结案陈词</a></li>
+<li><a href="#s4">田渊栋八人天团「Recursive」融资 $6.5 亿</a></li>
+<li><a href="#s5">微软取消 Claude Code 许可，全面转向 Copilot CLI</a></li>
+<li><a href="#s6">SpaceXAI 合并后流失 50+ 核心员工</a></li>
+<li><a href="#s7">Anthropic 商业客户数首超 OpenAI</a></li>
+<li><a href="#s8">Notion 发布 AI Agent 开发者平台</a></li>
+<li><a href="#s9">Google DeepMind 实验性 AI 指针交互</a></li>
+<li><a href="#s10">Anthropic 新政引发 Agent 用户争议</a></li>
+<li><a href="#s11">思科裁员 4,000 人转投 AI</a></li>
+<li><a href="#s12">OpenAI 准备对 Apple 采取法律行动</a></li>
+<li><a href="#s13">xAI 发布 Grok Build CLI 公测</a></li>
+<li><a href="#s14">Adaption 发布 AutoScientist：AI 自我训练工具</a></li>
+<li><a href="#s15">arXiv 新规：虚构引用者禁投 1 年</a></li>
+<li><a href="#s16">安大略审计发现医生 AI 笔记频繁出错</a></li>
+<li><a href="#s17">Wirestock 融资 $2,300 万：为 AI 实验室提供多模态数据</a></li>
+<li><a href="#s18">Anthropic 进军中小企业市场</a></li>
+</ol>
+</div>
+
+<!-- 1. Cerebras IPO -->
+<div class="card featured" id="s1">
+<div class="card-headline">🏆 Cerebras 天量 IPO：募资 $55 亿，首日暴涨 108%，估值 $660 亿</div>
+<div class="card-meta">
+<span>📅 发布日期：2026-05-14</span>
+<span>📰 TechCrunch</span>
+<span class="badge badge-breaking">BREAKING</span>
+</div>
+<div class="dim5">
+<div class="dim-item"><span class="dim-label">📌 核心事件</span><br>AI 芯片公司 Cerebras Systems 周四完成 IPO，发行价 $185（远超原区间 $115-$125），募资 $55 亿。开盘价 $385，暴涨 108%，收于 $311，市值达 $660 亿，成为 2026 年首个科技巨头级 IPO。</div>
+<div class="dim-item"><span class="dim-label">📊 关键数据</span><br>2025 年营收 $5.1 亿（同比+76%），净利润 $2.378 亿（前一年亏损近 $5 亿）。联合创始人 CEO Andrew Feldman 持股价值近 $19 亿，CTO Sean Lie 持股约 $10 亿。</div>
+<div class="dim-item"><span class="dim-label">🌍 影响范围</span><br>客户包括 OpenAI、G42、沙特 AI 大学和 AWS。Cerebras 定位为推理芯片主要供应商，直接挑战 Nvidia 的垄断地位。</div>
+<div class="dim-item"><span class="dim-label">🔮 后续动作</span><br>一年前因 CFIUS 审查（阿布扎比 G42 投资）IPO 搁浅，今年 4 月财务数据翻倍后重启上市。股价盘后仍在上涨。</div>
+<div class="dim-item"><span class="dim-label">💡 解读分析</span><br>Cerebras 的上市标志着 AI 芯片赛道进入「多极化」时代——Nvidia 不再一家独大。其 WSE 巨芯架构专为 AI 设计，在推理场景下相比 GPU 有独特优势。$660 亿估值反映市场对 AI 基础设施层的持续看好，但也要警惕营收过度集中（少数客户贡献绝大部分收入）的风险。</div>
+</div>
+<a class="link" href="https://techcrunch.com/2026/05/14/cerebras-raises-5-5b-kicking-off-2026s-ipo-season-with-a-bang/" target="_blank">🔗 TechCrunch 原文链接</a>
+</div>
+
+<!-- 2. OpenAI Codex Mobile -->
+<div class="card featured" id="s2">
+<div class="card-headline">🏆 OpenAI Codex 正式登陆 ChatGPT 手机 App，全计划可用</div>
+<div class="card-meta">
+<span>📅 发布日期：2026-05-14</span>
+<span>📰 TechCrunch / The Verge</span>
+<span class="badge badge-hot">HOT</span>
+</div>
+<div class="dim5">
+<div class="dim-item"><span class="dim-label">📌 核心事件</span><br>OpenAI 宣布 Codex 编程代理已集成至 ChatGPT 手机 App（iOS/Android），用户可通过手机远程管理 Codex 桌面端的所有开发任务。Preview 阶段面向所有计划开放，包括免费版和 Go 计划。</div>
+<div class="dim-item"><span class="dim-label">📊 关键数据</span><br>功能涵盖：跨线程工作、审查输出、审批命令、切换模型、启动新任务。文件、凭证、权限均保留在本地机器，更新通过截图、终端输出、diff 等实时回传手机。</div>
+<div class="dim-item"><span class="dim-label">🌍 影响范围</span><br>这是继 4 月 Codex 获得 macOS 桌面后台运行能力和 Chrome 扩展后的又一重大更新。Anthropic 2 月已推出 Claude Code 远程控制功能，双方代理编程工具竞争白热化。</div>
+<div class="dim-item"><span class="dim-label">🔮 后续动作</span><br>OpenAI 近期裁撤 Sora 视频生成、削减"副业项目"，全面聚焦企业市场和 Codex 代理工具。与 Anthropic 在代理编码赛道的争夺将决定谁占领开发者心智。</div>
+<div class="dim-item"><span class="dim-label">💡 解读分析</span><br>Codex 移动端将"随时编程"变为现实，降低了代理编程工具的门槛。免费版也开放 preview 是一个聪明的增长策略——先培养用户习惯再转化付费。但从 Anthropic 的领先优势看，OpenAI 在代理编程领域仍是追赶者。</div>
+</div>
+<a class="link" href="https://techcrunch.com/2026/05/14/openai-says-codex-is-coming-to-your-phone/" target="_blank">🔗 TechCrunch 原文链接</a> ·
+<a class="link" href="https://www.theverge.com/ai-artificial-intelligence/930763/openai-codex-chatgpt-ios-android-app-preview" target="_blank">The Verge</a>
+</div>
+
+<!-- 3. Musk v Altman -->
+<div class="card featured" id="s3">
+<div class="card-headline">🏆 Musk v. Altman 庭审结案陈词：一场闹剧中的真相与偏见</div>
+<div class="card-meta">
+<span>📅 发布日期：2026-05-14</span>
+<span>📰 TechCrunch / The Verge</span>
+<span class="badge badge-breaking">BREAKING</span>
+</div>
+<div class="dim5">
+<div class="dim-item"><span class="dim-label">📌 核心事件</span><br>Elon Musk 起诉 Sam Altman 一案进入结案陈词阶段。OpenAI 辩护律师 William Savitt 指出 Musk 有"选择性失忆"，声称在"风大的山顶上听到了别人听不到的话"。Musk 当天不在法庭（正随特朗普总统访问北京），Altman 和 Brockman 均出庭。</div>
+<div class="dim-item"><span class="dim-label">📊 关键数据</span><br>辩方指出证人使用"我不记得"达 150-200 次，论证 Musk 起诉已超过诉讼时效。Musk 曾向 Ilya Sutskever 和 Greg Brockman 捐赠 Tesla，被辩方暗示为"变相贿赂"以换取 62.5% 利润公司股份的支持。</div>
+<div class="dim-item"><span class="dim-label">🌍 影响范围</span><br>这场庭审被广泛认为"除了曝光脏衣服外一事无成"。但判决结果将直接影响 OpenAI 的治理结构和非营利使命的法律地位。微软在庭审中极力撇清关系。</div>
+<div class="dim-item"><span class="dim-label">🔮 后续动作</span><br>陪审团正在审议中。无论结果如何，此案已永久改变了 AI 行业的信任格局和合作模式。</div>
+<div class="dim-item"><span class="dim-label">💡 解读分析</span><br>庭审暴露了 AI 行业最深层的矛盾：非营利理想与商业现实的撕裂。Musk 的缺席和辩方的压倒性表现让此案看起来更像是个人恩怨的清算而非严肃的法律争议。但核心问题——OpenAI 是否背叛了创始原则——至今没有令人满意的答案。</div>
+</div>
+<a class="link" href="https://techcrunch.com/2026/05/14/what-the-jury-will-actually-decide-in-the-case-of-elon-musk-vs-sam-altman/" target="_blank">🔗 TechCrunch 原文链接</a> ·
+<a class="link" href="https://www.theverge.com/ai-artificial-intelligence/931006/musk-v-altman-closing-arguments-analysis" target="_blank">The Verge 分析</a>
+</div>
+
+<!-- 4. Recursive Superintelligence -->
+<div class="card" id="s4">
+<div class="card-headline">田渊栋八人天团「Recursive Superintelligence」融资 $6.5 亿，杀入递归自我进化赛道</div>
+<div class="card-meta">
+<span>📅 发布日期：2026-05-14</span>
+<span>📰 36氪 / 新智元</span>
+<span class="badge badge-verified">✅ 已验证</span>
+</div>
+<div class="dim5">
+<div class="dim-item"><span class="dim-label">📌 核心事件</span><br>成立不到半年的 Recursive Superintelligence 正式走出隐身模式，由 GV（Google Ventures）和 Greycroft 领投，AMD Ventures 和英伟达跟投，融资 $6.5 亿（约 44 亿人民币），估值 $46.5 亿。公司仅有 25 人，无产品。</div>
+<div class="dim-item"><span class="dim-label">📊 关键数据</span><br>八位联合创始人均为 AI 领域顶级研究员：Richard Socher（NLP 词向量奠基人）、Caiming Xiong（Salesforce AI Research 前 SVP）、田渊栋（Meta FAIR 前研究总监）、Alexey Dosovitskiy（ViT 第一作者）、Jeff Clune（达尔文·哥德尔机作者）、Tim Rocktäschel（DeepMind Genie 核心）、Josh Tobin（OpenAI 机器人团队搭建者）、Tim Shi（OpenAI 早期成员、Cresta 联创）。</div>
+<div class="dim-item"><span class="dim-label">🌍 影响范围</span><br>目标是实现"递归自我进化"（RSI）：让 AI 自己训练自己，自动化数据筛选、训练设计、后训练对齐、研究方向选择整条 pipeline。如果成功，将形成"AI 改进自己 → 更强的 AI 更擅长改进自己"的加速反馈循环。</div>
+<div class="dim-item"><span class="dim-label">🔮 后续动作</span><br>Richard Socher 宣称这是"神经网络的第三阶段，也许是最后一个阶段"——第一阶段特征工程师失业，第二阶段细分赛道公司消失，第三阶段 AI 学会训练自己。</div>
+<div class="dim-item"><span class="dim-label">💡 解读分析</span><br>这份创始名单几乎是过去十年 AI 关键突破的作者索引。Recursive 赌的是"AI 研究员"这个职业会消失——而这些人正是该职业的巅峰代表。$6.5 亿投给 25 人且无产品的公司，说明资本对 RSI 赛道的狂热程度。但也需警惕：递归自我进化目前更多是概念而非已验证的技术路径。</div>
+</div>
+<a class="link" href="https://36kr.com/p/3808752170819081" target="_blank">🔗 36氪 原文链接</a>
+</div>
+
+<!-- 5. Microsoft Claude Code -->
+<div class="card" id="s5">
+<div class="card-headline">微软开始取消 Claude Code 许可，全面转向 GitHub Copilot CLI</div>
+<div class="card-meta">
+<span>📅 发布日期：2026-05-14</span>
+<span>📰 The Verge</span>
+<span class="badge badge-verified">✅ 已验证</span>
+</div>
+<div class="dim5">
+<div class="dim-item"><span class="dim-label">📌 核心事件</span><br>微软 Experiences + Devices 团队（Windows、M365、Outlook、Teams、Surface）计划在 6 月 30 日前全面停用 Claude Code，迁移到 GitHub Copilot CLI。数千名微软开发者将受影响。</div>
+<div class="dim-item"><span class="dim-label">📊 关键数据</span><br>微软去年 12 月向数千名开发者开放 Claude Code，包括无编程经验的设计师和项目经理。但 Claude Code 在内部"太受欢迎"，反而削弱了微软自研的 Copilot CLI。6/30 是微软当前财年最后一天，取消许可可直接削减运营支出。</div>
+<div class="dim-item"><span class="dim-label">🌍 影响范围</span><br>微软曾是 Anthropic 最大的客户之一。EVP Rajesh Jha 表示 Claude Code 是"学习过程的重要部分"，但 Copilot CLI 能让微软直接塑造产品以适应自身代码库和工作流。</div>
+<div class="dim-item"><span class="dim-label">🔮 后续动作</span><br>Copilot CLI 仍可使用 Anthropic 模型和 OpenAI 模型。微软此前考虑收购 Cursor 来弥补 Copilot 差距，但出于监管考量转向其他 AI 初创公司投资。</div>
+<div class="dim-item"><span class="dim-label">💡 解读分析</span><br>这是一个标志性事件：即使是最亲密的合作伙伴，当自家产品被"碾压"时也会选择退出。微软内部开发者用脚投票选 Claude Code，但现在用行政手段强制迁移到 Copilot CLI。这既反映了 AI 编程工具竞争的激烈程度，也暴露了大厂"自研 vs 采购"的永恒矛盾。</div>
+</div>
+<a class="link" href="https://www.theverge.com/tech/930447/microsoft-claude-code-discontinued-notepad" target="_blank">🔗 The Verge 原文链接</a>
+</div>
+
+<!-- 6. SpaceXAI bleeding staff -->
+<div class="card" id="s6">
+<div class="card-headline">SpaceXAI 合并后人才流失严重：50+ 核心员工离职，Meta 和 Mira Murati 公司挖角</div>
+<div class="card-meta">
+<span>📅 发布日期：2026-05-14</span>
+<span>📰 TechCrunch</span>
+<span class="badge badge-verified">✅ 已验证</span>
+</div>
+<div class="dim5">
+<div class="dim-item"><span class="dim-label">📌 核心事件</span><br>据 The Information 报道，自 2 月 SpaceX 收购 xAI 以来，已有超过 50 名研究员和工程师离职，包括编码、世界模型和 Grok 语音方向的关键领导。至少 11 人跳槽 Meta，7 人加入 Mira Murati 的 Thinking Machine Labs。</div>
+<div class="dim-item"><span class="dim-label">📊 关键数据</span><br>核心预训练团队仅剩少数几人（团队负责人 Juntang Zhuang 已离开）。SpaceXAI 本月刚完成更名。Musk 的极端工作文化被认为是离职主因之一。</div>
+<div class="dim-item"><span class="dim-label">🌍 影响范围</span><br>预训练是构建新 AI 模型的第一步。核心人员流失引发外界对 SpaceXAI 是否仍致力于开发领先模型的质疑。此前近半数创始团队已离开。</div>
+<div class="dim-item"><span class="dim-label">🔮 后续动作</span><br>竞争对手（Meta、Thinking Machine Labs）正在积极吸收 xAI 流出的顶级人才。合并后的新领导层也导致内部不满。</div>
+<div class="dim-item"><span class="dim-label">💡 解读分析</span><br>SpaceXAI 的人才流失是 AI 行业"军备竞赛"的缩影。并购整合的阵痛、领导层变动、极端工作文化叠加流动性事件（削弱了留任激励），形成了完美的人才外流风暴。如果预训练团队持续萎缩，Grok 的模型竞争力将面临严峻考验。</div>
+</div>
+<a class="link" href="https://techcrunch.com/2026/05/14/elon-musks-spacexai-has-been-bleeding-staff-since-its-merger/" target="_blank">🔗 TechCrunch 原文链接</a>
+</div>
+
+<!-- 7. Anthropic business customers -->
+<div class="card" id="s7">
+<div class="card-headline">Ramp 数据：Anthropic 商业客户数首次超过 OpenAI</div>
+<div class="card-meta">
+<span>📅 发布日期：2026-05-13</span>
+<span>📰 TechCrunch</span>
+<span class="badge badge-verified">✅ 已验证</span>
+</div>
+<div class="dim5">
+<div class="dim-item"><span class="dim-label">📌 核心事件</span><br>根据企业支出管理平台 Ramp 的数据，Anthropic 的企业客户数量已超过 OpenAI。这是 Anthropic 在企业市场超越 OpenAI 的首个公开数据信号。</div>
+<div class="dim-item"><span class="dim-label">📊 关键数据</span><br>Ramp 通过分析数万家企业的 AI 工具支出来追踪采用趋势。结合微软取消 Claude Code 转向 Copilot CLI 的消息，Anthropic 在企业端的增长势头可见一斑。</div>
+<div class="dim-item"><span class="dim-label">🌍 影响范围</span><br>Anthropic 的 Claude Code 在过去一年中在企业和技术专业人士中人气飙升。加上向中小企业拓展的战略，Anthropic 正形成从大企到中小客户的全覆盖。</div>
+<div class="dim-item"><span class="dim-label">🔮 后续动作</span><br>Anthropic 同时在推进：Cat Wu 描绘的"预判需求"AI 愿景、中小企业客户拓展、Claude Code 持续迭代。多条战线并进。</div>
+<div class="dim-item"><span class="dim-label">💡 解读分析</span><br>这是 AI 行业格局变化的重要信号。OpenAI 凭借 ChatGPT 在消费端的品牌知名度仍然领先，但在企业级市场，Anthropic 凭借 Claude 系列模型的安全性和可靠性正在弯道超车。Ramp 数据虽非全面市场份额，但反映了真实的企业采购趋势。</div>
+</div>
+<a class="link" href="https://techcrunch.com/2026/05/13/anthropic-now-has-more-business-customers-than-openai-according-to-ramp-data/" target="_blank">🔗 TechCrunch 原文链接</a>
+</div>
+
+<!-- 8. Notion AI Agent Hub -->
+<div class="card" id="s8">
+<div class="card-headline">Notion 发布 AI Agent 开发者平台：Workspace 变身 Agent 协作中枢</div>
+<div class="card-meta">
+<span>📅 发布日期：2026-05-13</span>
+<span>📰 TechCrunch</span>
+<span class="badge badge-new">NEW</span>
+</div>
+<div class="dim5">
+<div class="dim-item"><span class="dim-label">📌 核心事件</span><br>Notion 发布开发者平台，将工作空间升级为 AI Agent 协作中枢。新功能包括：Workers（云端代码运行沙箱）、数据库同步（支持任何 API 数据源）、外部 Agent 直接对话（Claude Code、Cursor、Codex、Decagon 已支持）。</div>
+<div class="dim-item"><span class="dim-label">📊 关键数据</span><br>自 2 月推出 Custom Agents 以来，Notion 用户已构建超过 100 万个自定义 Agent。Workers 功能在 8 月前免费。外部 Agent API 允许企业连接自建内部 Agent。</div>
+<div class="dim-item"><span class="dim-label">🌍 影响范围</span><br>Notion 正从"笔记工具+AI 功能"转型为 Agent 编排层——协调跨工具、跨数据源的 AI 工作。CEO Ivan Zhao 承认"Notion 历史上不是最开发者友好的平台，但情况正在改变"。</div>
+<div class="dim-item"><span class="dim-label">🔮 后续动作</span><br>Notion CLI 已上线，开发者可通过 MCP（Model Context Protocol）连接外部服务，也可通过 Workers 编写自定义逻辑处理 MCP 无法满足的场景。</div>
+<div class="dim-item"><span class="dim-label">💡 解读分析</span><br>Notion 的战略转型代表了 SaaS 平台的一个新范式：不再自己造轮子，而是成为 Agent 生态的"操作系统"。100 万 Custom Agents 的数据说明需求旺盛，但 Notion 面临来自传统开发平台和新兴 Agent 编排工具的双重竞争。</div>
+</div>
+<a class="link" href="https://techcrunch.com/2026/05/13/notion-just-turned-its-workspace-into-a-hub-for-ai-agents/" target="_blank">🔗 TechCrunch 原文链接</a>
+</div>
+
+<!-- 9. Google DeepMind Pointer -->
+<div class="card" id="s9">
+<div class="card-headline">Google DeepMind 实验性「AI-enabled pointer」：下一代交互是「指哪 AI 打哪」</div>
+<div class="card-meta">
+<span>📅 发布日期：2026-05-15</span>
+<span>📰 36氪 / 新智元</span>
+<span class="badge badge-new">NEW</span>
+</div>
+<div class="dim5">
+<div class="dim-item"><span class="dim-label">📌 核心事件</span><br>Google DeepMind 发布实验原型「AI-enabled pointer」，在键盘、鼠标、触屏之后探索下一代人机交互范式。Hassabis 盛赞该项目，称其将"指哪 AI 打哪，连提示词都省了"。</div>
+<div class="dim-item"><span class="dim-label">📊 关键数据</span><br>原型演示显示用户可以通过简单的指向动作触发 AI 理解意图并执行操作，无需输入完整提示词。</div>
+<div class="dim-item"><span class="dim-label">🌍 影响范围</span><br>如果成熟，这种交互方式可能颠覆现有的提示工程范式，让 AI 交互回归直觉化。</div>
+<div class="dim-item"><span class="dim-label">🔮 后续动作</span><br>目前仍为实验原型，距离产品化还有距离。但方向明确：AI 理解上下文的能力越强，用户输入的门槛就越低。</div>
+<div class="dim-item"><span class="dim-label">💡 解读分析</span><br>这是 DeepMind 对"AI 交互终极形态"的一次探索。从命令行到 GUI、从触屏到语音、从语音到 Agent、从 Agent 到 Pointer——交互的历史就是一条不断降低用户认知负担的曲线。Pointer 如果能成熟落地，将是提示工程的终结者。</div>
+</div>
+<a class="link" href="https://36kr.com/p/3809801647595272" target="_blank">🔗 36氪 原文链接</a>
+</div>
+
+<!-- 10. Anthropic Agent Policy -->
+<div class="card" id="s10">
+<div class="card-headline">Anthropic 新政：抛弃最忠实的 Agent 用户，引发争议</div>
+<div class="card-meta">
+<span>📅 发布日期：2026-05-15</span>
+<span>📰 36氪 / 新智元</span>
+<span class="badge badge-hot">争议</span>
+</div>
+<div class="dim5">
+<div class="dim-item"><span class="dim-label">📌 核心事件</span><br>Anthropic 推出新的使用政策，对 Agent/自动化用户进行限制，被批评为"过河拆桥"——最忠实的 Agent 用户反成被打击对象。</div>
+<div class="dim-item"><span class="dim-label">📊 关键数据</span><br>新政策具体条款引发社区强烈反弹，许多早期基于 Claude API 构建自动化工作流的用户受影响。</div>
+<div class="dim-item"><span class="dim-label">🌍 影响范围</span><br>这一政策变化同时出现在 Anthropic 积极拓展中小企业客户的背景下，显示出其在用户增长和平台治理之间的矛盾。</div>
+<div class="dim-item"><span class="dim-label">💡 解读分析</span><br>Anthropic 的困境在于：Agent 用户带来了巨大的 API 消耗量，但也带来了滥用风险和不可控的模型行为。限制 Agent 可能是为了控制风险，但代价是疏远了最具技术深度的用户群体。长期来看，这可能将用户推向 OpenAI Codex 或开源方案。</div>
+</div>
+<a class="link" href="https://36kr.com/p/3809705808830209" target="_blank">🔗 36氪 原文链接</a>
+</div>
+
+<!-- 11. Cisco layoffs -->
+<div class="card" id="s11">
+<div class="card-headline">思科裁员近 4,000 人（约 5%），创纪录营收下仍选择转投 AI</div>
+<div class="card-meta">
+<span>📅 发布日期：2026-05-14</span>
+<span>📰 TechCrunch</span>
+<span class="badge badge-verified">✅ 已验证</span>
+</div>
+<div class="dim5">
+<div class="dim-item"><span class="dim-label">📌 核心事件</span><br>思科在财 Q3 营收和利润超预期的情况下仍宣布裁员约 4,000 人（占总员工 5%），以调整成本结构并加大对 AI 和网络安全的投资。</div>
+<div class="dim-item"><span class="dim-label">📊 关键数据</span><br>CEO Chuck Robbins 在博文中称公司营收创纪录、实现"双位数增长"。CEO 2025 年薪酬超 $5,200 万。这是思科近年来的又一轮裁员（2024 年已有两次大规模裁员）。</div>
+<div class="dim-item"><span class="dim-label">🌍 影响范围</span><br>思科的趋势与 Cloudflare（AI 让 1,100 岗位过时）和通用汽车（裁员 IT 人员招募 AI 技能人才）一致——科技公司在业绩良好的情况下仍以 AI 为名裁员。</div>
+<div class="dim-item"><span class="dim-label">💡 解读分析</span><br>思科的裁员不是"生存危机"而是"资源再分配"。但这也引发了一个更广泛的问题：当 AI 投资成为裁员的万能理由时，企业是否真的在用 AI 提效，还是只是以此为借口削减人力成本？CEO $5,200 万薪酬与 4,000 人失业形成鲜明对比。</div>
+</div>
+<a class="link" href="https://techcrunch.com/2026/05/14/cisco-cuts-nearly-4000-jobs-to-spend-more-on-ai-reports-record-quarterly-revenue/" target="_blank">🔗 TechCrunch 原文链接</a>
+</div>
+
+<!-- 12. OpenAI vs Apple -->
+<div class="card" id="s12">
+<div class="card-headline">OpenAI 据报准备对 Apple 采取法律行动——又一个被"背刺"的合作伙伴</div>
+<div class="card-meta">
+<span>📅 发布日期：2026-05-14</span>
+<span>📰 TechCrunch</span>
+<span class="badge badge-hot">HOT</span>
+</div>
+<div class="dim5">
+<div class="dim-item"><span class="dim-label">📌 核心事件</span><br>据 TechCrunch 报道，OpenAI 正在准备对 Apple 采取法律行动。OpenAI 不是第一个感到被 Apple 背叛的合作伙伴。</div>
+<div class="dim-item"><span class="dim-label">🌍 影响范围</span><br>这发生在 Apple Intelligence 深度整合 ChatGPT 之后不久。业界此前认为这是 OpenAI 获取 iPhone 用户的重要渠道，但 Apple 似乎正快速将 AI 能力内部化。</div>
+<div class="dim-item"><span class="dim-label">💡 解读分析</span><br>OpenAI 与 Apple 的关系从一开始就不对称：Apple 获得了 ChatGPT 集成来为 Apple Intelligence 造势，而 OpenAI 获得的实际用户增长有限。如果法律行动属实，这将进一步加剧 AI 公司与科技巨头之间合作的不信任感。</div>
+</div>
+<a class="link" href="https://techcrunch.com/2026/05/14/openai-is-reportedly-preparing-legal-action-against-apple-it-wouldnt-be-the-first-partner-to-feel-burned/" target="_blank">🔗 TechCrunch 原文链接</a>
+</div>
+
+<!-- 13. xAI Grok Build -->
+<div class="card" id="s13">
+<div class="card-headline">xAI 发布 Grok Build CLI 公测，加入代理编程工具战局</div>
+<div class="card-meta">
+<span>📅 发布日期：2026-05-14</span>
+<span>📰 The Verge / xAI</span>
+<span class="badge badge-new">NEW</span>
+</div>
+<div class="dim5">
+<div class="dim-item"><span class="dim-label">📌 核心事件</span><br>xAI 推出 Grok Build 的早期公测版，一个基于 Grok 的代理编程 CLI 工具。目前仅面向 SuperGrok Heavy 订阅用户开放。</div>
+<div class="dim-item"><span class="dim-label">🌍 影响范围</span><br>在 Anthropic 和 OpenAI 主导代理编程工具的格局下，xAI 作为第三极入场。但考虑到 SpaceXAI 同时面临严重的人才流失（见第 6 条），这款工具的研发能力和后续迭代速度存疑。</div>
+<div class="dim-item"><span class="dim-label">💡 解读分析</span><br>xAI 入局代理编程是必然选择，但在人才大量流失的背景下推出公测产品，更像是"占坑"而非真正的竞争力展示。Grok Build 需要证明的不只是技术能力，更是要在人才流失的逆境中维持产品迭代。</div>
+</div>
+<a class="link" href="https://www.theverge.com/ai-artificial-intelligence/930802/xai-launches-an-early-beta-of-its-agentic-cli-for-grok" target="_blank">🔗 The Verge 原文链接</a>
+</div>
+
+<!-- 14. Adaption AutoScientist -->
+<div class="card" id="s14">
+<div class="card-headline">Adaption 发布 AutoScientist：让 AI 模型自己训练自己</div>
+<div class="card-meta">
+<span>📅 发布日期：2026-05-13</span>
+<span>📰 TechCrunch</span>
+<span class="badge badge-verified">✅ 已验证</span>
+</div>
+<div class="dim5">
+<div class="dim-item"><span class="dim-label">📌 核心事件</span><br>Adaption 推出 AutoScientist，一款帮助 AI 模型自我训练的 AI 工具。目标是自动化模型研发流程中的人工环节。</div>
+<div class="dim-item"><span class="dim-label">🌍 影响范围</span><br>与田渊栋团队的"递归自我进化"理念不谋而合，但 Adaption 选择从工具层面切入而非组建全明星研究团队。</div>
+<div class="dim-item"><span class="dim-label">💡 解读分析</span><br>AutoScientist 和 Recursive Superintelligence 代表了同一趋势的两种路径：一个是"工具化"渐进路线，一个是"全明星团队+巨额融资"的冲刺路线。谁先跑通 RSI 的某个子环节，谁就可能定义下一代 AI 研发的范式。</div>
+</div>
+<a class="link" href="https://techcrunch.com/2026/05/13/adaption-aims-big-with-autoscientist-an-ai-tool-that-helps-models-train-themselves/" target="_blank">🔗 TechCrunch 原文链接</a>
+</div>
+
+<!-- 15. arXiv -->
+<div class="card" id="s15">
+<div class="card-headline">arXiv 出台新规：AI 幻觉虚构引用者将被禁投 1 年</div>
+<div class="card-meta">
+<span>📅 发布日期：2026-05-14</span>
+<span>📰 Hacker News / Twitter</span>
+<span class="badge badge-hot">240 热度</span>
+</div>
+<div class="dim5">
+<div class="dim-item"><span class="dim-label">📌 核心事件</span><br>arXiv 宣布新政策：对于在论文中使用 AI 生成虚构参考文献的作者，将处以 1 年禁投处罚。HN 热度 240 分，78 条评论。</div>
+<div class="dim-item"><span class="dim-label">💡 解读分析</span><br>这是学术界对 AI 幻觉问题最直接的制度回应。随着 AI 辅助写作在学术界普及，虚构引用从"偶发问题"变成了系统性风险。1 年禁投是一个强信号，但也引发了关于"如何区分恶意虚构和无意识幻觉"的讨论。</div>
+</div>
+<a class="link" href="https://news.ycombinator.com/item?id=48140922" target="_blank">🔗 HN 原文链接</a>
+</div>
+
+<!-- 16. Ontario AI note takers -->
+<div class="card" id="s16">
+<div class="card-headline">安大略审计发现：医生 AI 笔记工具频繁搞错基本事实</div>
+<div class="card-meta">
+<span>📅 发布日期：2026-05-14</span>
+<span>📰 The Register / Hacker News</span>
+<span class="badge badge-hot">73 热度</span>
+</div>
+<div class="dim5">
+<div class="dim-item"><span class="dim-label">📌 核心事件</span><br>安大略省审计人员发现，医生们使用的 AI 笔记工具 routinely（经常性）搞错基本事实。HN 热度 73 分。</div>
+<div class="dim-item"><span class="dim-label">💡 解读分析</span><br>医疗 AI 应用的"最后一公里"问题暴露无遗。AI 笔记工具在理想环境下表现良好，但面对真实医疗场景的复杂性和容错率极低的要求时，基本事实错误可能直接威胁患者安全。这不仅是技术问题，更是监管和责任界定的问题。</div>
+</div>
+<a class="link" href="https://news.ycombinator.com/item?id=48142188" target="_blank">🔗 The Register 原文链接</a>
+</div>
+
+<!-- 17. Wirestock -->
+<div class="card" id="s17">
+<div class="card-headline">Wirestock 融资 $2,300 万：为 AI 实验室供应创意多模态数据</div>
+<div class="card-meta">
+<span>📅 发布日期：2026-05-14</span>
+<span>📰 TechCrunch</span>
+<span class="badge badge-verified">✅ 已验证</span>
+</div>
+<div class="dim5">
+<div class="dim-item"><span class="dim-label">📌 核心事件</span><br>Wirestock 融资 $2,300 万，定位为 AI 实验室的创意多模态数据供应商。</div>
+<div class="dim-item"><span class="dim-label">💡 解读分析</span><br>随着 AI 训练数据需求从"越多越好"转向"质量越高越好"，合规、高质量的创意数据正在成为稀缺资源。Wirestock 的融资反映了 AI 数据供应链正在成为一个独立的投资赛道。</div>
+</div>
+<a class="link" href="https://techcrunch.com/2026/05/14/wirestock-raises-23m-to-supply-multi-modal-data-to-ai-labs/" target="_blank">🔗 TechCrunch 原文链接</a>
+</div>
+
+<!-- 18. Anthropic small business -->
+<div class="card" id="s18">
+<div class="card-headline">Anthropic 进军中小企业市场：AI 正在抄 SaaS 的老底</div>
+<div class="card-meta">
+<span>📅 发布日期：2026-05-13</span>
+<span>📰 TechCrunch / 36氪</span>
+<span class="badge badge-verified">✅ 已验证</span>
+</div>
+<div class="dim5">
+<div class="dim-item"><span class="dim-label">📌 核心事件</span><br>Anthropic 开始积极接触中小企业主这一全新客户类型。结合另一篇报道"AaaS 成主流，Claude 抄中小企业软件老底"，SaaS 订阅制正受到 AI Agent 模式的冲击。</div>
+<div class="dim-item"><span class="dim-label">💡 解读分析</span><br>Anthropic 的策略转变意味深长：从服务企业客户到直接面向中小企业。AI Agent 有能力替代传统 SaaS 的多个功能模块——一个 Claude Agent 可能顶得上 5 个 SaaS 工具的集成。对于中小企业来说，这可能是从"买 10 个 SaaS 订阅"到"买一个 Agent 能力"的范式转换。</div>
+</div>
+<a class="link" href="https://techcrunch.com/2026/05/13/anthropic-courts-a-new-kind-of-customer-small-business-owners/" target="_blank">🔗 TechCrunch 原文链接</a> ·
+<a class="link" href="https://36kr.com/p/3809759520759553" target="_blank">36氪 解读</a>
+</div>
+
+<footer>
+<p>🤖 AI 新闻日报 · 2026-05-15 星期五</p>
+<p>数据来源：TechCrunch, The Verge, 36氪, Hacker News, The Register</p>
+<p>时间范围：2026-05-12 至 2026-05-15 | 共收录 18 条新闻</p>
+</footer>
+
+</body>
+</html>
