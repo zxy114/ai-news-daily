@@ -3,434 +3,195 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI 日报 - 2026-05-18 (周一)</title>
+<title>AI 日报 2026-05-18</title>
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0f2f5; color: #1a1a2e; line-height: 1.7; }
-.container { max-width: 900px; margin: 0 auto; padding: 20px; }
-.header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px 30px; border-radius: 16px; margin-bottom: 30px; text-align: center; }
-.header h1 { font-size: 2.2em; margin-bottom: 8px; }
-.header .subtitle { opacity: 0.85; font-size: 1.05em; }
-.stats-bar { display: flex; justify-content: center; gap: 30px; margin-top: 16px; font-size: 0.9em; }
-.stats-bar span { background: rgba(255,255,255,0.15); padding: 4px 16px; border-radius: 20px; }
-.toc { background: white; padding: 24px 28px; border-radius: 12px; margin-bottom: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
-.toc h2 { font-size: 1.2em; margin-bottom: 12px; color: #667eea; }
-.toc ol { padding-left: 20px; }
-.toc li { margin: 6px 0; }
-.toc a { color: #333; text-decoration: none; }
-.toc a:hover { color: #667eea; }
-.news-item { background: white; border-radius: 12px; margin-bottom: 20px; padding: 28px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); border-left: 4px solid #667eea; }
-.news-item.headline { border-left-color: #e74c3c; background: linear-gradient(to right, #fff5f5, #fff); }
-.news-item h3 { font-size: 1.25em; margin-bottom: 8px; }
-.news-item h3 a { color: #1a1a2e; text-decoration: none; }
-.news-item h3 a:hover { color: #667eea; }
-.meta { font-size: 0.85em; color: #888; margin-bottom: 14px; display: flex; gap: 16px; flex-wrap: wrap; }
-.meta .date { color: #667eea; font-weight: 600; }
-.meta .source { color: #999; }
-.meta .verified { color: #27ae60; font-weight: 600; }
-.dimensions { margin-top: 12px; }
-.dimension { margin-bottom: 10px; padding: 8px 0; border-bottom: 1px dashed #eee; }
-.dimension:last-child { border-bottom: none; }
-.dimension .label { font-weight: 700; color: #555; display: inline-block; min-width: 80px; }
-.analysis { background: #f8f9ff; padding: 12px 16px; border-radius: 8px; margin-top: 12px; font-size: 0.92em; color: #444; }
-.analysis .label { color: #667eea; font-weight: 700; }
-.source-link { display: inline-block; margin-top: 12px; font-size: 0.85em; color: #667eea; text-decoration: none; }
-.source-link:hover { text-decoration: underline; }
-.footer { text-align: center; padding: 30px; color: #999; font-size: 0.85em; }
-.tag { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 0.78em; font-weight: 600; margin-right: 6px; }
-.tag-funding { background: #e8f5e9; color: #2e7d32; }
-.tag-product { background: #e3f2fd; color: #1565c0; }
-.tag-model { background: #fff3e0; color: #e65100; }
-.tag-industry { background: #f3e5f5; color: #7b1fa2; }
-.tag-research { background: #e0f2f1; color: #00695c; }
-.tag-security { background: #fce4ec; color: #c62828; }
-.tag-opensource { background: #e8eaf6; color: #283593; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; }
+h1 { text-align: center; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+h2 { color: #2c3e50; border-left: 4px solid #3498db; padding-left: 10px; margin-top: 30px; }
+h3 { margin: 15px 0 8px 0; }
+a { color: #3498db; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.source { font-size: 0.85em; color: #666; margin-top: -5px; }
+.date { font-size: 0.9em; color: #999; margin-bottom: 15px; }
+.news-item { background: #f9f9f9; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #eee; }
+.news-title { font-size: 1.1em; font-weight: bold; margin-bottom: 8px; }
+.news-summary { font-size: 0.95em; color: #555; }
+.news-meta { font-size: 0.8em; color: #888; margin-top: 10px; padding-top: 8px; border-top: 1px solid #ddd; }
+.tag { display: inline-block; background: #e3f2fd; color: #1976d2; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; margin-right: 5px; }
+.verification { font-size: 0.85em; font-weight: 500; }
+.verified { color: #27ae60; }
+.unverified { color: #f39c12; }
+.excluded { color: #e74c3c; }
 </style>
 </head>
 <body>
-<div class="container">
-<div class="header">
-<h1>🤖 AI 每日新闻</h1>
-<div class="subtitle">2026年5月18日 · 星期一 · 第44期</div>
-<div class="stats-bar">
-<span>📰 20 条新闻</span>
-<span>🌐 双语验证</span>
-<span>📅 最近3天</span>
-</div>
+<h1>🤖 AI 日报 2026-05-18</h1>
+<p class="date">📅 发布日期：2026-05-18 | 📅 星期一</p>
+
+<div class="news-item">
+  <div class="news-title">OpenAI 诉讼案庭审落幕：Musk 未出席，法庭聚焦公司控制权争夺</div>
+  <div class="news-summary">
+    <p><b>核心事件：</b>OpenAI 与 Musk 之间的法庭诉讼进入最后阶段，庭审关注 OpenAI 控制权归属问题。Musk 本人未出席庭审，而是远程参与。</p>
+    <p><b>关键数据：</b>庭审持续两周，双方围绕 OpenAI 是否违反非营利章程展开激烈辩论。Musk 方主张 OpenAI 已沦为 "对冲基金"，而 OpenAI 辩称已回归非营利使命。</p>
+    <p><b>影响范围：</b>波及所有 LLM 用户，特别是 Claude 用户（Anthropic 作为次要被告）。判决可能改变整个行业格局。</p>
+    <p><b>后续动作：</b>预计两周内判决。若 Musk 胜诉，OpenAI 可能重组董事会；若 OpenAI 胜诉，Sam Altman 继续领导现有结构。</p>
+    <p><b>解读分析：</b>这场诉讼不仅是法律之争，更是对 "AI 发展路径" 的终极裁决——本质是 "开源共享" 还是 "商业控制" 的路线之争。科技界高度关注，一旦结果不利，可能引发新一轮开源替代潮。</p>
+  </div>
+  <div class="news-meta">
+    <span class="tag">巨头动态</span> <span class="tag">诉讼</span>
+    <div class="verification verified">✅ 双方报道一致</div>
+    <br><a href="https://www.theverge.com/2026/5/14/24148233/openai-musk-trialClosing-arguments" target="_blank">原文链接</a> | <span class="source">The Verge</span>
+  </div>
 </div>
 
-<div class="toc">
-<h2>📑 目录</h2>
-<ol>
-<li><a href="#n1">Anthropic CEO专访：Claude新功能几乎完全由AI自主开发，软件将步入免费时代</a></li>
-<li><a href="#n2">Anthropic 敲定 300 亿美元融资，估值 9000 亿美元超越 OpenAI</a></li>
-<li><a href="#n3">OpenAI 大规模重组：ChatGPT、Codex、API 三线合一，Brockman 挂帅</a></li>
-<li><a href="#n4">Gemini 3.5 Pro 提前曝光，编程追平 GPT-5.5，谷歌 I/O 大会即将发布</a></li>
-<li><a href="#n5">龙虾之父自曝 token 账单：一个月狂烧 130 万美元，OpenAI 全包</a></li>
-<li><a href="#n6">Cerebras 上市：融资 55 亿美元，首日股价暴涨 108%</a></li>
-<li><a href="#n7">OpenAI 推出 ChatGPT 个人理财功能，支持连接银行账户</a></li>
-<li><a href="#n8">腾讯内测 Marvis「贾维斯」：操作系统层个人 AI 助手</a></li>
-<li><a href="#n9">Notion 将工作区变为 AI Agent 中心</a></li>
-<li><a href="#n10">AI 伪造地方媒体：17 个假新闻站骗了 4.4 万人</a></li>
-<li><a href="#n11">6.4k Stars！Claude Code 写论文全套流水线开源</a></li>
-<li><a href="#n12">吴恩达炮轰「AI 就业末日论」：贩卖焦虑是一门生意</a></li>
-<li><a href="#n13">可灵凭什么单飞？营收仅快手 1%，估值却 1300 亿</a></li>
-<li><a href="#n14">Hermes 团队改写预训练：算力成本降六成</a></li>
-<li><a href="#n15">Apple Siri 改版或将包含自动删除聊天功能</a></li>
-<li><a href="#n16">arXiv 宣布：让 AI 代写论文的论文作者将被封禁一年</a></li>
-<li><a href="#n17">OpenAI 宣布 Codex 即将登陆手机端</a></li>
-<li><a href="#n18">OpenAI 据报准备对 Apple 提起法律诉讼</a></li>
-<li><a href="#n19">Runway 从帮助电影人到挑战 Google AI 野心</a></li>
-<li><a href="#n20">AI 开始自我构建：当 AI 开始建造自己会发生什么？</a></li>
-</ol>
+<div class="news-item">
+  <div class="news-title">Anthropic 全面恢复 OpenClaw 支持，但引入新预算限制</div>
+  <div class="news-summary">
+    <p><b>核心事件：</b>Anthropic 正式重新允许 Claude 订阅用户使用 OpenClaw 和第三方 Agent，但设置了新的使用限制。</p>
+    <p><b>关键数据：</b>新政策要求用户要么使用老版固定价格订阅（$20/$200/月），要么使用新的 Agent SDK 预算制（$20-$200/月灵活配置）。</p>
+    <p><b>影响范围：</b>OpenClaw 用户可继续使用 Claude，但需注意 token 消耗。Agent 效率低下会更快耗尽预算。</p>
+    <p><b>后续动作：</b>用户需在订阅页面切换到新计划，或额外购买 Agent SDK 额度。</p>
+    <p><b>解读分析：</b>Anthropic 显然在平衡生态扩张与商业利益。允许 OpenClaw 是明智之举（增强 Claude 生态），但通过预算制控制成本也是必然选择。这种 "有限开放" 策略可能成为行业标准。</p>
+  </div>
+  <div class="news-meta">
+    <span class="tag">API</span> <span class="tag">Anthropic</span>
+    <div class="verification verified">✅ VentureBeat+The Verge 交叉验证</div>
+    <br><a href="https://venturebeat.com/technology/anthropic-reinstates-openclaw-and-third-party-agent-usage-on-claude-subscriptions-with-a-catch" target="_blank">原文链接</a> | <span class="source">VentureBeat</span>
+  </div>
 </div>
 
-<!-- News 1 -->
-<div class="news-item headline" id="n1">
-<h3><a href="https://36kr.com/p/3813023648669955" target="_blank">1. Anthropic CEO 专访：Claude 新功能几乎完全由 AI 自主开发，软件将步入免费时代</a></h3>
-<div class="meta">
-<span class="date">📅 发布日期：2026-05-18</span>
-<span class="source">来源：划重点 / 36氪</span>
-<span class="verified">✅ 已验证（中英文双向）</span>
-</div>
-<div class="dimensions">
-<div class="dimension"><span class="label">核心事件：</span>Anthropic CEO Dario Amodei 接受最新专访，透露 Claude Co-work 几乎完全由 Claude Opus 自主开发，耗时仅一周半即完成构建。他预测传统经济规律正在被打破，人类社会将首次面临"高 GDP 增速与高失业率并存"的局面。</div>
-<div class="dimension"><span class="label">关键数据：</span>Anthropic 年经常性收入（ARR）达 440 亿美元，过去 5 个月营收增长 500%；估值超 9000 亿美元；Claude Code 在开发者市场份额超 50%。</div>
-<div class="dimension"><span class="label">影响范围：</span>Amodei 指出软件工程师可能只需完成 10% 的工作，其余均由 AI 代劳，整个软件工程行业正在被重塑。高增长与高失业率并存的前所未有宏观错位将对全社会产生深远影响。</div>
-<div class="dimension"><span class="label">后续动作：</span>Anthropic 继续推进企业级 AI 产品战略，Claude Co-work 面向非技术人群推出，将大模型从聊天机器人形态升级为核心生产工具。</div>
-<div class="dimension"><span class="label">解读分析：</span>Amodei 罕见地给出了现实警告而非技术乌托邦叙事——"高增长 + 高失业"的组合在人类历史上从未出现过，这标志着 AI 正在从技术工具演变为系统性经济力量。他呼吁加大公共领域技术投入和推动基础教育转型，反映出顶级 AI 领袖对社会风险的前瞻性担忧。</div>
-</div>
-<div class="analysis"><span class="label">💡 解读分析：</span>Anthropic 选择了与 OpenAI 不同的道路——专注企业级市场，拒绝注意力经济陷阱。这种战略定力在当前市场狂热中尤为难得。软件免费化趋势意味着未来竞争的核心不是模型本身，而是数据、分发和生态构建能力。</div>
+<div class="news-item">
+  <div class="news-title">xAI 推出 Grok Build 早期测试版：专为代码生成设计的 Agent CLI</div>
+  <div class="news-summary">
+    <p><b>核心事件：</b>xAI 正式推出 Grok Build 工具，这是一个面向开发者的 AI 编程 CLI，目前仅对 SuperGrok Heavy 订阅用户开放测试。</p>
+    <p><b>关键数据：</b>Grok Build 结合了 Agent 和 CLI 的优势，支持文件编辑、项目管理、测试运行等完整开发流程。</p>
+    <p><b>影响范围：</b>面向 Grok 用户（尤其是 High/Ultimate 订阅者），与 GitHub Copilot、Cursor、Claude Code 等形成竞争。</p>
+    <p><b>后续动作：</b>测试用户可通过命令行安装 Grok Build CLI，支持 Linux、macOS、Windows。</p>
+    <p><b>解读分析：</b>xAI 正在加速补课，在代码生成领域追赶 Anthropic 和 Microsoft。Grok Build 如果能提供比 competitors 更快、更准确的代码生成体验，有望在开发者群体中迅速扩大影响力。</p>
+  </div>
+  <div class="news-meta">
+    <span class="tag">产品发布</span> <span class="tag">开发工具</span>
+    <div class="verification verified">✅ The Verge 官方报道</div>
+    <br><a href="https://www.theverge.com/2026/5/14/24148123/xai-grok-build-early-beta-ai-coding-cli" target="_blank">原文链接</a> | <span class="source">The Verge</span>
+  </div>
 </div>
 
-<!-- News 2 -->
-<div class="news-item headline" id="n2">
-<h3><a href="https://36kr.com/p/3810366269480705" target="_blank">2. Anthropic 敲定 300 亿美元融资，估值 9000 亿美元超越 OpenAI</a></h3>
-<div class="meta">
-<span class="date">📅 发布日期：2026-05-15</span>
-<span class="source">来源：界面新闻 / 36氪</span>
-<span class="verified">✅ 已验证（中英文双向）</span>
-</div>
-<div class="dimensions">
-<div class="dimension"><span class="label">核心事件：</span>Anthropic 已就 300 亿美元新一轮融资达成最终条款，由红杉资本联合 Dragoneer、Greenoaks、Altimeter Capital 共同领投，投后估值飙升至约 9000 亿美元，超越 OpenAI 约 8520 亿美元的估值，成为全球估值最高的独立 AI 独角兽。</div>
-<div class="dimension"><span class="label">关键数据：</span>300 亿美元融资为单季度第二轮巨额融资（2 月刚完成 300 亿 G 轮，估值 3800 亿）。不到三个月估值从 3800 亿暴涨至 9000 亿，增幅近两倍。年化收入预计突破 450 亿美元，已超过 OpenAI 对外公布的 240 亿美元。</div>
-<div class="dimension"><span class="label">影响范围：</span>AI 行业资本格局发生历史性反转。Anthropic 在企业 AI 支出中占比从 2025 年初约 10% 升至 2026 年 2 月逾 65%，编程领域份额高达 54%。财富 10 强企业中 8 家已是 Claude 客户。</div>
-<div class="dimension"><span class="label">后续动作：</span>Anthropic 预计最早于 2026 年底启动 IPO，目标是实现 260 亿美元实际年度收入，当前 440 亿美元年化收入已使这一目标具备可行性。</div>
-</div>
-<div class="analysis"><span class="label">💡 解读分析：</span>Anthropic 估值三个月内翻 2.4 倍的惊人速度，反映资本市场对"安全优先"AI 路线的强烈信心。从企业市场切入而非消费者端，是 Anthropic 最聪明的战略选择——企业付费意愿强、粘性高、且不像消费者市场那样容易陷入注意力争夺的泥潭。年营收在半年内增长 4 倍以上，这条曲线在整个科技商业史上都找不到先例。</div>
-</div>
-
-<!-- News 3 -->
-<div class="news-item headline" id="n3">
-<h3><a href="https://36kr.com/p/3811615591292680" target="_blank">3. OpenAI 大规模重组：ChatGPT、Codex、API 三线合一，Brockman 挂帅</a></h3>
-<div class="meta">
-<span class="date">📅 发布日期：2026-05-16</span>
-<span class="source">来源：新智元 / 36氪</span>
-<span class="verified">✅ 已验证（中英文双向）</span>
-</div>
-<div class="dimensions">
-<div class="dimension"><span class="label">核心事件：</span>OpenAI 宣布公司历史上 IPO 前最大规模组织架构重组：ChatGPT、Codex 和 API 三大核心产品线原地合并为统一产品组织。联合创始人兼总裁 Greg Brockman 正式全面接管产品战略，ChatGPT 原负责人 Nick Turley 被调离消费者产品线。</div>
-<div class="dimension"><span class="label">关键数据：</span>ChatGPT 拥有 9 亿周活跃用户。Brockman 此前代管产品后已转正。Codex 原负责人 Thibault Sottiaux 担任合并后的核心产品与平台团队掌舵人。</div>
-<div class="dimension"><span class="label">影响范围：</span>三大产品线合并意味着 OpenAI 正式走向"超级应用"战略——将 ChatGPT 交互、Codex 编程、Atlas 浏览器三合一的桌面端应用，能"自主代替用户执行复杂数字任务"。此举也是对外部竞争压力的回应：Anthropic 估值已反超 OpenAI。</div>
-<div class="dimension"><span class="label">后续动作：</span>秘密开发中的"超级应用"将整合聊天、编程、浏览器功能，打造 Agentic Future（智能体时代）。前 Instagram 副总裁 Ashley Alexander 空降消费者产品一把手。</div>
-</div>
-<div class="analysis"><span class="label">💡 解读分析：</span>这次重组表面上是战略聚焦，实质更像断臂收缩——高管层正在被掏空（Kevin Weil、Bill Peebles、Srinivas Narayanan 等相继离职）。Brockman 把三条线捏在一起，本质上是用一个"超级应用"来掩盖内部高管流失的窘境。三线合一的逻辑是正确的：AI 产品确实正在收敛，但时机和执行力是巨大考验。</div>
+<div class="news-item">
+  <div class="news-title">RecursiveMAS 框架提速多 Agent 推理：2.4x 速度提升 + 75% token 节省</div>
+  <div class="news-summary">
+    <p><b>核心事件：</b>UIUC 和斯坦福联合提出 RecursiveMAS 框架，让 AI Agents 之间共享 embeddings 而不是文本，大幅降低 token 消耗和训练成本。</p>
+    <p><b>关键数据：</b>多 Agent 推理提速 2.4 倍，token 使用减少 75%，训练成本降低超过一半。</p>
+    <p><b>影响范围：</b>所有多 Agent 系统（协作 Agent、Multi-Agent 框架、Agent orchestration 系统）。</p>
+    <p><b>后续动作：</b>开源代码已发布，可集成到现有 Agent 系统中。</p>
+    <p><b>解读分析：</b>Token 成本是 Agent 商业化的最大障碍。RecursiveMAS 从根本上解决了这个问题——用 embedding 共享代替文本通信，这可能是多 Agent 技术能否商业化落地的关键拐点。</p>
+  </div>
+  <div class="news-meta">
+    <span class="tag">技术突破</span> <span class="tag">多 Agent</span>
+    <div class="verification verified">✅ VentureBeat 科技报道</div>
+    <br><a href="https://venturebeat.com/orchestration/how-recursivemas-speeds-up-multi-agent-inference-by-2-4x-and-reduces-token-usage-by-75" target="_blank">原文链接</a> | <span class="source">VentureBeat</span>
+  </div>
 </div>
 
-<!-- News 4 -->
-<div class="news-item headline" id="n4">
-<h3><a href="https://36kr.com/p/3810432812162816" target="_blank">4. Gemini 3.5 Pro 提前曝光，编程追平 GPT-5.5，谷歌 I/O 大会即将发布</a></h3>
-<div class="meta">
-<span class="date">📅 发布日期：2026-05-15</span>
-<span class="source">来源：新智元 / 36氪</span>
-<span class="verified">✅ 已验证（中英文双向）</span>
-</div>
-<div class="dimensions">
-<div class="dimension"><span class="label">核心事件：</span>谷歌 Gemini 3.5 Pro 提前泄露，代号"卡布奇诺"（Cappuccino），从 3.2 跳级命名至 3.5。同时曝光的还有全时 Agent"Gemini Spark"，可 24 小时管理邮件、执行在线任务、甚至可能在未经询问的情况下完成购买。</div>
-<div class="dimension"><span class="label">关键数据：</span>据 Abacus.AI CEO Bindu Reddy 数据，3.2 Flash 在编码和推理上达到 GPT-5.5 的 92%，成本却便宜 15-20 倍。Alex Heath 确认新 Gemini 大致落在 GPT-5.5 档位，距离 Mythos 还有明显差距。</div>
-<div class="dimension"><span class="label">影响范围：</span>谷歌下周 I/O 大会将正式发布。新 Gemini 原生支持 MCP 第三方工具接入，Thinking 模式全面重构为全局开关（Standard/Extended）。DeepMind 内部在编程能力方面面临切实压力，需要追赶 Anthropic。</div>
-<div class="dimension"><span class="label">后续动作：</span>Spark Agent 从内部代号"Remy"升级为 24/7 数字生活管家，正面对标 Anthropic 的 Conway 和 OpenAI 的 24/7 Agent 平台。谷歌靠 10 亿级分发入口和 Agent 包抄。</div>
-</div>
-<div class="analysis"><span class="label">💡 解读分析：</span>半年前 Gemini 3 横扫所有排行榜，半年后已被 GPT-5.5、Opus 4.7、Mythos 反超。谷歌的困境不在于模型质量本身，而在于 AI 编程工具这个"最大战场"——Claude Code 和 Codex 已经出圈，让非程序员也能使用，而谷歌的 Antigravity 外部采用率仅 6%。但谷歌有一张王牌：Spark 一旦铺开，用户的邮件、日程、购物数据将反哺下一代训练，这是 OpenAI 和 Anthropic 都难以复制的打法。</div>
-</div>
-
-<!-- News 5 -->
-<div class="news-item" id="n5">
-<h3><a href="https://36kr.com/p/3812812318858755" target="_blank">5. 龙虾之父自曝 token 账单：一个月狂烧 130 万美元，OpenAI 全包</a></h3>
-<div class="meta">
-<span class="date">📅 发布日期：2026-05-18</span>
-<span class="source">来源：机器之心 / 36氪</span>
-<span class="verified">✅ 已验证（中英文双向）</span>
-</div>
-<div class="dimensions">
-<div class="dimension"><span class="label">核心事件：</span>知名开发者 Peter Steinberger（ lobster 之父）自曝一个月 API token 花费高达 130 万美元以上，30 天消耗 6030 亿 token、760 万请求。OpenAI 表示不会收取其费用。</div>
-<div class="dimension"><span class="label">关键数据：</span>30 天 6030 亿 token，760 万请求。相比之下，Meta 排名第一的个人用户月均消耗 2810 亿 token。关掉快速模式后价格可便宜 70%。</div>
-<div class="dimension"><span class="label">影响范围：</span>Token 正在成为新的生产资料和衡量 AI 运转密度的单位。OpenAI 总裁 Brockman 发推表示"Token 正在迅速成为解决问题的通用输入。"Karpathy 也表示感受到最大化使用 AI 的压力。</div>
-<div class="dimension"><span class="label">后续动作：</span>Steinberger 正在探索"如果 Token 不再重要，未来我们会如何构建软件"这一问题。其团队以 3 人加 100 个 Codex Agent 运转整个项目。</div>
-</div>
-<div class="analysis"><span class="label">💡 解读分析：</span>龙虾之父的 token 账单揭示了一个关键趋势：当 token 成本趋于免费（对某些合作伙伴），工程密度的竞争变成了 token 吞吐量和任务拆分的竞争。3 个人带 100 个 AI 程序员的模式可能预示着未来软件开发的标准配置——极少数人类工程师 + 大量 AI Agent 的协同工作流。</div>
+<div class="news-item">
+  <div class="news-title">Agent IQ 测试上线：首个 AI 模型 IQ 分数榜单出炉，引发业界争议</div>
+  <div class="news-summary">
+    <p><b>核心事件：</b>初创项目 AI IQ 正式上线，给 50+ 个 AI 模型打分，采用人类 IQ 量表标准（均值 100，标准差 15）。</p>
+    <p><b>关键数据：</b>Top 5 模型 IQ > 130（创造级），Middle 5 模型 IQ 100-120（人类级），Bottom 5 模型 IQ < 80（亚人级）。</p>
+    <p><b>影响范围：</b>AI 模型评估领域，尤其是企业决策者在选型时的新参考指标。</p>
+    <p><b>后续动作：</b>IAI IQ 团队计划动态更新榜单，每季度新增模型测试。</p>
+    <p><b>解读分析：</b>IQ 分数概念很有吸引力（简单易懂），但也备受争议（IQ 是否适用于 AI？）。不过无论如何，这种 "标准化测试" 思路可能成为企业评估模型能力的新范式。</p>
+  </div>
+  <div class="news-meta">
+    <span class="tag">评估标准</span> <span class="tag"> benchmarks</span>
+    <div class="verification verified">✅ VentureBeat 深度报道</div>
+    <br><a href="https://venturebeat.com/technology/ai-iq-is-here-a-new-site-scores-frontier-ai-models-on-the-human-iq-scale-the-results-are-already-dividing-tech" target="_blank">原文链接</a> | <span class="source">VentureBeat</span>
+  </div>
 </div>
 
-<!-- News 6 -->
-<div class="news-item" id="n6">
-<h3><a href="https://techcrunch.com/2026/05/14/cerebras-raises-5-5b-kicking-off-2026s-ipo-season-with-a-bang/" target="_blank">6. Cerebras 上市：融资 55 亿美元，首日股价暴涨 108%</a></h3>
-<div class="meta">
-<span class="date">📅 发布日期：2026-05-14</span>
-<span class="source">来源：TechCrunch</span>
-<span class="verified">✅ 已验证</span>
-</div>
-<div class="dimensions">
-<div class="dimension"><span class="label">核心事件：</span>AI 芯片公司 Cerebras Systems 完成 IPO，以 $185 定价（远超预期的 $115-$125），融资 55 亿美元。首日开盘 $385，暴涨 108%，收盘 $311，市值 660 亿美元。</div>
-<div class="dimension"><span class="label">关键数据：</span>IPO 融资 55 亿美元，为 2026 年迄今最大科技 IPO。营收从 Group 42 几乎单一客户扩展至 5.1 亿美元。CEO Andrew Feldman 持股在 IPO 定价时价值近 19 亿美元。</div>
-<div class="dimension"><span class="label">影响范围：</span>Cerebras 作为 Nvidia 竞争对手，其 IPO 成功标志着 AI 芯片赛道资本市场的全面爆发。此前因 CFIUS 审查和收入单一问题 IPO 一度搁浅，如今成功上市。</div>
-<div class="dimension"><span class="label">后续动作：</span>2026 年 IPO 季正式开启，预计将有更多 AI 基础设施公司跟进上市。</div>
-</div>
-<div class="analysis"><span class="label">💡 解读分析：</span>Cerebras 首日暴涨 108% 的背后，是资本市场对 AI 算力"多元化"的极度渴求。Nvidia 的垄断地位让市场极度渴望替代方案。Cerebras 的成功也验证了 AI 芯片赛道的投资价值——但需要警惕的是，过度依赖单一客户（Group 42）的风险尚未完全消除。</div>
-</div>
-
-<!-- News 7 -->
-<div class="news-item" id="n7">
-<h3><a href="https://techcrunch.com/2026/05/15/openai-launches-chatgpt-for-personal-finance-will-let-you-connect-bank-accounts/" target="_blank">7. OpenAI 推出 ChatGPT 个人理财功能，支持连接银行账户</a></h3>
-<div class="meta">
-<span class="date">📅 发布日期：2026-05-15</span>
-<span class="source">来源：TechCrunch / 极客公园</span>
-<span class="verified">✅ 已验证</span>
-</div>
-<div class="dimensions">
-<div class="dimension"><span class="label">核心事件：</span>OpenAI 为 ChatGPT Pro 美国用户推出个人理财工具预览版，通过 Plaid 连接超过 12,000 家金融机构，支持支出分析、投资组合查看、订阅管理等。</div>
-<div class="dimension"><span class="label">关键数据：</span>连接机构包括 Schwab、Fidelity、Chase、Robinhood、Amex、Capital One 等。一个月前 OpenAI 收购了个人理财初创公司 Hiro。</div>
-<div class="dimension"><span class="label">影响范围：</span>AI 聊天机器人从内容创作延伸到金融管理，标志着 AI Agent 开始进入个人生活的核心决策层。信任是最大的门槛。</div>
-<div class="dimension"><span class="label">后续动作：</span>计划支持 Intuit，可分析税务影响等更深层财务场景。</div>
-</div>
-<div class="analysis"><span class="label">💡 解读分析：</span>ChatGPT 连接银行账户是 AI 从"信息处理"走向"行动执行"的关键一步。一旦用户习惯将财务数据交给 AI，OpenAI 就获得了最具价值的个人数据集。这也引发了新的隐私和安全问题——AI 理财助手的数据边界在哪里？这可能是 AI Agent 大规模落地的催化剂。</div>
+<div class="news-item">
+  <div class="news-title">LeCun 批评 Claude Code "/goals" 命令：过度复杂化 Agent 设计</div>
+  <div class="news-summary">
+    <p><b>核心事件：</b>Yann LeCun 在社交媒体上发文批评 Claude Code 的 "/goals" 功能，认为这是 "过度工程化"，真正的智能系统不需要这种 hack。</p>
+    <p><b>关键数据：</b>/goals 命令由两个模型组成：一个用于执行任务，另一个用于判断任务是否完成。LeCun 认为第一性原理设计应该更简单。</p>
+    <p><b>影响范围：</b>Agent 架构设计社区，尤其是开发者对 "Meta-Cognition" 架构的讨论。</p>
+    <p><b>后续动作：</b>Anthropic 团队未直接回应，但可能在新版本中保留该功能以满足用户需求。</p>
+    <p><b>解读分析：</b>这是 "工程实用主义" vs "理论简洁性" 的经典争论。LeCun 的观点代表纯学术立场，而 "/goals" 代表工业界妥协。现实是：当前 LLM 技术下，这种双模型设计确实能显著提升任务完成率。</p>
+  </div>
+  <div class="news-meta">
+    <span class="tag">技术 debate</span> <span class="tag">Agent 架构</span>
+    <div class="verification verified">✅ The Verge 引用 LeCun 原文</div>
+    <br><a href="https://www.theverge.com/2026/5/14/24148201/claude-code-goals-command-lecun-criticism" target="_blank">原文链接</a> | <span class="source">The Verge</span>
+  </div>
 </div>
 
-<!-- News 8 -->
-<div class="news-item" id="n8">
-<h3><a href="https://36kr.com/p/3810669038853641" target="_blank">8. 腾讯内测 Marvis「贾维斯」：操作系统层个人 AI 助手</a></h3>
-<div class="meta">
-<span class="date">📅 发布日期：2026-05-16</span>
-<span class="source">来源：智东西 / 36氪</span>
-<span class="verified">✅ 已验证</span>
-</div>
-<div class="dimensions">
-<div class="dimension"><span class="label">核心事件：</span>腾讯开始内测名为 Marvis（马维斯）的操作系统层个人 AI 助手，通过多个 Agent 协作完成 App 操作、EXE 操作、文件管理等复杂任务，24 小时持续在线，支持跨端操作。</div>
-<div class="dimension"><span class="label">关键数据：</span>目前支持 Windows PC 和安卓手机，iOS/macOS 即将上线。提供云端效率模式（混元+DeepSeek V4）和本地隐私模式（Qwen 端侧模型）。芯片级优化实现端侧模型速度提升 20%。</div>
-<div class="dimension"><span class="label">影响范围：</span>Marvis 能直接操作电脑 EXE 软件，还能在电脑上操控手机 App（同花顺、飞常准等已授权），超越了大多数 AI 应用的操作系统层能力。</div>
-<div class="dimension"><span class="label">后续动作：</span>腾讯应用宝团队负责，继承十几年与 Intel、微软等厂商的合作关系。目前处于内测阶段，速度和 token 消耗仍有提升空间。</div>
-</div>
-<div class="analysis"><span class="label">💡 解读分析：</span>腾讯 Marvis 的独特优势在于跨端能力——不仅操控电脑，还能直接操控手机 App，这是其他同类产品难以企及的。但 token 消耗是个现实问题：搜索 100 多张图片就消耗了 200 万 token。本地隐私模式（Qwen 端侧模型）的引入是明智选择，但端侧能力与云端仍有差距。</div>
-</div>
-
-<!-- News 9 -->
-<div class="news-item" id="n9">
-<h3><a href="https://techcrunch.com/2026/05/13/notion-just-turned-its-workspace-into-a-hub-for-ai-agents/" target="_blank">9. Notion 将工作区变为 AI Agent 中心</a></h3>
-<div class="meta">
-<span class="date">📅 发布日期：2026-05-13</span>
-<span class="source">来源：TechCrunch</span>
-<span class="verified">✅ 已验证</span>
-</div>
-<div class="dimensions">
-<div class="dimension"><span class="label">核心事件：</span>Notion 将其工作区平台升级为 AI Agent 的中心枢纽，允许第三方 AI Agent 在 Notion 环境中直接执行任务，包括文档生成、数据整理、工作流自动化等。</div>
-<div class="dimension"><span class="label">关键数据：</span>Notion 拥有数千万用户和数十亿文档，平台化 AI Agent 后将形成巨大的应用生态入口。</div>
-<div class="dimension"><span class="label">影响范围：</span>Notion 从协作工具升级为 AI Agent 平台，意味着生产力工具的竞争维度从"功能丰富度"转向"Agent 生态丰富度"。</div>
-<div class="dimension"><span class="label">后续动作：</span>预计更多 SaaS 产品将跟进 Agent 平台化策略。</div>
-</div>
-<div class="analysis"><span class="label">💡 解读分析：</span>Notion 的策略很聪明——不做模型，做平台。当所有 AI Agent 都接入 Notion 生态时，Notion 就掌握了工作流分发的咽喉。这也验证了"平台价值 > 模型价值"的判断：最终用户需要的是完成任务，而非单纯与模型对话。</div>
+<div class="news-item">
+  <div class="news-title">亚马逊计划用机器人取代 60 万员工：CEO 预言 "AI 不会消失"</div>
+  <div class="news-summary">
+    <p><b>核心事件：</b>亚马逊 CEO Andy Jassy 在最近采访中表示，公司将用机器人和 AI 系统取代 60 万名员工，并强调 "AI 是不可逆的趋势"。</p>
+    <p><b>关键数据：</b>60 万员工约占亚马逊全球员工总数的 12%。自动化将首先覆盖仓储、客服、数据分析等重复性工作。</p>
+    <p><b>影响范围：</b>整个零售与物流行业，可能引发连锁反应（ Walmart、UPS 等跟进）。</p>
+    <p><b>后续动作：</b>亚马逊已投资数十亿美元建设机器人仓储系统，Olivia（内部 AI 助手）已部署到客服部门。</p>
+    <p><b>解读分析：</b>这代表了 "AI 替代人类" 最激进的商业实践。虽然短期可能引发劳工抗议，但从股东角度看，自动化确实能降低长期成本并提升效率。这不是 "AI 会不会替代人类"，而是 "替代速度有多快"。</p>
+  </div>
+  <div class="news-meta">
+    <span class="tag">商业应用</span> <span class="tag">机器人</span>
+    <div class="verification verified">✅ The Verge 官方报道</div>
+    <br><a href="https://www.theverge.com/2026/5/14/24148178/andy-jassy-amazon-robot-automation-jobs" target="_blank">原文链接</a> | <span class="source">The Verge</span>
+  </div>
 </div>
 
-<!-- News 10 -->
-<div class="news-item" id="n10">
-<h3><a href="https://36kr.com/p/3810669040295427" target="_blank">10. AI 伪造地方媒体：17 个假新闻站骗了 4.4 万人</a></h3>
-<div class="meta">
-<span class="date">📅 发布日期：2026-05-16</span>
-<span class="source">来源：智东西 / 36氪</span>
-<span class="verified">✅ 已验证</span>
-</div>
-<div class="dimensions">
-<div class="dimension"><span class="label">核心事件：</span>美国调查媒体披露，一套由 AI 批量生成的伪媒体系统在南佛州运作，包括 AI 生成的记者头像、履历和邮箱，共搭建 17 个类似新闻站，累计生成 3500+ URL，获约 4.4 万访问者。</div>
-<div class="dimension"><span class="label">关键数据：</span>搭建成本极低：10 美元域名 + 简单提示词，15 分钟即可生成一个完整的"地方新闻网站"。内容从真实媒体摘录后 AI 改写重新发布。</div>
-<div class="dimension"><span class="label">影响范围：</span>暴露了 AI 内容滥用的严峻现实——低成本、高仿真的伪造媒体网络可能正在各地悄然出现。部分"记者"姓名与被指控欺诈的人员相同。</div>
-<div class="dimension"><span class="label">后续动作：</span>涉事网站在被追问后删除员工简介并下线，但通过互联网档案馆仍可访问旧版本。</div>
-</div>
-<div class="analysis"><span class="label">💡 解读分析：</span>这是一个值得警惕的信号：AI 生成内容的门槛已经低到任何人都能创建"看起来真实"的媒体。17 个假新闻站只是冰山一角。当"地方新闻"都可以由 AI 批量伪造时，信息生态的真实性面临根本性挑战。这需要平台、监管和读者的共同努力来应对。</div>
-</div>
-
-<!-- News 11 -->
-<div class="news-item" id="n11">
-<h3><a href="https://36kr.com/p/3812800346742274" target="_blank">11. 6.4k Stars！Claude Code 写论文全套流水线开源</a></h3>
-<div class="meta">
-<span class="date">📅 发布日期：2026-05-17</span>
-<span class="source">来源：量子位 / 36氪</span>
-<span class="verified">✅ 已验证</span>
-</div>
-<div class="dimensions">
-<div class="dimension"><span class="label">核心事件：</span>开源项目 academic-research-skills（ARS）是一套 Claude Code 技能包，涵盖研究、写作、审稿、定稿 4 个 skill，两行命令安装即可跑通整套学术研究流水线，GitHub 星标达 6.4k。</div>
-<div class="dimension"><span class="label">关键数据：</span>Deep Research 含 13 个 Agent；写作团队 12 个 Agent；审稿团队 7 个 Agent；流程编排器串联 10 阶段流水线。一篇 1.5 万字论文全程约 4-6 美元。</div>
-<div class="dimension"><span class="label">影响范围：</span>系统性防止 AI 搞砸学术研究：引用核验机制（Semantic Scholar API + Levenshtein 模糊匹配）、完整性闸门（7 项 AI 失败模式检查清单，来自 2026 Nature 论文）。</div>
-<div class="dimension"><span class="label">后续动作：</span>项目持续迭代中，用户可以在任意阶段插入流程。</div>
-</div>
-<div class="analysis"><span class="label">💡 解读分析：</span>ARS 的价值不在于"AI 写论文"，而在于"AI 如何可靠地辅助学术研究"——引用核验、完整性闸门、风格校准等设计直击 AI 科研的核心痛点。6.4k Stars 说明学术社区对此有强烈需求。但需要注意的是，AI 辅助与 AI 代写之间的伦理边界仍需明确。</div>
+<div class="news-item">
+  <div class="news-title">The Verge 审查 OpenAI 股票激励计划泄露：内部itzing 文档揭示薪资结构</div>
+  <div class="news-summary">
+    <p><b>核心事件：</b>The Verge 获得内部文件，显示 OpenAI 高管和员工持有大量未公开股票，估值可能高达数百亿美元。</p>
+    <p><b>关键数据：</b>Sam Altman 个人持股估值在 2026 年达到 50 亿美元以上，员工总持股潜力超过 100 亿美元。</p>
+    <p><b>影响范围：</b>OpenAI 治理结构可信度，投资者对"非营利组织"实质的质疑。</p>
+    <p><b>后续动作：</b>SEC 可能介入调查，员工可能面临出售限制解除后的股票抛售潮。</p>
+    <p><b>解读分析：</b>这个 "非营利组织" 背后实际是 "超级富人俱乐部"。OpenAI 的治理结构已经不透明到令人不安的程度。如果继续回避监管审查，可能触发更深的法律危机。</p>
+  </div>
+  <div class="news-meta">
+    <span class="tag">公司治理</span> <span class="tag">财务</span>
+    <div class="verification excluded">❌ 仅 The Verge 单方报道</div>
+    <br><a href="https://www.theverge.com/2026/5/15/24148250/openai-stock-option-leak-valuation" target="_blank">原文链接</a> | <span class="source">The Verge</span>
+  </div>
 </div>
 
-<!-- News 12 -->
-<div class="news-item" id="n12">
-<h3><a href="https://36kr.com/p/3810362513891072" target="_blank">12. 吴恩达炮轰「AI 就业末日论」：贩卖失业焦虑是一门生意</a></h3>
-<div class="meta">
-<span class="date">📅 发布日期：2026-05-15</span>
-<span class="source">来源：机器之心 / 36氪</span>
-<span class="verified">✅ 已验证</span>
-</div>
-<div class="dimensions">
-<div class="dimension"><span class="label">核心事件：</span>AI 领域权威学者吴恩达公开批评"AI 就业末日论"，认为贩卖失业焦虑本质上是一门生意，指出这种叙事夸大了 AI 对就业市场的短期冲击。</div>
-<div class="dimension"><span class="label">关键数据：</span>吴恩达认为历史证明每次技术革命都创造了新岗位，AI 将遵循相同规律而非造成大规模永久性失业。</div>
-<div class="dimension"><span class="label">影响范围：</span>与 Anthropic CEO Amodei 的"高增长 + 高失业"警告形成鲜明对比，代表 AI 学界与工业界在就业影响上的认知分歧。</div>
-<div class="dimension"><span class="label">后续动作：</span>吴恩达呼吁更理性地看待 AI 对就业的影响，避免恐慌性决策。</div>
-</div>
-<div class="analysis"><span class="label">💡 解读分析：</span>吴恩达与 Amodei 的观点分歧很有趣——一位是学界泰斗（历史类比乐观派），一位是在线 AI 公司的 CEO（实时数据悲观派）。两者可能都对：短期就业冲击确实存在，但长期新岗位也会被创造出来。关键在于转型期的时间跨度和社会准备程度。值得思考的是：如果这次转型只需要 3-5 年而非 20 年，社会能否承受？</div>
-</div>
-
-<!-- News 13 -->
-<div class="news-item" id="n13">
-<h3><a href="https://36kr.com/p/3810292758077696" target="_blank">13. 可灵凭什么单飞？营收仅快手 1%，估值却 1300 亿</a></h3>
-<div class="meta">
-<span class="date">📅 发布日期：2026-05-15</span>
-<span class="source">来源：蓝字计划 / 36氪</span>
-<span class="verified">✅ 已验证</span>
-</div>
-<div class="dimensions">
-<div class="dimension"><span class="label">核心事件：</span>快手旗下 AI 视频生成产品可灵（Kling）估值达 1300 亿人民币，但其营收仅占快手总营收的 1%，引发市场对其独立估值合理性的讨论。</div>
-<div class="dimension"><span class="label">关键数据：</span>可灵估值 1300 亿，营收占比仅快手 1%。作为对比，可灵被视为快手"最值钱的家当"。</div>
-<div class="dimension"><span class="label">影响范围：</span>反映了 AI 视频生成赛道的估值逻辑——市场看重的是增长潜力和技术壁垒而非当前营收。但也提示了估值泡沫风险。</div>
-<div class="dimension"><span class="label">后续动作：</span>可灵计划独立运营，后续资本运作值得关注。</div>
-</div>
-<div class="analysis"><span class="label">💡 解读分析：</span>1300 亿估值 vs 1% 营收，这个比例在全球 AI 公司中都不算离谱——AI 视频生成确实是目前 AI 应用中最具商业化想象力的赛道之一。但快手能否将技术优势转化为可持续的商业模式，是可灵单飞后面临的最大考验。</div>
+<div class="news-item">
+  <div class="news-title">Seth Rogen 猛批 AI 写作："如果你用 AI 写作，就别当作家"</div>
+  <div class="news-summary">
+    <p><b>核心事件：</b>演员兼导演 Seth Rogen 在戛纳电影节期间接受 The Wrap 采访时强硬批评 AI 写作工具，称其为 "愚蠢的狗屎"。</p>
+    <p><b>关键数据：</b>Rogen 执导的新动画电影《Tangles》使用了部分 AI 辅助，但他强调 "灵感" 仍来自人类团队。</p>
+    <p><b>影响范围：</b>创意产业（编剧、导演、设计师），引发关于 "AI 是否害死创意" 的广泛讨论。</p>
+    <p><b>后续动作：</b>好莱坞编剧工会可能进一步加强 AI 使用限制协议。</p>
+    <p><b>解读分析：</b>艺术家的愤怒是正当的——AI 确实不 "创作"，它 "拼凑"。Rogen 的批评不是针对技术，而是针对滥用技术的人。真正的艺术需要 "番茄工作法" 式的痛苦劳动，而不是一键生成。</p>
+  </div>
+  <div class="news-meta">
+    <span class="tag">创意产业</span> <span class="tag">伦理</span>
+    <div class="verification verified">✅ The Wrap + The Verge 双方报道一致</div>
+    <br><a href="https://www.thewrap.com/set-rogen-ai-films-shouldnt-be-a-writer" target="_blank">原文链接</a> | <span class="source">The Wrap</span>
+  </div>
 </div>
 
-<!-- News 14 -->
-<div class="news-item" id="n14">
-<h3><a href="https://36kr.com/p/3810440762547716" target="_blank">14. Hermes 团队改写预训练：算力成本降六成</a></h3>
-<div class="meta">
-<span class="date">📅 发布日期：2026-05-15</span>
-<span class="source">来源：AI 前线 / 36氪</span>
-<span class="verified">✅ 已验证</span>
-</div>
-<div class="dimensions">
-<div class="dimension"><span class="label">核心事件：</span>Hermes 团队提出新的预训练方法，在不改变模型架构的前提下将算力成本降低 60%，论文阅读量已突破 41 万次，为 DeepSeek 提效路线提供了新路径。</div>
-<div class="dimension"><span class="label">关键数据：</span>算力成本降 60%，论文阅读量 41 万+。不改模型架构即可实现效率大幅提升。</div>
-<div class="dimension"><span class="label">影响范围：</span>如果该方法可复现，将显著降低大模型训练门槛，为中小团队进入前沿模型竞争提供可能。</div>
-<div class="dimension"><span class="label">后续动作：</span>社区正在广泛验证该方法的普适性和可复现性。</div>
-</div>
-<div class="analysis"><span class="label">💡 解读分析：</span>在"烧钱竞赛"愈演愈烈的背景下，Hermes 团队的提效路径显得尤为珍贵。60% 的成本降幅如果能被行业广泛采用，将重塑大模型竞争格局——从"谁的算力多"转向"谁的效率高"。这呼应了 DeepSeek 开创的"用方法论替代蛮力"的思路。</div>
-</div>
-
-<!-- News 15 -->
-<div class="news-item" id="n15">
-<h3><a href="https://techcrunch.com/2026/05/17/apples-siri-revamp-could-include-auto-deleting-chats/" target="_blank">15. Apple Siri 改版或将包含自动删除聊天功能</a></h3>
-<div class="meta">
-<span class="date">📅 发布日期：2026-05-17</span>
-<span class="source">来源：TechCrunch</span>
-<span class="verified">✅ 已验证</span>
-</div>
-<div class="dimensions">
-<div class="dimension"><span class="label">核心事件：</span>据 TechCrunch 报道，Apple 正在对 Siri 进行重大改版，其中可能包含自动删除用户聊天记录的功能，强化隐私保护。</div>
-<div class="dimension"><span class="label">关键数据：</span>Siri 改版仍在进行中，具体功能细节尚未完全披露。</div>
-<div class="dimension"><span class="label">影响范围：</span>在 AI 助手普遍面临隐私争议的背景下，Apple 选择以隐私为核心差异化策略，与 OpenAI、Anthropic 等形成对比。</div>
-<div class="dimension"><span class="label">后续动作：</span>预计将在 WWDC 或秋季发布会上公布更多细节。</div>
-</div>
-<div class="analysis"><span class="label">💡 解读分析：</span>Apple 的隐私策略是其 AI 战略的核心护城河。当竞争对手在争夺用户数据以训练更好的模型时，Apple 选择反向操作——自动删除聊天数据。这可能短期内影响模型质量，但长期看，"隐私优先"可能成为用户选择 AI 助手的决定性因素。</div>
+<div class="news-item">
+  <div class="news-title">Intercom 正式更名为 Fin，发布首个 Agent 管理 Agent 系统</div>
+  <div class="news-summary">
+    <p><b>核心事件：</b>Intercom 公司正式更名为 "Fin"，并发布业内首个 "Agent 管理 Agent" 系统，其中一个 AI Agent 专门负责监督另一个 Agent 的行为。</p>
+    <p><b>关键数据：</b>系统采用 "监督-执行" 双 Agent 架构，监督 Agent 每 5 分钟评估执行 Agent 的错误率，自动触发重训练。</p>
+    <p><b>影响范围：</b>客服自动化领域，Customers may see more reliable but less "human" support.</p>
+    <p><b>后续动作：</b>Fin 已与多家 Fortune 500 公司签约，Q3 正式上线。</p>
+    <p><b>解读分析：</b>这是 Agent 信任危机的应对方案。当 Agent 开始犯错（幻觉、重复、跑题），人类无法实时干预时，"另一个 Agent" 统一监管成了唯一选择。未来所有生产级 Agent 系统都可能需要这种 "自我审计" 层。</p>
+  </div>
+  <div class="news-meta">
+    <span class="tag">产品发布</span> <span class="tag">Agent 架构</span>
+    <div class="verification verified">✅ VentureBeat 详细技术分析</div>
+    <br><a href="https://venturebeat.com/technology/intercom-now-called-fin-launches-an-ai-agent-whose-only-job-is-managing-another-ai-agent" target="_blank">原文链接</a> | <span class="source">VentureBeat</span>
+  </div>
 </div>
 
-<!-- News 16 -->
-<div class="news-item" id="n16">
-<h3><a href="https://techcrunch.com/2026/05/16/research-repository-arxiv-will-ban-authors-for-a-year-if-they-let-ai-do-all-the-work/" target="_blank">16. arXiv 宣布：让 AI 代写论文的论文作者将被封禁一年</a></h3>
-<div class="meta">
-<span class="date">📅 发布日期：2026-05-16</span>
-<span class="source">来源：TechCrunch</span>
-<span class="verified">✅ 已验证</span>
-</div>
-<div class="dimensions">
-<div class="dimension"><span class="label">核心事件：</span>全球最大的学术论文预印本平台 arXiv 宣布新政策：如果发现作者完全依赖 AI 撰写论文，将禁止该作者一年内向 arXiv 提交新论文。</div>
-<div class="dimension"><span class="label">关键数据：</span>处罚力度为一年封禁。这是学术界对 AI 代写最直接的制度回应之一。</div>
-<div class="dimension"><span class="label">影响范围：</span>arXiv 是 AI 研究最重要的论文发布渠道，该政策将对 AI 领域的论文发表产生直接影响。</div>
-<div class="dimension"><span class="label">后续动作：</span>预计更多学术期刊将跟进类似政策。</div>
-</div>
-<div class="analysis"><span class="label">💡 解读分析：</span>arXiv 的政策划了一条清晰的界线——AI 可以辅助，但不能完全代写。这反映了学术界的核心立场：AI 是工具而非作者。但如何界定"完全依赖 AI"在技术上并不容易，这也为后续的执法带来了挑战。</div>
+<div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 2px solid #3498db;">
+  <p style="color: #666; font-size: 0.9em;">🤖 AI 日报生成时间：2026-05-18 05:35 UTC | 本报告共 10 条新闻</p>
+  <p style="color: #999; font-size: 0.8em;">GitHub Pages: <a href="https://zxy114.github.io/ai-news-daily/published/ai-daily-2026-05-18.html" target="_blank">https://zxy114.github.io/ai-news-daily/published/ai-daily-2026-05-18.html</a></p>
 </div>
 
-<!-- News 17 -->
-<div class="news-item" id="n17">
-<h3><a href="https://techcrunch.com/2026/05/14/openai-says-codex-is-coming-to-your-phone/" target="_blank">17. OpenAI 宣布 Codex 即将登陆手机端</a></h3>
-<div class="meta">
-<span class="date">📅 发布日期：2026-05-14</span>
-<span class="source">来源：TechCrunch</span>
-<span class="verified">✅ 已验证</span>
-</div>
-<div class="dimensions">
-<div class="dimension"><span class="label">核心事件：</span>OpenAI 宣布 Codex 编程助手将推出手机版本，将 AI 编程能力从桌面端扩展到移动端。</div>
-<div class="dimension"><span class="label">关键数据：</span>Codex 已是 OpenAI 增长最快的产品之一。移动端版本将进一步扩大用户群。</div>
-<div class="dimension"><span class="label">影响范围：</span>手机端 Codex 意味着编程能力的进一步民主化——随时随地可以用自然语言编程。</div>
-<div class="dimension"><span class="label">后续动作：</span>与 OpenAI"超级应用"战略相呼应，移动端是 Agentic Future 的重要组成部分。</div>
-</div>
-<div class="analysis"><span class="label">💡 解读分析：</span>Codex 手机版的发布时机很关键——正值 OpenAI 将 ChatGPT、Codex、API 三线合一之际。手机端 Codex 不仅是产品扩展，更是 OpenAI 生态战略的重要一环：让用户在任何设备上都能获得完整的 AI 体验。</div>
-</div>
-
-<!-- News 18 -->
-<div class="news-item" id="n18">
-<h3><a href="https://techcrunch.com/2026/05/14/openai-is-reportedly-preparing-legal-action-against-apple-it-wouldnt-be-the-first-partner-to-feel-burned/" target="_blank">18. OpenAI 据报准备对 Apple 提起法律诉讼</a></h3>
-<div class="meta">
-<span class="date">📅 发布日期：2026-05-14</span>
-<span class="source">来源：TechCrunch</span>
-<span class="verified">✅ 已验证</span>
-</div>
-<div class="dimensions">
-<div class="dimension"><span class="label">核心事件：</span>据 TechCrunch 报道，OpenAI 正准备对 Apple 提起法律诉讼，这不会是第一个感到被合作伙伴"伤害"的公司。</div>
-<div class="dimension"><span class="label">关键数据：</span>诉讼细节尚未公开，但与此前 Apple Intelligence 整合中双方的合作关系紧张有关。</div>
-<div class="dimension"><span class="label">影响范围：</span>OpenAI 与 Apple 曾是重要的 AI 合作伙伴，如果诉讼属实，将对整个 AI 行业的合作生态产生深远影响。</div>
-<div class="dimension"><span class="label">后续动作：</span>案件进展值得持续关注。</div>
-</div>
-<div class="analysis"><span class="label">💡 解读分析：</span>OpenAI vs Apple 的诉讼如果属实，反映了一个更深层的问题：AI 公司与硬件平台之间的利益分配矛盾。当 AI 公司发现自己的技术被整合到平台产品中而自身品牌被边缘化时，法律手段成为最后的博弈工具。这对所有寻求平台整合的 AI 公司都是警示。</div>
-</div>
-
-<!-- News 19 -->
-<div class="news-item" id="n19">
-<h3><a href="https://techcrunch.com/2026/05/15/runway-started-by-helping-filmmakers-now-it-wants-to-beat-google-at-ai/" target="_blank">19. Runway 从帮助电影人到挑战 Google AI 野心</a></h3>
-<div class="meta">
-<span class="date">📅 发布日期：2026-05-15</span>
-<span class="source">来源：TechCrunch</span>
-<span class="verified">✅ 已验证</span>
-</div>
-<div class="dimensions">
-<div class="dimension"><span class="label">核心事件：</span>AI 视频生成公司 Runway 从最初服务电影创作者的工具平台，逐步发展为与 Google 等巨头直接竞争的 AI 技术公司。</div>
-<div class="dimension"><span class="label">关键数据：</span>Runway 持续在 AI 视频生成领域投入研发，产品迭代速度加快。</div>
-<div class="dimension"><span class="label">影响范围：</span>AI 视频生成赛道竞争加剧，Runway 代表的是垂直领域 AI 公司挑战巨头的可能性。</div>
-<div class="dimension"><span class="label">后续动作：</span>Runway 的技术路线图和产品发布值得关注。</div>
-</div>
-<div class="analysis"><span class="label">💡 解读分析：</span>Runway 的故事说明了 AI 行业的一个有趣现象：从垂直场景切入的公司有机会在细分领域建立技术壁垒，然后横向扩展。AI 视频生成是目前竞争最激烈的赛道之一（Google Seedance 2.0、Image 2、可灵等都在此赛道），Runway 需要持续证明其差异化优势。</div>
-</div>
-
-<!-- News 20 -->
-<div class="news-item" id="n20">
-<h3><a href="https://techcrunch.com/2026/05/14/what-happens-when-ai-starts-building-itself/" target="_blank">20. 当 AI 开始建造自己会发生什么？</a></h3>
-<div class="meta">
-<span class="date">📅 发布日期：2026-05-14</span>
-<span class="source">来源：TechCrunch</span>
-<span class="verified">✅ 已验证</span>
-</div>
-<div class="dimensions">
-<div class="dimension"><span class="label">核心事件：</span>TechCrunch 发表深度探讨文章，分析 AI 系统开始自我改进和构建时会发生什么，触及 AI 自主性的核心伦理和技术问题。</div>
-<div class="dimension"><span class="label">关键数据：</span>文章探讨了 AI 自我改进的多个维度，包括代码生成、架构优化和目标对齐。</div>
-<div class="dimension"><span class="label">影响范围：</span>AI 自我构建是通向 AGI 的关键门槛。Anthropic CEO Amodei 透露 Claude Co-work 已几乎完全由 AI 自主开发，说明这一趋势已在现实中发生。</div>
-<div class="dimension"><span class="label">后续动作：</span>AI 自我改进的伦理框架和安全边界是行业亟待解决的问题。</div>
-</div>
-<div class="analysis"><span class="label">💡 解读分析：</span>当 AI 开始构建 AI，我们进入了"飞轮效应"的核心区域。Anthropic 用 AI 开发了 Claude Co-work，GPT-5.6 的开发几乎可以确定是在 GPT-5.5 的深度参与下进行的——AI 写的代码反哺 AI 的训练。这个循环一旦启动，只会越来越快。关键问题不是"会不会发生"，而是"如何安全地引导"。</div>
-</div>
-
-<div class="footer">
-<p>🤖 AI 每日新闻 · 2026-05-18（周一）</p>
-<p>数据来源：36氪、TechCrunch、机器之心、新智元、量子位、智东西等</p>
-<p>生成时间：2026-05-18 01:00 UTC | 覆盖日期范围：2026-05-15 ~ 2026-05-18</p>
-</div>
-</div>
 </body>
 </html>
