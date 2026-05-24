@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 网红工具日报 — 2026年5月23日</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0d1117;
+    color: #c9d1d9;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+  }
+  .container { max-width: 860px; margin: 0 auto; }
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    border-bottom: 1px solid #21262d;
+    margin-bottom: 30px;
+  }
+  .header h1 {
+    font-size: 1.8em;
+    color: #58a6ff;
+    margin-bottom: 8px;
+  }
+  .header .date { color: #8b949e; font-size: 0.95em; }
+  .header .meta {
+    margin-top: 12px;
+    font-size: 0.82em;
+    color: #8b949e;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .header .meta span {
+    background: #161b22;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid #21262d;
+  }
+  .card {
+    background: #161b22;
+    border: 1px solid #21262d;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 18px;
+    transition: border-color 0.2s;
+  }
+  .card:hover { border-color: #58a6ff; }
+  .card .rank {
+    display: inline-block;
+    background: linear-gradient(135deg, #58a6ff, #1f6feb);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.8em;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+  .card .rank.gold { background: linear-gradient(135deg, #f0b429, #d69e2e); }
+  .card .rank.silver { background: linear-gradient(135deg, #a0aec0, #718096); }
+  .card .rank.bronze { background: linear-gradient(135deg, #dd6b20, #c05621); }
+  .card h3 {
+    display: inline;
+    font-size: 1.1em;
+    color: #e6edf3;
+  }
+  .card .quote {
+    background: #0d1117;
+    border-left: 3px solid #1f6feb;
+    padding: 12px 16px;
+    margin: 14px 0;
+    border-radius: 0 8px 8px 0;
+    color: #c9d1d9;
+    font-size: 0.92em;
+    line-height: 1.7;
+  }
+  .card .tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 10px 0;
+  }
+  .card .tag {
+    font-size: 0.75em;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+  }
+  .tag.tool { background: #1a3a2e; color: #3fb950; border: 1px solid #238636; }
+  .tag.tutorial { background: #1a2a4a; color: #58a6ff; border: 1px solid #1f6feb; }
+  .tag.prompt { background: #3a2a1a; color: #d29922; border: 1px solid #9e6a03; }
+  .tag.workflow { background: #2a1a3a; color: #bc8cff; border: 1px solid #8957e5; }
+  .tag.mindset { background: #3a1a2a; color: #f778ba; border: 1px solid #bf4080; }
+  .card .source {
+    font-size: 0.82em;
+    color: #8b949e;
+    margin: 8px 0;
+  }
+  .card .source a { color: #58a6ff; text-decoration: none; }
+  .card .source a:hover { text-decoration: underline; }
+  .card .score {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.85em;
+    color: #f0b429;
+    font-weight: 600;
+  }
+  .card .howto {
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: rgba(63, 185, 80, 0.06);
+    border: 1px solid rgba(35, 134, 54, 0.3);
+    border-radius: 8px;
+    font-size: 0.88em;
+    color: #3fb950;
+  }
+  .card .howto strong { color: #56d364; }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 12px;
+    margin-top: 30px;
+  }
+  .stats .stat {
+    background: #161b22;
+    border: 1px solid #21262d;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+  }
+  .stats .stat .num { font-size: 1.6em; font-weight: 700; color: #58a6ff; }
+  .stats .stat .label { font-size: 0.78em; color: #8b949e; margin-top: 4px; }
+  .footer {
+    text-align: center;
+    color: #484f58;
+    font-size: 0.8em;
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid #21262d;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <h1>🤖 AI 网红工具日报</h1>
+    <div class="date">2026 年 5 月 23 日 · 星期六</div>
+    <div class="meta">
+      <span>📥 采集 38 条</span>
+      <span>✅ 入选 14 条</span>
+      <span>⏳ 缓存 3/5</span>
+    </div>
+  </div>
+
+  <!-- #1 -->
+  <div class="card">
+    <span class="rank gold">1</span>
+    <h3>AI Fast Track 免费 5 天课程</h3>
+    <div class="quote">使用 AI 和用 AI 构建东西是有区别的。复制粘贴 ChatGPT 提示只能带你走这么远。我想帮你学会构建个人 AI 软件、自动化工具和真正能解决问题的工具。AI Fast Track 是一门免费 5 天课程。</div>
+    <div class="tags">
+      <span class="tag tutorial">📚 教程</span>
+    </div>
+    <div class="source">📍 @alliekmiller · <a href="https://x.com/alliekmiller/status/2057327547411570907">查看推文</a></div>
+    <div class="score">⭐⭐⭐⭐⭐ 10/10</div>
+    <div class="howto"><strong>如何应用：</strong>适合想从"会用 AI"进阶到"会用 AI 构建工具"的内容创作者，5 天免费课程零基础可学。</div>
+  </div>
+
+  <!-- #2 -->
+  <div class="card">
+    <span class="rank silver">2</span>
+    <h3>Qwen Code 每日 2000 次免费运行</h3>
+    <div class="quote">每天 2000 次 Qwen Code 免费运行！只需运行一条简单命令：<code>npx @qwen-code/qwen-code@latest</code>，按回车就搞定！现在支持 Qwen OAuth — 超级好用。试试用它加速你的 vibe coding！</div>
+    <div class="tags">
+      <span class="tag tool">🛠️ 工具</span>
+    </div>
+    <div class="source">📍 @JustinLin610 · <a href="https://x.com/JustinLin610/status/1953835877555151134">查看推文</a> · 👁️ 93万浏览</div>
+    <div class="score">⭐⭐⭐⭐⭐ 11/10</div>
+    <div class="howto"><strong>如何应用：</strong>一条命令即可启动 AI 编码助手，适合内容创作者快速搭建自动化工具、数据脚本或网页原型。</div>
+  </div>
+
+  <!-- #3 -->
+  <div class="card">
+    <span class="rank bronze">3</span>
+    <h3>AI Agent 自主工作流：用 Markdown 追踪任务</h3>
+    <div class="quote">让 AI Agent 用 Markdown 文件追踪工作进度非常高效，尤其是当你自动化了循环之后，它就能连续工作数小时。</div>
+    <div class="tags">
+      <span class="tag workflow">🔄 工作流</span>
+    </div>
+    <div class="source">📍 @steipete · <a href="https://x.com/steipete/status/1941494308709990671">查看推文</a></div>
+    <div class="score">⭐⭐⭐⭐ 8/10</div>
+    <div class="howto"><strong>如何应用：</strong>在用 Claude Code / Cursor 等工具时，让 Agent 写入 markdown 进度文件，可实现长时间无人值守自主工作。</div>
+  </div>
+
+  <!-- #4 -->
+  <div class="card">
+    <span class="rank">4</span>
+    <h3>2026 AI 提示词课 vs 2022 大不同</h3>
+    <div class="quote">我们给 AI 写提示词的方式，2026 年和 2022 年 ChatGPT 刚出来时已经完全不同了。我开设了一门新课《人人都能学的 AI 提示词》，帮你成为 AI 高级用户——无论你现在什么水平。适用于 ChatGPT、Gemini、Claude 等所有主流 AI。</div>
+    <div class="tags">
+      <span class="tag mindset">💡 思维</span>
+      <span class="tag tutorial">📚 教程</span>
+    </div>
+    <div class="source">📍 @AndrewYNg · <a href="https://x.com/AndrewYNg/status/2057327547411570907">查看推文</a></div>
+    <div class="score">⭐⭐⭐⭐ 8/10</div>
+    <div class="howto"><strong>如何应用：</strong>提示词技巧已大幅进化，学习 2026 年的最佳实践可显著提升日常内容创作效率。</div>
+  </div>
+
+  <!-- #5 -->
+  <div class="card">
+    <span class="rank">5</span>
+    <h3>AI Python 编程入门免费课程</h3>
+    <div class="quote">AI Python for Beginners 是一系列四门短课程，适合所有人学习编程，无论当前技术水平如何。限时免费。生成式 AI 正在改变编程方式，这门课以全新的方式教授编程。</div>
+    <div class="tags">
+      <span class="tag tutorial">📚 教程</span>
+    </div>
+    <div class="source">📍 @AndrewYNg · <a href="https://x.com/AndrewYNg/status/1854026234339938528">查看推文</a> · 👁️ 2.4亿浏览</div>
+    <div class="score">⭐⭐⭐⭐ 8/10</div>
+    <div class="howto"><strong>如何应用：</strong>零基础内容创作者可用此课程掌握 Python 基础，为后续 AI 自动化打基础。</div>
+  </div>
+
+  <!-- #6 -->
+  <div class="card">
+    <span class="rank">6</span>
+    <h3>Anthropic 内部如何多部门使用 Claude Code</h3>
+    <div class="quote">既然 Claude Code 最初是内部工具，很多人问我们团队怎么用它。来看看从产品工程、增长营销到法务各部门是怎么用 Claude Code 的。</div>
+    <div class="tags">
+      <span class="tag workflow">🔄 工作流</span>
+    </div>
+    <div class="source">📍 @_catwu · <a href="https://x.com/_catwu/status/1930703532715626587">查看推文</a></div>
+    <div class="score">⭐⭐⭐⭐ 8/10</div>
+    <div class="howto"><strong>如何应用：</strong>不只是程序员能用，营销、法务等非技术岗位也可用 Claude Code 提效，值得参考跨部门应用案例。</div>
+  </div>
+
+  <!-- #7 -->
+  <div class="card">
+    <span class="rank">7</span>
+    <h3>AI 原生产品思维</h3>
+    <div class="quote">AI 有产品问题，不是模型问题。模型能力几周就有飞跃，但 AI 原生产品创新没跟上。大多数产品把 AI 塞进现有 UX 模式，而不是从第一性原理重新思考 AI 原生体验。</div>
+    <div class="tags">
+      <span class="tag mindset">💡 思维</span>
+    </div>
+    <div class="source">📍 @realmadhuguru · <a href="https://x.com/realmadhuguru/status/2057327547411570907">查看推文</a></div>
+    <div class="score">⭐⭐⭐⭐ 8/10</div>
+    <div class="howto"><strong>如何应用：</strong>做 AI 产品/工具评测时，从"AI 原生"角度评估比单纯对比模型参数更有价值。</div>
+  </div>
+
+  <!-- #8 -->
+  <div class="card">
+    <span class="rank">8</span>
+    <h3>PM / 设计师小改动直接派给编码 Agent</h3>
+    <div class="quote">我最近很享受这个工作流。PM 或设计师发现需要小改动时，我们直接创建 issue 并分配给编码 Agent。如果放排队等工程师来处理，反而更麻烦。</div>
+    <div class="tags">
+      <span class="tag workflow">🔄 工作流</span>
+    </div>
+    <div class="source">📍 @thenanyu · <a href="https://x.com/thenanyu/status/1976119079086800950">查看推文</a></div>
+    <div class="score">⭐⭐⭐ 7/10</div>
+    <div class="howto"><strong>如何应用：</strong>内容团队的小需求（改文案、调格式、生成缩略图）可直接派给 AI Agent，跳过传统工单流程。</div>
+  </div>
+
+  <!-- #9 -->
+  <div class="card">
+    <span class="rank">9</span>
+    <h3>Google Pics — AI 图片创作和编辑工具</h3>
+    <div class="quote">我们和艺术家、设计师合作打造了新的 AI 工具来解决创意工作流中的实际问题。Google Pics：全新的图片创作和编辑工具。可移动和缩放对象、添加文字等。</div>
+    <div class="tags">
+      <span class="tag tool">🛠️ 工具</span>
+    </div>
+    <div class="source">📍 @GoogleAI · <a href="https://x.com/GoogleAI">查看推文</a></div>
+    <div class="score">⭐⭐⭐ 5/10</div>
+    <div class="howto"><strong>如何应用：</strong>内容创作者可直接用 Google Pics 做快速图片编辑，无需打开 Photoshop 等重型工具。</div>
+  </div>
+
+  <!-- #10 -->
+  <div class="card">
+    <span class="rank">10</span>
+    <h3>Midjourney V8.1 — <code>--no</code> 反向提示词</h3>
+    <div class="quote">很多人要求的反提示功能回来了！V8.1 现在支持 <code>--no</code> 标记。想从图片中去除某些元素（比如人物）？试试 <code>--no people</code>。</div>
+    <div class="tags">
+      <span class="tag prompt">💬 Prompt</span>
+    </div>
+    <div class="source">📍 @midjourney · <a href="https://x.com/midjourney/status/2044166948674769196">查看推文</a></div>
+    <div class="score">⭐⭐⭐ 3/10</div>
+    <div class="howto"><strong>如何应用：</strong>生成图片时用 <code>--no [元素]</code> 排除不想要的内容，提升出图精准度。</div>
+  </div>
+
+  <!-- #11 -->
+  <div class="card">
+    <span class="rank">11</span>
+    <h3>Midjourney V8.1 正式升级</h3>
+    <div class="quote">V8.1 已上线！经典美学回归，原生 2K HD 渲染 — 比 V8 快 3 倍、便宜 3 倍。全质量 V8.1 1K 模式比 V7 草稿模式还快。Describe 功能重做，还有全新的 moodboards 和 srefs。</div>
+    <div class="tags">
+      <span class="tag tool">🛠️ 工具</span>
+    </div>
+    <div class="source">📍 @midjourney · <a href="https://x.com/midjourney/status/2044166948674769196">查看推文</a></div>
+    <div class="score">⭐⭐⭐ 3/10</div>
+    <div class="howto"><strong>如何应用：</strong>升级到 V8.1 可立即获得更快速度和更低成本的图片生成体验。</div>
+  </div>
+
+  <!-- #12 -->
+  <div class="card">
+    <span class="rank">12</span>
+    <h3>Kimi Web Bridge — AI Agent 浏览器操作</h3>
+    <div class="quote">认识 Kimi Web Bridge — Kimi 的浏览器扩展。AI Agent 现在可以像人一样与网站互动：搜索、滚动、点击、输入和完成任务。支持 Kimi Code CLI、Claude Code、Cursor 等。</div>
+    <div class="tags">
+      <span class="tag tool">🛠️ 工具</span>
+      <span class="tag workflow">🔄 工作流</span>
+    </div>
+    <div class="source">📍 @Kimi_Moonshot · <a href="https://x.com/Kimi_Moonshot">查看推文</a></div>
+    <div class="score">⭐⭐⭐ 3/10</div>
+    <div class="howto"><strong>如何应用：</strong>让 AI Agent 自动完成浏览器操作（填表、抓取数据、自动化流程），扩展 Agent 能力边界。</div>
+  </div>
+
+  <!-- #13 -->
+  <div class="card">
+    <span class="rank">13</span>
+    <h3>DeepSeek-R1 最佳部署设置</h3>
+    <div class="quote">看到大家都在部署 DeepSeek-R1，这里是我们推荐的最佳实践设置：不用 system prompt。温度：0.6。使用官方搜索和文件上传提示。以及缓解模型越狱的指南。</div>
+    <div class="tags">
+      <span class="tag prompt">💬 Prompt</span>
+      <span class="tag tool">🛠️ 工具</span>
+    </div>
+    <div class="source">📍 @deepseek_ai · <a href="https://x.com/deepseek_ai">查看推文</a></div>
+    <div class="score">⭐⭐⭐ 3/10</div>
+    <div class="howto"><strong>如何应用：</strong>自部署 DeepSeek-R1 时直接套用这些参数即可获得官方推荐的最佳体验。</div>
+  </div>
+
+  <!-- #14 -->
+  <div class="card">
+    <span class="rank">14</span>
+    <h3>Google Antigravity 2.0 — AI Agent 桌面应用</h3>
+    <div class="quote">Google I/O 开发者新闻回顾。用 AI Agent 开发：Antigravity 2.0 — 一款全新的独立桌面应用，专为 AI Agent 开发而构建。</div>
+    <div class="tags">
+      <span class="tag tool">🛠️ 工具</span>
+    </div>
+    <div class="source">📍 @GoogleAI · <a href="https://x.com/GoogleAI">查看推文</a></div>
+    <div class="score">⭐⭐⭐ 3/10</div>
+    <div class="howto"><strong>如何应用：</strong>想快速搭建 AI Agent 应用的开发者可尝试 Antigravity 2.0 桌面版，降低开发门槛。</div>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats">
+    <div class="stat"><div class="num">38</div><div class="label">原始采集</div></div>
+    <div class="stat"><div class="num">14</div><div class="label">入选条目</div></div>
+    <div class="stat"><div class="num">6.5</div><div class="label">平均评分</div></div>
+    <div class="stat"><div class="num">3/5</div><div class="label">缓存完成</div></div>
+  </div>
+
+  <div class="footer">
+    自动生成于 2026-05-23 10:00 UTC · AI 网红工具日报 · 数据来源 X (Twitter)
+  </div>
+
+</div>
+</body>
+</html>

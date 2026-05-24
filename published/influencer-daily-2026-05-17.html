@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 网红日报 · 2026-05-18</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --card-bg: #161b22;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --accent: #58a6ff;
+      --border: #30363d;
+      --success: #238636;
+      --warning: #d29922;
+      --danger: #da3633;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 20px;
+      background: var(--bg); color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6; -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 900px; margin: 0 auto; }
+    header { border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 24px; }
+    h1 { margin: 0 0 6px; font-size: 28px; letter-spacing: -0.5px; }
+    .subtitle { color: var(--muted); font-size: 14px; }
+    .meta { margin-top: 10px; font-size: 12px; color: var(--muted); }
+    .grid {
+      display: grid; gap: 16px;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+    .card {
+      background: var(--card-bg); border: 1px solid var(--border);
+      border-radius: 10px; padding: 16px; transition: transform 0.15s ease;
+    }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.3); }
+    .card-title { font-size: 16px; font-weight: 600; margin: 0 0 8px; }
+    .card-meta { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+    .tag {
+      font-size: 11px; padding: 2px 8px; border-radius: 999px;
+      border: 1px solid var(--border); color: var(--muted);
+    }
+    .tag.tool { border-color: var(--accent); color: var(--accent); }
+    .tag.workflow { border-color: var(--warning); color: var(--warning); }
+    .tag.prompt { border-color: var(--success); color: var(--success); }
+    .tag.thought { border-color: #f7768e; color: #f7768e; }
+    .score {
+      display: inline-block; font-size: 12px; font-weight: 600;
+      padding: 2px 8px; border-radius: 999px; background: #21262d; color: #f0f6fc;
+    }
+    .score.top { background: var(--success); }
+    .score.high { background: var(--accent); }
+    .score.med { background: var(--warning); }
+    .howto {
+      background: #21262d; padding: 10px; font-size: 13px;
+      border-left: 3px solid var(--accent); margin-top: 10px;
+    }
+    .howto strong { display: block; margin-bottom: 4px; color: var(--text); font-size: 12px; }
+    .source {
+      margin-top: 10px; font-size: 12px; color: var(--muted);
+    }
+    .source a { color: var(--accent); text-decoration: none; }
+    .source a:hover { text-decoration: underline; }
+    .stats { display: flex; gap: 10px; font-size: 12px; color: var(--muted); margin-top: 6px; }
+    .stat { display: flex; align-items: center; gap: 4px; }
+    .stat svg { width: 14px; height: 14px; fill: var(--muted); }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; background: var(--card-bg); border-radius: 10px; overflow: hidden; }
+    th, td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--border); }
+    th { background: #1f242c; color: #c9d1d9; font-weight: 600; }
+    tr:hover td { background: #21262d; }
+    .cta { margin-top: 30px; padding: 16px; background: #21262d; border: 1px solid var(--border); border-radius: 10px; }
+    .cta h3 { margin: 0 0 10px; font-size: 18px; }
+    .cta ul { margin: 0; padding-left: 20px; }
+    footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); text-align: center; }
+    .flag { display: inline-block; padding: 2px 8px; font-size: 11px; background: #30363d; border-radius: 999px; color: #8b949e; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🤖 AI 网红日报</h1>
+      <div class="subtitle">AI 工具 × 工作流 × Prompt × 思维 × 内容生产力</div>
+      <div class="meta">📅 2026-05-18 10:00 UTC | 📊 今日精选 13 条 | 🚀 Top 12</div>
+    </header>
+
+    <!-- Summary Grid -->
+    <div class="grid" style="margin-bottom:20px;">
+      <div class="card">
+        <div class="card-title">🔥 Hailuo AI Agent</div>
+        <div class="card-meta"><span class="tag tool">工具</span><span class="tag workflow">工作流</span></div>
+        <div class="score top">12/10</div>
+        <p style="font-size:13px; color:#98c379; margin:8px 0;">免费一周 | 谈话式输入 → Agent 自动规划 + 多模态输出</p>
+        <div class="howto"><strong>如何应用</strong>高阶构思 → 自然语言输入 → Agent 选模型+规划流程 → 生成图文/视频/音频</div>
+      </div>
+      <div class="card">
+        <div class="card-title">🚀 Kimi K2.6 Agent</div>
+        <div class="card-meta"><span class="tag tool">工具</span><span class="tag workflow">工作流</span></div>
+        <div class="score top">13/10</div>
+        <div class="stats">
+          <span class="stat" title="长作业工具调用">tool calls: 4000+</span>
+          <span class="stat" title="子Agent并行">sub-agents: 300</span>
+        </div>
+        <p style="font-size:13px; color:#98c379; margin:8px 0;">12h+连续执行 | 跨语言多任务 | 单提示生成 100+ 文件</p>
+        <div class="howto"><strong>如何应用</strong>单需求提示 → 自动拆解+300子Agent协作 → 输出完整项目代码</div>
+      </div>
+      <div class="card">
+        <div class="card-title">lescope Qwen-Scope</div>
+        <div class="card-meta"><span class="tag tool">工具</span><span class="tag workflow">调试</span></div>
+        <div class="score high">10/10</div>
+        <p style="font-size:13px; color:#98c379; margin:8px 0;">可编程 SAE 特征 | 直接操控内部表示 → 无需提示工程</p>
+        <div class="howto"><strong>如何应用</strong>特征 steering + 数据合成 + 故障溯源 + 评估设计</div>
+      </div>
+      <div class="card">
+        <div class="card-title">🛡️ Claude 4 Alignment</div>
+        <div class="card-meta"><span class="tag workflow">安全</span><span class="tag prompt">提示</span></div>
+        <div class="score high">8/10</div>
+        <p style="font-size:13px; color:#98c379; margin:8px 0;">系统提示词+工具训练 → 100% 消除勒索行为</p>
+        <div class="howto"><strong>如何应用</strong>在提示中加入“无害性”相关工具与说明 → 构建更安全工作流</div>
+      </div>
+      <div class="card">
+        <div class="card-title">🎨 Muse Spark</div>
+        <div class="card-meta"><span class="tag tool">工具</span><span class="tag workflow">多模态</span></div>
+        <div class="score high">10/10</div>
+        <p style="font-size:13px; color:#98c379; margin:8px 0;">原生多模态 reasoning + 工具调用 + 多智能体编排</p>
+        <div class="howto"><strong>如何应用</strong>上传 sketch → Muse 自动补全视觉思维链 → 生成代码/文案/交互说明</div>
+      </div>
+      <div class="card">
+        <div class="card-title">⚡ FlashQLA</div>
+        <div class="card-meta"><span class="tag workflow">性能</span><span class="tag tool">加速</span></div>
+        <div class="score top">11/10</div>
+        <div class="stats">
+          <span class="stat" title="推理加速">2-3x</span>
+          <span class="stat" title="反向加速">2x</span>
+        </div>
+        <p style="font-size:13px; color:#98c379; margin:8px 0;">本地 Agent 推理加速，适配 TP/小模型/长上下文</p>
+        <div class="howto"><strong>如何应用</strong>本地 Agent + FlashQLA → 快速响应，减少带宽占用</div>
+      </div>
+    </div>
+
+    <!-- Full List Table -->
+    <h2 style="margin:24px 0 12px; font-size:20px;">📋 每日精选 13 条</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>标题</th>
+          <th>类别</th>
+          <th>评分</th>
+          <th>关键优势</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Hailuo AI Agent</td><td>工具</td><td><span class="score top">12</span></td><td>谈话式创意流 | 免费一周</td></tr>
+        <tr><td>2</td><td>Kimi K2.6 Agent</td><td>工具</td><td><span class="score top">13</span></td><td>长作业4000+调用 | 300子Agent | 单提示100+文件</td></tr>
+        <tr><td>3</td><td>Qwen-Scope SAE</td><td>工具</td><td><span class="score high">10</span></td><td>特征操控 | 数据合成 | 故障溯源</td></tr>
+        <tr><td>4</td><td>Claude 4 Alignment</td><td>工作流</td><td><span class="score high">8</span></td><td>系统提示消除勒索行为</td></tr>
+        <tr><td>5</td><td>Muse Spark</td><td>工具</td><td><span class="score high">10</span></td><td>原生多模态 reasoning + 多Agent</td></tr>
+        <tr><td>6</td><td>FlashQLA</td><td>工作流</td><td><span class="score top">11</span></td><td>本地Agent加速 2-3x 推理</td></tr>
+        <tr><td>7</td><td>Context Cost</td><td>工作流</td><td><span class="score high">8</span></td><td>降30-60% token消耗</td></tr>
+        <tr><td>8</td><td>Vibe Coding</td><td>工作流</td><td><span class="score med">5</span></td><td>沉浸式编程 | 思维流 > 代码流</td></tr>
+        <tr><td>9</td><td>Prompt Engineering 2026</td><td>Prompt</td><td><span class="score high">9</span></td><td>标准化模板库</td></tr>
+        <tr><td>10</td><td>Notion Dev Platform</td><td>工具</td><td><span class="score med">5</span></td><td>CLI + Serverless Workers</td></tr>
+        <tr><td>11</td><td>Claude Code 架构</td><td>思维</td><td><span class="score med">6</span></td><td>杂合经典AI与LLM</td></tr>
+        <tr><td>12</td><td>Seedance 2.0 + GPT Image 2</td><td>工具</td><td><span class="score high">10</span></td><td>电影级视频 + 多风格视觉</td></tr>
+        <tr><td>13</td><td>Hailuo Workspace 升级</td><td>工具</td><td><span class="score high">10</span></td><td>统一工作区 | 多模态融合</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Action Plan -->
+    <div class="cta">
+      <h3>🎯 本周行动建议</h3>
+      <ul>
+        <li><strong>今日动手</strong>：用 Hailuo AI Agent 生成下周社媒封面；用 Kimi K2.6 写一个 Express.js REST API。</li>
+        <li><strong>本周演练</strong>：Notion + CLI 部署一个“推文摘要 Agent”；用 Qwen-Scope 分析模型偏差。</li>
+        <li><strong>本月目标</strong>：测试 FlashQLA + 本地 Agent 7×24 质检；整理团队 Prompt 库 v1.0。</li>
+      </ul>
+    </div>
+
+    <footer>
+      <div>🤖 AI 网红日报 · 每日更新</div>
+      <div style="margin-top:6px;">📌 本期链接：<code>/reports/influencer-daily-2026-05-18.html</code> | <code>/reports/influencer-daily-latest.html</code></div>
+      <div style="margin-top:6px;">© 2026 AI 网红日报 · 基于 2026-05-18 缓存 (g1/3/4 + 网摘补充)</div>
+    </footer>
+  </div>
+
+  <!-- Inline SVG Icons -->
+  <svg style="display:none;">
+    <symbol id="heart" viewBox="0 0 24 24"><path d="M20.84 4.61c-1.5-1.5-3.91-1.5-5.41 0l-7.76 7.76-7.76-7.76c-1.5-1.5-3.91-1.5-5.41 0-1.5 1.5-1.5 3.91 0 5.41l7.76 7.76L20.84 10c1.5-1.5 1.5-3.91 0-5.41z"/></symbol>
+    <symbol id="retweet" viewBox="0 0 24 24"><path d="M21 11h-7l2-2a7 7 0 1 0-3 12l3 3V18h6l-3-3a7 7 0 0 0 4-7z"/><circle cx="16" cy="6" r="2"/></symbol>
+    <symbol id="eye" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></symbol>
+  </svg>
+</body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 网红工具日报 — 2026-05-19</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --border: #30363d;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --accent: #58a6ff;
+    --accent2: #3fb950;
+    --accent3: #d2a8ff;
+    --tag-tool: #1f6feb;
+    --tag-workflow: #8957e5;
+    --tag-prompt: #da3633;
+    --tag-tutorial: #bf8700;
+    --tag-thinking: #3fb950;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    padding: 0;
+  }
+  .header {
+    text-align: center;
+    padding: 48px 24px 32px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(180deg, #161b22 0%, #0d1117 100%);
+  }
+  .header h1 {
+    font-size: 2em;
+    background: linear-gradient(135deg, var(--accent), var(--accent3));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+  }
+  .header .date { color: var(--muted); font-size: 1.1em; }
+  .header .meta { color: var(--muted); font-size: 0.85em; margin-top: 12px; }
+  .meta .warn { color: #d29922; }
+  .container { max-width: 800px; margin: 0 auto; padding: 24px 16px; }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    transition: border-color 0.2s;
+  }
+  .card:hover { border-color: var(--accent); }
+
+  .card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .rank {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .rank.gold { color: #e3b341; }
+  .rank.silver { color: #8b949e; }
+  .rank.bronze { color: #d29922; }
+
+  .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag {
+    font-size: 0.75em;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .tag-工具 { background: var(--tag-tool); color: #fff; }
+  .tag-工作流 { background: var(--tag-workflow); color: #fff; }
+  .tag-Prompt { background: var(--tag-prompt); color: #fff; }
+  .tag-教程 { background: var(--tag-tutorial); color: #fff; }
+  .tag-思维 { background: var(--tag-thinking); color: #fff; }
+
+  .score {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.95em;
+    color: #e3b341;
+  }
+
+  .tweet-text {
+    background: #0d1117;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 12px 0;
+    border-left: 3px solid var(--accent);
+    font-size: 0.95em;
+    line-height: 1.7;
+    color: #c9d1d9;
+  }
+
+  .source {
+    font-size: 0.85em;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  .source a { color: var(--accent); text-decoration: none; }
+  .source a:hover { text-decoration: underline; }
+
+  .howto {
+    background: linear-gradient(135deg, #1c2128, #161b22);
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+  .howto-label {
+    font-size: 0.8em;
+    font-weight: 700;
+    color: var(--accent2);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+  }
+  .howto p { font-size: 0.9em; color: #c9d1d9; line-height: 1.6; }
+
+  .stats-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 32px 24px;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+  .stat { text-align: center; }
+  .stat-num { font-size: 1.8em; font-weight: 700; color: var(--accent); }
+  .stat-label { font-size: 0.8em; color: var(--muted); text-transform: uppercase; }
+
+  .footer {
+    text-align: center;
+    padding: 32px 24px;
+    color: var(--muted);
+    font-size: 0.85em;
+    border-top: 1px solid var(--border);
+    margin-top: 24px;
+  }
+  .footer .warn-box {
+    background: #2a1f00;
+    border: 1px solid #d29922;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    color: #d29922;
+    font-size: 0.9em;
+  }
+
+  @media (max-width: 600px) {
+    .header h1 { font-size: 1.5em; }
+    .card { padding: 16px; }
+    .stats-bar { gap: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🤖 AI 网红工具日报</h1>
+  <div class="date">2026 年 5 月 19 日 · 星期二</div>
+  <div class="meta">每日精选 · 工具 / 教程 / Prompt / 工作流</div>
+</div>
+
+<div class="container">
+
+  <div class="stats-bar">
+    <div class="stat"><div class="stat-num">10</div><div class="stat-label">精选条目</div></div>
+    <div class="stat"><div class="stat-num">2/5</div><div class="stat-label">缓存组</div></div>
+    <div class="stat"><div class="stat-num">6</div><div class="stat-label">工具推荐</div></div>
+    <div class="stat"><div class="stat-num">4</div><div class="stat-label">工作流</div></div>
+  </div>
+
+  <!-- #1 -->
+  <div class="card">
+    <div class="card-top">
+      <span class="rank gold">🥇 #1</span>
+      <div class="tags"><span class="tag tag-工具">工具</span></div>
+      <div class="score">⭐ 8.0</div>
+    </div>
+    <div class="tweet-text">💡 You get 2,000 free Qwen Code runs every day! Run this one simple command: <code>npx @qwen-code/qwen-code@latest</code> Now with Qwen OAuth support — super easy to use.</div>
+    <div class="source">🔗 @JustinLin6iller · <a href="https://x.com/Alibaba_Qwen/status/1953835877555151134" target="_blank">查看原文</a></div>
+    <div class="howto">
+      <div class="howto-label">💡 如何应用</div>
+      <p>每天免费 2000 次 Qwen Code 调用，一条命令即可启动。适合快速验证代码想法、辅助日常编程工作流，成本为零。</p>
+    </div>
+  </div>
+
+  <!-- #2 -->
+  <div class="card">
+    <div class="card-top">
+      <span class="rank silver">🥈 #2</span>
+      <div class="tags"><span class="tag tag-工作流">工作流</span></div>
+      <div class="score">⭐ 7.0</div>
+    </div>
+    <div class="tweet-text">Whenever a PM or a designer finds a small change to be made, we just create the issue and assign it to a coding agent. Instead of putting it into the work queue and interrupting an engineer's flow — dead simple code review for whoever is on-call.</div>
+    <div class="source">🔗 @thenanyu · <a href="https://x.com/thenanyu/status/1976119079086800950" target="_blank">查看原文</a></div>
+    <div class="howto">
+      <div class="howto-label">💡 如何应用</div>
+      <p>PM 和设计师发现的小改动，直接创建 issue 交给 AI 编码代理处理，避免打断工程师思路。值班人员只需做简单 code review，大幅缩短交付周期。</p>
+    </div>
+  </div>
+
+  <!-- #3 -->
+  <div class="card">
+    <div class="card-top">
+      <span class="rank bronze">🥉 #3</span>
+      <div class="tags"><span class="tag tag-工作流">工作流</span></div>
+      <div class="score">⭐ 6.0</div>
+    </div>
+    <div class="tweet-text">When I first joined Anthropic I was surprised that lots of the team used Claude Code as a general agent, not just for code. I use Claude Code to help me with almost all the work I do now.</div>
+    <div class="source">🔗 @trq212 · <a href="https://x.com/trq212/status/1944877527044120655" target="_blank">查看原文</a></div>
+    <div class="howto">
+      <div class="howto-label">💡 如何应用</div>
+      <p>Claude Code 已被 Anthropic 内部多个团队用作通用 AI 代理。尝试将它用于文档处理、数据分析等非编码任务。</p>
+    </div>
+  </div>
+
+  <!-- #4 -->
+  <div class="card">
+    <div class="card-top">
+      <span class="rank">#4</span>
+      <div class="tags"><span class="tag tag-工具">工具</span></div>
+      <div class="score">⭐ 5.0</div>
+    </div>
+    <div class="tweet-text">The Claude Code SDK is now the Claude Agent SDK — because the agent harness is useful for much more than coding. We're moving to using it to power most of our own agent loops at Anthropic.</div>
+    <div class="source">🔗 @trq212 · <a href="https://x.com/trq212/status/1975243734083379662" target="_blank">查看原文</a></div>
+    <div class="howto">
+      <div class="howto-label">💡 如何应用</div>
+      <p>Agent SDK 可用于构建各类 AI 代理工作流。开发者可以用它搭建自己的自动化 agent，不限于代码场景。</p>
+    </div>
+  </div>
+
+  <!-- #5 -->
+  <div class="card">
+    <div class="card-top">
+      <span class="rank">#5</span>
+      <div class="tags"><span class="tag tag-工作流">工作流</span></div>
+      <div class="score">⭐ 5.0</div>
+    </div>
+    <div class="tweet-text">Here's an inside look on how our teams — from product engineering, to growth marketing, to legal — use Claude Code at Anthropic.</div>
+    <div class="source">🔗 @_catwu · <a href="https://x.com/_catwu/status/1930703532715626587" target="_blank">查看原文</a></div>
+    <div class="howto">
+      <div class="howto-label">💡 如何应用</div>
+      <p>了解 Claude Code 在不同部门的实际应用方式，可作为团队内部推广 AI 编码工具的最佳实践参考。</p>
+    </div>
+  </div>
+
+  <!-- #6 -->
+  <div class="card">
+    <div class="card-top">
+      <span class="rank">#6</span>
+      <div class="tags"><span class="tag tag-Prompt">Prompt</span><span class="tag tag-工作流">工作流</span></div>
+      <div class="score">⭐ 5.0</div>
+    </div>
+    <div class="tweet-text">Telling the agent to keep track of the work in a markdown is so effective, especially once you automated the loop that it can work for hours.</div>
+    <div class="source">🔗 @steipete · <a href="https://x.com/steipete/status/1941494308709990671" target="_blank">查看原文</a></div>
+    <div class="howto">
+      <div class="howto-label">💡 如何应用</div>
+      <p>让 AI 代理用 Markdown 文件跟踪任务进度，形成自动化循环。特别适合需要数小时持续工作的复杂任务。</p>
+    </div>
+  </div>
+
+  <!-- #7 -->
+  <div class="card">
+    <div class="card-top">
+      <span class="rank">#7</span>
+      <div class="tags"><span class="tag tag-工具">工具</span></div>
+      <div class="score">⭐ 4.0</div>
+    </div>
+    <div class="tweet-text">We shipped a ton of new Claude Code features: checkpointing, a new VSCode extension, tab to think, a new mascot Clawd 🦀</div>
+    <div class="source">🔗 @trq212 · <a href="https://x.com/trq212/status/1972784970054893877" target="_blank">查看原文</a></div>
+    <div class="howto">
+      <div class="howto-label">💡 如何应用</div>
+      <p>Checkpointing 可保存进度随时回滚；Tab to Think 让代理有更多推理时间；新的 VSCode 扩展提升开发体验。</p>
+    </div>
+  </div>
+
+  <!-- #8 -->
+  <div class="card">
+    <div class="card-top">
+      <span class="rank">#8</span>
+      <div class="tags"><span class="tag tag-工具">工具</span></div>
+      <div class="score">⭐ 4.0</div>
+    </div>
+    <div class="tweet-text">It's been a big week for Claude Code. We launched 8 exciting new features to help devs build faster and smarter.</div>
+    <div class="source">🔗 @_catwu · <a href="https://x.com/_catwu/status/1903130881205977320" target="_blank">查看原文</a></div>
+    <div class="howto">
+      <div class="howto-label">💡 如何应用</div>
+      <p>一周发布 8 项新功能，建议逐一了解找到最适合自己工作流的提升点。</p>
+    </div>
+  </div>
+
+  <!-- #9 -->
+  <div class="card">
+    <div class="card-top">
+      <span class="rank">#9</span>
+      <div class="tags"><span class="tag tag-工具">工具</span></div>
+      <div class="score">⭐ 4.0</div>
+    </div>
+    <div class="tweet-text">New Claude Code features: Microcompact — clear old tool calls to extend session length. Subagents — @-mention support + model selection. PDF support — read PDFs directly.</div>
+    <div class="source">🔗 @_catwu · <a href="https://x.com/_catwu/status/1952488684579873195" target="_blank">查看原文</a></div>
+    <div class="howto">
+      <div class="howto-label">💡 如何应用</div>
+      <p>Microcompact 释放上下文空间；Subagents 支持多模型；PDF 支持直接读取。三个功能组合使用可大幅提升长会话效率。</p>
+    </div>
+  </div>
+
+  <!-- #10 -->
+  <div class="card">
+    <div class="card-top">
+      <span class="rank">#10</span>
+      <div class="tags"><span class="tag tag-教程">教程</span></div>
+      <div class="score">⭐ 4.0</div>
+    </div>
+    <div class="tweet-text">It's been a big week for Claude Code. We launched 8 exciting new features — here's a roundup of everything.</div>
+    <div class="source">🔗 @_catwu · <a href="https://x.com/_catwu/status/1903130881205977320" target="_blank">查看原文</a></div>
+    <div class="howto">
+      <div class="howto-label">💡 如何应用</div>
+      <p>作为 Claude Code 新功能的学习参考，建议对照实际项目逐一尝试落地。</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div class="warn-box">⚠️ 今日仅完成 2/5 组缓存（g2, g4），g1/g3/g5 未生成。覆盖率偏低，建议检查缓存采集系统。</div>
+  <p>AI 网红工具日报 · 自动生成于 2026-05-19 10:00 UTC</p>
+</div>
+
+</body>
+</html>

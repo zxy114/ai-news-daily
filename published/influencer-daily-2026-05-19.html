@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI网红工具日报 - 2026-05-20</title>
+    <style>
+        :root {
+            --bg-color: #0f0f13;
+            --card-bg: #1a1a20;
+            --card-hover: #252530;
+            --text-main: #e0e0e0;
+            --text-sub: #a0a0a0;
+            --accent: #6366f1;
+            --accent-hover: #4f46e5;
+            --badge-tool: #10b981;
+            --badge-prompt: #f59e0b;
+            --badge-workflow: #8b5cf6;
+            --badge-tutorial: #3b82f6;
+            --badge-thinking: #ef4444;
+            --border: #2a2a35;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            font-size: 2rem;
+            background: linear-gradient(135deg, #6366f1, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        .header .subtitle {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+        }
+        .date-badge {
+            display: inline-block;
+            background: #2d2d38;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-top: 10px;
+            color: var(--text-sub);
+        }
+        .article { margin-bottom: 24px; }
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border-color: #3a3a48;
+        }
+        .card-content { padding: 20px; }
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .rank {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent);
+            line-height: 1;
+        }
+        .star-rating { color: #fbbf24; font-size: 1rem; }
+        .card-source {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            margin-bottom: 14px;
+        }
+        .card-source a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .card-source a:hover { text-decoration: underline; }
+        .quote-block {
+            background: #131318;
+            padding: 14px 16px;
+            border-left: 3px solid var(--accent);
+            border-radius: 0 6px 6px 0;
+            margin: 12px 0 16px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .card-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 14px;
+        }
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .badge-tool { background: rgba(16, 185, 129, 0.15); color: #34d399; }
+        .badge-prompt { background: rgba(245, 158, 11, 0.15); color: #fbbf24; }
+        .badge-workflow { background: rgba(139, 92, 246, 0.15); color: #a78bfa; }
+        .badge-tutorial { background: rgba(59, 130, 246, 0.15); color: #60a5fa; }
+        .badge-thinking { background: rgba(239, 68, 68, 0.15); color: #f87171; }
+        .how-to {
+            background: #15151b;
+            padding: 14px 16px;
+            border-radius: 8px;
+            margin-top: 16px;
+        }
+        .how-to h4 {
+            font-size: 0.8rem;
+            color: var(--text-sub);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .how-to p {
+            font-size: 0.9rem;
+            color: #d0d0d5;
+        }
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 12px;
+            margin-top: 40px;
+            padding: 20px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+        .stat-item { text-align: center; }
+        .stat-value { font-size: 1.5rem; font-weight: 700; color: var(--accent); }
+        .stat-label { font-size: 0.75rem; color: var(--text-sub); text-transform: uppercase; margin-top: 4px; }
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: var(--text-sub);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+            margin-top: 30px;
+        }
+        .tags-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .tag {
+            background: #1a1a20;
+            border: 1px solid var(--border);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-sub);
+        }
+        .tag.highlight { border-color: var(--accent); color: var(--accent); }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>🤖 AI 网红工具日报</h1>
+        <div class="subtitle">每日精选 AI 工具、教程、Prompt 与工作流</div>
+        <div class="date-badge">📅 2026-05-20（周三）</div>
+    </div>
+
+    <!-- Top 14 Articles -->
+    
+    <div class="article">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-header">
+                    <div class="rank">1</div>
+                    <div class="star-rating">⭐⭐⭐⭐⭐ (12/10)</div>
+                </div>
+                <div class="card-source">
+                    <span class="badge badge-tool">工具</span>
+                    <span class="badge badge-workflow">工作流</span>
+                    <a href="https://x.com/Hailuo_AI/status/1970086888951394483" target="_blank">@Hailuo_AI</a>
+                </div>
+                <div class="quote-block">
+                    <strong>原文：</strong>Introducing Hailuo AI Agent: Your next-gen creative flow — FREE for one week! Just talk, and watch your ideas come alive on the infinite canvas. The Agent selects the best models, plans the workflow, and brings your vision to life. Images, videos, audio — all in one place.
+                </div>
+                <div class="how-to">
+                    <h4>💡 如何应用</h4>
+                    <p>用自然语言描述创意，Agent 自动选择最佳模型生成图片/视频/音频。适合做短视频、社交媒体素材的一站式创作。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="article">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-header">
+                    <div class="rank">2</div>
+                    <div class="star-rating">⭐⭐⭐⭐⭐ (10/10)</div>
+                </div>
+                <div class="card-source">
+                    <span class="badge badge-tool">工具</span>
+                    <span class="badge badge-workflow">工作流</span>
+                    <a href="https://x.com/Hailuo_AI/status/2032807692897816737" target="_blank">@Hailuo_AI</a>
+                </div>
+                <div class="quote-block">
+                    <strong>原文：</strong>Hailuo Workspace Just ...Leveled Up! One Flow. Infinite Creations. Unified Workspace: Images, video, audio — seamlessly fused for a smooth flow. Project Mastery: Assets are now easily organized and ready to inspire.
+                </div>
+                <div class="how-to">
+                    <h4>💡 如何应用</h4>
+                    <p>在 Hailuo Workspace 中按项目管理素材，图片→视频→音频一站式衔接，省去反复切换工具的时间。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="article">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-header">
+                    <div class="rank">3</div>
+                    <div class="star-rating">⭐⭐⭐⭐⭐ (10/10)</div>
+                </div>
+                <div class="card-source">
+                    <span class="badge badge-tool">工具</span>
+                    <a href="https://x.com/Hailuo_AI/status/2050631393848541292" target="_blank">@Hailuo_AI</a>
+                </div>
+                <div class="quote-block">
+                    <strong>原文：</strong>Seedance 2.0 & GPT Image 2 officially launch on Hailuo AI. Seedance 2.0: Advanced motion control + stable multi-character visuals, turn words into cinematic videos instantly. GPT Image 2: Craft premium multi-style visuals effortlessly via text prompt.
+                </div>
+                <div class="how-to">
+                    <h4>💡 如何应用</h4>
+                    <p>用 Seedance 2.0 做多角色动态视频（适合剧情短片），用 GPT Image 2 快速生成多风格封面图。两个模型同一平台可用。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="article">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-header">
+                    <div class="rank">4</div>
+                    <div class="star-rating">⭐⭐⭐⭐ (8/10)</div>
+                </div>
+                <div class="card-source">
+                    <span class="badge badge-tool">工具</span>
+                    <a href="https://x.com/zarazhangrui/status/1982919958423089315" target="_blank">@zarazhangrui</a>
+                </div>
+                <div class="quote-block">
+                    <strong>原文：</strong>Introducing TLDW: a better way to consume long YouTube videos. The key feature is personalized highlight reels: the AI identifies the most high-signal parts of a video, displayed using different colors on the progress bar. We open-sourced the code. Try it at tldw.us.
+                </div>
+                <div class="how-to">
+                    <h4>💡 如何应用</h4>
+                    <p>粘贴 YouTube 链接到 tldw.us，AI 自动标注高价值片段。适合快速消化播客、教程、访谈等长视频内容，做选题调研利器。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="article">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-header">
+                    <div class="rank">5</div>
+                    <div class="star-rating">⭐⭐⭐⭐ (8/10)</div>
+                </div>
+                <div class="card-source">
+                    <span class="badge badge-prompt">Prompt</span>
+                    <span class="badge badge-tool">工具</span>
+                    <a href="https://x.com/zarazhangrui/status/2016336358189789184" target="_blank">@zarazhangrui</a>
+                </div>
+                <div class="quote-block">
+                    <strong>原文：</strong>I created a Claude Skill that make beautiful slides on the web. The world hasn't woken up to the fact that code can create much better slides than most PPT tools. Claude interviews you first about aesthetics, then generate a few directions to "show not tell", and you can pick.
+                </div>
+                <div class="how-to">
+                    <h4>💡 如何应用</h4>
+                    <p>让 Claude 先询问你的审美偏好，然后生成多个风格方向的幻灯片预览。比 PPT 工具更灵活，适合做课程演示、项目提案。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="article">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-header">
+                    <div class="rank">6</div>
+                    <div class="star-rating">⭐⭐⭐⭐ (8/10)</div>
+                </div>
+                <div class="card-source">
+                    <span class="badge badge-thinking">思维</span>
+                    <a href="https://x.com/GaryMarcus/status/2054015225318482075" target="_blank">@GaryMarcus</a>
+                </div>
+                <div class="quote-block">
+                    <strong>原文：</strong>Claude Code (still not AGI but biggest advance since GPT-4) is the most neurosymbolic thing I have ever seen. 53 symbolic tools, 500,000 lines of symbolic code, combined with a state-of-the-art LLM. It's a victory for borrowing from classical AI and CS to move beyond pure LLMs.
+                </div>
+                <div class="how-to">
+                    <h4>💡 如何应用</h4>
+                    <p>理解 Claude Code 不只是"大模型"——53 个符号工具 + 50 万行代码让它成为真正的 Agent 框架。用这个思路设计自己的 AI 工作流：先搭工具，再让 LLM 编排。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="article">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-header">
+                    <div class="rank">7</div>
+                    <div class="star-rating">⭐⭐⭐⭐ (8/10)</div>
+                </div>
+                <div class="card-source">
+                    <span class="badge badge-prompt">Prompt</span>
+                    <a href="https://x.com/zodchiii/status/2036093004725747955" target="_blank">@zodchiii</a>
+                </div>
+                <div class="quote-block">
+                    <strong>原文：</strong>Most prompt engineering guides are outdated. They tell you to "act as a senior expert" and write walls of text. That worked in 2024. Claude 4.6 is a different animal. It takes you literally. It does exactly what you ask — nothing more. I spent months figuring out what actually works from daily use.
+                </div>
+                <div class="how-to">
+                    <h4>💡 如何应用</h4>
+                    <p>Claude 4.6 会字面理解你的指令——不要用模糊的"扮演专家"，而是给出具体、精确的任务描述和输出格式。越具体，效果越好。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="article">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-header">
+                    <div class="rank">8</div>
+                    <div class="star-rating">⭐⭐⭐⭐ (8/10)</div>
+                </div>
+                <div class="card-source">
+                    <span class="badge badge-workflow">工作流</span>
+                    <span class="badge badge-prompt">Prompt</span>
+                    <a href="https://x.com/milesdeutscher/status/2030000475358253502" target="_blank">@milesdeutscher</a>
+                </div>
+                <div class="quote-block">
+                    <strong>原文：</strong>Getting Started w/ AI Automation: 10 Essential Workflows (+ prompts). Custom Skill Creator Prompt: Describe any repetitive task or workflow, and your AI agent builds a custom skill for it — so you never have to explain it again.
+                </div>
+                <div class="how-to">
+                    <h4>💡 如何应用</h4>
+                    <p>把重复性任务描述一遍，AI 自动创建可复用的 Skill。推荐用"描述任务→AI生成Skill→后续一键调用"模式替代每次重新写 Prompt。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="article">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-header">
+                    <div class="rank">9</div>
+                    <div class="star-rating">⭐⭐⭐⭐ (7/10)</div>
+                </div>
+                <div class="card-source">
+                    <span class="badge badge-tutorial">教程</span>
+                    <span class="badge badge-tool">工具</span>
+                    <a href="https://x.com/eng_khairallah1/status/2037816689665147355" target="_blank">@eng_khairallah1</a>
+                </div>
+                <div class="quote-block">
+                    <strong>原文：</strong>Top 60 Claude Skills, Workflows, and GitHub Repos for AI — The Complete List.
+                </div>
+                <div class="how-to">
+                    <h4>💡 如何应用</h4>
+                    <p>直接按需取用的 Claude Skill 资源库。从代码生成到内容创作都有现成模板，复制到 CLAUDE.md 即可使用。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="article">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-header">
+                    <div class="rank">10</div>
+                    <div class="star-rating">⭐⭐⭐⭐ (7/10)</div>
+                </div>
+                <div class="card-source">
+                    <span class="badge badge-tutorial">教程</span>
+                    <a href="https://x.com/heynavtoor/status/2033240431790797239" target="_blank">@heynavtoor</a>
+                </div>
+                <div class="quote-block">
+                    <strong>原文：</strong>AI agents are the biggest shift in AI since ChatGPT launched. Instead of AI that answers questions, agents are AI that takes actions: browsing the web, managing files, coordinating tasks, calling APIs, and completing multi-step workflows autonomously. Microsoft built this 12-lesson course to teach you the fundamentals from scratch.
+                </div>
+                <div class="how-to">
+                    <h4>💡 如何应用</h4>
+                    <p>免费系统学习 AI Agent 开发。适合想从"用 AI"升级到"造 AI Agent"的创作者，12 节课从零到部署。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="article">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-header">
+                    <div class="rank">11</div>
+                    <div class="star-rating">⭐⭐⭐ (6/10)</div>
+                </div>
+                <div class="card-source">
+                    <span class="badge badge-workflow">工作流</span>
+                    <a href="https://x.com/steipete/status/1941494308709990671" target="_blank">@steipete</a>
+                </div>
+                <div class="quote-block">
+                    <strong>原文：</strong>Telling the agent to keep track of the work in a markdown is so effective, especially once you automated the loop that it can work for hours.
+                </div>
+                <div class="how-to">
+                    <h4>💡 如何应用</h4>
+                    <p>在 Prompt 中要求 Agent 把工作进度写入 .md 文件，配合自动化循环可实现长时间无人值守。非常适合批量内容生产、数据分析等场景。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="article">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-header">
+                    <div class="rank">12</div>
+                    <div class="star-rating">⭐⭐⭐ (5/10)</div>
+                </div>
+                <div class="card-source">
+                    <span class="badge badge-tool">工具</span>
+                    <a href="https://x.com/zarazhangrui/status/1982128230133068263" target="_blank">@zarazhangrui</a>
+                </div>
+                <div class="quote-block">
+                    <strong>原文：</strong>Sometimes a video is so high-signal, you feel like taking notes all the time. So we make it easy in TLDW: select any lines in the transcript, and convert them into notes with one click (or get AI to explain it if you don't get it).
+                </div>
+                <div class="how-to">
+                    <h4>💡 如何应用</h4>
+                    <p>看教程/课程视频时选中逐字稿关键句，一键转笔记或让 AI 解释不懂的部分。适合做学习笔记和内容素材整理。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="article">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-header">
+                    <div class="rank">13</div>
+                    <div class="star-rating">⭐⭐⭐ (5/10)</div>
+                </div>
+                <div class="card-source">
+                    <span class="badge badge-tutorial">教程</span>
+                    <a href="https://x.com/Hailuo_AI/status/2035349090477949272" target="_blank">@Hailuo_AI</a>
+                </div>
+                <div class="quote-block">
+                    <strong>原文：</strong>Follow the tutorial and create your own at hailuoai.video/tool/relight. Can't wait to see what you guys cook up! 👨‍🍳🔥 Tag me in your results!
+                </div>
+                <div class="how-to">
+                    <h4>💡 如何应用</h4>
+                    <p>上传照片 → 用 AI 重光工具调整光线效果。适合电商产品图、人像补光，一键提升视觉质感。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="article">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-header">
+                    <div class="rank">14</div>
+                    <div class="star-rating">⭐⭐⭐ (6/10)</div>
+                </div>
+                <div class="card-source">
+                    <span class="badge badge-thinking">思维</span>
+                    <a href="https://x.com/GaryMarcus/status/2046293597910413466" target="_blank">@GaryMarcus</a>
+                </div>
+                <div class="quote-block">
+                    <strong>原文：</strong>So let me see if i got this AI stuff straight: you pay to experiment with the models, you pay to automate your business workflows, you pay to validate the outputs, you pay to detect silent downgrades, you pay to update your workflows, you pay to revalidate...
+                </div>
+                <div class="how-to">
+                    <h4>💡 如何应用</h4>
+                    <p>提醒创作者评估 AI 工具的真实 ROI。订阅费、API 调用费、验证成本加起来可能超预期——用之前先算总账。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Statistics & Tags -->
+    <div class="stats-bar">
+        <div class="stat-item">
+            <div class="stat-value">14</div>
+            <div class="stat-label">收录条目</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-value">18</div>
+            <div class="stat-label">原始推文</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-value">3</div>
+            <div class="stat-label">剔除项</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-value">7</div>
+            <div class="stat-label">Hailuo AI 事件</div>
+        </div>
+    </div>
+
+    <div class="tags-cloud">
+        <span class="tag highlight">Hailuo AI</span>
+        <span class="tag">TLDW</span>
+        <span class="tag">Claude Skill</span>
+        <span class="tag">Prompt工程</span>
+        <span class="tag">Agent工作流</span>
+        <span class="tag">Seedance 2.0</span>
+    </div>
+
+    <div class="footer">
+        <p>📅 生成时间：2026-05-20 10:00 UTC | 数据来源：Twitter/X 公开推文</p>
+        <p style="opacity: 0.7; margin-top: 8px;">AI 网红工具日报 · 每日精选内容创作者工具与技巧</p>
+    </div>
+</div>
+</body>
+</html>

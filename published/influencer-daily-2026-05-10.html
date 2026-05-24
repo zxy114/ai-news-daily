@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🤖 AI 网红工具日报 — 2026年5月10日</title>
+  <style>
+    :root {
+      --bg-color: #0f0f12;
+      --card-bg: #1a1a1f;
+      --card-hover: #25252d;
+      --text-primary: #e0e0e0;
+      --text-secondary: #a0a0a0;
+      --accent: #6d28d9;
+      --accent-hover: #7c3aed;
+      --warning: #eab308;
+      --success: #10b981;
+      --border: #2d2d35;
+      --tag-tool: #3b82f6;
+      --tag-tutorial: #8b5cf6;
+      --tag-prompt: #ec4899;
+      --tag-workflow: #06b6d4;
+      --tag-thinking: #84cc16;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-primary);
+      line-height: 1.6;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .header {
+      background: linear-gradient(135deg, #1a1a1f 0%, #0f0f12 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 30px 20px;
+      text-align: center;
+      border-radius: 12px 12px 0 0;
+    }
+    .header h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+      background: linear-gradient(90deg, #6d28d9, #8b5cf6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .header .meta {
+      color: var(--text-secondary);
+      font-size: 14px;
+    }
+    .meta-chip {
+      display: inline-block;
+      padding: 4px 10px;
+      background: #2d2d35;
+      border-radius: 20px;
+      margin: 0 5px;
+      font-size: 12px;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      border-color: var(--accent);
+    }
+    .card-header {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .rank {
+      font-size: 24px;
+      font-weight: bold;
+      color: var(--accent);
+      min-width: 40px;
+    }
+    .card-title {
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .card-content {
+      padding: 20px;
+    }
+    .abstract {
+      color: var(--text-secondary);
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .source {
+      background: #151519;
+      padding: 10px 14px;
+      border-radius: 8px;
+      margin: 12px 0;
+      font-size: 14px;
+      border-left: 3px solid var(--accent);
+    }
+    .source a { color: var(--accent); text-decoration: none; }
+    .source a:hover { text-decoration: underline; }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0;
+    }
+    .tag {
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      background: rgba(255,255,255,0.05);
+    }
+    .tag-tool { background: rgba(59,130,246,0.15); color: #60a5fa; }
+    .tag-tutorial { background: rgba(139,92,246,0.15); color: #a78bfa; }
+    .tag-prompt { background: rgba(236,72,153,0.15); color: #f472b6; }
+    .tag-workflow { background: rgba(6,182,212,0.15); color: #22d3ee; }
+    .tag-thinking { background: rgba(132,204,22,0.15); color: #84cc16; }
+    .rating {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+    .rating .stars { color: #fbbf24; }
+    .how-to-use {
+      background: linear-gradient(90deg, rgba(10,185,129,0.05), transparent);
+      padding: 14px 16px;
+      border-radius: 8px;
+      border-left: 3px solid var(--success);
+      font-size: 14px;
+    }
+    .how-to-use h4 {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--success);
+      margin-bottom: 6px;
+    }
+    .footer {
+      text-align: center;
+      padding: 20px;
+      color: var(--text-secondary);
+      font-size: 13px;
+      background: var(--card-bg);
+      border-top: 1px solid var(--border);
+      margin-top: 30px;
+    }
+    .stats-table {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 30px;
+    }
+    .stats-table h3 {
+      margin-bottom: 16px;
+      font-size: 16px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    .stats-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      font-size: 14px;
+    }
+    .stats-row:last-child { border-bottom: none; }
+    .stats-label { color: var(--text-secondary); }
+    .stats-value { font-weight: 600; color: var(--text-primary); }
+    .note {
+      background: rgba(234,179,8,0.1);
+      border: 1px solid rgba(234,179,8,0.2);
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+    .note strong { color: var(--warning); }
+    @media (max-width: 600px) {
+      .header h1 { font-size: 22px; }
+      .card-content { padding: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🤖 AI 网红工具日报</h1>
+      <div class="meta">
+        <span class="meta-chip">📅 2026年5月10日（周日）</span>
+        <span class="meta-chip">🕒 10:00 UTC</span>
+        <span class="meta-chip">📊 实用评分筛选</span>
+      </div>
+    </div>
+
+    <div style="margin-top: 24px; font-size: 14px; text-align: center; color: var(--text-secondary);">
+      > 每日精选内容创作者立即可用的 AI 工具、教程与工作流技巧<br>
+      > 数据来源：Product Hunt · Hacker News · AIbase · V2EX · GitHub Trending
+    </div>
+
+    <!-- 1. Notion -->
+    <div class="card">
+      <div class="card-header">
+        <div class="rank">1</div>
+        <div class="card-title">🛠 Notion 3.4 — 新仪表盘 + 连接器 + 更智能的 AI Agent</div>
+      </div>
+      <div class="card-content">
+        <div class="abstract">Notion 3.4 正式上线，带来了全新仪表盘视图、外部数据连接器（可接入 Slack、GitHub、Figma 等），以及更智能的 AI Agent 能力——支持在文档内直接执行多步骤任务。</div>
+        
+        <div class="source">
+          <strong>来源：</strong> <a href="https://www.product hunt.com/products/notion-3-4" target="_blank">Product Hunt · Notion 3.4</a>
+        </div>
+        
+        <div class="tags">
+          <span class="tag tag-tool">工具</span>
+          <span class="tag tag-workflow">工作流</span>
+        </div>
+        
+        <div class="rating">
+          <span class="stars">★★★★★★★★★</span>
+          <strong>9.2 / 10</strong>
+        </div>
+        
+        <div class="how-to-use">
+          <h4>💡 如何应用</h4>
+          如果你在用 Notion 管理内容日历，直接用新的连接器把 Slack 通知拉进来，AI Agent 可以自动整理选题、生成周报。把你的内容库做成仪表盘，一目了然。
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. OpenAI Codex -->
+    <div class="card">
+      <div class="card-header">
+        <div class="rank">2</div>
+        <div class="card-title">🛠 OpenAI Codex Chrome 扩展 — 浏览器里直接用 Codex</div>
+      </div>
+      <div class="card-content">
+        <div class="abstract">OpenAI 发布了 Codex 的 Chrome 浏览器扩展，支持 Mac 和 PC。可直接集成 GitHub、Slack 和 Figma，在浏览器标签页中完成代码生成、文件操作和自动化任务。</div>
+        
+        <div class="source">
+          <strong>来源：</strong> <a href="https://www.aibase.com/news/27814" target="_blank">AIbase · OpenAI Codex Chrome Extension</a>
+        </div>
+        
+        <div class="tags">
+          <span class="tag tag-tool">工具</span>
+          <span class="tag tag-workflow">工作流</span>
+        </div>
+        
+        <div class="rating">
+          <span class="stars">★★★★★★★★☆</span>
+          <strong>9.0 / 10</strong>
+        </div>
+        
+        <div class="how-to-use">
+          <h4>💡 如何应用</h4>
+          内容创作者可以用它自动生成博客代码片段、批量处理网页数据、甚至在浏览器里直接写自动化脚本抓取竞品内容。
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Adject -->
+    <div class="card">
+      <div class="card-header">
+        <div class="rank">3</div>
+        <div class="card-title">🛠 Adject 2.0 — AI 生成超写实产品图</div>
+      </div>
+      <div class="card-content">
+        <div class="abstract">Adject 2.0 上线 Product Hunt，主打用 AI 生成超写实的产品视觉图。上传一张产品照，即可生成不同场景、光线、风格的高质量商品图。</div>
+        
+        <div class="source">
+          <strong>来源：</strong> <a href="https://www.product hunt.com/products/adject" target="_blank">Product Hunt · Adject 2.0</a>
+        </div>
+        
+        <div class="tags">
+          <span class="tag tag-tool">工具</span>
+        </div>
+        
+        <div class="rating">
+          <span class="stars">★★★★★★★★☆</span>
+          <strong>8.8 / 10</strong>
+        </div>
+        
+        <div class="how-to-use">
+          <h4>💡 如何应用</h4>
+          电商/带货创作者直接用——拍一张白底图，AI 自动生成场景化产品图，省掉摄影师和修图师。小红书、抖音商品展示图一秒出。
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Gemini API -->
+    <div class="card">
+      <div class="card-header">
+        <div class="rank">4</div>
+        <div class="card-title">💡 Gemini API File Search 支持多模态 — 上传图片/视频直接检索</div>
+      </div>
+      <div class="card-content">
+        <div class="abstract">Google 宣布 Gemini API 的 File Search 功能现在支持多模态——可以上传图片、视频、音频文件，直接进行语义搜索和 RAG 检索。</div>
+        
+        <div class="source">
+          <strong>来源：</strong> <a href="https://blog.google/innovation-and-ai/technology/developers-tools/expanded-gemini-api-file-search-multimodal-rag/" target="_blank">Google Blog · Gemini API File Search</a><br>
+          <small style="color:var(--text-secondary)">· Hacker News 93 points</small>
+        </div>
+        
+        <div class="tags">
+          <span class="tag tag-tool">工具</span>
+          <span class="tag tag-tutorial">教程</span>
+        </div>
+        
+        <div class="rating">
+          <span class="stars">★★★★★★★☆</span>
+          <strong>8.7 / 10</strong>
+        </div>
+        
+        <div class="how-to-use">
+          <h4>💡 如何应用</h4>
+          做知识管理的创作者可以把视频课程、播客录音丢进去做自动索引，观众提问时 AI 直接定位到对应片段。教程博主必备工作流。
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Anthropic NLA -->
+    <div class="card">
+      <div class="card-header">
+        <div class="rank">5</div>
+        <div class="card-title">💡 Anthropic 自然语言自编码器 — 看懂 AI 的"思考过程"</div>
+      </div>
+      <div class="card-content">
+        <div class="abstract">Anthropic 发布了 Natural Language Autoencoder（NLA），能将 Claude 模型内部的数字激活值直接翻译成人类可读的文字说明，让 AI 的"思考过程"变得透明可解释。</div>
+        
+        <div class="source">
+          <strong>来源：</strong> <a href="https://www.aibase.com/news/27826" target="_blank">AIbase · Anthropic NLA</a>
+        </div>
+        
+        <div class="tags">
+          <span class="tag tag-thinking">思维</span>
+          <span class="tag tag-tutorial">教程</span>
+        </div>
+        
+        <div class="rating">
+          <span class="stars">★★★★★★★☆</span>
+          <strong>8.5 / 10</strong>
+        </div>
+        
+        <div class="how-to-use">
+          <h4>💡 如何应用</h4>
+          科普/技术博主的好素材——用这个做一期"AI 到底在想什么"的内容。也可以用它调试自己的 Prompt，看 AI 到底是被哪部分触发的。
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Tailgrids -->
+    <div class="card">
+      <div class="card-header">
+        <div class="rank">6</div>
+        <div class="card-title">🛠 Tailgrids 3.0 — 面向 Tailwind + AI 工作流的开源 React UI 库</div>
+      </div>
+      <div class="card-content">
+        <div class="abstract">Tailgrids 3.0 发布，这是一个开源的 React UI 组件库，专门为 Tailwind CSS 和 AI Workflow 场景优化，提供大量预制组件和 AI 集成模板。</div>
+        
+        <div class="source">
+          <strong>来源：</strong> <a href="https://www.product hunt.com/products/tailgrids" target="_blank">Product Hunt · Tailgrids 3.0</a>
+        </div>
+        
+        <div class="tags">
+          <span class="tag tag-tool">工具</span>
+          <span class="tag tag-workflow">工作流</span>
+        </div>
+        
+        <div class="rating">
+          <span class="stars">★★★★★★☆☆</span>
+          <strong>8.3 / 10</strong>
+        </div>
+        
+        <div class="how-to-use">
+          <h4>💡 如何应用</h4>
+          做个人网站或落地页的创作者可以直接拖拽组件搭页面，内置 AI 工作流模板让你快速搭建一个 AI Demo 展示站。
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. AgentPeek -->
+    <div class="card">
+      <div class="card-header">
+        <div class="rank">7</div>
+        <div class="card-title">🛠 AgentPeek — 在 Mac 菜单栏监控 Claude Code 和 Codex</div>
+      </div>
+      <div class="card-content">
+        <div class="abstract">AgentPeek 把 Claude Code 和 OpenAI Codex 的运行状态塞进了 Mac 的菜单栏（notch），可以实时监控 AI 编程 Agent 的任务进度、输出和状态。</div>
+        
+        <div class="source">
+          <strong>来源：</strong> <a href="https://www.product hunt.com/products/agentpeek" target="_blank">Product Hunt · AgentPeek</a>
+        </div>
+        
+        <div class="tags">
+          <span class="tag tag-tool">工具</span>
+        </div>
+        
+        <div class="rating">
+          <span class="stars">★★★★★★☆☆</span>
+          <strong>8.1 / 10</strong>
+        </div>
+        
+        <div class="how-to-use">
+          <h4>💡 如何应用</h4>
+          用 AI 写代码的创作者不用来回切窗口了，菜单栏就能看到 Agent 在干什么。录屏做教程时也更方便展示 AI 工作状态。
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. DeepSeek Image -->
+    <div class="card">
+      <div class="card-header">
+        <div class="rank">8</div>
+        <div class="card-title">💡 DeepSeek 图片识别模式开放内测 — 多模态理解上线</div>
+      </div>
+      <div class="card-content">
+        <div class="abstract">DeepSeek 于5月9日开放了"图片识别模式"的大范围内测，用户可以在聊天界面独立入口使用。支持图片理解、OCR、图表分析等能力。</div>
+        
+        <div class="source">
+          <strong>来源：</strong> <a href="https://www.aibase.com/news/27820" target="_blank">AIbase · DeepSeek 图片识别</a>
+        </div>
+        
+        <div class="tags">
+          <span class="tag tag-tool">工具</span>
+        </div>
+        
+        <div class="rating">
+          <span class="stars">★★★★★★☆☆</span>
+          <strong>8.0 / 10</strong>
+        </div>
+        
+        <div class="how-to-use">
+          <h4>💡 如何应用</h4>
+          截图丢进去就能让它分析数据图表、提取文字、理解界面设计。做竞品分析或教程截图标注时非常好用，而且免费。
+        </div>
+      </div>
+    </div>
+
+    <!-- 9. Claude Code HTML -->
+    <div class="card">
+      <div class="card-header">
+        <div class="rank">9</div>
+        <div class="card-title">💡 用 Claude Code 写 HTML 的"不合理有效性"</div>
+      </div>
+      <div class="card-content">
+        <div class="abstract">Hacker News 热帖（462 points），展示了用 Claude Code 直接生成完整网页的方法。作者发现 HTML 是最适合 AI 生成的格式——结构清晰、即时预览、调试简单。</div>
+        
+        <div class="source">
+          <strong>来源：</strong> <a href="https://news.ycombinator.com/item?id=48071940" target="_blank">@trq212 · Hacker News</a>
+        </div>
+        
+        <div class="tags">
+          <span class="tag tag-tutorial">教程</span>
+          <span class="tag tag-workflow">工作流</span>
+          <span class="tag tag-prompt">Prompt</span>
+        </div>
+        
+        <div class="rating">
+          <span class="stars">★★★★★★☆☆</span>
+          <strong>8.0 / 10</strong>
+        </div>
+        
+        <div class="how-to-use">
+          <h4>💡 如何应用</h4>
+          需要快速搭落地页、邮件模板、作品集的创作者，直接把需求告诉 Claude Code，让它生成 HTML。比折腾 React/Next.js 快 10 倍，而且浏览器直接打开就能看。
+        </div>
+      </div>
+    </div>
+
+    <!-- 10. Keel -->
+    <div class="card">
+      <div class="card-header">
+        <div class="rank">10</div>
+        <div class="card-title">🛠 Keel — 记忆归属你自己的 AI 助手</div>
+      </div>
+      <div class="card-content">
+        <div class="abstract">Keel 上线 Product Hunt，定位为"记忆属于你"的 AI 助手。所有对话记忆和偏好数据存储在用户自己的 GitHub 仓库中，不锁定在平台。</div>
+        
+        <div class="source">
+          <strong>来源：</strong> <a href="https://www.product hunt.com/products/keel-3" target="_blank">Product Hunt · Keel</a>
+        </div>
+        
+        <div class="tags">
+          <span class="tag tag-tool">工具</span>
+          <span class="tag tag-thinking">思维</span>
+        </div>
+        
+        <div class="rating">
+          <span class="stars">★★★★★☆☆</span>
+          <strong>7.8 / 10</strong>
+        </div>
+        
+        <div class="how-to-use">
+          <h4>💡 如何应用</h4>
+          担心 AI 平台锁定和数据隐私的创作者可以试试。把你的写作风格、选题偏好存在自己的仓库里，随时迁移到其他 AI 工具。
+        </div>
+      </div>
+    </div>
+
+    <!-- 11. LumiChats -->
+    <div class="card">
+      <div class="card-header">
+        <div class="rank">11</div>
+        <div class="card-title">🛠 LumiChats Offline — 完全离线的 AI 聊天，零数据收集</div>
+      </div>
+      <div class="card-content">
+        <div class="abstract">LumiChats Offline 是一款完全离线运行的 AI 聊天应用，零数据收集、100% 免费。适合对隐私极度敏感的用户场景。</div>
+        
+        <div class="source">
+          <strong>来源：</strong> <a href="https://www.product hunt.com/products/lumichats-offline" target="_blank">Product Hunt · LumiChats</a>
+        </div>
+        
+        <div class="tags">
+          <span class="tag tag-tool">工具</span>
+        </div>
+        
+        <div class="rating">
+          <span class="stars">★★★★☆☆☆</span>
+          <strong>7.5 / 10</strong>
+        </div>
+        
+        <div class="how-to-use">
+          <h4>💡 如何应用</h4>
+          处理敏感客户资料或私密写作时，用离线 AI 确保数据不出本机。做"AI 隐私安全"选题的内容也很好的素材。
+        </div>
+      </div>
+    </div>
+
+    <!-- 12. Zed Theme -->
+    <div class="card">
+      <div class="card-header">
+        <div class="rank">12</div>
+        <div class="card-title">🛠 Zed 编辑器主题构建器 — 可视化定制代码编辑器主题</div>
+      </div>
+      <div class="card-content">
+        <div class="abstract">Zed 编辑器推出了在线 Theme Builder，可视化地调整编辑器配色方案，实时预览效果。</div>
+        
+        <div class="source">
+          <strong>来源：</strong> <a href="https://zed.dev/theme-builder" target="_blank">Zed Theme Builder</a> · Hacker News
+        </div>
+        
+        <div class="tags">
+          <span class="tag tag-tool">工具</span>
+          <span class="tag tag-tutorial">教程</span>
+        </div>
+        
+        <div class="rating">
+          <span class="stars">★★★★☆☆☆</span>
+          <strong>7.3 / 10</strong>
+        </div>
+        
+        <div class="how-to-use">
+          <h4>💡 如何应用</h4>
+          技术教程博主可以用它统一视频/截图里的代码配色，做出有辨识度的个人风格。选一个舒服的主题也提高长时间写代码的体验。
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-table">
+      <h3>📊 今日数据概览</h3>
+      <div class="stats-row">
+        <span class="stats-label">采集源</span>
+        <span class="stats-value">Product Hunt, HN, AIbase, V2EX, GitHub</span>
+      </div>
+      <div class="stats-row">
+        <span class="stats-label">今日 AI 新工具</span>
+        <span class="stats-value">~8 个（PH 精选）</span>
+      </div>
+      <div class="stats-row">
+        <span class="stats-label">收录条目</span>
+        <span class="stats-value">12 条</span>
+      </div>
+      <div class="stats-row">
+        <span class="stats-label">最高评分</span>
+        <span class="stats-value">Notion 3.4 — 9.2/10</span>
+      </div>
+      <div class="stats-row">
+        <span class="stats-label">热门标签分布</span>
+        <span class="stats-value">工具(9) > 工作流(3) > 教程(3) > 思维(2) > Prompt(1)</span>
+      </div>
+    </div>
+
+    <!-- Notice -->
+    <div class="note">
+      <strong>⚠️ 注意</strong><br>
+      本期缓存组 g2/g3/g4 未完成采集（仅 g1/g5 完成，内容为空），数据由实时多源采集补充生成。<br>
+      建议检查采集任务的 cron 配置和认证状态。
+    </div>
+
+    <div class="footer">
+      <p>生成时间：2026-05-10 10:00 UTC | 数据截止：2026-05-10 09:30 UTC</p>
+      <p style="color: #6b7280; margin-top: 8px;">© 2026 AI 网红日报 · 原创内容，转载请注明出处</p>
+    </div>
+  </div>
+</body>
+</html>
