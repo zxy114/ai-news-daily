@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 网红工具日报 — 2026-05-24</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0d1117;
+    color: #c9d1d9;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans SC', sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .header {
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 1px solid #21262d;
+    margin-bottom: 30px;
+  }
+  .header h1 {
+    font-size: 1.8em;
+    color: #58a6ff;
+    margin-bottom: 8px;
+  }
+  .header .date {
+    color: #8b949e;
+    font-size: 0.95em;
+  }
+  .header .subtitle {
+    color: #8b949e;
+    font-size: 0.9em;
+    margin-top: 6px;
+  }
+  .card {
+    background: #161b22;
+    border: 1px solid #21262d;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    transition: border-color 0.2s;
+  }
+  .card:hover {
+    border-color: #388bfd;
+  }
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .card-title {
+    font-size: 1.15em;
+    color: #f0f6fc;
+    font-weight: 600;
+  }
+  .score {
+    background: linear-gradient(135deg, #238636, #2ea043);
+    color: #fff;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    font-weight: 600;
+  }
+  .score.high { background: linear-gradient(135deg, #da3633, #f85149); }
+  .score.mid { background: linear-gradient(135deg, #d29922, #e3b341); color: #0d1117; }
+  .tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 0.75em;
+    font-weight: 500;
+    margin-right: 6px;
+  }
+  .tag-tool { background: #1f6feb33; color: #58a6ff; }
+  .tag-tutorial { background: #23863633; color: #3fb950; }
+  .tag-prompt { background: #8957e533; color: #bc8cff; }
+  .tag-workflow { background: #d2992233; color: #e3b341; }
+  .text-block {
+    background: #0d1117;
+    border-left: 3px solid #388bfd;
+    padding: 12px 16px;
+    margin: 12px 0;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.92em;
+    color: #b1bac4;
+  }
+  .source {
+    font-size: 0.85em;
+    color: #8b949e;
+    margin-top: 10px;
+  }
+  .source a {
+    color: #58a6ff;
+    text-decoration: none;
+  }
+  .source a:hover {
+    text-decoration: underline;
+  }
+  .howto {
+    background: #161b22;
+    border: 1px dashed #30363d;
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-top: 12px;
+    font-size: 0.88em;
+  }
+  .howto-label {
+    color: #f0883e;
+    font-weight: 600;
+    font-size: 0.82em;
+    margin-bottom: 4px;
+  }
+  .footer {
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 1px solid #21262d;
+    margin-top: 40px;
+    color: #484f58;
+    font-size: 0.82em;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🤖 AI 网红工具日报</h1>
+  <div class="date">2026 年 5 月 24 日 · 星期日</div>
+  <div class="subtitle">每日精选 AI 工具、教程、Prompt 模板与工作流，看完就能上手</div>
+</div>
+
+<!-- Card 1 -->
+<div class="card">
+  <div class="card-header">
+    <div class="card-title">1. Anthropic 发布 Prompt Engineering 双料教程</div>
+    <span class="score high">⭐ 10/10</span>
+  </div>
+  <div><span class="tag tag-tutorial">📚 教程</span></div>
+  <div class="text-block">
+    我们刚刚发布了两项学习提示工程的新资源：<br>
+    1. 面向 Claude 新手的交互式提示入门教程<br>
+    2. 面向在 Anthropic API 上构建开发者的真实场景提示课程
+  </div>
+  <div class="howto">
+    <div class="howto-label">💡 如何应用</div>
+    无论你是新手还是开发者，这两套课程覆盖从基础到高级的提示写法。建议先过一遍入门教程，再用实战课程优化你日常使用的 AI prompt。
+  </div>
+  <div class="source">来源：<a href="https://x.com/alexalbert__/status/1826319786009387496">@alexalbert__</a></div>
+</div>
+
+<!-- Card 2 -->
+<div class="card">
+  <div class="card-header">
+    <div class="card-title">2. Karpathy 的 5 大 GPT 提示技巧</div>
+    <span class="score high">⭐ 9/10</span>
+  </div>
+  <div><span class="tag tag-tutorial">📚 教程</span></div>
+  <div class="text-block">
+    Andrej Karpathy 是帮助创立 OpenAI 的传奇 AI 研究员。他最近做了一场关于如何写好 GPT prompt 的演讲，但几乎没人注意到。我看了这 40 分钟的演讲——以下是 Karpathy 让 AI 更好为你服务的 5 个顶级技巧。
+  </div>
+  <div class="howto">
+    <div class="howto-label">💡 如何应用</div>
+    卡帕西的提示技巧来自一线实践经验，特别适合写长文、做分析和生成内容时参考。看完立刻就能用在你的 ChatGPT/Claude 日常对话中。
+  </div>
+  <div class="source">来源：<a href="https://x.com/petergyang/status/1665002918075043840">@petergyang</a></div>
+</div>
+
+<!-- Card 3 -->
+<div class="card">
+  <div class="card-header">
+    <div class="card-title">3. 用 Claude Opus 做 Prompt Engineering 的工作流</div>
+    <span class="score mid">⭐ 8/10</span>
+  </div>
+  <div><span class="tag tag-prompt">💬 Prompt</span></div>
+  <div class="text-block">
+    很多大模型擅长写代码，但 Claude 3 Opus 是我用过的第一个在提示工程方面也非常出色的模型。以下是我与 Opus 配合做提示工程的工作流。
+  </div>
+  <div class="howto">
+    <div class="howto-label">💡 如何应用</div>
+    用 AI 来写 AI 的提示词——这是一个元级别的工作流。把你的需求丢给 Claude，让它帮你优化 prompt，迭代几轮后效果惊人。
+  </div>
+  <div class="source">来源：<a href="https://x.com/alexalbert__/status/1767258557039378511">@alexalbert__</a></div>
+</div>
+
+<!-- Card 4 -->
+<div class="card">
+  <div class="card-header">
+    <div class="card-title">4. OpenAI 开源 Deep Research Prompt 重写器</div>
+    <span class="score mid">⭐ 8/10</span>
+  </div>
+  <div><span class="tag tag-tutorial">📚 教程</span></div>
+  <div class="text-block">
+    OpenAI 今天开源了深度研究提示重写器的工作原理以及完整提示词。你现在可以用大约 20 行代码构建自己的深度研究 Agent。Claude Research 也发布了如何添加相关功能的方法。
+  </div>
+  <div class="howto">
+    <div class="howto-label">💡 如何应用</div>
+    20 行代码搭一个 Deep Research Agent，适合做自动化调研、竞品分析、热点追踪。直接拿来改造成自己的内容研究工具。
+  </div>
+  <div class="source">来源：<a href="https://x.com/swyx/status/1938399666330341831">@swyx</a></div>
+</div>
+
+<!-- Card 5 -->
+<div class="card">
+  <div class="card-header">
+    <div class="card-title">5. Anthropic 推出 Prompt Caching，成本降 90%</div>
+    <span class="score">⭐ 7/10</span>
+  </div>
+  <div><span class="tag tag-prompt">💬 Prompt</span></div>
+  <div class="text-block">
+    我们刚刚在 Anthropic API 中推出了提示缓存功能。它可以将 API 输入成本降低高达 90%，并将延迟降低高达 80%。
+  </div>
+  <div class="howto">
+    <div class="howto-label">💡 如何应用</div>
+    如果你在用 Claude API 做批量内容生成或自动化工作流，开启 prompt caching 可以省下大量成本。特别适合有重复系统提示的场景。
+  </div>
+  <div class="source">来源：<a href="https://x.com/alexalbert__/status/1823751966893465630">@alexalbert__</a></div>
+</div>
+
+<!-- Card 6 -->
+<div class="card">
+  <div class="card-header">
+    <div class="card-title">6. 高级 Prompt Engineering 技巧合集</div>
+    <span class="score">⭐ 7/10</span>
+  </div>
+  <div><span class="tag tag-prompt">💬 Prompt</span></div>
+  <div class="text-block">
+    Twitter 上有很多"ChatGPT 最好的 10 个提示"这种帖子。这不是那种帖子。提示工程正在超越少样本学习和思维链推理。以下是一些更好地使用语言模型的高级技巧。
+  </div>
+  <div class="howto">
+    <div class="howto-label">💡 如何应用</div>
+    适合已经熟悉基础提示、想进阶的用户。掌握这些技巧后可以让模型输出更精准、更可控，直接提升你的内容生产质量。
+  </div>
+  <div class="source">来源：<a href="https://x.com/alexalbert__/status/1645539660842823681">@alexalbert__</a></div>
+</div>
+
+<!-- Card 7 -->
+<div class="card">
+  <div class="card-header">
+    <div class="card-title">7. Claude "Think" Tool 提升多步骤任务准确率</div>
+    <span class="score">⭐ 7/10</span>
+  </div>
+  <div><span class="tag tag-tool">🔧 工具</span></div>
+  <div class="text-block">
+    我们 Anthropic 团队的新研究表明，给 Claude 一个简单的"think"工具可以显著提升指令遵循和多步骤问题解决的能力。
+  </div>
+  <div class="howto">
+    <div class="howto-label">💡 如何应用</div>
+    在你的 Agent 工具链中加入一个"思考"步骤，让 AI 在执行复杂任务前先理清思路。特别适合多步骤内容策划和数据分析场景。
+  </div>
+  <div class="source">来源：<a href="https://x.com/alexalbert__/status/1903130655564922911">@alexalbert__</a></div>
+</div>
+
+<!-- Card 8 -->
+<div class="card">
+  <div class="card-header">
+    <div class="card-title">8. GPT-4.1 Agent 提示指南（附实测数据）</div>
+    <span class="score">⭐ 7/10</span>
+  </div>
+  <div><span class="tag tag-tool">🔧 工具</span></div>
+  <div class="text-block">
+    OpenAI 发布了 GPT 4.1 的提示指南（附实测数据），面向构建 Agent 的开发者。新建议：让模型保持持久性（+20%）、不要自行解析工具调用（+2%）、提示式规划（+4%）、避免使用 JSON 格式。
+  </div>
+  <div class="howto">
+    <div class="howto-label">💡 如何应用</div>
+    构建 AI Agent 时的实操指南，每个建议都附有量化数据。如果你在用 GPT 做自动化工作流，按这些技巧调整 prompt 可以立竿见影。
+  </div>
+  <div class="source">来源：<a href="https://x.com/swyx/status/1911849229188022278">@swyx</a></div>
+</div>
+
+<!-- Card 9 -->
+<div class="card">
+  <div class="card-header">
+    <div class="card-title">9. 5 分钟无代码体验 Claude Computer Use</div>
+    <span class="score">⭐ 6/10</span>
+  </div>
+  <div><span class="tag tag-tutorial">📚 教程</span></div>
+  <div class="text-block">
+    任何人都可以在不到 5 分钟内试用 Claude 的计算机操控功能——无需编码。以下是简单的设置方法。
+  </div>
+  <div class="howto">
+    <div class="howto-label">💡 如何应用</div>
+    想体验 AI 操控电脑的魔法？跟着教程走，5 分钟就能上手。适合自动化日常操作如填表、整理文件、截图等。
+  </div>
+  <div class="source">来源：<a href="https://x.com/alexalbert__/status/1849124173966393630">@alexalbert__</a></div>
+</div>
+
+<!-- Card 10 -->
+<div class="card">
+  <div class="card-header">
+    <div class="card-title">10. Shopify 用工具量化会议成本</div>
+    <span class="score">⭐ 6/10</span>
+  </div>
+  <div><span class="tag tag-tool">🔧 工具</span></div>
+  <div class="text-block">
+    Shopify 今年删除了 12,000 个会议，更进一步推出了一款显示会议 $$$ 成本的工具。与 Shopify COO 讨论了会议膨胀和保护工作时间的话题，以下是 6 个犀利观点。
+  </div>
+  <div class="howto">
+    <div class="howto-label">💡 如何应用</div>
+    量化会议成本是提升团队效率的利器。内容创作团队可以借鉴这个思路，用 AI 工具计算每场会议的"机会成本"，推动更高效的异步协作。
+  </div>
+  <div class="source">来源：<a href="https://x.com/petergyang/status/1679130177819881475">@petergyang</a></div>
+</div>
+
+<div class="footer">
+  由 AI 网红工具日报系统自动生成 · 数据来源：X/Twitter AI 领域 KOL<br>
+  © 2026 AI Influence Digest
+</div>
+
+</body>
+</html>
