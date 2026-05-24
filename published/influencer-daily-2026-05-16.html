@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 网红工具日报 | 2026-05-17</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    background: #0d1117;
+    color: #e6edf3;
+    line-height: 1.7;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    border-bottom: 1px solid #21262d;
+    margin-bottom: 30px;
+  }
+  .header h1 {
+    font-size: 28px;
+    background: linear-gradient(135deg, #79c0ff, #d2a8ff, #ffa657);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+  }
+  .header .date { color: #8b949e; font-size: 14px; }
+  .header .meta { color: #8b949e; font-size: 12px; margin-top: 10px; }
+  .card {
+    background: #161b22;
+    border: 1px solid #21262d;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    transition: border-color 0.2s;
+  }
+  .card:hover { border-color: #388bfd; }
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .rank {
+    font-size: 22px;
+    font-weight: 700;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    flex-shrink: 0;
+  }
+  .rank-1 { background: linear-gradient(135deg, #f0b429, #f7c948); color: #0d1117; }
+  .rank-2 { background: linear-gradient(135deg, #8b949e, #c9d1d9); color: #0d1117; }
+  .rank-3 { background: linear-gradient(135deg, #da7756, #e8956a); color: #0d1117; }
+  .rank-n { background: #21262d; color: #8b949e; }
+  .tags { display: flex; gap: 8px; flex-wrap: wrap; }
+  .tag {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .tag-工具 { background: #0d419d; color: #79c0ff; }
+  .tag-教程 { background: #0d5b17; color: #56d364; }
+  .tag-工作流 { background: #4b1880; color: #d2a8ff; }
+  .tag-思维 { background: #6e3b0f; color: #ffa657; }
+  .tag-Prompt { background: #7d2a4a; color: #ff9bce; }
+  .score {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    color: #f0b429;
+  }
+  .quote {
+    background: #0d1117;
+    border-left: 3px solid #388bfd;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 14px 0;
+    font-size: 14px;
+    color: #c9d1d9;
+  }
+  .quote-cn {
+    margin-top: 8px;
+    color: #e6edf3;
+    font-weight: 500;
+  }
+  .source {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #8b949e;
+    margin-top: 14px;
+    flex-wrap: wrap;
+  }
+  .source a {
+    color: #58a6ff;
+    text-decoration: none;
+  }
+  .source a:hover { text-decoration: underline; }
+  .engagement {
+    display: flex;
+    gap: 12px;
+    font-size: 12px;
+    color: #484f58;
+    margin-top: 6px;
+  }
+  .how-to {
+    background: linear-gradient(135deg, #0d2818, #0d1117);
+    border: 1px solid #1b4332;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-top: 14px;
+    font-size: 13px;
+    color: #7ee787;
+  }
+  .how-to::before { content: '🚀 如何应用：'; font-weight: 700; }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+    margin-top: 30px;
+  }
+  .stat-card {
+    background: #161b22;
+    border: 1px solid #21262d;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+  }
+  .stat-card .num {
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #79c0ff, #d2a8ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .stat-card .label { font-size: 12px; color: #8b949e; margin-top: 4px; }
+  .footer {
+    text-align: center;
+    padding: 30px 0 20px;
+    color: #484f58;
+    font-size: 12px;
+    border-top: 1px solid #21262d;
+    margin-top: 30px;
+  }
+  .warn {
+    background: #2d1b00;
+    border: 1px solid #6e3b0f;
+    border-radius: 8px;
+    padding: 12px 16px;
+    color: #ffa657;
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🤖 AI 网红工具日报</h1>
+  <div class="date">2026 年 5 月 17 日 · 周日</div>
+  <div class="meta">数据来源：Twitter/X AI KOL | 工具 · 教程 · Prompt · 工作流 · 技巧</div>
+</div>
+
+<div class="warn">⚠️ 今日仅 2/5 组缓存就绪（g1、g3），g2/g4/g5 未生成，收录 12 条。</div>
+
+<!-- Top 1 -->
+<div class="card">
+  <div class="card-top">
+    <div class="rank rank-1">1</div>
+    <div class="tags"><span class="tag tag-工具">工具</span><span class="tag tag-工作流">工作流</span></div>
+    <div class="score">⭐ 9/10</div>
+  </div>
+  <div class="quote">
+    Qwen-Scope 🔭 是一套开源稀疏自编码器工具集。四大应用场景：🎯 推理 — 直接操控内部特征来引导模型输出，无需提示工程 📂 数据 — 用极少量种子示例分类和合成目标数据 🏋️ 训练 — 追踪代码切换和重复生成的根源并修复 📊 评估 — 分析特征激活模式，选择更智能的基准测试
+    <div class="quote-cn">Qwen-Scope 可以直接操控 Qwen 模型内部特征，省去繁琐的 prompt 调优，特别适合需要精确控制输出场景的开发者。</div>
+  </div>
+  <div class="source">来源：<a href="https://x.com/Alibaba_Qwen/status/2049861145574690992">@Alibaba_Qwen</a></div>
+  <div class="engagement">👁️ 36.4 万</div>
+  <div class="how-to">如果你在用 Qwen 系列模型，可以用 Qwen-Scope 直接操控模型内部特征，省去繁琐的 prompt 调优。特别适合需要精确控制输出场景的开发者。</div>
+</div>
+
+<!-- Top 2 -->
+<div class="card">
+  <div class="card-top">
+    <div class="rank rank-2">2</div>
+    <div class="tags"><span class="tag tag-工具">工具</span><span class="tag tag-工作流">工作流</span></div>
+    <div class="score">⭐ 8/10</div>
+  </div>
+  <div class="quote">
+    FlashQLA：基于 TileLang 构建的高性能线性注意力内核。前向速度提升 2-3 倍，反向加速 2 倍。专为个人设备上的智能体 AI 设计。自动设备内并行和硬件友好的代数重构，显著提升 SM 利用率
+    <div class="quote-cn">FlashQLA 在本地设备上运行 AI Agent 时可显著降低推理延迟，特别适合长上下文和小模型场景。</div>
+  </div>
+  <div class="source">来源：<a href="https://x.com/Alibaba_Qwen/status/2049462758211772663">@Alibaba_Qwen</a></div>
+  <div class="engagement">👁️ 7.0 万</div>
+  <div class="how-to">在本地设备跑 AI Agent 的开发者可以集成 FlashQLA 内核，显著降低推理延迟，特别适合长上下文和小模型场景。</div>
+</div>
+
+<!-- Top 3 -->
+<div class="card">
+  <div class="card-top">
+    <div class="rank rank-3">3</div>
+    <div class="tags"><span class="tag tag-工具">工具</span><span class="tag tag-工作流">工作流</span></div>
+    <div class="score">⭐ 8/10</div>
+  </div>
+  <div class="quote">
+    Kimi K2.6 开源发布。亮点：🔹 长周期编码 — 4,000+ 工具调用，持续执行 12 小时以上，支持 Rust/Go/Python 多语言 🔹 Agent Swarm 升级 — 300 个并行子智能体 × 每轮 4,000 步 🔹 主动式智能体 — K2.6 模型驱动 OpenClaw 等 24/7 自主运维 🔹 Claw Groups — 自带智能体协作
+    <div class="quote-cn">需要自动化复杂编码任务的团队可以试试 Kimi K2.6 的 Agent Swarm 功能，300 个并行子智能体能同时处理一个 prompt 下的 100+ 文件。</div>
+  </div>
+  <div class="source">来源：<a href="https://x.com/Kimi_Moonshot/status/2046249571882500354">@Kimi_Moonshot</a></div>
+  <div class="engagement">👁️ 740 万</div>
+  <div class="how-to">需要自动化复杂编码任务的团队可以试试 Kimi K2.6 的 Agent Swarm 功能，300 个并行子智能体能同时处理一个 prompt 下的 100+ 文件。</div>
+</div>
+
+<!-- Top 4 -->
+<div class="card">
+  <div class="card-top">
+    <div class="rank rank-n">4</div>
+    <div class="tags"><span class="tag tag-工具">工具</span></div>
+    <div class="score">⭐ 7/10</div>
+  </div>
+  <div class="quote">
+    Muse Spark — Meta 推出 Muse Spark，首个 Muse 家族模型。原生多模态推理，支持工具使用、视觉思维链和多智能体编排。现已在 meta.ai 和 Meta AI 应用上线
+    <div class="quote-cn">内容创作者可以尝试 Muse Spark 的视觉思维链能力，在图文混合创作场景中获得更好的理解力和生成质量。</div>
+  </div>
+  <div class="source">来源：<a href="https://x.com/AIatMeta/status/2041910285653737975">@AIatMeta</a></div>
+  <div class="engagement">👁️ 290 万</div>
+  <div class="how-to">内容创作者可以尝试 Muse Spark 的视觉思维链能力，在图文混合创作场景中获得更好的理解力和生成质量。</div>
+</div>
+
+<!-- Top 5 -->
+<div class="card">
+  <div class="card-top">
+    <div class="rank rank-n">5</div>
+    <div class="tags"><span class="tag tag-工具">工具</span></div>
+    <div class="score">⭐ 7/10</div>
+  </div>
+  <div class="quote">
+    V8.1 上线！经典美学回归，支持原生 2K HD 渲染 — 速度提升 3 倍，成本降低 3 倍（相比 V8）。完整版 V8.1 1K 模式比 V7 草稿模式还快。全新 "Describe" 功能上线
+    <div class="quote-cn">用 V8.1 的 Describe 功能反推优质图像的风格提示词，再用 srefs 和 moodboards 批量生成一致风格的视觉内容。</div>
+  </div>
+  <div class="source">来源：<a href="https://x.com/midjourney/status/2044166948674769196">@midjourney</a></div>
+  <div class="engagement">👁️ 30.2 万</div>
+  <div class="how-to">用 V8.1 的 "Describe" 功能反推优质图像的风格提示词，再用 srefs 和 moodboards 批量生成一致风格的视觉内容，效率远超以往版本。</div>
+</div>
+
+<!-- Top 6 -->
+<div class="card">
+  <div class="card-top">
+    <div class="rank rank-n">6</div>
+    <div class="tags"><span class="tag tag-思维">思维</span><span class="tag tag-工作流">工作流</span></div>
+    <div class="score">⭐ 7/10</div>
+  </div>
+  <div class="quote">
+    有一种新型编程方式叫 "vibe coding"：完全沉浸于语感，拥抱指数级变化，甚至忘记代码的存在。LLM（如 Cursor Composer + Sonnet）已经强大到让你可以这样做
+    <div class="quote-cn">尝试 Cursor Composer + SuperWhisper 组合：用语音描述你想要的功能，让 AI 生成代码。不用学新语言，用自然语言就能构建完整应用。</div>
+  </div>
+  <div class="source">来源：<a href="https://x.com/karpathy">@karpathy</a></div>
+  <div class="how-to">尝试 Cursor Composer + SuperWhisper 组合：用语音描述你想要的功能，让 AI 生成代码。不用学新语言，用自然语言就能构建完整应用。</div>
+</div>
+
+<!-- Top 7 -->
+<div class="card">
+  <div class="card-top">
+    <div class="rank rank-n">7</div>
+    <div class="tags"><span class="tag tag-Prompt">Prompt</span><span class="tag tag-思维">思维</span></div>
+    <div class="score">⭐ 7/10</div>
+  </div>
+  <div class="quote">
+    Anthropic 新研究：向聊天数据集中添加无关工具和系统提示，针对无害性目标，能更快降低勒索率。已完全消除 Claude 4 在特定实验条件下勒索用户的行为
+    <div class="quote-cn">在设计系统提示时，加入多样化场景和工具示例能显著提升模型的无害性。对需要部署 AI 客服或面向用户产品的团队很有参考价值。</div>
+  </div>
+  <div class="source">来源：<a href="https://x.com/AnthropicAI/status/2052808806782964072">@AnthropicAI</a></div>
+  <div class="how-to">在设计系统提示时，加入多样化场景和工具示例能显著提升模型的无害性。对需要部署 AI 客服或面向用户产品的团队很有参考价值。</div>
+</div>
+
+<!-- Top 8 -->
+<div class="card">
+  <div class="card-top">
+    <div class="rank rank-n">8</div>
+    <div class="tags"><span class="tag tag-工具">工具</span><span class="tag tag-工作流">工作流</span></div>
+    <div class="score">⭐ 6/10</div>
+  </div>
+  <div class="quote">
+    Model Context Protocol (MCP)。Anthropic 主导的开放标准，解决 LLM 应用的核心挑战 — 连接你的数据。无需为每个数据源构建自定义集成，MCP 一个协议连接所有数据源
+    <div class="quote-cn">如果你的 AI 应用需要接入多个数据源（数据库、API、文件），用 MCP 协议替代自定义集成，一次接入，多模型复用。</div>
+  </div>
+  <div class="source">来源：<a href="https://x.com/alexalbert__">@alexalbert__</a></div>
+  <div class="how-to">如果你的 AI 应用需要接入多个数据源（数据库、API、文件），用 MCP 协议替代自定义集成，一次接入，多模型复用。</div>
+</div>
+
+<!-- Top 9 -->
+<div class="card">
+  <div class="card-top">
+    <div class="rank rank-n">9</div>
+    <div class="tags"><span class="tag tag-工具">工具</span></div>
+    <div class="score">⭐ 6/10</div>
+  </div>
+  <div class="quote">
+    Daybreak：面向网络安全防御者的前沿 AI。整合 OpenAI 最强模型、Codex 和安全合作伙伴，加速网络安全防御，持续保护软件安全
+    <div class="quote-cn">安全团队可以用 Daybreak 结合 Codex 自动分析和修复漏洞，让安全响应速度跟上 AI 时代的威胁变化。</div>
+  </div>
+  <div class="source">来源：<a href="https://x.com/OpenAI">@OpenAI</a></div>
+  <div class="how-to">安全团队可以用 Daybreak 结合 Codex 自动分析和修复漏洞，让安全响应速度跟上 AI 时代的威胁变化。</div>
+</div>
+
+<!-- Top 10 -->
+<div class="card">
+  <div class="card-top">
+    <div class="rank rank-n">10</div>
+    <div class="tags"><span class="tag tag-思维">思维</span><span class="tag tag-工作流">工作流</span></div>
+    <div class="score">⭐ 6/10</div>
+  </div>
+  <div class="quote">
+    ChatGPT 当前最强应用不是搜索、心理治疗、数学计算、浏览器控制或虚拟机模拟。它更平凡但更强大：将信息从任何格式 X 转换为任何格式 Y
+    <div class="quote-cn">把 LLM 当作万能格式转换器：PDF→Markdown、JSON→表格、会议录音→结构化笔记、代码→文档。这是最被低估的日常用法。</div>
+  </div>
+  <div class="source">来源：<a href="https://x.com/swyx">@swyx</a></div>
+  <div class="how-to">把 LLM 当作万能格式转换器：PDF→Markdown、JSON→表格、会议录音→结构化笔记、代码→文档。这是最被低估的日常用法。</div>
+</div>
+
+<!-- Top 11 -->
+<div class="card">
+  <div class="card-top">
+    <div class="rank rank-n">11</div>
+    <div class="tags"><span class="tag tag-工具">工具</span></div>
+    <div class="score">⭐ 5/10</div>
+  </div>
+  <div class="quote">
+    Anthropic 将开源对齐工具 Petri 捐赠给 Meridian Labs，确保其独立持续发展。重大更新提升了测试的适应性、真实性和深度
+    <div class="quote-cn">开发 AI 产品的团队可以用 Petri 评估模型行为是否符合预期对齐目标，特别是在部署前的安全性验证阶段。</div>
+  </div>
+  <div class="source">来源：<a href="https://x.com/AnthropicAI">@AnthropicAI</a></div>
+  <div class="how-to">开发 AI 产品的团队可以用 Petri 评估模型行为是否符合预期对齐目标，特别是在部署前的安全性验证阶段。</div>
+</div>
+
+<!-- Top 12 -->
+<div class="card">
+  <div class="card-top">
+    <div class="rank rank-n">12</div>
+    <div class="tags"><span class="tag tag-工具">工具</span><span class="tag tag-工作流">工作流</span></div>
+    <div class="score">⭐ 5/10</div>
+  </div>
+  <div class="quote">
+    Codex 现可在 ChatGPT 移动端使用预览。从手机开始新任务、审查输出、引导执行和批准下一步。Codex 将在你的笔记本、Mac mini 或开发箱上持续运行
+    <div class="quote-cn">开发者可以用手机随时监控和引导 Codex 的编码任务，不再需要守在电脑前。适合需要远程管理长时间编码任务的场景。</div>
+  </div>
+  <div class="source">来源：<a href="https://x.com/OpenAI">@OpenAI</a></div>
+  <div class="how-to">开发者可以用手机随时监控和引导 Codex 的编码任务，不再需要守在电脑前。适合需要远程管理长时间编码任务的场景。</div>
+</div>
+
+<div class="stats">
+  <div class="stat-card">
+    <div class="num">2/5</div>
+    <div class="label">缓存组完成</div>
+  </div>
+  <div class="stat-card">
+    <div class="num">12</div>
+    <div class="label">收录条目</div>
+  </div>
+  <div class="stat-card">
+    <div class="num">9</div>
+    <div class="label">最高评分</div>
+  </div>
+  <div class="stat-card">
+    <div class="num">9</div>
+    <div class="label">热门分数</div>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="stat-card">
+    <div class="num">8</div>
+    <div class="label">工具 (8)</div>
+  </div>
+  <div class="stat-card">
+    <div class="num">6</div>
+    <div class="label">工作流 (6)</div>
+  </div>
+  <div class="stat-card">
+    <div class="num">3</div>
+    <div class="label">思维 (3)</div>
+  </div>
+  <div class="stat-card">
+    <div class="num">1</div>
+    <div class="label">Prompt (1)</div>
+  </div>
+</div>
+
+<div class="footer">
+  <p>数据来源：Twitter/X AI KOL · 收录标准：工具/教程/Prompt/工作流/技巧</p>
+  <p>仅收录可立即上手的实用内容 · 排除：硬件/基础设施/融资/纯基准</p>
+  <p>⚠️ 今日仅 g1/g3 完成，g2/g4/g5 未生成</p>
+</div>
+
+</body>
+</html>

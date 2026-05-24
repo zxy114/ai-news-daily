@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI网红工具日报 2026-05-13</title>
+    <style>
+        :root {
+            --bg-color: #0f1117;
+            --card-bg: #1a1d24;
+            --card-border: #2a2e38;
+            --text-primary: #e0e6ed;
+            --text-secondary: #a0a7b3;
+            --accent-orange: #f97316;
+            --accent-blue: #3b82f6;
+            --accent-green: #10b981;
+            --accent-purple: #8b5cf6;
+            --rating-gold: #fbbf24;
+            --tag-bg: #2d3748;
+            --tag-text: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.7;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid var(--accent-orange);
+            padding-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-orange);
+            margin-bottom: 10px;
+        }
+
+        .header .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .header .meta {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            background: var(--card-bg);
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 20px;
+            border: 1px solid var(--card-border);
+        }
+
+        /* Filter Notes */
+        .filter-notes {
+            background: var(--card-bg);
+            border-left: 4px solid var(--accent-blue);
+            padding: 15px 20px;
+            margin-bottom: 30px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .filter-notes h3 {
+            color: var(--accent-blue);
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .filter-notes ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .filter-notes li {
+            margin-bottom: 5px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Card */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+            border-color: var(--accent-orange);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+            line-height: 1.4;
+        }
+
+        .card-category {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .tag[data-category="工具"] { border-left: 3px solid var(--accent-blue); }
+        .tag[data-category="工作流"] { border-left: 3px solid var(--accent-green); }
+        .tag[data-category="思维"] { border-left: 3px solid var(--accent-purple); }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px dashed var(--card-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .rating {
+            color: var(--rating-gold);
+            font-weight: 600;
+        }
+
+        .source-link {
+            color: var(--accent-blue);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .source-link:hover {
+            color: var(--accent-orange);
+        }
+
+        .card-content {
+            color: var(--text-primary);
+            line-height: 1.8;
+        }
+
+        .card-content p {
+            margin-bottom: 12px;
+        }
+
+        .card-content h3 {
+            color: var(--accent-green);
+            margin: 15px 0 8px;
+            font-size: 1.1rem;
+        }
+
+        .how-to-use {
+            background: rgba(16, 185, 129, 0.1);
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 15px;
+            border-left: 3px solid var(--accent-green);
+        }
+
+        .how-to-use h4 {
+            color: var(--accent-green);
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .card-source {
+            display: block;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 1px solid var(--card-border);
+            margin-top: 40px;
+        }
+
+        .footer p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2rem; }
+            .card { padding: 20px; }
+            .card-header { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- Header -->
+    <div class="header">
+        <h1>🤖 AI网红工具日报</h1>
+        <div class="subtitle">2026年5月13日 · 每日精选工具推荐、教程、Prompt模板、工作流优化与AI技巧</div>
+        <div class="meta">📅 生成时间：2026-05-13 10:00 UTC</div>
+    </div>
+
+    <!-- Filter Notes -->
+    <div class="filter-notes">
+        <h3>📊 筛选说明</h3>
+        <ul>
+            <li>✅ 收录标准：工具推荐 / 教程 / Prompt模板 / 工作流优化 / AI使用技巧</li>
+            <li>❌ 排除内容：硬件/基础设施 / 融资/收入 / 纯基准对比 / 学术论文 / 政治观点</li>
+            <li>🎯 质量门槛：内容创作者看完能立即上手用（评分 ≥ 5）</li>
+            <li>📝 数据来源：今日 g1/g4 缓存完成，g2/g3/g5 待补全（12.5条/组进度）</li>
+        </ul>
+    </div>
+
+    <!-- Content -->
+    <div id="content">
+
+        <!-- Item 1 -->
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <h2 class="card-title">1️⃣ Hailuo I2V-01-Live：静态图像转动态视频大师级工具</h2>
+                    <div class="card-category">
+                        <span class="tag" data-category="工具">🛠️ 工具</span>
+                        <span class="rating">⭐ 8/10</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-content">
+                <h3>推文原文（中文翻译）</h3>
+                <p>推出 Hailuo I2V-01-Live：将静态艺术转化为动态杰作。Live 是 I2V 家族的最新成员，旨在彻底改变 2D 插图的动态表现方式。通过增强的流畅度和生动的动作，该模型让您的角色能够以前所未有的真实感进行动作、说话和表情。</p>
+                
+                <h3>如何应用</h3>
+                <p>将静态插画、AI生成图像或手绘草图导入 Hailuo，通过自然语言描述或简单指令生成带呼吸、微笑、踱步等生活化动作的动画视频，适合短视频创作者、社交平台运营者快速产出可视化内容。</p>
+                
+                <span class="card-source">来源：@Hailuo_AI - <a href="https://x.com/Hailuo_AI/status/2047958123051360325" target="_blank" class="source-link">查看推文</a></span>
+            </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <h2 class="card-title">2️⃣ TLDW：长视频学习神器（YouTube视频摘要）</h2>
+                    <div class="card-category">
+                        <span class="tag" data-category="工具">🛠️ 工具</span>
+                        <span class="rating">⭐ 8/10</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-content">
+                <h3>推文原文（中文翻译）</h3>
+                <p>推出 TLDW：一种更高效地消费长视频的方式。我非常兴奋地推出一个和两位朋友共同构建的副项目：TLDW（Too Long; Didn't Watch），一个帮助人们从长视频中学习的工具。TLDW 源自我自己学习YouTube时的痛点。过去一年，我注意到我的内容消费习惯发生变化：花更多时间观看长视频学习——视频播客、创始人访谈、讲座、教程……其中很多超过1小时，且信息量巨大。</p>
+                
+                <h3>如何应用</h3>
+                <p>当你需要快速吸收长视频教程/访谈/讲座的核心内容时，将 YouTube 链接提交给 TLDW，它会生成结构化摘要，提取关键知识点与时间戳，大幅提升学习效率，尤其适合开发者、产品经理、创业者快速获取专业内容。</p>
+                
+                <span class="card-source">来源：@zarazhangrui - <a href="https://x.com/zarazhangrui/status/1982919958423089315" target="_blank" class="source-link">查看推文</a></span>
+            </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <h2 class="card-title">3️⃣ Claude Skill：自动生成精美演示文稿</h2>
+                    <div class="card-category">
+                        <span class="tag" data-category="工具">🛠️ 工具</span>
+                        <span class="tag" data-category="工作流">🔧 工作流</span>
+                        <span class="rating">⭐ 8/10</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-content">
+                <h3>推文原文（中文翻译）</h3>
+                <p>我创建了一个 Claude Skill，可在网页上生成精美幻灯片。世界尚未意识到代码能生成比大多数PPT工具更好的幻灯片。Claude 首先会就美学风格与你访谈，然后生成几个方向让你"展示而非口头描述"，你可以挑选最喜欢的一个。</p>
+                
+                <h3>如何应用</h3>
+                <p>在 Claude 中调用幻灯片 Skill，描述主题与受众（如"向投资人展示AI产品路线图，科技感深色系"），Claude 会生成 2-3 个设计方向，选择后一键发布为可共享的网页幻灯片，比手动制作PPT快10倍且视觉更现代。</p>
+                
+                <span class="card-source">来源：@zarazhangrui - <a href="https://x.com/zarazhangrui/status/1982128230133068263" target="_blank" class="source-link">查看推文</a></span>
+            </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <h2 class="card-title">4️⃣ Hailuo T2V-01-Director：自然语言视频镜头控制</h2>
+                    <div class="card-category">
+                        <span class="tag" data-category="工具">🛠️ 工具</span>
+                        <span class="rating">⭐ 7/10</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-content">
+                <h3>推文原文（中文翻译）</h3>
+                <p>推出 Hailuo T2V-01-Director 模型：像专业人士一样控制你的摄像机！通过自然语言或简单指令进行导演。组合多种动作实现无缝、电影级的转场。新增：动作随机性降低，控制准确性增强。</p>
+                
+                <h3>如何应用</h3>
+                <p>生成视频后，使用自然语言指令调整镜头运动："缓慢推近主角面部"、"从左侧横移至背景"，模型会精准执行，不再依赖复杂的帧级编辑，适合短视频创作者快速调整视频构图和节奏。</p>
+                
+                <span class="card-source">来源：@Hailuo_AI - <a href="https://x.com/Hailuo_AI/status/1893296229108666368" target="_blank" class="source-link">查看推文</a></span>
+            </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <h2 class="card-title">5️⃣ Ramp Inspect：AI代码自维护工作流（视频演示）</h2>
+                    <div class="card-category">
+                        <span class="tag" data-category="工具">🛠️ 工具</span>
+                        <span class="tag" data-category="工作流">🔧 工作流</span>
+                        <span class="rating">⭐ 7/10</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-content">
+                <h3>推文原文（中文翻译）</h3>
+                <p>Ramp Labs（Ramp 的 AI 部门）正在推进代理式创新。@a_levitator 正在讨论并演示代码自维护软件和 AI 软件工厂概念。00:04 介绍，01:11 从编码转向代码维护，01:59 介绍 Ramp Inspect 后台编码代理，03:05 首次实验：夜间AI代码自动化，04:23 无状态监控在大型可观测性系统中的局限性，05:47 使用 Datadog 监控为AI提供状态和焦点，07:23 真实案例：AI自主修复认证bug，08:14 如何控制噪音并实施AI分级模式，09:27 传统 vs 新的持续代码可观测性范式，10:21 构建自主AI软件工厂的关键经验。</p>
+                
+                <h3>如何应用</h3>
+                <p>在 Jenkins/GitLab CI 中部署 Ramp Inspect，配置为每日夜间运行，自动扫描新 PR/提交，发现常见bug（如认证逻辑错误、空指针）后直接发起修复PR，你只需Reviewed并合并——将代码维护从"手动排查"变为"AI自动修复+人工审核"。</p>
+                
+                <span class="card-source">来源：@mattturck - <a href="https://x.com/mattturck/status/2051708647865020870" target="_blank" class="source-link">查看推文</a></span>
+            </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <h2 class="card-title">6️⃣ Agent工作流优化：使用Markdown追踪进度</h2>
+                    <div class="card-category">
+                        <span class="tag" data-category="工作流">🔧 工作流</span>
+                        <span class="rating">⭐ 5/10</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-content">
+                <h3>推文原文（中文翻译）</h3>
+                <p>让AI在Markdown中追踪工作进度非常有效，尤其是在自动化循环后，它可以连续工作数小时。</p>
+                
+                <h3>如何应用</h3>
+                <p>在Agent提示词中加入："每次完成任务后，在TEMP_TASK_LOG.md中更新进度：任务名称、完成时间、输出路径、下一步建议"，构建"执行-记录-复盘"闭环，可轻松追踪多轮任务链，避免"聊完就忘"的上下文丢失问题。</p>
+                
+                <span class="card-source">来源：@steipete - <a href="https://x.com/steipete/status/1941494308709990671" target="_blank" class="source-link">查看推文</a></span>
+            </div>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <h2 class="card-title">7️⃣ 软件工程角色新范式：Pirate vs Architect</h2>
+                    <div class="card-category">
+                        <span class="tag" data-category="思维">💡 思维创新</span>
+                        <span class="rating">⭐ 5/10</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-content">
+                <h3>推文原文（中文翻译）</h3>
+                <p>2026年的软件工程需要两个角色：海盗与架构师。海盗以最快速度编码，找出什么是真正有价值的。架构师则将混乱的原型转化为高效运作的系统。以下是其运作方式与原因。</p>
+                
+                <h3>如何应用</h3>
+                <p>团队协作中明确分工：当探索新功能/技术方案时，指定一人担任"海盗角色"——专注用最少代码模拟MVP，快速验证价值；当方案验证通过后，切换至"架构师角色"——重构代码、优化结构、添加测试。同一人可切换角色，但避免同时扮演两者造成认知负荷。</p>
+                
+                <span class="card-source">来源：@danshipper - <a href="https://x.com/danshipper/status/2043819933675450455" target="_blank" class="source-link">查看推文</a></span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>README: AI网红工具日报（daily digest of AI tools for content creators & influencers）</p>
+        <p style="margin-top: 5px;">如需定制订阅列表或提供内容线索，请联系 @AI_Influence_Digest</p>
+        <p style="margin-top: 15px; font-size: 0.8rem; opacity: 0.6;">任务ID：cron:2a25fa8c-873a-4f64-9c28-4faef679b95d</p>
+    </div>
+</div>
+
+<script>
+    // Simple dark mode toggle (already dark)
+    console.log('AI网红工具日报 2026-05-13 - 暗色主题加载完成');
+</script>
+</body>
+</html>
