@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 网红工具日报 - 2026-05-25</title>
+  <style>
+    :root {
+      --bg-color: #0a0a0a;
+      --card-bg: #131313;
+      --text-primary: #e0e0e0;
+      --text-secondary: #a0a0a0;
+      --accent: #6366f1;
+      --accent-hover: #4f46e5;
+      --border: #262626;
+      --tag-bg: #1f1f1f;
+      --tag-text: #a5b4fc;
+      --rating: #fbbf24;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg-color);
+      color: var(--text-primary);
+      line-height: 1.6;
+      padding: 20px;
+    }
+    .container { max-width: 900px; margin: 0 auto; }
+    .header { text-align: center; margin-bottom: 40px; border-bottom: 1px solid var(--border); padding-bottom: 24px; }
+    .header h1 { font-size: 28px; color: var(--accent); margin-bottom: 8px; }
+    .header p { color: var(--text-secondary); font-size: 14px; }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 20px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+    .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+    .card-title { font-size: 18px; font-weight: 600; margin-bottom: 8px; color: var(--text-primary); }
+    .card-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+    .tag {
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    .rating { display: flex; align-items: center; gap: 4px; color: var(--rating); font-size: 14px; }
+    .source { display: flex; align-items: center; gap: 8px; color: var(--text-secondary); font-size: 14px; margin-bottom: 16px; }
+    .source a { color: var(--accent); text-decoration: none; }
+    .source a:hover { text-decoration: underline; }
+    .content { font-size: 15px; color: var(--text-primary); white-space: pre-wrap; margin-bottom: 16px; line-height: 1.7; }
+    .how-to { background: #0f0f0f; border-left: 3px solid var(--accent); padding: 12px; border-radius: 0 6px 6px 0; font-size: 14px; }
+    .how-to-label { font-weight: 600; color: var(--accent); display: block; margin-bottom: 4px; }
+    .footer {
+      text-align: center;
+      padding: 32px;
+      color: var(--text-secondary);
+      font-size: 13px;
+      border-top: 1px solid var(--border);
+    }
+    .github-link { display: inline-block; margin-top: 12px; background: var(--accent); color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 500; }
+    .github-link:hover { background: var(--accent-hover); }
+    @media (max-width: 600px) {
+      .card { padding: 16px; }
+      .card-title { font-size: 16px; }
+      .header h1 { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🤖 AI 网红工具日报</h1>
+      <p>2026-05-25 · 原创精选：工具推荐 · 教程 · Prompt 模板 · 工作流优化 · AI 使用技巧</p>
+    </div>
+
+    <!-- Item 1 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">🛠️ Claude Code 原型开发实战 — 从 1 个到几十个原型</div>
+        <div class="rating">⭐⭐⭐⭐⭐ (9/10)</div>
+      </div>
+      <div class="card-meta">
+        <span class="tag">教程</span><span class="tag">工作流</span>
+      </div>
+      <div class="source">来源：<a href="https://x.com/_catwu">@_catwu</a> · <a href="https://x.com/_catwu/status/1963031711614435594" target="_blank">查看原推</a></div>
+      <div class="content">
+        我们团队如何用 Claude Code 来对 Todo 工具进行原型迭代。过去原型制作非常耗时，一个功能只能做 1-2 个原型。Claude Code 改变了这一切，现在我们为单个功能构建几十个原型，实际的 prompt 全部公开。
+      </div>
+      <div class="how-to">
+        <span class="how-to-label">💡 如何应用：</span>
+        直接参考帖子中附带的完整 prompt，在自己的项目中用 Claude Code 快速出原型。适用于任何需要反复迭代 UI/功能的产品开发场景，一个人就能干原来一个团队的活。
+      </div>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">🔧 Claude Agent SDK + Cloudflare Sandboxes 教程</div>
+        <div class="rating">⭐⭐⭐⭐⭐ (8/10)</div>
+      </div>
+      <div class="card-meta">
+        <span class="tag">教程</span><span class="tag">工具</span>
+      </div>
+      <div class="source">来源：<a href="https://x.com/trq212">@trq212</a> · <a href="https://x.com/trq212/status/1983232134103068768" target="_blank">查看原推</a></div>
+      <div class="content">
+        如果你想做一个使用 bash 工具的 Agent，Cloudflare 刚发了一篇很好的教程，教你如何用他们的沙盒来托管 Claude Agent SDK。非编程 Agent 也需要 bash——我给做通用 Agent 的公司的建议就是"多用 bash 工具"，附上了一个邮件 Agent 的具体示例。
+      </div>
+      <div class="how-to">
+        <span class="how-to-label">💡 如何应用：</span>
+        跟着 Cloudflare 的教程搭建自己的 Agent，用 bash 工具扩展 Agent 能力边界。即使做非编程类 Agent（如邮件/客服），bash 能让 Agent 执行文件操作、API 调用等复杂任务。
+      </div>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">💡 如何构建不是"套壳"的 AI 产品</div>
+        <div class="rating">⭐⭐⭐⭐ (8/10)</div>
+      </div>
+      <div class="card-meta">
+        <span class="tag">思维</span><span class="tag">工作流</span>
+      </div>
+      <div class="source">来源：<a href="https://x.com/realmadhuguru">@realmadhuguru</a> · <a href="https://x.com/realmadhuguru/status/1958348930774908998" target="_blank">查看原推</a></div>
+      <div class="content">
+        构建 AI 产品不被视为"套壳"的几个思考：1）深入研究用户工作流：工具、数据源、hack、手动操作、那些因为复杂而没人做的事。按角色×垂直领域组合思考。2）识别挑战……人们对"AI wrapper"的担忧被过度放大了。从基础模型到集成进关键业务流程之间的鸿沟其实很宽。
+      </div>
+      <div class="how-to">
+        <span class="how-to-label">💡 如何应用：</span>
+        做 AI 产品时别只调 API，先花时间泡在用户的真实工作流里。找到那些用户因为复杂而跳过的环节，那就是 AI 最大的价值点。做内容工具也一样——解决真实痛点比堆功能重要。
+      </div>
+    </div>
+
+    <!-- Item 4 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">📊 evals（评估）是 AI 时代新必备技能</div>
+        <div class="rating">⭐⭐⭐⭐ (7/10)</div>
+      </div>
+      <div class="card-meta">
+        <span class="tag">思维</span><span class="tag">工作流</span>
+      </div>
+      <div class="source">来源：<a href="https://x.com/realmadhuguru">@realmadhuguru</a> · <a href="https://x.com/realmadhuguru/status/1963748941385908426" target="_blank">查看原推</a></div>
+      <div class="content">
+        evals 正在成为产品人和 AI 公司的必备技能。AI 之前：功能/产品需要从零构建。AI 之后：模型有巨大的潜在能力，可以通过更好的 prompt、上下文和工具使用来拓展。你的第一件事是……
+      </div>
+      <div class="how-to">
+        <span class="how-to-label">💡 如何应用：</span>
+        在使用任何 AI 工具时建立自己的 eval 体系——用固定 prompt 测试不同模型/配置的输出质量。这是筛选最适合自己场景的 AI 工具的系统方法，比看评测文章靠谱。
+      </div>
+    </div>
+
+    <!-- Item 5 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">🎨 Claude Code SDK 自定义工具和 Hooks</div>
+        <div class="rating">⭐⭐⭐⭐ (7/10)</div>
+      </div>
+      <div class="card-meta">
+        <span class="tag">工具</span><span class="tag">教程</span>
+      </div>
+      <div class="source">来源：<a href="https://x.com/_catwu">@_catwu</a> · <a href="https://x.com/_catwu/status/1966943489759080940" target="_blank">查看原推</a></div>
+      <div class="content">
+        Claude Code SDK 现在支持直接在代码中自定义工具和 hooks。我们还更新了所有文档，包含完整参考和 10 个新指南。
+      </div>
+      <div class="how-to">
+        <span class="how-to-label">💡 如何应用：</span>
+        用 Claude Code SDK 构建自己的 Agent 工作流，通过自定义工具把重复性操作自动化。比如自动发布内容到多个平台、批量处理素材等。
+      </div>
+    </div>
+
+    <!-- Item 6 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">🧠 AI 编程的可靠性数学 — 为什么 AI 能写 1 小时代码但写不了 10 小时</div>
+        <div class="rating">⭐⭐⭐⭐ (7/10)</div>
+      </div>
+      <div class="card-meta">
+        <span class="tag">思维</span>
+      </div>
+      <div class="source">来源：<a href="https://x.com/ylecun">@ylecun</a> · <a href="https://x.com/ylecun/status/1935108028891861393" target="_blank">查看原推</a></div>
+      <div class="content">
+        为什么 AI 能编码 1 小时但不能 10 小时？一个简单解释：如果每 10 分钟步骤有 10% 的出错概率，那成功率是：1 小时 53%、4 小时 8%、10 小时 0.002%。
+      </div>
+      <div class="how-to">
+        <span class="how-to-label">💡 如何应用：</span>
+        理解这个原理后，把大任务拆成小步骤给 AI，每步人工检查。内容创作同理——让 AI 一次写一篇完整文章不如让它分段写、分段审。
+      </div>
+    </div>
+
+    <!-- Item 7 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">🎤 用 Claude Skill 生成网页幻灯片</div>
+        <div class="rating">⭐⭐⭐⭐ (7/10)</div>
+      </div>
+      <div class="card-meta">
+        <span class="tag">工具</span><span class="tag">教程</span>
+      </div>
+      <div class="source">来源：<a href="https://x.com/zarazhangrui">@zarazhangrui</a> · <a href="https://x.com/zarazhangrui/status/2016337615843434646" target="_blank">查看原推</a></div>
+      <div class="content">
+        我做了一个 Claude Skill，可以在网页上生成漂亮的幻灯片。代码能创建比大多数 PPT 工具好得多的幻灯片。Claude 先采访你关于审美偏好，然后生成几个方向来"展示而非讲述"，你可以选择。
+      </div>
+      <div class="how-to">
+        <span class="how-to-label">💡 如何应用：</span>
+        用这个 Skill 快速生成演示文稿，比 PowerPoint 效率高且设计感更强。适合需要频繁做 pitch、分享会的创作者和创业者。
+      </div>
+    </div>
+
+    <!-- Item 8 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">✨ 3 个超实用的 Prompt 模板</div>
+        <div class="rating">⭐⭐⭐⭐ (7/10)</div>
+      </div>
+      <div class="card-meta">
+        <span class="tag">Prompt</span>
+      </div>
+      <div class="source">来源：<a href="https://x.com/zarazhangrui">@zarazhangrui</a> · <a href="https://x.com/zarazhangrui/status/1988654882363166862" target="_blank">查看原推</a></div>
+      <div class="content">
+        3 个对我帮助巨大的 prompt：1. 每次问我一个问题来帮我理清 [某话题]。2. [我的想法]。找出我思维中的漏洞。3. 写一份半宣言半激励的文字帮我开始/停止 [某个习惯]。
+      </div>
+      <div class="how-to">
+        <span class="how-to-label">💡 如何应用：</span>
+        第一个 prompt 适合深度学习新领域；第二个适合验证商业想法和内容策划；第三个适合克服创作障碍。三个模板都能直接复制使用。
+      </div>
+    </div>
+
+    <!-- Item 9 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">🎤 Agentic 时代的 PM 新方法论</div>
+        <div class="rating">⭐⭐⭐⭐ (7/10)</div>
+      </div>
+      <div class="card-meta">
+        <span class="tag">工作流</span><span class="tag">思维</span>
+      </div>
+      <div class="source">来源：<a href="https://x.com/trq212">@trq212</a> · <a href="https://x.com/trq212/status/1967296896533500066" target="_blank">查看原推</a></div>
+      <div class="content">
+        Cat 正在重新定义 AI 编程时代如何做 PM。"我们最好的功能来自工程师自己原型想法、内测、然后听反馈。"工程师端到端拥有功能……
+      </div>
+      <div class="how-to">
+        <span class="how-to-label">💡 如何应用：</span>
+        如果你在做 AI 相关产品或内容，采用"快速原型→内测→反馈迭代"的流程。AI 工具让个人也能做到以前需要团队才能完成的原型开发。
+      </div>
+    </div>
+
+    <!-- Item 10 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">📹 用 AI 浏览器从 YouTube 视频学习</div>
+        <div class="rating">⭐⭐⭐⭐ (7/10)</div>
+      </div>
+      <div class="card-meta">
+        <span class="tag">工具</span><span class="tag">工作流</span>
+      </div>
+      <div class="source">来源：<a href="https://x.com/zarazhangrui">@zarazhangrui</a> · <a href="https://x.com/zarazhangrui/status/1952144485351305539" target="_blank">查看原推</a></div>
+      <div class="content">
+        这是我如何用 Perplexity 的 Comet 浏览器从 YouTube 视频学习日语。AI 浏览器是游戏规则改变者。
+      </div>
+      <div class="how-to">
+        <span class="how-to-label">💡 如何应用：</span>
+        用 AI 浏览器（如 Perplexity Comet）自动提取视频中的知识点、生成笔记和学习计划。内容创作者也可以用它来高效研究竞品视频和学习新领域。
+      </div>
+    </div>
+
+    <!-- Item 11 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">🎯 AI 三层素养模型</div>
+        <div class="rating">⭐⭐⭐⭐ (6/10)</div>
+      </div>
+      <div class="card-meta">
+        <span class="tag">思维</span>
+      </div>
+      <div class="source">来源：<a href="https://x.com/zarazhangrui">@zarazhangrui</a> · <a href="https://x.com/zarazhangrui/status/1988852566751355075" target="_blank">查看原推</a></div>
+      <div class="content">
+        AI 素养的三个层次：第一层是消费（读帖子、看 demo）；第二层是使用（亲自尝试 AI 工具）；第三层是构建（用 AI 做出东西来）。大多数人永远停在第一层。真正的学习发生在你构建的时候。
+      </div>
+      <div class="how-to">
+        <span class="how-to-label">💡 如何应用：</span>
+        检查自己处于哪一层。如果你还在"看 AI 新闻"的阶段，今天就挑一个工具实际用它做点什么。从做一个 AI 生成的短视频、写一篇 AI 辅助的文案开始。
+      </div>
+    </div>
+
+    <!-- Item 12 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">📈 X 涨粉 10k 的 4 步方法</div>
+        <div class="rating">⭐⭐⭐⭐ (6/10)</div>
+      </div>
+      <div class="card-meta">
+        <span class="tag">工作流</span>
+      </div>
+      <div class="source">来源：<a href="https://x.com/zarazhangrui">@zarazhangrui</a> · <a href="https://x.com/zarazhangrui/status/1987669356801925370" target="_blank">查看原推</a></div>
+      <div class="content">
+        我如何在 3 个月内 X 涨粉 10k：1）调整信息流（取关标题党，关注 builder）；2）真诚互动（不要用 AI 写回复）；3）每天至少发 3 条（用你日常说话的方式写）；4）公开学习（用 X 作为公开笔记本记录学习过程）。
+      </div>
+      <div class="how-to">
+        <span class="how-to-label">💡 如何应用：</span>
+        做 AI 领域的内容创作者，核心是"公开学习"——把你使用 AI 工具的过程、踩的坑、发现的技巧实时分享。真实感比精致感更有吸引力。
+      </div>
+    </div>
+
+    <!-- Item 13 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">🎬 Gemini Omni — 多模态创作新工具</div>
+        <div class="rating">⭐⭐⭐⭐ (6/10)</div>
+      </div>
+      <div class="card-meta">
+        <span class="tag">工具</span>
+      </div>
+      <div class="source">来源：<a href="https://x.com/GoogleDeepMind">@GoogleDeepMind</a> · <a href="https://x.com/GoogleDeepMind/status/2056786446636212467" target="_blank">查看原推</a></div>
+      <div class="content">
+        我们发布了 Gemini Omni：迈向"从任何东西创建任何东西"模型的第一步——从视频开始。它结合了 Gemini 的智能和生成式媒体系统，在世界理解、多模态和编辑方面代表了重大飞跃。
+      </div>
+      <div class="how-to">
+        <span class="how-to-label">💡 如何应用：</span>
+        关注 Gemini Omni 的发布动态，它可以让你从文本/图片/视频混合输入生成新的多媒体内容。适合需要快速将素材转化为多种格式内容的创作者。
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>📅 生成时间：2026-05-25 10:00 UTC</p>
+      <p>📊 数据来源：g1·g2·g3·g5 缓存（g4 未完成）</p>
+      <a href="https://zxy114.github.io/ai-news-daily/published/influencer-daily-2026-05-25.html" class="github-link" target="_blank">查看原文+评论</a>
+    </div>
+  </div>
+</body>
+</html>
