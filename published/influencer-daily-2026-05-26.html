@@ -1,0 +1,534 @@
+ <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 网红工具日报 — 2026-05-26</title>
+  <style>
+    :root {
+      --bg-color: #0f172a;
+      --card-bg: #1e293b;
+      --text-primary: #e2e8f0;
+      --text-secondary: #94a3b8;
+      --accent: #3b82f6;
+      --accent-hover: #2563eb;
+      --tag-tool: #059669;
+      --tag-workflow: #7c3aed;
+      --tag-mind: #db2777;
+      --tag-tutorial: #dc2626;
+      --border: #334155;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-primary);
+      line-height: 1.7;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    header .date {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+
+    .top-alert {
+      background: linear-gradient(90deg, #1e293b 0%, #0f172a 50%, #1e293b 100%);
+      border-left: 4px solid var(--accent);
+      padding: 12px 20px;
+      margin-bottom: 24px;
+      border-radius: 6px;
+      font-size: 0.95rem;
+    }
+
+    .top-alert a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .top-alert a:hover {
+      text-decoration: underline;
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title::before {
+      content: "•";
+      color: var(--accent);
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .summary-card {
+      background: var(--card-bg);
+      padding: 16px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .summary-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+    }
+
+    .summary-card h3 {
+      font-size: 1.5rem;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .summary-card p {
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+    }
+
+    .cards-container {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .news-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s;
+    }
+
+    .news-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .handle-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #cbd5e1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: var(--bg-color);
+    }
+
+    .handle-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .handle-name {
+      font-weight: 600;
+    }
+
+    .handle-link {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+
+    .handle-link:hover {
+      color: var(--accent);
+    }
+
+    .card-content {
+      margin-bottom: 16px;
+      white-space: pre-wrap;
+      line-height: 1.65;
+    }
+
+    .card-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+      font-size: 0.85rem;
+    }
+
+    .tag {
+      padding: 4px 10px;
+      border-radius: 20px;
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .tag-tool { background: var(--tag-tool); }
+    .tag-workflow { background: var(--tag-workflow); }
+    .tag-mind { background: var(--tag-mind); }
+    .tag-tutorial { background: var(--tag-tutorial); }
+
+    .score {
+      color: var(--text-secondary);
+      font-size: 0.8rem;
+    }
+
+    .score .star {
+      color: #fbbf24;
+    }
+
+    .card-footer {
+      background: rgba(59, 130, 246, 0.1);
+      padding: 12px;
+      border-radius: 10px;
+      margin-top: 12px;
+    }
+
+    .card-footer p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+    }
+
+    .card-footer strong {
+      color: var(--accent);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 48px;
+      padding-top: 30px;
+      border-top: 1px solid var(--border);
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+    }
+
+    .footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.5rem; }
+      .summary-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📢 AI 网红工具日报</h1>
+      <div class="date">📅 2026-05-26</div>
+    </header>
+
+    <div class="top-alert">
+      🌟 <strong>今日重点：</strong>Google I/O 大会发布多款创作工具！Gemini Omni 视频生成、Google Pics 图像编辑、Codex 移动端和远程操控，让内容创作真正做到"无处不在"。
+    </div>
+
+    <div class="summary-grid">
+      <div class="summary-card">
+        <h3>🛠️</h3>
+        <p><strong>6</strong> 个新工具</p>
+      </div>
+      <div class="summary-card">
+        <h3>🔄</h3>
+        <p><strong>3</strong> 个工作流</p>
+      </div>
+      <div class="summary-card">
+        <h3>💡</h3>
+        <p><strong>2</strong> 条思维</p>
+      </div>
+    </div>
+
+    <div class="section-title">精选内容</div>
+
+    <div class="cards-container">
+      <!-- Card 1 -->
+      <div class="news-card">
+        <div class="card-header">
+          <div class="handle-avatar">G</div>
+          <div class="handle-info">
+            <div class="handle-name">@GoogleAI</div>
+            <a class="handle-link" href="https://x.com/GoogleAI/status/2057128296538861943" target="_blank">查看推文</a>
+          </div>
+        </div>
+        <div class="card-content">
+          We partnered with artists, designers, and builders to create new AI tools that solve real problems in their creative workflows. Introducing Google Pics in Google Workspace: A brand-new image creation &amp; editing tool. Move and resize objects, add text, and more.
+        </div>
+        <div class="card-meta">
+          <span class="tag tag-tool">🛠 工具</span>
+          <span class="score">⭐⭐⭐⭐⭐ <span class="star">★★★★★</span> 评分：9/10</span>
+        </div>
+        <div class="card-footer">
+          <p><strong>如何应用：</strong>直接在 Google Docs/Slides 里生成和编辑图片，不需要切换到外部工具。做演示文稿、社媒封面图、博客配图一站式搞定，创作效率直接翻倍。</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="news-card">
+        <div class="card-header">
+          <div class="handle-avatar">D</div>
+          <div class="handle-info">
+            <div class="handle-name">@GoogleDeepMind</div>
+            <a class="handle-link" href="https://x.com/GoogleDeepMind/status/2056786446636212467" target="_blank">查看推文</a>
+          </div>
+        </div>
+        <div class="card-content">
+          We're dropping Gemini Omni: our first step towards a model that can create anything from anything — starting with video. It combines Gemini's intelligence with our generative media systems.
+        </div>
+        <div class="card-meta">
+          <span class="tag tag-tool">🛠 工具</span>
+          <span class="score">⭐⭐⭐⭐⭐ <span class="star">★★★★★</span> 评分：9/10</span>
+        </div>
+        <div class="card-footer">
+          <p><strong>如何应用：</strong>输入文字、图片甚至音频就能生成视频。网红做短视频、产品展示、创意内容再也不是瓶颈——给个灵感就能出片，适合做 TikTok/Reels/Shorts 批量生产。</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="news-card">
+        <div class="card-header">
+          <div class="handle-avatar">O</div>
+          <div class="handle-info">
+            <div class="handle-name">@OpenAI</div>
+            <a class="handle-link" href="https://x.com/OpenAI/status/2056793648571011232" target="_blank">查看推文</a>
+          </div>
+        </div>
+        <div class="card-content">
+          Now in preview: Codex in the ChatGPT mobile app. Start new work, review outputs, steer execution, and approve next steps, all from the ChatGPT mobile app. Codex will keep running on your laptop, Mac mini, or devbox.
+        </div>
+        <div class="card-meta">
+          <span class="tag tag-tool">🛠 工具</span>
+          <span class="score">⭐⭐⭐⭐ <span class="star">★★★★☆</span> 评分：8/10</span>
+        </div>
+        <div class="card-footer">
+          <p><strong>如何应用：</strong>在手机上启动 Codex 任务，出门在外也能追踪和审批代码进度。对于一边做内容一边开发工具的创作者，意味着你再也不用坐在电脑前等了。</p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="news-card">
+        <div class="card-header">
+          <div class="handle-avatar">G</div>
+          <div class="handle-info">
+            <div class="handle-name">@GoogleAI</div>
+            <a class="handle-link" href="https://x.com/GoogleAI/status/2056859455833473091" target="_blank">查看推文</a>
+          </div>
+        </div>
+        <div class="card-content">
+          Gemini Spark is your 24/7 personal AI agent that can take action on your behalf, under your direction. It seamlessly integrates with Gmail, Google Docs, and Slides to automate your workflows.
+        </div>
+        <div class="card-meta">
+          <span class="tag tag-workflow">🔄 工作流</span>
+          <span class="score">⭐⭐⭐⭐ <span class="star">★★★★☆</span> 评分：8/10</span>
+        </div>
+        <div class="card-footer">
+          <p><strong>如何应用：</strong>让 AI 代理自动处理邮件分类、文档起草、幻灯片排版等重复工作。创作者可以把精力集中在内容构思上，让 Spark 替你干杂活。</p>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="news-card">
+        <div class="card-header">
+          <div class="handle-avatar">G</div>
+          <div class="handle-info">
+            <div class="handle-name">@GoogleAI</div>
+            <a class="handle-link" href="https://x.com/GoogleAI/status/2056845506601718271" target="_blank">查看推文</a>
+          </div>
+        </div>
+        <div class="card-content">
+          Today, we launched a brand-new intelligent Search box. An upgrade to the Search experience with our most advanced Gemini 3.5 models. You can ask across modalities (text, images, files, and videos).
+        </div>
+        <div class="card-meta">
+          <span class="tag tag-tool">🛠 工具</span>
+          <span class="score">⭐⭐⭐⭐ <span class="star">★★★★☆</span> 评分：8/10</span>
+        </div>
+        <div class="card-footer">
+          <p><strong>如何应用：</strong>直接丢图片、视频、文件给搜索引擎提问。做内容调研时截图+文字组合搜索，快速找到素材来源、竞品分析、灵感参考。</p>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="news-card">
+        <div class="card-header">
+          <div class="handle-avatar">P</div>
+          <div class="handle-info">
+            <div class="handle-name">@petergyang</div>
+            <a class="handle-link" href="https://x.com/petergyang/status/2058555226479866312" target="_blank">查看推文</a>
+          </div>
+        </div>
+        <div class="card-content">
+          "We used to say build the MVP. Now you should build the system that builds the MVP first." Ryan Carson shared how he runs his startup solo with AI agents: OpenClaw as his AI chief of staff to triage emails, book meetings, and do sales.
+        </div>
+        <div class="card-meta">
+          <span class="tag tag-workflow">🔄 工作流</span>
+          <span class="tag tag-mind">💡 思维</span>
+          <span class="score">⭐⭐⭐⭐ <span class="star">★★★★☆</span> 评分：8/10</span>
+        </div>
+        <div class="card-footer">
+          <p><strong>如何应用：</strong>核心思路是"先搭 AI 系统，再让系统帮你搭产品"。内容创作者可以用同样的方法论——先设置好 AI 工作流（邮件、排期、社媒发布），再专注内容本身。一个人就是一支队伍。</p>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="news-card">
+        <div class="card-header">
+          <div class="handle-avatar">O</div>
+          <div class="handle-info">
+            <div class="handle-name">@OpenAI</div>
+            <a class="handle-link" href="https://x.com/OpenAI/status/2057617844800794878" target="_blank">查看推文</a>
+          </div>
+        </div>
+        <div class="card-content">
+          Codex can now securely use apps on your Mac from your phone, even when your Mac is locked and the screen is off.
+        </div>
+        <div class="card-meta">
+          <span class="tag tag-tool">🛠 工具</span>
+          <span class="tag tag-workflow">🔄 工作流</span>
+          <span class="score">⭐⭐⭐⭐ <span class="star">★★★★☆</span> 评分：8/10</span>
+        </div>
+        <div class="card-footer">
+          <p><strong>如何应用：</strong>合上 MacBook 盖子也能让 Codex 继续干活。创作者可以出门前启动渲染/导出/批量处理任务，回来时已完成。真正做到"离线生产力"。</p>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="news-card">
+        <div class="card-header">
+          <div class="handle-avatar">G</div>
+          <div class="handle-info">
+            <div class="handle-name">@GoogleAI</div>
+            <a class="handle-link" href="https://x.com/GoogleAI/status/2057871583843135978" target="_blank">查看推文</a>
+          </div>
+        </div>
+        <div class="card-content">
+          Antigravity 2.0: A new standalone desktop application built for the agentic era. I/O Developer News Recap with agent building tools.
+        </div>
+        <div class="card-meta">
+          <span class="tag tag-tool">🛠 工具</span>
+          <span class="score">⭐⭐⭐⭐ <span class="star">★★★★☆</span> 评分：7.5/10</span>
+        </div>
+        <div class="card-footer">
+          <p><strong>如何应用：</strong>独立的桌面端 AI 代理应用，可以构建和运行自定义 AI 工作流。适合需要自动化多步骤任务的创作者，比如"监控热点→生成初稿→自动排版"。</p>
+        </div>
+      </div>
+
+      <!-- Card 9 -->
+      <div class="news-card">
+        <div class="card-header">
+          <div class="handle-avatar">M</div>
+          <div class="handle-info">
+            <div class="handle-name">@MiniMax_AI</div>
+            <a class="handle-link" href="https://x.com/MiniMax_AI/status/2057115503270019458" target="_blank">查看推文</a>
+          </div>
+        </div>
+        <div class="card-content">
+          You built an agent that can research, decide, and execute. Then it hits checkout — and needs your face ID. We built something to streamline that last step. One integration. No more babysitting.
+        </div>
+        <div class="card-meta">
+          <span class="tag tag-workflow">🔄 工作流</span>
+          <span class="score">⭐⭐⭐⭐ <span class="star">★★★★☆</span> 评分：7.5/10</span>
+        </div>
+        <div class="card-footer">
+          <p><strong>如何应用：</strong>解决 AI 代理执行到支付/验证环节需要人工干预的痛点。如果你用 AI 代理做自动化采购、订阅管理、批量操作，这个工具能真正实现端到端无人值守。</p>
+        </div>
+      </div>
+
+      <!-- Card 10 -->
+      <div class="news-card">
+        <div class="card-header">
+          <div class="handle-avatar">O</div>
+          <div class="handle-info">
+            <div class="handle-name">@OpenAI</div>
+            <a class="handle-link" href="https://x.com/OpenAI/status/2057617862479708650" target="_blank">查看推文</a>
+          </div>
+        </div>
+        <div class="card-content">
+          Advanced annotation mode lets you directly adjust the way web pages look while leaving feedback, making it even easier to work together with Codex.
+        </div>
+        <div class="card-meta">
+          <span class="tag tag-tool">🛠 工具</span>
+          <span class="tag tag-tutorial">✏️ 教程</span>
+          <span class="score">⭐⭐⭐⭐ <span class="star">★★★★☆</span> 评分：7/10</span>
+        </div>
+        <div class="card-footer">
+          <p><strong>如何应用：</strong>在网页上直接画圈标注就能给 Codex 下指令。做网站设计、着陆页优化时，不用写代码，画几笔就能让 AI 理解你想改什么。非技术创作者的福音。</p>
+        </div>
+      </div>
+
+      <!-- Card 11 -->
+      <div class="news-card">
+        <div class="card-header">
+          <div class="handle-avatar">D</div>
+          <div class="handle-info">
+            <div class="handle-name">@danshipper</div>
+            <a class="handle-link" href="https://x.com/danshipper/status/2057514494960513272" target="_blank">查看推文</a>
+          </div>
+        </div>
+        <div class="card-content">
+          We've automated every single thing we can with AI agents. And yet there's way more human work to do than ever. We've gone from 4 → 30 human employees since GPT-3. How AI makes expert competence cheap, why that drives up demand.
+        </div>
+        <div class="card-meta">
+          <span class="tag tag-mind">💡 思维</span>
+          <span class="score">⭐⭐⭐⭐ <span class="star">★★★★☆</span> 评分：8/10</span>
+        </div>
+        <div class="card-footer">
+          <p><strong>如何应用：</strong>核心洞察——AI 让专业能力变得廉价，反而刺激了需求爆发。创作者应该思考：与其用 AI 替代自己，不如用 AI 放大自己的专业判断，做更高价值的内容。AI 降低了执行的门槛，但提高了品味的溢价。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-title">今日总结</div>
+    <div style="background: #1e293b; padding: 16px; border-radius: 12px; margin-top: 24px;">
+      <p>(filtered by policy)</p>
+      <p style="color: var(--text-secondary);">AI 从"回答问题"进入"替你干活"时代。Google I/O 大会集中发布创作工具（Pics、Omni、Spark），AI 从"回答问题"进入"替你干活"时代。OpenAI Codex 移动端和远程操控让创作不受地点限制。</p>
+    </div>
+
+    <footer class="footer">
+      <p>每日 10:00 UTC 自动生成 | 数据来源：Twitter/X AI 领域 KOL</p>
+    </footer>
+  </div>
+</body>
+</html>
