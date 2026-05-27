@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 网红工具日报 — 2026-05-27</title>
+<style>
+  :root {
+    --bg: #0f0f13;
+    --card: #1a1a24;
+    --card-hover: #22222f;
+    --border: #2a2a3a;
+    --accent: #7c6aff;
+    --accent2: #ff6b9d;
+    --text: #e4e4ef;
+    --muted: #8888a0;
+    --tag-bg: #2a2a3a;
+    --tag-text: #b0b0d0;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    line-height: 1.7;
+    padding: 20px;
+    max-width: 820px;
+    margin: 0 auto;
+  }
+  header {
+    text-align: center;
+    padding: 40px 0 30px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 30px;
+  }
+  header h1 {
+    font-size: 1.6em;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+  }
+  header .date { color: var(--muted); font-size: 0.95em; }
+  header .summary { color: var(--muted); font-size: 0.85em; margin-top: 6px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin-bottom: 18px;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .card:hover {
+    background: var(--card-hover);
+    border-color: var(--accent);
+  }
+  .card-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+  .card-num {
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9em;
+    flex-shrink: 0;
+  }
+  .card-title {
+    font-size: 1.05em;
+    font-weight: 600;
+    color: #fff;
+  }
+  .tag {
+    display: inline-block;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 0.75em;
+    margin-left: auto;
+  }
+  .card .text {
+    color: var(--text);
+    margin-bottom: 12px;
+    font-size: 0.92em;
+  }
+  .card .source {
+    color: var(--muted);
+    font-size: 0.82em;
+    margin-bottom: 10px;
+  }
+  .card .source a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .source a:hover { text-decoration: underline; }
+  .stars {
+    color: #fbbf24;
+    font-size: 0.85em;
+    margin-bottom: 10px;
+  }
+  .card .tip {
+    background: rgba(124,106,255,0.08);
+    border-left: 3px solid var(--accent);
+    padding: 10px 14px;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.88em;
+    color: #c8c8e0;
+  }
+  footer {
+    text-align: center;
+    padding: 30px 0 20px;
+    border-top: 1px solid var(--border);
+    margin-top: 20px;
+    color: var(--muted);
+    font-size: 0.8em;
+  }
+  .stats {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    padding: 16px;
+    background: var(--card);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+  }
+  .stat-item { text-align: center; }
+  .stat-num {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .stat-label { font-size: 0.78em; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>📢 AI 网红工具日报</h1>
+  <div class="date">2026-05-27（周三）</div>
+  <div class="summary">精选 12 条高实用价值内容 · 内容创作者看完能立刻上手</div>
+</header>
+
+<div class="stats">
+  <div class="stat-item"><div class="stat-num">12</div><div class="stat-label">精选收录</div></div>
+  <div class="stat-item"><div class="stat-num">9/10</div><div class="stat-label">最高评分</div></div>
+  <div class="stat-item"><div class="stat-num">4/5</div><div class="stat-label">缓存组</div></div>
+</div>
+
+<div class="card">
+  <div class="card-head">
+    <div class="card-num">1</div>
+    <div class="card-title">用 AI Agent 系统一个人运营一家创业公司</div>
+    <span class="tag">工作流</span>
+  </div>
+  <div class="text">"以前我们说要构建 MVP。现在你应该先构建能构建 MVP 的系统。" 他分享了如何用 AI Agent 独自运营创业公司：用 OpenClaw 作为 AI 行政主管，自动处理邮件分拣、会议安排和销售工作。</div>
+  <div class="source">来源：@petergyang · <a href="https://x.com/petergyang/status/2058555226479866312" target="_blank">推文链接</a></div>
+  <div class="stars">⭐ 实用性：9/10</div>
+  <div class="tip">💡 尝试用 OpenClaw 或类似 AI 工具搭建你的"自动运营系统"——先让 AI 处理邮件分类、日程管理、客户跟进等重复性工作，把时间留给核心决策。</div>
+</div>
+
+<div class="card">
+  <div class="card-head">
+    <div class="card-num">2</div>
+    <div class="card-title">Gemini Omni 终极视频 Prompt 指南</div>
+    <span class="tag">教程 / Prompt</span>
+  </div>
+  <div class="text">掌握 Gemini Omni 的终极视频 Prompt 指南。Gemini Omni 是最新模型，可以从任何输入创建视频。你可以在 Gemini Omni Flash 上体验速度和创造力。</div>
+  <div class="source">来源：@GoogleAI · <a href="https://x.com/GoogleAI/status/2059381218660270435" target="_blank">推文链接</a></div>
+  <div class="stars">⭐ 实用性：9/10</div>
+  <div class="tip">💡 直接阅读完整指南学习视频生成 Prompt 技巧，包括场景描述、镜头运动、光影控制等写法，立刻在 Gemini 中实践。</div>
+</div>
+
+<div class="card">
+  <div class="card-head">
+    <div class="card-num">3</div>
+    <div class="card-title">Google Pics — Workspace 全新 AI 图像创作与编辑工具</div>
+    <span class="tag">工具</span>
+  </div>
+  <div class="text">与艺术家、设计师、开发者合作打造新 AI 工具，解决创意工作流中的真实问题。全新推出 Google Workspace 中的 Google Pics：移动和调整对象、添加文字等。</div>
+  <div class="source">来源：@GoogleAI · <a href="https://x.com/GoogleAI/status/2057128296538861943" target="_blank">推文链接</a></div>
+  <div class="stars">⭐ 实用性：8/10</div>
+  <div class="tip">💡 如果你使用 Google Workspace，直接在 Workspace 中尝试 Google Pics，无需切换工具即可完成基础的 AI 图像编辑。</div>
+</div>
+
+<div class="card">
+  <div class="card-head">
+    <div class="card-num">4</div>
+    <div class="card-title">MiniMax 代理 checkout 流程自动化</div>
+    <span class="tag">工具 / 工作流</span>
+  </div>
+  <div class="text">你构建了一个能研究、决策、执行的 Agent，然后它遇到了 checkout——需要人脸识别、指纹或人工确认。我们构建了简化这最后一步的方案。一次集成，无需再等待。</div>
+  <div class="source">来源：@MiniMax_AI · <a href="https://x.com/MiniMax_AI/status/2057115503270019458" target="_blank">推文链接</a></div>
+  <div class="stars">⭐ 实用性：8/10</div>
+  <div class="tip">💡 如果你的 AI Agent 涉及需要人类验证的操作（支付、签名等），了解这种"最后一公里"自动化方案，可以显著提升 Agent 的独立运行能力。</div>
+</div>
+
+<div class="card">
+  <div class="card-head">
+    <div class="card-num">5</div>
+    <div class="card-title">OpenAI SynthID 水印 + C2PA 内容凭证</div>
+    <span class="tag">工具</span>
+  </div>
+  <div class="text">OpenAI 新增识别 AI 生成图片的方式。除了 C2PA 内容凭证外，图片现在还包含 SynthID 水印，可通过公开验证工具检测图片是否由 AI 生成。</div>
+  <div class="source">来源：@OpenAI · <a href="https://x.com/OpenAI/status/2056793648571011232" target="_blank">推文链接</a></div>
+  <div class="stars">⭐ 实用性：8/10</div>
+  <div class="tip">💡 内容创作者应了解如何为 AI 生成的内容添加可验证凭证，提高作品的透明度和可信度，避免合规风险。</div>
+</div>
+
+<div class="card">
+  <div class="card-head">
+    <div class="card-num">6</div>
+    <div class="card-title">Hailuo AI Agent — 零门槛视频创作工作流</div>
+    <span class="tag">工具 / 工作流</span>
+  </div>
+  <div class="text">Hailuo AI Agent：下一代创意工作流——免费试用一周！只需对话，看着你的想法在无限画布上实现。Agent 自动选择最佳模型、规划工作流，图片、视频、音频一站式完成。</div>
+  <div class="source">来源：@Hailuo_AI · <a href="https://x.com/Hailuo_AI/status/1970086888951394483" target="_blank">推文链接</a></div>
+  <div class="stars">⭐ 实用性：8/10</div>
+  <div class="tip">💡 直接在 Hailuo 平台尝试 AI Agent 模式——用自然语言描述你想要的视频，Agent 自动选模型、规划流程、输出成品。</div>
+</div>
+
+<div class="card">
+  <div class="card-head">
+    <div class="card-num">7</div>
+    <div class="card-title">OpenAI Codex 远程 Mac 控制</div>
+    <span class="tag">工具</span>
+  </div>
+  <div class="text">Codex 周四发布亮点：Codex 现在可以从手机安全地使用 Mac 上的应用，即使 Mac 锁屏且屏幕关闭。</div>
+  <div class="source">来源：@OpenAI · <a href="https://x.com/OpenAI/status/2057617844800794878" target="_blank">推文链接</a></div>
+  <div class="stars">⭐ 实用性：7/10</div>
+  <div class="tip">💡 远程工作者可尝试用手机通过 Codex 操控 Mac 上的应用，实现"人在外面、手在电脑里"的高效工作模式。</div>
+</div>
+
+<div class="card">
+  <div class="card-head">
+    <div class="card-num">8</div>
+    <div class="card-title">MiniMax 双 LLM 架构语音 Agent</div>
+    <span class="tag">工具</span>
+  </div>
+  <div class="text">Gradium 发布 Gizmo 语音助手，由双 LLM 架构驱动，消除对话中的尴尬沉默。超快的 M2-her 模型提供即时确认，强大的 M2.7 处理复杂推理。</div>
+  <div class="source">来源：@MiniMax_AI · <a href="https://x.com/MiniMax_AI/status/2058012127206785094" target="_blank">推文链接</a></div>
+  <div class="stars">⭐ 实用性：7/10</div>
+  <div class="tip">💡 构建语音类 AI 产品时，参考"快模型响应 + 慢模型推理"的双模型架构思路，显著改善用户体验。</div>
+</div>
+
+<div class="card">
+  <div class="card-head">
+    <div class="card-num">9</div>
+    <div class="card-title">Gemini Omni 创意作品集</div>
+    <span class="tag">工具</span>
+  </div>
+  <div class="text">Gemini Omni 来了，我们这周看到了超棒的创作！这里有一些亮点展示。</div>
+  <div class="source">来源：@GoogleDeepMind · <a href="https://x.com/GoogleDeepMind/status/2057616371748651054" target="_blank">推文链接</a></div>
+  <div class="stars">⭐ 实用性：7/10</div>
+  <div class="tip">💡 浏览 Gemini Omni 的创意案例，获取灵感，了解这个视频生成模型能做到什么程度。</div>
+</div>
+
+<div class="card">
+  <div class="card-head">
+    <div class="card-num">10</div>
+    <div class="card-title">Project Genie — 把真实街景变成互动世界</div>
+    <span class="tag">工具</span>
+  </div>
+  <div class="text">Project Genie 与 Google Maps 街景联动，现在可以将美国真实地点转化为全新的互动世界。</div>
+  <div class="source">来源：@GoogleDeepMind · <a href="https://x.com/GoogleDeepMind/status/2057842131142590512" target="_blank">推文链接</a></div>
+  <div class="stars">⭐ 实用性：7/10</div>
+  <div class="tip">💡 Google AI Ultra 订阅用户可在 Google Labs 中体验——选择美国任意地点，选择风格，即可将真实街景转化为互动虚拟世界。</div>
+</div>
+
+<div class="card">
+  <div class="card-head">
+    <div class="card-num">11</div>
+    <div class="card-title">OpenAI Codex 高级标注模式</div>
+    <span class="tag">工具</span>
+  </div>
+  <div class="text">高级标注模式让你直接调整网页外观并留下反馈，让与 Codex 协作更加轻松。</div>
+  <div class="source">来源：@OpenAI · <a href="https://x.com/OpenAI/status/2057617862479708650" target="_blank">推文链接</a></div>
+  <div class="stars">⭐ 实用性：6/10</div>
+  <div class="tip">💡 使用 Codex 开发网页时，直接用标注模式可视化标注需要修改的地方，比文字描述更精准高效。</div>
+</div>
+
+<div class="card">
+  <div class="card-head">
+    <div class="card-num">12</div>
+    <div class="card-title">MiniMax Agent 集成 Perplexity 搜索</div>
+    <span class="tag">工具 / 工作流</span>
+  </div>
+  <div class="text">MiniMax Agent 现已使用 Perplexity 搜索基础设施。测试对比 3 家 AI 原生搜索提供商，Perplexity 在答案质量和摘要密度上表现最佳。</div>
+  <div class="source">来源：@MiniMax_AI · <a href="https://x.com/MiniMax_AI/status/2057848932882170152" target="_blank">推文链接</a></div>
+  <div class="stars">⭐ 实用性：6/10</div>
+  <div class="tip">💡 如果你在使用 AI Agent 做研究任务，尝试接入 Perplexity 搜索 API，提升搜索结果的相关性和信息密度。</div>
+</div>
+
+<footer>
+  <p>⚠️ G5 缓存今日未生成，可能缺失部分内容</p>
+  <p>生成时间：2026-05-27 10:00 UTC · 数据来源：Twitter/X 缓存抓取</p>
+</footer>
+
+</body>
+</html>
