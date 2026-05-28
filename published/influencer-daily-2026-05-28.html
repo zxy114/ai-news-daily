@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 网红工具日报 · 2026-05-28</title>
+  <style>
+    :root {
+      --bg-dark: #0f1115;
+      --bg-card: #1a1d24;
+      --text-main: #e6e9f2;
+      --text-muted: #9aa4b2;
+      --accent: #7c5cff;
+      --accent-grad: linear-gradient(135deg, #7c5cff 0%, #2b85ff 100%);
+      --border: #2d333d;
+      --success: #00e676;
+      --warning: #ffea00;
+      --danger: #ff5252;
+      --rating-star: #ffd700;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px 30px;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="%23232630" opacity="0.3"/></svg>');
+      border-bottom: 1px solid var(--border);
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      background: var(--accent-grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+    .card {
+      background: var(--bg-card);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      margin-bottom: 24px;
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+    .card-header {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .card-title {
+      font-size: 18px;
+      line-height: 1.4;
+      font-weight: 600;
+    }
+    .card-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .chip {
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: rgba(124,92,255,0.15);
+      color: #a795ff;
+      border: 1px solid rgba(124,92,255,0.2);
+    }
+    .tag-tool { background: rgba(43,133,255,0.15); color: #8ab6ff; border-color: rgba(43,133,255,0.2); }
+    .tag-guide { background: rgba(0,230,118,0.15); color: #64dba9; border-color: rgba(0,230,118,0.2); }
+    .tag-process { background: rgba(255,234,0,0.15); color: #ffe066; border-color: rgba(255,234,0,0.2); }
+    .tag-mind { background: rgba(255,82,82,0.15); color: #ff9999; border-color: rgba(255,82,82,0.2); }
+    .card-body {
+      padding: 20px;
+      font-size: 14px;
+    }
+    .source {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .source a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .apply {
+      background: rgba(0,230,118,0.08);
+      border-left: 3px solid var(--success);
+      padding: 10px 14px;
+      margin-top: 12px;
+      font-size: 13px;
+      color: var(--success);
+    }
+    .rating {
+      font-size: 16px;
+      color: var(--rating-star);
+    }
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: var(--text-muted);
+      font-size: 13px;
+      border-top: 1px solid var(--border);
+    }
+    .index {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(15,17,21,0.95);
+      backdrop-filter: blur(8px);
+      padding: 10px 20px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 20px;
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+    }
+    .index a {
+      color: var(--text-main);
+      text-decoration: none;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+    .index a:hover { opacity: 1; color: var(--accent); }
+    .tag-all { background: rgba(255,255,255,0.1); color: #fff; border: 1px solid #fff; }
+    .quick-links {
+      display: flex;
+      gap: 16px;
+      margin-top: 16px;
+      font-size: 14px;
+    }
+    .quick-links a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🤖 AI 网红工具日报</h1>
+      <p class="subtitle">每日精选 AI 工具推荐、教程、Prompt 模板与工作流优化<br>💡 核心标准：内容创作者看完能立刻上手用</p>
+      <p class="subtitle" style="margin-top: 12px; color: var(--success);">📅 2026-05-28</p>
+    </header>
+
+    <div class="index">
+      <a href="#item-1" class="tag-all">🚀 全部</a>
+      <a href="#item-1">1. YouTube</a>
+      <a href="#item-2">2. Codex</a>
+      <a href="#item-3">3. Hailuo</a>
+      <a href="#item-4">4. Hailuo Agent</a>
+      <a href="#item-5">5. MiniMax</a>
+      <a href="#item-6">6. Prompt 工程</a>
+      <a href="#item-7">7. AI Agent创业</a>
+      <a href="#item-8">8. Gemini Omni</a>
+      <a href="#item-9">9. 科学工具</a>
+      <a href="#item-10">10. SynthID</a>
+      <a href="#item-11">11. GPT-5.5</a>
+      <a href="#item-12">12. Qwen</a>
+    </div>
+
+    <main>
+
+      <article class="card" id="item-1">
+        <div class="card-header">
+          <div class="card-title">🛠️ YouTube「Made on YouTube 2025」重磅更新：AI 创作工具全家桶</div>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+        </div>
+        <div class="card-body">
+          <div class="source">来源：<a href="https://www.netinfluencer.com/made-on-youtube-2025-a-breakdown-of-all-new-ai-tools-monetization-features-platform-updates/" target="_blank">YouTube 官方博客</a></div>
+          <p>YouTube 在 20 周年活动上发布一系列 AI 新功能：Veo 3 Fast 短片生成、AI 自动剪辑（Edit with AI）、语音转歌曲（Speech to Song）、自动配音+口型同步、AI 企划助手（Ask Studio）、标题 A/B 测试等。</p>
+          <div class="card-meta">
+            <span class="chip tag-tool">工具</span>
+            <span class="chip tag-process">工作流</span>
+          </div>
+          <div class="apply"><strong>如何应用：</strong>打开 YouTube Studio 即可使用 AI 剪辑和企划功能。标题 A/B 测试直接帮你找到最高点击率的标题组合，数据驱动优化内容策略。</div>
+        </div>
+      </article>
+
+      <article class="card" id="item-2">
+        <div class="card-header">
+          <div class="card-title">🛠️ ChatGPT Codex 远程操控 Mac 应用</div>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+        </div>
+        <div class="card-body">
+          <div class="source">来源：<a href="https://x.com/OpenAI/status/2057617844800794878" target="_blank">@OpenAI</a></div>
+          <p>Highlights from today's Codex Thursday launches: Codex can now securely use apps on your Mac from your phone, even when your Mac is locked and the screen is off.</p>
+          <div class="card-meta">
+            <span class="chip tag-tool">工具</span>
+            <span class="chip tag-process">工作流</span>
+          </div>
+          <div class="apply"><strong>如何应用：</strong>在手机上通过 Codex 远程调用 Mac 上的任意应用（Photoshop、Final Cut、Finder 等），适合需要随时处理文件的创作者。锁定屏幕也能操作，出门在外也能让 AI 帮你跑任务。</div>
+        </div>
+      </article>
+
+      <article class="card" id="item-3">
+        <div class="card-header">
+          <div class="card-title">🛠️ Hailuo AI 推出「Start/End Frame」精准视频控制</div>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+        </div>
+        <div class="card-body">
+          <div class="source">来源：<a href="https://x.com/Hailuo_AI/status/1961075684241191067" target="_blank">@Hailuo_AI</a></div>
+          <p>Introducing Hailuo Start/End Frame — Start where you want. End where you choose. Fluid motion, cinematic flow, complex prompts handled with precision.</p>
+          <div class="card-meta">
+            <span class="chip tag-tool">工具</span>
+            <span class="chip tag-guide">教程</span>
+          </div>
+          <div class="apply"><strong>如何应用：</strong>上传起始帧和结束帧两张图片，AI 自动生成中间过渡视频。做转场动画、产品展示视频、品牌片头非常高效。免费试用。</div>
+        </div>
+      </article>
+
+      <article class="card" id="item-4">
+        <div class="card-header">
+          <div class="card-title">🔧 Hailuo AI Agent：一站式 AI 创作工作流（免费一周）</div>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+        </div>
+        <div class="card-body">
+          <div class="source">来源：<a href="https://x.com/Hailuo_AI/status/1970086888951394483" target="_blank">@Hailuo_AI</a></div>
+          <p>Introducing Hailuo AI Agent: Your next-gen creative flow — FREE for one week! Just talk to it and it handles the rest.</p>
+          <div class="card-meta">
+            <span class="chip tag-tool">工具</span>
+            <span class="chip tag-process">工作流</span>
+          </div>
+          <div class="apply"><strong>如何应用：</strong>直接用自然语言描述你想要的视频/图片，AI Agent 自动规划创作流程并生成成品。适合不会写复杂 prompt 的创作者，降低 AI 创作门槛。</div>
+        </div>
+      </article>
+
+      <article class="card" id="item-5">
+        <div class="card-header">
+          <div class="card-title">🔧 MiniMax Agent：AI 自主完成全流程任务</div>
+          <div class="rating">⭐⭐⭐⭐</div>
+        </div>
+        <div class="card-body">
+          <div class="source">来源：<a href="https://x.com/MiniMax_AI/status/2057115503270019458" target="_blank">@MiniMax_AI</a></div>
+          <p>You built an agent that can research, decide, and execute. Then it hits checkout and needs your fingerprint. MiniMax Agent 可以自主研究、决策和执行完整任务链。</p>
+          <div class="card-meta">
+            <span class="chip tag-tool">工具</span>
+            <span class="chip tag-process">工作流</span>
+          </div>
+          <div class="apply"><strong>如何应用：</strong>设定任务目标后 Agent 自动完成调研→分析→执行流程，适合做竞品分析、市场调研、内容策划等批量任务。</div>
+        </div>
+      </article>
+
+      <article class="card" id="item-6">
+        <div class="card-header">
+          <div class="card-title">🧠 AI 工作流 Prompt 工程蓝图 2026</div>
+          <div class="rating">⭐⭐⭐⭐</div>
+        </div>
+        <div class="card-body">
+          <div class="source">来源：<a href="https://techdailyshot.com/blog/ultimate-ai-workflow-prompt-engineering-blueprint-2026" target="_blank">TechDailyShot</a></div>
+          <p>The AI arms race is no longer about who has the largest models—it's about who can orchestrate AI-driven workflows with surgical precision. Prompt chaining, context management, and feedback loops are critical.</p>
+          <div class="card-meta">
+            <span class="chip tag-guide">教程</span>
+            <span class="chip tag-mind">思维</span>
+          </div>
+          <div class="apply"><strong>如何应用：</strong>学习 Prompt Chaining（提示链）和 RAG（检索增强生成）架构，把复杂任务拆成多步骤 AI 工作流。适合想把 AI 融入日常内容生产线的创作者。</div>
+        </div>
+      </article>
+
+      <article class="card" id="item-7">
+        <div class="card-header">
+          <div class="card-title">🧠 用 AI Agent 独立运营创业公司的完整工作流</div>
+          <div class="rating">⭐⭐⭐⭐</div>
+        </div>
+        <div class="card-body">
+          <div class="source">来源：<a href="https://x.com/petergyang/status/2058555226479866312" target="_blank">@petergyang</a></div>
+          <p>"We used to say build the MVP. Now you should build the system that builds the MVP first." Peter Gyang 分享如何用 AI agents 独立运营创业公司：OpenClaw 作为 AI 秘书处理邮件、安排会议、做销售。</p>
+          <div class="card-meta">
+            <span class="chip tag-process">工作流</span>
+            <span class="chip tag-mind">思维</span>
+          </div>
+          <div class="apply"><strong>如何应用：</strong>将 AI Agent 作为你的「首席运营官」——邮件分拣、日程管理、客户跟进全部自动化。一个人也能运营一套完整的业务流程。</div>
+        </div>
+      </article>
+
+      <article class="card" id="item-8">
+        <div class="card-header">
+          <div class="card-title">🛠️ Gemini Omni 多模态创作工具集</div>
+          <div class="rating">⭐⭐⭐⭐</div>
+        </div>
+        <div class="card-body">
+          <div class="source">来源：<a href="https://x.com/GoogleDeepMind/status/2057616371748651054" target="_blank">@GoogleDeepMind</a></div>
+          <p>Gemini Omni is here, and we've been seeing amazing creations all week.</p>
+          <div class="card-meta">
+            <span class="chip tag-tool">工具</span>
+            <span class="chip tag-guide">教程</span>
+          </div>
+          <div class="apply"><strong>如何应用：</strong>Gemini Omni 支持文本、图像、视频、音频多模态统一处理。创作者可以用一个平台完成从文案到配图到视频的完整创作链。</div>
+        </div>
+      </article>
+
+      <article class="card" id="item-9">
+        <div class="card-header">
+          <div class="card-title">🧠 Google AI 科学工具包加速研究工作流</div>
+          <div class="rating">⭐⭐⭐⭐</div>
+        </div>
+        <div class="card-body">
+          <div class="source">来源：<a href="https://x.com/GoogleDeepMind/status/2057256257153884161" target="_blank">@GoogleDeepMind</a></div>
+          <p>How can you accelerate your day to day research workflow? By giving AI the right scientific toolkit. Science Skills 整合 30+ 生命科学模型。</p>
+          <div class="card-meta">
+            <span class="chip tag-tool">工具</span>
+            <span class="chip tag-guide">教程</span>
+          </div>
+          <div class="apply"><strong>如何应用：</strong>做科普类/知识类内容的创作者可以用 Science Skills 快速获取准确的专业信息，大幅减少资料查证时间。</div>
+        </div>
+      </article>
+
+      <article class="card" id="item-10">
+        <div class="card-header">
+          <div class="card-title">🛠️ OpenAI 图片水印与溯源：SynthID + C2PA</div>
+          <div class="rating">⭐⭐⭐⭐</div>
+        </div>
+        <div class="card-body">
+          <div class="source">来源：<a href="https://x.com/OpenAI/status/2056793648571011232" target="_blank">@OpenAI</a></div>
+          <p>We're adding new ways for people to identify AI-generated images and understand where they came from. In addition to C2PA Content Credentials, images now also contain a SynthID watermark.</p>
+          <div class="card-meta">
+            <span class="chip tag-tool">工具</span>
+            <span class="chip tag-mind">思维</span>
+          </div>
+          <div class="apply"><strong>如何应用：</strong>创作者发布 AI 生成图片时注意合规标注，同时可以用水印保护自己的原创 AI 作品不被盗用。了解这些技术趋势有助于在平台审核中保持主动。</div>
+        </div>
+      </article>
+
+      <article class="card" id="item-11">
+        <div class="card-header">
+          <div class="card-title">📊 GPT-5.5 发布背后的 AI 进展洞察</div>
+          <div class="rating">⭐⭐⭐</div>
+        </div>
+        <div class="card-body">
+          <div class="source">来源：<a href="https://x.com/mattturck/status/2057498130795385188" target="_blank">@mattturck</a></div>
+          <p>Why AI Progress Suddenly Feels Real — 对话 OpenAI Post-Training Frontiers 团队负责人，讨论模型可靠性和 GPT-5.5 的发布心路历程。</p>
+          <div class="card-meta">
+            <span class="chip tag-mind">思维</span>
+          </div>
+          <div class="apply"><strong>如何应用：</strong>了解 AI 模型的最新进展方向（可靠性提升、多模态融合），提前规划你的 AI 内容创作策略。GPT-5.5 在创意写作和内容生成方面有显著提升。</div>
+        </div>
+      </article>
+
+      <article class="card" id="item-12">
+        <div class="card-header">
+          <div class="card-title">🧠 通义千问 Qwen 自主进化：35 小时连续执行 432 个内核任务</div>
+          <div class="rating">⭐⭐⭐</div>
+        </div>
+        <div class="card-body">
+          <div class="source">来源：<a href="https://x.com/Alibaba_Qwen/status/2057450236180935056" target="_blank">@Alibaba_Qwen</a></div>
+          <p>Self-Evolving in the Wild: Over the course of ~35 hours of continuous autonomous execution, the model performed 432 kernel tasks.</p>
+          <div class="card-meta">
+            <span class="chip tag-tool">工具</span>
+            <span class="chip tag-mind">思维</span>
+          </div>
+          <div class="apply"><strong>如何应用：</strong>展示了 AI 自主学习和执行复杂任务链的能力。对于需要批量处理内容的创作者，这类自主 Agent 可以大幅减少人工干预。</div>
+        </div>
+      </article>
+
+      <div class="card" style="margin-top: 32px;">
+        <div class="card-header" style="border-bottom: none; background: linear-gradient(135deg, rgba(124,92,255,0.1), rgba(43,133,255,0.1));">
+          <div class="card-title">📋 今日速览 · Top 12 工具</div>
+        </div>
+        <div class="card-body" style="padding-top: 12px;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+            <thead style="border-bottom: 1px solid var(--border);">
+              <tr>
+                <th style="text-align: left; padding: 8px 4px;">排位</th>
+                <th style="text-align: left; padding: 8px 4px;">工具/内容</th>
+                <th style="text-align: left; padding: 8px 4px;">一句话总结</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 8px 4px;">1</td>
+                <td style="padding: 8px 4px;"><strong>YouTube AI 创作套件</strong></td>
+                <td style="padding: 8px 4px;">Veo 3 短片+自动剪辑+配音</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 8px 4px;">2</td>
+                <td style="padding: 8px 4px;"><strong>Codex 远程 Mac</strong></td>
+                <td style="padding: 8px 4px;">手机操控电脑上的任何 App</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 8px 4px;">3</td>
+                <td style="padding: 8px 4px;"><strong>Hailuo Start/End Frame</strong></td>
+                <td style="padding: 8px 4px;">起止帧精准控制视频生成</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 8px 4px;">4</td>
+                <td style="padding: 8px 4px;"><strong>Hailuo AI Agent</strong></td>
+                <td style="padding: 8px 4px;">语音对话即可完成创作</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 8px 4px;">5</td>
+                <td style="padding: 8px 4px;"><strong>MiniMax Agent</strong></td>
+                <td style="padding: 8px 4px;">自主完成全流程任务</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 8px 4px;">6</td>
+                <td style="padding: 8px 4px;"><strong>Prompt 工程蓝图</strong></td>
+                <td style="padding: 8px 4px;">AI 工作流架构最佳实践</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 8px 4px;">7</td>
+                <td style="padding: 8px 4px;"><strong>AI Agent 创业</strong></td>
+                <td style="padding: 8px 4px;">一个人+AI=一个团队</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 8px 4px;">8</td>
+                <td style="padding: 8px 4px;"><strong>Gemini Omni</strong></td>
+                <td style="padding: 8px 4px;">多模态统一创作平台</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 8px 4px;">9</td>
+                <td style="padding: 8px 4px;"><strong>Google Science Skills</strong></td>
+                <td style="padding: 8px 4px;">科普内容快速查证</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 8px 4px;">10</td>
+                <td style="padding: 8px 4px;"><strong>SynthID 水印</strong></td>
+                <td style="padding: 8px 4px;">AI 图片溯源保护</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 8px 4px;">11</td>
+                <td style="padding: 8px 4px;"><strong>GPT-5.5</strong></td>
+                <td style="padding: 8px 4px;">模型进展方向洞察</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 8px 4px;">12</td>
+                <td style="padding: 8px 4px;"><strong>Qwen 自主进化</strong></td>
+                <td style="padding: 8px 4px;">AI 35 小时连续执行</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="quick-links">
+        <a href="https://x.com/OpenAI" target="_blank">@OpenAI</a> • 
+        <a href="https://x.com/Hailuo_AI" target="_blank">@Hailuo_AI</a> • 
+        <a href="https://x.com/MiniMax_AI" target="_blank">@MiniMax_AI</a> • 
+        <a href="https://x.com/Alibaba_Qwen" target="_blank">@Alibaba_Qwen</a> • 
+        <a href="https://x.com/GoogleDeepMind" target="_blank">@GoogleDeepMind</a>
+      </div>
+
+    </main>
+
+    <footer>
+      <p>📅 生成时间：2026-05-28 10:00 UTC<br>
+      📊 数据来源：Twitter/X 缓存 + 公开 AI 资讯<br>
+      🔗 订阅：每日自动生成，持续追踪 AI 工具前沿</p>
+    </footer>
+  </div>
+</body>
+</html>
