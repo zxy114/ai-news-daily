@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 网红工具日报 | 2026-05-29</title>
+  <style>
+    :root {
+      --bg-dark: #0f0f1a;
+      --bg-card: #1a1a2e;
+      --text-main: #e0e0e0;
+      --text-secondary: #a0a0b0;
+      --accent: #4f46e5;
+      --accent-hover: #4338ca;
+      --success: #10b981;
+      --star: #fbbf24;
+      --tag-tool: #3b82f6;
+      --tag-tutorial: #8b5cf6;
+      --tag-prompt: #ec4899;
+      --tag-workflow: #06b6d4;
+      --tag-thinking: #f59e0b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 20px;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    header {
+      text-align: center;
+      padding: 30px 20px;
+      border-bottom: 1px solid #2a2a40;
+      margin-bottom: 40px;
+    }
+    h1 { margin: 0; font-size: 28px; color: #fff; }
+    .subtitle {
+      color: var(--text-secondary);
+      margin-top: 10px;
+    }
+    .card {
+      background: var(--bg-card);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 24px;
+      border-left: 4px solid var(--accent);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    }
+    .card-overlay {
+      background: linear-gradient(135deg, #1a1a2e 0%, #2d2d44 100%);
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .card-title {
+      font-size: 22px;
+      margin: 0;
+      color: #fff;
+    }
+    .tag-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .tag {
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .tag-tool { background: var(--tag-tool); }
+    .tag-tutorial { background: var(--tag-tutorial); }
+    .tag-prompt { background: var(--tag-prompt); }
+    .tag-workflow { background: var(--tag-workflow); }
+    .tag-thinking { background: var(--tag-thinking); }
+    .rating {
+      color: var(--star);
+      font-size: 20px;
+      margin-top: 8px;
+    }
+    .source {
+      color: var(--text-secondary);
+      font-size: 14px;
+      margin-top: 16px;
+    }
+    .source a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .source a:hover {
+      text-decoration: underline;
+    }
+    .source .handle {
+      color: #fff;
+      font-weight: 600;
+    }
+    .summary {
+      margin: 16px 0;
+      color: #d0d0e0;
+    }
+    .how-to-use {
+      background: rgba(79, 70, 229, 0.1);
+      border: 1px solid rgba(79, 70, 229, 0.2);
+      border-radius: 12px;
+      padding: 16px;
+      margin-top: 20px;
+    }
+    .how-to-use h4 {
+      margin: 0 0 8px 0;
+      color: var(--accent);
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .how-to-use p {
+      margin: 0;
+      color: #b0b0c0;
+    }
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      border-top: 1px solid #2a2a40;
+      margin-top: 40px;
+      color: var(--text-secondary);
+    }
+    .footer-links a {
+      color: var(--accent);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer-links a:hover { text-decoration: underline; }
+    @media (max-width: 600px) {
+      h1 { font-size: 22px; }
+      .card-title { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🤖 AI 网红工具日报</h1>
+      <div class="subtitle">2026-05-29 | 工具推荐、教程、Prompt 模板与工作流优化</div>
+    </header>
+
+    <!-- Item 1 -->
+    <div class="card card-overlay">
+      <div class="card-header">
+        <h2 class="card-title">🛠️ Petergyang：AI 幻灯片生成技能（Sliders）</h2>
+        <div class="tag-group">
+          <span class="tag tag-tool">工具</span>
+          <span class="tag tag-tutorial">教程</span>
+          <span class="tag tag-workflow">工作流</span>
+        </div>
+      </div>
+      <div class="summary">
+        "I got tired of making PowerPoint slides so I built an AI skill to do it for me. Here's my new tutorial on how to build a /slides skill that turns a rough outline into a beautiful HTML deck in minutes. I walk through how to: Use 12 slide formats and 3 templates Add live"
+      </div>
+      <div class="rating">⭐⭐⭐⭐⭐ (5/5)</div>
+      <div class="source">
+        来源： <span class="handle">@petergyang</span> — <a href="https://x.com/petergyang/status/2059642246614647259" target="_blank" rel="noopener">推文链接</a>
+      </div>
+      <div class="how-to-use">
+        <h4>💡 如何应用</h4>
+        <p>直接输入大纲，AI 自动生成美观的 HTML 幻灯片（12种格式+3种模板）。适合需要快速做产品演示、教学课件、演讲稿的创作者。可作为独立技能部署，也可集成到工作流中。</p>
+      </div>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">🎨 Zara Zhang：Claude Skill 制作精美幻灯片</h2>
+        <div class="tag-group">
+          <span class="tag tag-tool">工具</span>
+        </div>
+      </div>
+      <div class="summary">
+        "I created a Claude Skill that make beautiful slides on the web. The world hasn't woken up to the fact that code can create much better slides than most PPT tools. - Claude interviews you first about aesthetics, then generate a few directions to 'show not tell', and you can pick"
+      </div>
+      <div class="rating">⭐⭐⭐⭐⭐ (5/5)</div>
+      <div class="source">
+        来源： <span class="handle">@zarazhangrui</span> — <a href="https://x.com/zarazhangrui/status/2016337615843434646" target="_blank" rel="noopener">推文链接</a>
+      </div>
+      <div class="how-to-use">
+        <h4>💡 如何应用</h4>
+        <p>Claude 先和你聊审美偏好（设计风格、配色、字体），然后生成多个方向供你选择。比传统 PPT 工具更智能、更快速，适合追求设计感和效率的创作者。</p>
+      </div>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="card card-overlay">
+      <div class="card-header">
+        <h2 class="card-title">🎬 TLDW：视频学习新范式（不是摘要！）</h2>
+        <div class="tag-group">
+          <span class="tag tag-tool">工具</span>
+          <span class="tag tag-workflow">工作流</span>
+        </div>
+      </div>
+      <div class="summary">
+        "We built TLDW (too long, didn't watch), a tool that helps you learn from long YouTube videos better & faster. AI video summaries are solving the wrong problem. You don't need a generic text summary of a 1-hour video. You need the 5 minutes that actually change how you think."
+      </div>
+      <div class="rating">⭐⭐⭐⭐⭐ (5/5)</div>
+      <div class="source">
+        来源： <span class="handle">@zarazhangrui</span> — <a href="https://x.com/zarazhangrui/status/1980371308161482853" target="_blank" rel="noopener">推文链接</a>
+      </div>
+      <div class="how-to-use">
+        <h4>💡 如何应用</h4>
+        <p>TLDW 不生成笼统摘要，而是帮你定位视频中真正改变了思维方式的5分钟精华段落，并允许高亮 transcript 转为笔记。学课程、研究案例、快速掌握知识非常高效。</p>
+      </div>
+    </div>
+
+    <!-- Item 4 -->
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">🔧 塑造你的 X 算法（告别噪音）</h2>
+        <div class="tag-group">
+          <span class="tag tag-thinking">思维</span>
+          <span class="tag tag-workflow">工作流</span>
+        </div>
+      </div>
+      <div class="summary">
+        "I spent 8 years away from X because it felt like noise. When I came back 6 months ago for AI, my feed was full of clickbait and topics I no longer cared about. So I did something most people don't do: I intentionally shaped my algorithm. Every time X pushed clickbait at me, I..."
+      </div>
+      <div class="rating">⭐⭐⭐⭐ (4/5)</div>
+      <div class="source">
+        来源： <span class="handle">@zarazhangrui</span> — <a href="https://x.com/zarazhangrui/status/1979564068450246910" target="_blank" rel="noopener">推文链接</a>
+      </div>
+      <div class="how-to-use">
+        <h4>💡 如何应用</h4>
+        <p>别被动刷 X！每次算法推荐你不想看的内容时，立即点「不感兴趣」或隐藏，算法会学习并逐渐优化你的信息流。每天花1分钟调整，2周后你会惊喜于 feeds 的质量提升。</p>
+      </div>
+    </div>
+
+    <!-- Item 5 -->
+    <div class="card card-overlay">
+      <div class="card-header">
+        <h2 class="card-title">🎙️ Gemini Live 更新：更快的语音对话</h2>
+        <div class="tag-group">
+          <span class="tag tag-tool">工具</span>
+        </div>
+      </div>
+      <div class="summary">
+        "We just shipped our biggest update to Gemini Live ever. It's smarter. It's more expressive. It has accents. And my favorite: it can talk faster! Here are 3 ways people are already using it in GeminiApp."
+      </div>
+      <div class="rating">⭐⭐⭐⭐ (4/5)</div>
+      <div class="source">
+        来源： <span class="handle">@joshwoodward</span> — <a href="https://x.com/joshwoodward/status/1988752728231981430" target="_blank" rel="noopener">推文链接</a>
+      </div>
+      <div class="how-to-use">
+        <h4>💡 如何应用</h4>
+        <p>Gemini Live 现在能更快地语音对话，还有方言语音。创作者可以用它快速头脑风暴、写脚本、校对文案，像和朋友聊天一样自然地激发创意。</p>
+      </div>
+    </div>
+
+    <!-- Item 6 -->
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">📊 Gemini Pro 使用限制翻倍</h2>
+        <div class="tag-group">
+          <span class="tag tag-tool">工具</span>
+        </div>
+      </div>
+      <div class="summary">
+        "For GeminiApp Pro plan members, we've just doubled your 2.5 Pro limit, from 50 to 100 queries per day. Thanks for using the model so much and messaging us wanting more! Enjoy!"
+      </div>
+      <div class="rating">⭐⭐⭐⭐⭐ (5/5)</div>
+      <div class="source">
+        来源： <span class="handle">@joshwoodward</span> — <a href="https://x.com/joshwoodward/status/1930324630738456640" target="_blank" rel="noopener">推文链接</a>
+      </div>
+      <div class="how-to-use">
+        <h4>💡 如何应用</h4>
+        <p>Gemini Pro 用户每天从 50 次查询提升到 100 次，价格不变！适合需要频繁调用 Gemini Pro 进行内容创作、学习、分析的重度用户，立刻省下不少时间。</p>
+      </div>
+    </div>
+
+    <!-- Item 7 -->
+    <div class="card card-overlay">
+      <div class="card-header">
+        <h2 class="card-title">🚀 Veo 3 正在热火朝天🔥</h2>
+        <div class="tag-group">
+          <span class="tag tag-tool">工具</span>
+        </div>
+      </div>
+      <div class="summary">
+        "Veo 3 dropped about 100 hours ago, and it's been on 🔥🔥🔥 ever since Now, we're excited to announce: + 71 new countries have access + Pro subscribers get a trial pack of Veo 3 on the web (mobile soon) + Ultra subscribers get the highest # of Veo 3 gens w/ refreshes"
+      </div>
+      <div class="rating">⭐⭐⭐⭐ (4/5)</div>
+      <div class="source">
+        来源： <span class="handle">@joshwoodward</span> — <a href="https://x.com/joshwoodward/status/1926311143867330938" target="_blank" rel="noopener">推文链接</a>
+      </div>
+      <div class="how-to-use">
+        <h4>💡 如何应用</h4>
+        <p>Veo 3 支持 71 个新国家！Pro 会员可免费试用 Veo 3。创作者可用它快速生成产品演示视频、营销素材、教学动画。注意上传起始/结束帧可获得更精准的视频控制。</p>
+      </div>
+    </div>
+
+    <!-- Item 8 -->
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">💭 ChatGPT / Claude 作为阅读伙伴</h2>
+        <div class="tag-group">
+          <span class="tag tag-thinking">思维</span>
+          <span class="tag tag-tutorial">教程</span>
+        </div>
+      </div>
+      <div class="summary">
+        "I spend a significant amount of my free time reading books with ChatGPT / Claude as a companion and I feel like I'm getting a PhD for $20 / month"
+      </div>
+      <div class="rating">⭐⭐⭐⭐⭐ (5/5)</div>
+      <div class="source">
+        来源： <span class="handle">@danshipper</span> — <a href="https://x.com/danshipper/status/1866820543032267013" target="_blank" rel="noopener">推文链接</a>
+      </div>
+      <div class="how-to-use">
+        <h4>💡 如何应用</h4>
+        <p>读专业书/长文章时，让 ChatGPT/Claude 作为「阅读伙伴」：随时提问概念、要求解释、生成摘要、模拟问答。每月 $20 的成本换来深度理解，ROI 极高。</p>
+      </div>
+    </div>
+
+    <!-- Item 9 -->
+    <div class="card card-overlay">
+      <div class="card-header">
+        <h2 class="card-title">🧠 「第二大脑」新思路：GPT-3 帮你整理笔记</h2>
+        <div class="tag-group">
+          <span class="tag tag-workflow">工作流</span>
+          <span class="tag tag-tutorial">教程</span>
+        </div>
+      </div>
+      <div class="summary">
+        "How GPT-3 will turn all of your notes into an *actual* second brain:"
+      </div>
+      <div class="rating">⭐⭐⭐⭐ (4/5)</div>
+      <div class="source">
+        来源： <span class="handle">@danshipper</span> — <a href="https://x.com/danshipper/status/1612509256820867073" target="_blank" rel="noopener">推文链接</a>
+      </div>
+      <div class="how-to-use">
+        <h4>💡 如何应用</h4>
+        <p>不要只把 GPT 当写作工具！先按主题归类你的原始笔记（截图、墨水、语音录音），再让 GPT 做「知识蒸馏」：提取要点、建立联系、形成可检索的知识库。这比单纯记录更有价值。</p>
+      </div>
+    </div>
+
+    <!-- Item 10 -->
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">🤖 AI 代理自动化 ≠ 降低人力需求</h2>
+        <div class="tag-group">
+          <span class="tag tag-thinking">思维</span>
+          <span class="tag tag-workflow">工作流</span>
+        </div>
+      </div>
+      <div class="summary">
+        "We've automated every single thing we can with AI agents. And yet there's way more human work to do than ever. We've gone from 4 -> 30 human employees since GPT-3. I wrote a report on the structural reasons: how AI makes expert competence cheap, why that drives up demand"
+      </div>
+      <div class="rating">⭐⭐⭐⭐ (4/5)</div>
+      <div class="source">
+        来源： <span class="handle">@danshipper</span> — <a href="https://x.com/danshipper/status/2057514494960513272" target="_blank" rel="noopener">推文链接</a>
+      </div>
+      <div class="how-to-use">
+        <h4>💡 如何应用</h4>
+        <p>别担心 AI 会取代你——它反而提高了专家的「单位产出」。关键不是「用不用 AI」，而是「用 AI 做什么」：把重复劳动交给 AI，腾出时间做更高价值的战略、创意、人机协作。你的「AI 代理协作能力」将成为核心竞争力。</p>
+      </div>
+    </div>
+
+    <!-- Item 11 -->
+    <div class="card card-overlay">
+      <div class="card-header">
+        <h2 class="card-title">💡 o3 API 限制翻倍（Plus 用户）</h2>
+        <div class="tag-group">
+          <span class="tag tag-tool">工具</span>
+        </div>
+      </div>
+      <div class="summary">
+        "Because you all asked: we're going to double the rate limits for o3 for Plus users. Rolling out as we speak. Now go do awesome stuff with it!"
+      </div>
+      <div class="rating">⭐⭐⭐⭐ (4/5)</div>
+      <div class="source">
+        来源： <span class="handle">@kevinweil</span> — <a href="https://x.com/kevinweil/status/1932565467736027597" target="_blank" rel="noopener">推文链接</a>
+      </div>
+      <div class="how-to-use">
+        <h4>💡 如何应用</h4>
+        <p>OpenAI Plus 用户的 o3 模型调用频率翻倍！适合构建知识库问答、自动化内容审核、批量摘要生成等需要高频调用 o3 的场景。</p>
+      </div>
+    </div>
+
+    <!-- Item 12 -->
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">🌟 OpenAI for Science：科学版 AI 平台</h2>
+        <div class="tag-group">
+          <span class="tag tag-tool">工具</span>
+        </div>
+      </div>
+      <div class="summary">
+        "I'm starting something new inside OpenAI! It's called OpenAI for Science, and the goal is to build the next great scientific instrument: an AI-powered platform that accelerates scientific discovery."
+      </div>
+      <div class="rating">⭐⭐⭐⭐ (4/5)</div>
+      <div class="source">
+        来源： <span class="handle">@kevinweil</span> — <a href="https://x.com/kevinweil/status/1962938974260904421" target="_blank" rel="noopener">推文链接</a>
+      </div>
+      <div class="how-to-use">
+        <h4>💡 如何应用</h4>
+        <p>虽然主打科研，但内容创作者也能用它：文献调研、概念可视化、复杂数据转故事脚本、学术写作风格优化。 soon 推出。</p>
+      </div>
+    </div>
+
+    <!-- Item 13 -->
+    <div class="card card-overlay">
+      <div class="card-header">
+        <h2 class="card-title">🔔 每日思维 tip：AI 教育 ≠ 学知识，而是学「如何和 AI 共学」</h2>
+        <div class="tag-group">
+          <span class="tag tag-thinking">思维</span>
+        </div>
+      </div>
+      <div class="summary">
+        "Yes, I actually believe 'general AI education' (teaching people how to work with AI & have AI augment, not replace them) should be part of the curriculum"
+      </div>
+      <div class="rating">⭐⭐⭐⭐⭐ (5/5)</div>
+      <div class="source">
+        来源： <span class="handle">@zarazhangrui</span> — <a href="https://x.com/zarazhangrui/status/1986604145126875423" target="_blank" rel="noopener">推文链接</a>
+      </div>
+      <div class="how-to-use">
+        <h4>💡 如何应用</h4>
+        <p>未来不是「谁会用 AI」的竞争，而是「谁能用 AI 同时赋能自己和团队」的竞争。每天花 5 分钟和 AI 陪练：让它提问、让它质疑你的观点、让它总结你刚读完的内容。这种「协作式学习」才是真正的 AI 素养。</p>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-links">
+        <p>订阅源 | <a href="https://x.com/ai_influencer_digest" target="_blank" rel="noopener">@AI Influencer Digest</a></p>
+        <p>GitHub Pages | <a href="https://zxy114.github.io/ai-news-daily/" target="_blank" rel="noopener">https://zxy114.github.io/ai-news-daily/</a></p>
+        <p style="margin-top: 15px; font-size: 13px;">生成时间：2026-05-29</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
