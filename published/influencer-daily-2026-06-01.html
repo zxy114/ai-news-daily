@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 网红工具日报 | 2026-06-01</title>
+  <style>
+    :root {
+      --bg-color: #0f0f13;
+      --card-bg: #1a1a24;
+      --text-main: #e0e0e0;
+      --text-sub: #a0a0a0;
+      --accent: #6c5ce7;
+      --accent-hover: #5b4ad5;
+      --tag-tool: #00b894;
+      --tag-tutorial: #0984e3;
+      --tag-prompt: #e17055;
+      --tag-workflow: #fdcb6e;
+      --tag-mind: #6c5ce7;
+      --border: #2d2d3d;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 30px 20px;
+      background: linear-gradient(135deg, var(--accent), #a29bfe);
+      border-radius: 16px;
+      color: white;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    header .subtitle {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .badge-tool { background: rgba(0, 184, 148, 0.2); color: #00b894; }
+    .badge-tutorial { background: rgba(9, 132, 227, 0.2); color: #0984e3; }
+    .badge-prompt { background: rgba(225, 112, 85, 0.2); color: #e17055; }
+    .badge-workflow { background: rgba(253, 203, 110, 0.2); color: #fdcb6e; }
+    .badge-mind { background: rgba(108, 92, 231, 0.2); color: #6c5ce7; }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+      border-color: var(--accent);
+    }
+
+    .card .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+
+    .card .title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .card .rating {
+      font-size: 1.1rem;
+      color: #ffd700;
+    }
+
+    .card .source {
+      font-size: 0.85rem;
+      color: var(--text-sub);
+      margin-bottom: 16px;
+    }
+
+    .card .source a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .card .content {
+      margin-bottom: 16px;
+    }
+
+    .card .note {
+      font-size: 0.9rem;
+      color: var(--text-sub);
+      padding: 12px 16px;
+      background: rgba(0,0,0,0.2);
+      border-radius: 8px;
+    }
+
+    .card .note strong {
+      color: var(--text-main);
+      margin-right: 4px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 16px;
+      margin-top: 30px;
+      padding: 20px;
+      background: var(--card-bg);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-item .value {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--accent);
+    }
+
+    .stat-item .label {
+      font-size: 0.85rem;
+      color: var(--text-sub);
+      margin-top: 4px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      color: var(--text-sub);
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--accent);
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.6rem; }
+      .card { padding: 16px; }
+      .card .title { font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📢 AI 网红工具日报</h1>
+      <p class="subtitle">2026-06-01 · 精选 AI 创作者最值得关注的工具和技巧</p>
+    </header>
+
+    <main>
+      <div class="badge badge-tool">工具</div>
+      <div class="card">
+        <div class="header">
+          <div>
+            <h2 class="title"> minimax m2.7 — 免费 Agentic 编程工具</h2>
+            <div class="source">
+              来源: <a href="https://x.com/MiniMax_AI/status/2060071852970844377" target="_blank">@MiniMax_AI</a>
+            </div>
+          </div>
+          <div class="rating">⭐⭐⭐⭐⭐ 5/5</div>
+        </div>
+        <div class="content">
+          <p><strong>推文原文:</strong> Free agentic coding with MiniMax M2.7 — Available for a limited time!</p>
+        </div>
+        <div class="note">
+          <strong>如何应用:</strong> MiniMax M2.7 限时免费开放 agentic 编程功能，可以直接让它帮你写代码、调试、自动化任务。趁免费窗口期抓紧试用，适合日常开发提效。
+        </div>
+      </div>
+
+      <div class="badge badge-tutorial">教程</div>
+      <div class="badge badge-prompt">Prompt</div>
+      <div class="card">
+        <div class="header">
+          <div>
+            <h2 class="title">Mastering Gemini Omni：终极视频 Prompt 指南</h2>
+            <div class="source">
+              来源: <a href="https://x.com/GoogleAI/status/2059381218660270435" target="_blank">@GoogleAI</a>
+            </div>
+          </div>
+          <div class="rating">⭐⭐⭐⭐ 4/5</div>
+        </div>
+        <div class="content">
+          <p><strong>推文原文:</strong> Mastering Gemini Omni: The Ultimate Video Prompting Guide — our newest model designed to create anything from any input, starting with video.</p>
+        </div>
+        <div class="note">
+          <strong>如何应用:</strong> Gemini Omni 是 Google 最新的"从任意输入生成视频"的模型。这篇指南教你怎么写 Prompt 来最大化视频生成效果，适合想做 AI 短视频的内容创作者。
+        </div>
+      </div>
+
+      <div class="badge badge-workflow">工作流</div>
+      <div class="badge badge-mind">思维</div>
+      <div class="card">
+        <div class="header">
+          <div>
+            <h2 class="title">Gemini Omni 多语言角色翻译</h2>
+            <div class="source">
+              来源: <a href="https://x.com/GoogleAI/status/2060156788742205736" target="_blank">@GoogleAI</a>
+            </div>
+          </div>
+          <div class="rating">⭐⭐⭐⭐ 4/5</div>
+        </div>
+        <div class="content">
+          <p><strong>推文原文:</strong> Watch your avatar speak Spanish, English and Japanese — Omni unlocks translation use cases.</p>
+        </div>
+        <div class="note">
+          <strong>如何应用:</strong> 用 Gemini Omni 让你的数字人角色实时翻译并说出多语言内容，适合做面向全球受众的视频内容，大幅降低本地化门槛。
+        </div>
+      </div>
+
+      <div class="badge badge-prompt">Prompt</div>
+      <div class="card">
+        <div class="header">
+          <div>
+            <h2 class="title">草图生成无人机视角视频</h2>
+            <div class="source">
+              来源: <a href="https://x.com/GoogleAI/status/2060156790642299029" target="_blank">@GoogleAI</a>
+            </div>
+          </div>
+          <div class="rating">⭐⭐⭐⭐ 4/5</div>
+        </div>
+        <div class="content">
+          <p><strong>推文原文:</strong> Draw a path that a drone can follow — Gave Google Omni a sketched camera path and asked it to generate drone POV footage.</p>
+        </div>
+        <div class="note">
+          <strong>如何应用:</strong> 手绘一条路径草图，Gemini Omni 就能生成对应的无人机视角视频。旅行博主、地产展示、风景内容创作者可以直接用这个技巧制作高质量航拍风格视频。
+        </div>
+      </div>
+
+      <div class="badge badge-tool">工具</div>
+      <div class="badge badge-mind">思维</div>
+      <div class="card">
+        <div class="header">
+          <div>
+            <h2 class="title">SynthID 内容水印验证 — 5000万+次使用</h2>
+            <div class="source">
+              来源: <a href="https://x.com/GoogleDeepMind/status/2059235181274202500" target="_blank">@GoogleDeepMind</a>
+            </div>
+          </div>
+          <div class="rating">⭐⭐⭐ 3/5</div>
+        </div>
+        <div class="content">
+          <p><strong>推文原文:</strong> SynthID verification in Gemini has been used 50+ million times to see if media was AI-generated. Watermarked over 100 billion pieces of content.</p>
+        </div>
+        <div class="note">
+          <strong>如何应用:</strong> SynthID 已为超 1000 亿内容添加水印。内容创作者可以了解 AI 生成内容的认证机制，确保自己产出的内容可溯源、可信任，在平台上建立观众信任。
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat-item">
+          <div class="value">2/5</div>
+          <div class="label">采集组数</div>
+        </div>
+        <div class="stat-item">
+          <div class="value">15</div>
+          <div class="label">原始推文</div>
+        </div>
+        <div class="stat-item">
+          <div class="value">5</div>
+          <div class="label">精选收录</div>
+        </div>
+        <div class="stat-item">
+          <div class="value">⭐⭐⭐⭐⭐</div>
+          <div class="label">最高评分</div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      日报自动生成 | 查看<a href="https://zxy114.github.io/ai-news-daily/published/influencer-daily-2026-06-01.html" target="_blank">在线版本</a>
+    </footer>
+  </div>
+</body>
+</html>
