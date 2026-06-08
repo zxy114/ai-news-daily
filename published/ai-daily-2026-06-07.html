@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 日报 - 2026-06-07</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC",sans-serif;background:#0a0a0f;color:#e0e0e8;line-height:1.7;padding:20px}
+.container{max-width:900px;margin:0 auto}
+header{text-align:center;padding:30px 0 20px;border-bottom:1px solid #2a2a3a;margin-bottom:30px}
+header h1{font-size:28px;font-weight:700;background:linear-gradient(135deg,#6366f1,#8b5cf6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:6px}
+header .date{font-size:14px;color:#888;letter-spacing:2px}
+.toc{background:#12121a;border:1px solid #2a2a3a;border-radius:12px;padding:16px 24px;margin-bottom:30px}
+.toc h3{font-size:14px;color:#888;margin-bottom:10px;text-transform:uppercase;letter-spacing:1px}
+.toc ul{list-style:none}
+.toc li{padding:6px 0;border-bottom:1px solid #1a1a2a}
+.toc li:last-child{border-bottom:none}
+.toc a{color:#818cf8;text-decoration:none;font-size:15px}
+.toc a:hover{color:#a78bfa}
+.news-item{background:#12121a;border:1px solid #2a2a3a;border-radius:12px;padding:24px;margin-bottom:20px;transition:border-color 0.2s}
+.news-item:hover{border-color:#4338ca}
+.news-item .num{display:inline-block;font-size:12px;font-weight:700;color:#818cf8;background:#1e1e2e;padding:3px 10px;border-radius:6px;margin-bottom:10px}
+.news-item h2{font-size:20px;color:#e2e8f0;margin-bottom:10px;line-height:1.4}
+.news-item .meta{font-size:12px;color:#6b7280;margin-bottom:12px}
+.news-item .meta span{margin-right:12px}
+.news-item .source{font-size:11px;color:#9ca3af}
+.news-item .source a{color:#818cf8;text-decoration:none}
+.news-item .source a:hover{text-decoration:underline}
+.section{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0;padding:8px 0;border-top:1px solid #1a1a2a}
+.section-label{font-size:11px;font-weight:600;color:#6366f1;text-transform:uppercase;letter-spacing:1px;margin-bottom:2px}
+.section p{font-size:14px;color:#c4c4d0}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+.tag{font-size:11px;padding:2px 8px;border-radius:4px;background:#1e1e2e;color:#9ca3af}
+.tag.hot{background:#7c2d12;color:#fca5a5}
+.summary{background:linear-gradient(135deg,#1e1b4b,#1e1e2e);border:1px solid #4338ca;border-radius:12px;padding:24px;margin-top:30px}
+.summary h2{font-size:18px;color:#c4b5fd;margin-bottom:12px}
+.summary ul{list-style:none}
+.summary li{padding:6px 0;font-size:14px;color:#c4c4d0}
+.summary li::before{content:"▸ ";color:#818cf8}
+footer{text-align:center;padding:30px 0;color:#555;font-size:12px;border-top:1px solid #2a2a3a;margin-top:30px}
+@media(max-width:640px){.section{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<h1>🤖 AI 日报</h1>
+<div class="date">2026-06-07 · 北京时</div>
+</header>
+
+<div class="toc">
+<h3>目录</h3>
+<ul>
+<li><a href="#n1">1. OpenAI ChatGPT 突破 10 亿月活，Dreaming V3 记忆系统上线</a></li>
+<li><a href="#n2">2. Anthropic 秘密提交 IPO 文件，估值 $965B</a></li>
+<li><a href="#n3">3. Alphabet 史上最大规模 $850 亿股权融资</a></li>
+<li><a href="#n4">4. Meta Business Agent：企业级 AI 助手全球上线</a></li>
+<li><a href="#n5">5. Microsoft Build 2026：MAI 自研模型，战略转向自主</a></li>
+<li><a href="#n6">6. Anthropic 警告：80% 代码由 Claude 编写，呼吁行业减速</a></li>
+<li><a href="#n7">7. 美国 AI 监管框架两党提案 + 政府持股方案</a></li>
+<li><a href="#n8">8. Claude Mythos / GPT-5.5 网络安全攻防能力评估</a></li>
+<li><a href="#n9">9. xAI 推出 Grok For Government，获五角大楼合同</a></li>
+<li><a href="#n10">10. Apple WWDC 2026 倒计时：Siri 全面 AI 化</a></li>
+</ul>
+</div>
+
+<!-- 1 -->
+<div class="news-item" id="n1">
+<span class="num">NO. 01</span>
+<h2>OpenAI ChatGPT 突破 10 亿月活，Dreaming V3 记忆系统上线</h2>
+<div class="meta">
+<span>📅 2026-06-04</span>
+<span>🏷️ OpenAI · 产品</span>
+</div>
+<p>ChatGPT 月活跃用户突破 10 亿大关，成为史上最快达到该里程碑的应用。同日，OpenAI 发布 Dreaming V3 记忆系统重大升级，具备时间感知能力——自动理解用户事件的时间线变化，无需手动更新。计算成本降低约 5 倍，首次将基于 Dreaming 的记忆功能带向免费用户。隐私方面，新增 Memory Summary 页面供用户查看和编辑 AI 对个人数据的记录。</p>
+<div class="section">
+<div><div class="section-label">核心事件</div><p>ChatGPT MAU 破 10 亿；Dreaming V3 记忆升级</p></div>
+<div><div class="section-label">关键数据</div><p>10 亿月活 / 9 亿周活 / 计算成本降低 5 倍</p></div>
+<div><div class="section-label">影响范围</div><p>全球用户，Plus/Pro 已可用，免费版即将开放</p></div>
+<div><div class="section-label">后续动作</div><p>免费用户数周内开放；欧盟 AI 法案透明度义务 8 月 2 日生效</p></div>
+</div>
+<div class="tags"><span class="tag hot">🔥 里程碑</span><span class="tag">OpenAI</span><span class="tag">ChatGPT</span><span class="tag">AI 产品</span></div>
+<div class="source"><a href="https://www.reuters.com/technology/chatgpt-app-hits-1-billion-monthly-active-users-record-time-data-shows-2026-06-02" target="_blank">Reuters</a> · <a href="https://medium.com/adi-insights-innovations-collective/ai-update-june-6-2026-everything-that-happened-be697deb26e1" target="_blank">Medium</a></div>
+</div>
+
+<!-- 2 -->
+<div class="news-item" id="n2">
+<span class="num">NO. 02</span>
+<h2>Anthropic 秘密提交 IPO 文件，估值达 $965B</h2>
+<div class="meta">
+<span>📅 2026-06-01</span>
+<span>🏷️ Anthropic · 资本市场</span>
+</div>
+<p>Anthropic 于 6 月 2 日向 SEC 秘密提交 S-1 注册文件，正式启动 IPO 流程。公司在 5 月完成 $650 亿 H 轮融资，投后估值 $965B，成为全球最有价值的 AI 初创公司。与此同时，OpenAI 也预计在未来几周内提交 IPO 文件，SpaceX IPO 则定于本月。三家巨头同年冲击资本市场。</p>
+<div class="section">
+<div><div class="section-label">核心事件</div><p>Anthropic 秘密提交 S-1，OpenAI 和 SpaceX 紧随其后</p></div>
+<div><div class="section-label">关键数据</div><p>H 轮 $650 亿 / 投后估值 $965B / 年收入运行率 $47B</p></div>
+<div><div class="section-label">影响范围</div><p>全球资本市场，AI 板块重新定价</p></div>
+<div><div class="section-label">后续动作</div><p>SpaceX 本月 IPO / OpenAI 数周内提交 / 三巨头同年份上市</p></div>
+</div>
+<div class="tags"><span class="tag hot">🔥 资本</span><span class="tag">Anthropic</span><span class="tag">IPO</span><span class="tag">OpenAI</span><span class="tag">SpaceX</span></div>
+<div class="source"><a href="https://techcrunch.com/2026/06/01/anthropic-files-to-go-public" target="_blank">TechCrunch</a> · <a href="https://www.reuters.com/business/ai-giant-anthropic-confidentially-files-us-ipo-2026-06-01" target="_blank">Reuters</a></div>
+</div>
+
+<!-- 3 -->
+<div class="news-item" id="n3">
+<span class="num">NO. 03</span>
+<h2>Alphabet 史上最大规模 $850 亿股权融资，全力加码 AI 基础设施</h2>
+<div class="meta">
+<span>📅 2026-06-03</span>
+<span>🏷️ Google / Alphabet · 资本支出</span>
+</div>
+<p>Alphabet 将股权融资规模从 $800 亿上调至 $847.5 亿，用于 AI 基础设施建设。融资结构：Berkshire Hathaway 锚定 $100 亿，$400 亿 ATM 计划（Q3 启动），以及公开股票发行。这是科技史上最大规模的股权融资之一，显示 Alphabet 对 AI 基础设施的资本承诺已超出内部现金流支撑能力。</p>
+<div class="section">
+<div><div class="section-label">核心事件</div><p>$847.5 亿股权融资，AI 基础设施资本支出上调 13%</p></div>
+<div><div class="section-label">关键数据</div><p>$847.5 亿总融资 / $400 亿 ATM 计划 / Berkshire 锚定 $100 亿</p></div>
+<div><div class="section-label">影响范围</div><p>全球 AI 基础设施供应链，数据中心生态</p></div>
+<div><div class="section-label">后续动作</div><p>Q3 启动 ATM 计划 / 持续扩大资本支出 / 云 backlog $1550 亿</p></div>
+</div>
+<div class="tags"><span class="tag hot">🔥 资本</span><span class="tag">Alphabet</span><span class="tag">Google</span><span class="tag">AI 基础设施</span></div>
+<div class="source"><a href="https://techcrunch.com/2026/06/03/alphabets-record-breaking-85b-raise-for-googles-ai-business-is-a-helluva-good-signal" target="_blank">TechCrunch</a> · <a href="https://aiweekly.co/node/2527" target="_blank">AI Weekly</a></div>
+</div>
+
+<!-- 4 -->
+<div class="news-item" id="n4">
+<span class="num">NO. 04</span>
+<h2>Meta Business Agent 全球上线，正式进军企业级 AI 市场</h2>
+<div class="meta">
+<span>📅 2026-06-03</span>
+<span>🏷️ Meta · 企业 AI</span>
+</div>
+<p>Meta 在伦敦 Conversations 2026 大会上发布 Meta Business Agent，AI 客服代理覆盖 WhatsApp、Instagram 和 Messenger。已超 100 万商家在 WhatsApp/Messenger 上启用。同时推出 Meta Business Agent Platform，支持第三方数据源（Shopify、Zendesk）接入。这是 Zuckerberg 摆脱广告收入依赖、多元化 AI 变现的战略步骤。</p>
+<div class="section">
+<div><div class="section-label">核心事件</div><p>Meta Business Agent 全球发布，覆盖三大消息平台</p></div>
+<div><div class="section-label">关键数据</div><p>100 万+ 商家已启用 / 覆盖 WhatsApp/Instagram/Messenger</p></div>
+<div><div class="section-label">影响范围</div><p>全球中小企业和电商生态</p></div>
+<div><div class="section-label">后续动作</div><p>开放第三方平台集成 / 拓展企业 AI 订阅与商务变现</p></div>
+</div>
+<div class="tags"><span class="tag">Meta</span><span class="tag">WhatsApp</span><span class="tag">企业 AI</span><span class="tag">AI Agent</span></div>
+<div class="source"><a href="https://www.reuters.com/business/meta-launches-enterprise-focused-ai-business-agent-automate-daily-operations-2026-06-03" target="_blank">Reuters</a> · <a href="https://about.fb.com/news/2026/06/meta-business-agent" target="_blank">Meta 官方博客</a></div>
+</div>
+
+<!-- 5 -->
+<div class="news-item" id="n5">
+<span class="num">NO. 05</span>
+<h2>Microsoft Build 2026：MAI 自研模型家族发布，战略转向自主可控</h2>
+<div class="meta">
+<span>📅 2026-06-02</span>
+<span>🏷️ Microsoft · 大模型</span>
+</div>
+<p>微软在 Build 2026 发布 MAI（Microsoft AI）自研模型家族，包括 MAI-Thinking-1（推理模型，私有预览）和 MAI-Code-1-Flash（代码生成，进军"vibe coding"市场）。Satya Nadella 明确表示微软要从"消费前沿模型"转向"参与前沿竞争"。此举标志着微软在投资 $130 亿 OpenAI 和 $50 亿 Anthropic 后，向长期自给自足的战略转向。</p>
+<div class="section">
+<div><div class="section-label">核心事件</div><p>MAI 自研模型家族发布，含推理和代码模型</p></div>
+<div><div class="section-label">关键数据</div><p>$130 亿 OpenAI 投资 / $50 亿 Anthropic 投资</p></div>
+<div><div class="section-label">影响范围</div><p>Azure 生态 / 全球开发者 / 代码生成市场</p></div>
+<div><div class="section-label">后续动作</div><p>MAI-Thinking-1 私有预览 / 代码模型推向市场</p></div>
+</div>
+<div class="tags"><span class="tag">Microsoft</span><span class="tag">MAI</span><span class="tag">大模型</span><span class="tag">Build 2026</span></div>
+<div class="source"><a href="https://medium.com/adi-insights-innovations-collective/ai-update-june-6-2026-everything-that-happened-be697deb26e1" target="_blank">Medium</a></div>
+</div>
+
+<!-- 6 -->
+<div class="news-item" id="n6">
+<span class="num">NO. 06</span>
+<h2>Anthropic 披露：80% 生产代码由 Claude 编写，呼吁行业协调减速</h2>
+<div class="meta">
+<span>📅 2026-06-05</span>
+<span>🏷️ Anthropic · AI 安全</span>
+</div>
+<p>Anthropic 披露 2026 年 5 月其生产代码库中超过 80% 的代码由 Claude 编写。但这并非炫耀——公司同时呼吁所有前沿 AI 实验室建立协调机制，在高级 AI 系统开始超人类速度自我改进时暂停或减速开发。Claude Opus 4.8 在 SWE-bench Verified 上得分 88.6%。另有泄露线索暗示 Claude Sonnet 4.8 即将推出。</p>
+<div class="section">
+<div><div class="section-label">核心事件</div><p>80% 代码由 AI 编写 + 行业减速呼吁</p></div>
+<div><div class="section-label">关键数据</div><p>80% 生产代码由 Claude 编写 / Opus 4.8 SWE-bench 88.6%</p></div>
+<div><div class="section-label">影响范围</div><p>全球 AI 安全治理 / 前沿实验室竞争格局</p></div>
+<div><div class="section-label">后续动作</div><p>Sonnet 4.8 可能即将发布 / 行业减速协议讨论中</p></div>
+</div>
+<div class="tags"><span class="tag hot">🔥 安全</span><span class="tag">Anthropic</span><span class="tag">AI 安全</span><span class="tag">Claude</span></div>
+<div class="source"><a href="https://medium.com/adi-insights-innovations-collective/ai-update-june-6-2026-everything-that-happened-be697deb26e1" target="_blank">Medium</a> · <a href="https://www.linkedin.com/pulse/anthropics-claude-mythos-ai-uncovers-more-than-8ghue" target="_blank">LinkedIn</a></div>
+</div>
+
+<!-- 7 -->
+<div class="news-item" id="n7">
+<span class="num">NO. 07</span>
+<h2>美国 AI 监管框架：两党法案提案 + 政府持股方案浮现</h2>
+<div class="meta">
+<span>📅 2026-06-04 ~ 06-06</span>
+<span>🏷️ AI 监管 · 美国政策</span>
+</div>
+<p>6 月 4 日，两党议员推出《伟大美国人工智能法案 2026》讨论稿（269 页），核心内容包括：联邦优先于州级 AI 模型开发监管 3 年、$1 亿/年设立 AI 标准与创新中心、强化 AI 驱动的网络安全防御。同日，Sam Altman 与 Bernie Sanders 会面讨论 AI 企业公众股权问题。6 月 6 日，Trump 表示支持"让美国人民从 AI 成功中受益"的伙伴关系模式，计划下周在白宫会见主要 AI 公司高管。</p>
+<div class="section">
+<div><div class="section-label">核心事件</div><p>两党法案讨论稿 + Sam Altman 与 Sanders 会面 + Trump 白宫会晤计划</p></div>
+<div><div class="section-label">关键数据</div><p>269 页法案 / $1 亿/年基金 / 联邦优先 3 年</p></div>
+<div><div class="section-label">影响范围</div><p>美国 AI 产业 / 全球 AI 治理风向标</p></div>
+<div><div class="section-label">后续动作</div><p>法案公开征求意见 / Trump 白宫 AI 会晤（预计下周）</p></div>
+</div>
+<div class="tags"><span class="tag hot">🔥 监管</span><span class="tag">AI 政策</span><span class="tag">美国</span><span class="tag">两党</span></div>
+<div class="source"><a href="https://medium.com/adi-insights-innovations-collective/ai-update-june-6-2026-everything-that-happened-be697deb26e1" target="_blank">Medium</a> · <a href="https://www.cnbc.com/2026/06/05/trump-open-ai-altman-stake.html" target="_blank">CNBC</a> · <a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-7-2026" target="_blank">BuildFastWithAI</a></div>
+</div>
+
+<!-- 8 -->
+<div class="news-item" id="n8">
+<span class="num">NO. 08</span>
+<h2>Claude Mythos / GPT-5.5 网络攻防能力获独立评估验证</h2>
+<div class="meta">
+<span>📅 2026-06-05</span>
+<span>🏷️ AI 安全 · 网络安全</span>
+</div>
+<p>英国 AI 安全研究所（AISI）发布对 GPT-5.5 的网络安全能力评估，确认其为第二个能端到端完成多步骤企业网络攻击模拟的模型（此前 Claude Mythos Preview 为第一个）。ExploitGym 基准测试中，Claude Mythos Preview 和 GPT-5.5 分别在 898 个真实漏洞中成功生成可利用攻击的实例为 157 和 120 个。Anthropic Project Glasswing 在首个已发现超过 10,000 个严重漏洞。</p>
+<div class="section">
+<div><div class="section-label">核心事件</div><p>AISI 独立评估确认前沿模型网络攻防能力跨越临界点</p></div>
+<div><div class="section-label">关键数据</div><p>Mythos 157/898 成功利用 / GPT-5.5 120/898 / Glasswing 发现 10,000+ 漏洞</p></div>
+<div><div class="section-label">影响范围</div><p>全球网络安全行业 / AI 安全治理</p></div>
+<div><div class="section-label">后续动作</div><p>前沿网络安全模型限制发布 / 可信访问验证计划推进</p></div>
+</div>
+<div class="tags"><span class="tag hot">🔥 安全</span><span class="tag">AISI</span><span class="tag">Claude Mythos</span><span class="tag">GPT-5.5</span><span class="tag">网络安全</span></div>
+<div class="source"><a href="https://www.aisi.gov.uk/blog/our-evaluation-of-openais-gpt-5-5-cyber-capabilities" target="_blank">AISI</a> · <a href="https://arxiv.org/html/2605.11086v1" target="_blank">ExploitGym (arXiv)</a> · <a href="https://www.mpg.de/26548739/cybersecurity-threats-new-language-models-claude-mythos" target="_blank">Max Planck</a></div>
+</div>
+
+<!-- 9 -->
+<div class="news-item" id="n9">
+<span class="num">NO. 09</span>
+<h2>xAI 推出 Grok For Government，获五角大楼合同</h2>
+<div class="meta">
+<span>📅 2026-06-02</span>
+<span>🏷️ xAI · 政府 AI</span>
+</div>
+<p>xAI 发布 Grok For Government 套件，面向国家安全、联邦、州和地方政府客户，提供 Grok 4 前沿模型、Deep Search 和 Tool Use 能力。同时获得国防部 CDAO 合同。多个联邦机构对 Grok 在机密系统中的部署表达了安全和可靠性方面的担忧。GSA OneGov 合同中 Grok 4 模型价格为 $0.42/机构（截至 2027 年 3 月）。</p>
+<div class="section">
+<div><div class="section-label">核心事件</div><p>Grok For Government 发布 + 国防部合同</p></div>
+<div><div class="section-label">关键数据</div><p>$0.42/机构（OneGov 合同价）/ 覆盖联邦 + 州 + 地方三级政府</p></div>
+<div><div class="section-label">影响范围</div><p>美国政府部门 / 国防 AI 应用</p></div>
+<div><div class="section-label">后续动作</div><p>FedRAMP High 认证推进中 / 多机构安全审查持续</p></div>
+</div>
+<div class="tags"><span class="tag">xAI</span><span class="tag">Grok</span><span class="tag">政府 AI</span><span class="tag">国防部</span></div>
+<div class="source"><a href="https://www.govconwire.com/articles/xai-grok-for-government-frontier-ai-model-grok-4-national-security" target="_blank">GovCon Wire</a> · <a href="https://www.axios.com/2026/02/23/ai-defense-department-deal-musk-xai-grok" target="_blank">Axios</a> · <a href="https://www.wsj.com/politics/national-security/elon-musk-xai-grok-security-safety-government-73ab4f6e" target="_blank">WSJ</a></div>
+</div>
+
+<!-- 10 -->
+<div class="news-item" id="n10">
+<span class="num">NO. 10</span>
+<h2>Apple WWDC 2026 倒计时：Siri 全面 AI 化，端侧智能成焦点</h2>
+<div class="meta">
+<span>📅 2026-06-08（北京时间 6 月 9 日凌晨）</span>
+<span>🏷️ Apple · 消费电子 AI</span>
+</div>
+<p>Apple WWDC 2026 将于北京时间 6 月 9 日凌晨召开。核心预期：全新 Siri（支持个人上下文、屏幕感知、第三方 LLM 集成如 ChatGPT/Gemini/Claude）、iOS 27、Health+ AI 健康代理、Liquid Glass 设计语言。端侧 AI 处理被视为 Apple 对抗云模型的关键差异化策略，隐私保护是核心卖点。可折叠 iPhone 支持和 Intel Mac 兼容性变化亦在预期中。</p>
+<div class="section">
+<div><div class="section-label">核心事件</div><p>WWDC 2026 Keynote，Siri 全面重构</p></div>
+<div><div class="section-label">关键数据</div><p>多 LLM 集成（ChatGPT/Gemini/Claude） / Health+ 订阅</p></div>
+<div><div class="section-label">影响范围</div><p>全球 20 亿+ Apple 设备用户</p></div>
+<div><div class="section-label">后续动作</div><p>Keynote 次日开发者预览发布 / 秋季正式版推送</p></div>
+</div>
+<div class="tags"><span class="tag hot">🔥 前瞻</span><span class="tag">Apple</span><span class="tag">WWDC</span><span class="tag">Siri</span><span class="tag">iOS 27</span></div>
+<div class="source"><a href="https://appleinsider.com/articles/26/05/28/apple-doubling-down-on-on-device-ai-at-wwdc-2026" target="_blank">AppleInsider</a> · <a href="https://www.bloomberg.com/news/articles/2026-06-05/wwdc-2026-preview-ios-27-siri-ai-features-macos-27-more-apple-will-announce" target="_blank">Bloomberg</a></div>
+</div>
+
+<!-- Summary -->
+<div class="summary">
+<h2>📌 精选摘要</h2>
+<ul>
+<li><strong>AI 资本竞赛进入"万亿级"时代</strong>：Anthropic H 轮 $650B、Alphabet $850B 股权融资、OpenAI/SpaceX 同年 IPO，AI 基础设施的资本密集度已超出企业内部现金流，依赖公开市场融资</li>
+<li><strong>AI 自我编程能力跨越临界点</strong>：Anthropic 80% 生产代码由 Claude 编写 + Mythos/GPT-5.5 端到端网络攻击能力获政府实验室验证，AI 从"辅助编码"进入"自主工程+自主攻防"阶段</li>
+<li><strong>监管与治理框架加速成型</strong>：美国两党 AI 法案 + 政府持股方案 + Trump 白宫会晤，欧盟 AI 法案透明度义务 8 月生效，全球 AI 治理从讨论走向立法</li>
+</ul>
+</div>
+
+<footer>
+AI 日报 · 2026-06-07 · 由 AI 自动生成 · 数据来源：Reuters / TechCrunch / Medium / AISI / AppleInsider / Bloomberg 等
+</footer>
+</div>
+</body>
+</html>
