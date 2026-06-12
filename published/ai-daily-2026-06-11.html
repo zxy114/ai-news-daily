@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 新闻日报 — 2026年6月11日</title>
+<style>
+  :root {
+    --bg: #0f1117;
+    --card: #181b24;
+    --border: #2a2e3a;
+    --accent: #6c63ff;
+    --accent2: #00d4aa;
+    --text: #e4e4e7;
+    --muted: #8b8fa3;
+    --tag-bg: #1e2233;
+    --highlight: #ff6b6b;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 20px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .header {
+    text-align: center;
+    padding: 40px 0 30px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+  }
+  .header h1 {
+    font-size: 2em;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+  }
+  .header .date { color: var(--muted); font-size: 1.05em; }
+  .header .subtitle { color: var(--muted); font-size: 0.9em; margin-top: 6px; }
+  .summary-bar {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 36px;
+  }
+  .summary-bar .chip {
+    background: var(--tag-bg);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 0.85em;
+    color: var(--accent2);
+  }
+  .news-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px 26px;
+    margin-bottom: 24px;
+    transition: border-color .2s;
+  }
+  .news-card:hover { border-color: var(--accent); }
+  .news-card .tag-row { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px; }
+  .news-card .tag {
+    font-size: 0.72em;
+    background: var(--tag-bg);
+    color: var(--accent);
+    padding: 3px 10px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+  }
+  .news-card .tag.hot { color: var(--highlight); }
+  .news-card h2 {
+    font-size: 1.22em;
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+  .news-card .meta {
+    font-size: 0.8em;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+  .news-card .meta a { color: var(--accent2); text-decoration: none; }
+  .news-card .meta a:hover { text-decoration: underline; }
+  .dims {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 14px;
+  }
+  @media (max-width:560px) { .dims { grid-template-columns: 1fr; } }
+  .dim {
+    background: var(--bg);
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 0.88em;
+  }
+  .dim .label {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.78em;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    margin-bottom: 4px;
+  }
+  .footer {
+    text-align: center;
+    padding: 30px 0 20px;
+    border-top: 1px solid var(--border);
+    margin-top: 36px;
+    color: var(--muted);
+    font-size: 0.82em;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🤖 AI 新闻日报</h1>
+  <div class="date">2026 年 6 月 11 日（星期四）</div>
+  <div class="subtitle">北京时区 · 覆盖 6 月 8 日–11 日全球 AI 热点 · 质量优先</div>
+</div>
+
+<div class="summary-bar">
+  <span class="chip">📌 11 条精选</span>
+  <span class="chip">🇺🇸 美洲</span>
+  <span class="chip">🇰🇷 亚洲</span>
+  <span class="chip">🇮🇳 印度</span>
+  <span class="chip">🇪🇺 欧洲</span>
+  <span class="chip">🌐 全球</span>
+</div>
+
+<!-- 1 -->
+<div class="news-card">
+  <div class="tag-row">
+    <span class="tag hot">🔥 头条</span>
+    <span class="tag">模型发布</span>
+    <span class="tag">安全</span>
+  </div>
+  <h2>Anthropic 面向公众发布 Mythos 级模型 Claude Fable 5，附带安全护栏</h2>
+  <div class="meta">
+    📅 发布日期：2026-06-09 ｜ 来源：
+    <a href="https://www.cnbc.com/2026/06/09/anthropic-mythos-claude-fable-5.html" target="_blank">CNBC</a> ·
+    <a href="https://www.axios.com/2026/06/09/anthropic-mythos-class-safeguards" target="_blank">Axios</a> ·
+    <a href="https://www.forbes.com/sites/sandycarter/2026/06/09/anthropic-launches-mythos-with-six-features-you-absolutely-need/" target="_blank">Forbes</a>
+  </div>
+  <div class="dims">
+    <div class="dim"><div class="label">核心事件</div>Anthropic 发布 Claude Fable 5——首个面向公众的 Mythos 级模型，同时对 Mythos 5（完全能力版）保持有限开放。Fable 5 将敏感领域（网络安全、生物、化学）的请求路由至较弱模型 Opus 4.8。</div>
+    <div class="dim"><div class="label">关键数据</div>Fable 5 在 SWE-bench Pro 上得分 80.3%；Stripe 用其一天内迁移 5000 万行代码库；定价 $10/$50（输入/输出每百万 token），低于 Mythos Preview 半价。</div>
+    <div class="dim"><div class="label">影响范围</div>全球开发者与企业用户均可通过 API 访问；Anthropic 企业采用率（Ramp AI Index）已升至 34.4%，超越 OpenAI 的 32.3%。</div>
+    <div class="dim"><div class="label">后续动作 / 解读</div>Mythos 5 将与美国政府合作逐步扩大访问；两模型底层架构相同，区别在于安全分类器。此举标志着"安全护栏下的超强模型公开化"成为行业新范式。</div>
+  </div>
+</div>
+
+<!-- 2 -->
+<div class="news-card">
+  <div class="tag-row">
+    <span class="tag hot">🔥 头条</span>
+    <span class="tag">IPO</span>
+    <span class="tag">资本市场</span>
+  </div>
+  <h2>SpaceX 完成史上最大 IPO：融资 $750 亿，估值 $1.77 万亿</h2>
+  <div class="meta">
+    📅 发布日期：2026-06-11 ｜ 来源：
+    <a href="https://www.reuters.com/legal/transactional/elon-musks-spacex-kicks-off-mega-ipo-wave-with-75-billion-haul-2026-06-11/" target="_blank">Reuters</a> ·
+    <a href="https://www.forbes.com/sites/tylerroush/2026/06/11/spacex-cements-final-ipo-price-at-135-as-retail-investor-orders-top-100-billion-live-updates/" target="_blank">Forbes</a> ·
+    <a href="https://www.nytimes.com/2026/06/10/business/spacex-ipo-what-to-know.html" target="_blank">NYT</a>
+  </div>
+  <div class="dims">
+    <div class="dim"><div class="label">核心事件</div>SpaceX 以 $135/股 定价完成 IPO，融资 $750 亿，超越沙特阿美成为史上最大 IPO。零售投资者认购超 $1000 亿，BlackRock 单笔下单 $50 亿。</div>
+    <div class="dim"><div class="label">关键数据</div>估值 $1.77 万亿；555.6M 股份；Musk 控制 85% 投票权。SpaceX 宣布将 Colossus 1 AI 数据中心租给 Anthropic（$12.5 亿/月）及 Google（$9.2 亿/月）。</div>
+    <div class="dim"><div class="label">影响范围</div>纳斯达克上市（SPCX），预计将引发 Anthropic、OpenAI 等 AI 巨头跟进 IPO 的"超级上市潮"。</div>
+    <div class="dim"><div class="label">后续动作 / 解读</div>参议员 Warren 致信 SEC 要求推迟 IPO，理由为公司治理风险。分析师预计首年波动剧烈，但 IPO 为 AI 基础设施投资打开了新的资金通道。</div>
+  </div>
+</div>
+
+<!-- 3 -->
+<div class="news-card">
+  <div class="tag-row">
+    <span class="tag hot">🔥 头条</span>
+    <span class="tag">IPO</span>
+    <span class="tag">竞争格局</span>
+  </div>
+  <h2>OpenAI 紧随 Anthropic 提交机密 IPO 申请，目标估值 $1 万亿</h2>
+  <div class="meta">
+    📅 发布日期：2026-06-08 ｜ 来源：
+    <a href="https://techcrunch.com/2026/06/08/following-anthropic-openai-files-confidentially-for-ipo/" target="_blank">TechCrunch</a> ·
+    <a href="https://www.cnn.com/2026/06/08/tech/openai-files-for-ipo" target="_blank">CNN</a> ·
+    <a href="https://www.cnbc.com/2026/06/09/openai-announces-ipo.html" target="_blank">CNBC</a>
+  </div>
+  <div class="dims">
+    <div class="dim"><div class="label">核心事件</div>OpenAI 于 6 月 8 日提交机密 S-1 文件，距离 Anthropic 提交（6 月 1 日）仅一周。公司称"先发制人"公布以应对泄露，但尚未确定上市时间表。</div>
+    <div class="dim"><div class="label">关键数据</div>目标估值最高 $1 万亿；月收入 $20 亿（截至 2026 年 3 月）；Anthropic 年初至今二级市场涨幅 123%，OpenAI 为 11.3%。</div>
+    <div class="dim"><div class="label">影响范围</div>三大巨头（SpaceX、Anthropic、OpenAI）集体冲刺上市，市场关注是否有足够流动性承接。</div>
+    <div class="dim"><div class="label">后续动作 / 解读</div>Perplexity CEO 表示将在 2028 年独立上市。分析师认为 OpenAI 预计 2028 年烧钱 $850 亿，IPO 是支撑算力投入的关键一步。</div>
+  </div>
+</div>
+
+<!-- 4 -->
+<div class="news-card">
+  <div class="tag-row">
+    <span class="tag">硬件</span>
+    <span class="tag">Computex</span>
+    <span class="tag">Agentic AI</span>
+  </div>
+  <h2>Qualcomm Computex 2026 宣布"AI Agent 元年"，发布 Dragonfly 服务器芯片</h2>
+  <div class="meta">
+    📅 发布日期：2026-06-09 ｜ 来源：
+    <a href="https://www.ynetnews.com/tech-and-digital/article/hk5z00ib11mg" target="_blank">Ynetnews</a> ·
+    <a href="https://time.com/article/2026/06/06/why-ai-agents-are-the-next-great-technological-transformation/" target="_blank">TIME</a>
+  </div>
+  <div class="dims">
+    <div class="dim"><div class="label">核心事件</div>Qualcomm CEO Cristiano Amon 在 Computex 2026 宣告 2026 年为"Agent 元年"，发布 Dragonfly 系列数据中心芯片，直接挑战 Nvidia/Intel 在 AI 推理市场的地位。</div>
+    <div class="dim"><div class="label">关键数据</div>Dragonfly 覆盖从可穿戴到数据中心的端到端架构；Qualcomm 定位为唯一横跨边缘到云的 AI 芯片厂商。</div>
+    <div class="dim"><div class="label">影响范围</div>信号明确：AI 交互范式正从"被动聊天机器人"转向"自主 Agent 代理"。</div>
+    <div class="dim"><div class="label">后续动作 / 解读</div>Amon 认为当前设备硬件尚未为 Agentic AI 做好准备，未来硬件内嵌 AI 能力将更加关键。Qualcomm 的全栈布局可能重塑 AI 推理芯片市场格局。</div>
+  </div>
+</div>
+
+<!-- 5 -->
+<div class="news-card">
+  <div class="tag-row">
+    <span class="tag">产品</span>
+    <span class="tag">Apple</span>
+    <span class="tag">WWDC</span>
+  </div>
+  <h2>Apple WWDC 2026：Siri AI 大改版上线，搭载 Google Gemini 引擎</h2>
+  <div class="meta">
+    📅 发布日期：2026-06-08 ｜ 来源：
+    <a href="https://www.reuters.com/business/apples-wwdc-conference-kicks-off-investors-want-know-if-ai-will-save-siri-2026-06-08/" target="_blank">Reuters</a> ·
+    <a href="https://techcrunch.com/2026/06/08/wwdc-2026-everything-announced-on-siri-ai-os-27-apple-intelligence-and-more/" target="_blank">TechCrunch</a> ·
+    <a href="https://www.cnet.com/tech/services-and-software/siri-ai-wwdc-2026/" target="_blank">CNET</a>
+  </div>
+  <div class="dims">
+    <div class="dim"><div class="label">核心事件</div>Apple 发布全新 Siri AI——支持多步任务、上下文理解、视觉智能和跨应用操作，并推出独立 Siri 应用。底层采用 Google Gemini 模型。</div>
+    <div class="dim"><div class="label">关键数据</div>覆盖 iPhone、iPad、Mac 平台；支持 iOS 27 / macOS 27。初期不在欧盟 iPhone/iPad 上线，中国大陆不可用。</div>
+    <div class="dim"><div class="label">影响范围</div>Apple 选择实用路线而非炒作 Agentic AI，Engadget 评价"令人庆幸的克制"。这是 Tim Cook 任内最后一次 WWDC 主题演讲。</div>
+    <div class="dim"><div class="label">后续动作 / 解读</div>分析师预计 AI/Siri 变现可推动股价上涨 $75–100。独立 Siri App 被视为与 ChatGPT/Claude 正面竞争的信号。</div>
+  </div>
+</div>
+
+<!-- 6 -->
+<div class="news-card">
+  <div class="tag-row">
+    <span class="tag">安全</span>
+    <span class="tag">信息战</span>
+    <span class="tag">地缘政治</span>
+  </div>
+  <h2>OpenAI 封禁利用 ChatGPT 操纵 AI 数据中心与关税讨论的关联账户</h2>
+  <div class="meta">
+    📅 发布日期：2026-06-10/11 ｜ 来源：
+    <a href="https://www.axios.com/2026/06/10/openai-china-ai-data-center-tariffs-chatgpt" target="_blank">Axios</a> ·
+    <a href="https://www.reuters.com/business/media-telecom/openai-says-chinese-propaganda-is-being-deployed-foment-dissent-over-tariffs-2026-06-10/" target="_blank">Reuters</a> ·
+    <a href="https://gigazine.net/gsc_news/en/20260611-openai-chinese-propaganda-influenceus-ai-debates" target="_blank">GIGAZINE</a>
+  </div>
+  <div class="dims">
+    <div class="dim"><div class="label">核心事件</div>OpenAI 威胁情报团队发现两组使用 ChatGPT 生成社交媒体内容的操作：一个针对美国 AI 数据中心建设争论，一个针对关税政策。两组均使用简体中文提示，伪装美国用户。</div>
+    <div class="dim"><div class="label">关键数据</div>"数据中心"行动规模较小，帖子几乎没有真实互动；"关税"行动生成了政治漫画和多语种评论。</div>
+    <div class="dim"><div class="label">影响范围</div>首次发现利用 AI 模型操纵 AI 基础设施政策辩论的案例，引发硅谷精英圈对"外国资金影响反数据中心运动"的广泛讨论。</div>
+    <div class="dim"><div class="label">后续动作 / 解读</div>OpenAI 强调这是"经典的搭便车式影响行动"。该发现可能进一步推动美国加强 AI 平台的透明度和来源追踪机制。</div>
+  </div>
+</div>
+
+<!-- 7 -->
+<div class="news-card">
+  <div class="tag-row">
+    <span class="tag">企业合作</span>
+    <span class="tag">印度</span>
+  </div>
+  <h2>TCS 与 Anthropic 建立全球战略伙伴关系，推动企业级 AI 规模化落地</h2>
+  <div class="meta">
+    📅 发布日期：2026-06-11 ｜ 来源：
+    <a href="https://techcrunch.com/2026/06/11/anthropic-taps-tcs-to-scale-its-enterprise-ai-deployments/" target="_blank">TechCrunch</a> ·
+    <a href="https://www.tcs.com/who-we-are/newsroom/press-release/tcs-anthropic-launch-global-premier-partnership-drive-enterprise-ai-scaling" target="_blank">TCS 官网</a>
+  </div>
+  <div class="dims">
+    <div class="dim"><div class="label">核心事件</div>Anthropic 与印度 IT 巨头 TCS 达成全球首发合作伙伴关系，TCS 将成立专门业务部门部署 Claude 模型，获得新模型早期访问权，并向 5 万+员工提供 Claude 助手。</div>
+    <div class="dim"><div class="label">关键数据</div>联合覆盖金融、公共、生命科学、航空、电信等行业；印度为 Anthropic 第二大市场。</div>
+    <div class="dim"><div class="label">影响范围</div>这笔交易被视为 AI 前沿公司抢夺企业分发渠道的标志性动作。TCS 股价同日因"AI 替代人力"担忧跌至 52 周新低，凸显 AI 对传统 IT 外包的双重影响。</div>
+    <div class="dim"><div class="label">后续动作 / 解读</div>Anthropic 正积极拓展印度市场。TCS/Infosys 年内股价已跌 30%+，此次合作也被视为帮助恢复投资者信心的重要举措。</div>
+  </div>
+</div>
+
+<!-- 8 -->
+<div class="news-card">
+  <div class="tag-row">
+    <span class="tag">Nvidia</span>
+    <span class="tag">韩国</span>
+    <span class="tag">Physical AI</span>
+  </div>
+  <h2>Jensen Huang 访韩掀起"AI 外交"风暴：LG/现代/SK 多线合作</h2>
+  <div class="meta">
+    📅 发布日期：2026-06-08 ｜ 来源：
+    <a href="https://www.axios.com/2026/06/08/nvidia-jensen-huang-hyundai-robots" target="_blank">Axios</a> ·
+    <a href="https://www.kipost.net/news/articleViewAmp.html?idxno=338951" target="_blank">KIPOST</a> ·
+    <a href="https://www.cnbc.com/2026/06/07/nvidia-sk-to-detail-cooperation-plan-amid-prolonged-chip-shortage.html" target="_blank">CNBC</a>
+  </div>
+  <div class="dims">
+    <div class="dim"><div class="label">核心事件</div>Nvidia CEO 黄仁勋访韩四天，密集会见 LG、现代、SK、Naver 等企业领袖，达成多项合作协议。宣布与 LG 在 M.A.P.（移动/AI 基础设施/Physical AI）领域扩展合作，LG Uplus 将采购 NVIDIA Rubin GPU。</div>
+    <div class="dim"><div class="label">关键数据</div>SK 合作计划涉及存储芯片供应；黄仁勋称全球存储芯片短缺将持续"数年"。</div>
+    <div class="dim"><div class="label">影响范围</div>黄仁勋公开表示"没有人比现代更适合做机器人"，被视为对特斯拉 Optimus 的间接回应。韩国全民追星式关注催生了"Jensen Huang's Footprints"追踪网站。</div>
+    <div class="dim"><div class="label">后续动作 / 解读</div>此举是 Nvidia "AI 生态圈外交"的典型模式：通过绑定各国头部制造/科技公司，将 GPU 生态嵌入全球产业链。</div>
+  </div>
+</div>
+
+<!-- 9 -->
+<div class="news-card">
+  <div class="tag-row">
+    <span class="tag">政策</span>
+    <span class="tag">美国</span>
+  </div>
+  <h2>美国众议院发布《Great American AI Act》讨论草案，拟统一全国 AI 治理框架</h2>
+  <div class="meta">
+    📅 发布日期：2026-06-04（持续发酵至 6/11） ｜ 来源：
+    <a href="https://letsdatascience.com/news/house-lawmakers-introduce-national-ai-standard-draft-0654b796" target="_blank">Let's Data Science</a> ·
+    <a href="https://www.shrm.org/topics-tools/news/what-hr-needs-to-know-about-great-american-ai-act-of-2026" target="_blank">SHRM</a> ·
+    <a href="https://www.politico.com/live-updates/2026/06/08/congress/obernolte-bullish-on-ai-bill-00954156" target="_blank">Politico</a>
+  </div>
+  <div class="dims">
+    <div class="dim"><div class="label">核心事件</div>众议院两党六人小组发布 269 页讨论草案，拟建立统一联邦 AI 治理框架。核心条款：三年内先占州级 AI 模型开发监管；要求年收入 $5 亿以上的前沿开发者公开安全框架、报告重大事故、接受半年一次第三方审计。</div>
+    <div class="dim"><div class="label">关键数据</div>草案由 Rep. Obernolte (R-CA) 和 Rep. Trahan (D-MA) 牵头；科技界支持，消费者权益组织批评。</div>
+    <div class="dim"><div class="label">影响范围</div>若通过，将大幅改变美国 AI 监管碎片化现状；Obernolte 称目标月底前举行听证会。</div>
+    <div class="dim"><div class="label">后续动作 / 解读</div>AI 安全专家评价积极，但部分民主党人认为"拿安全换先占"的政治代价太高。同时参议院出现了 HALO Act（限制军事 AI）等并行提案，AI 立法进入密集期。</div>
+  </div>
+</div>
+
+<!-- 10 -->
+<div class="news-card">
+  <div class="tag-row">
+    <span class="tag">基础设施</span>
+    <span class="tag">Nokia</span>
+    <span class="tag">Agentic AI</span>
+  </div>
+  <h2>Nokia 将 Agentic AI 框架嵌入网络服务平台，实现 IP 网络自主运维</h2>
+  <div class="meta">
+    📅 发布日期：2026-06-11 ｜ 来源：
+    <a href="https://www.telecoms.com/ai/nokia-adds-agentic-ai-to-its-network-services-platform" target="_blank">Telecoms.com</a> ·
+    <a href="https://telecomreseller.com/2026/06/11/nokia-introduces-agentic-ai-framework-in-network-services-platform-to-enable-trust-based-ai-operations-for-ip-networks/" target="_blank">Telecom Reseller</a>
+  </div>
+  <div class="dims">
+    <div class="dim"><div class="label">核心事件</div>Nokia 在其网络服务平台（NSP）中嵌入 Agentic AI 框架，将 AI Agent 直接植入多厂商 IP 网络的管控平台中，实现基于实时拓扑与协议状态的自主决策。</div>
+    <div class="dim"><div class="label">关键数据</div>NSP 掌握网络拓扑、协议行为、配置状态、服务关系等实时数据，为 AI Agent 提供"可信数据锚点"。</div>
+    <div class="dim"><div class="label">影响范围</div>AI 流量快速增长给 IP 网络带来规模与复杂度压力，Nokia 的方案是为数不多的"将 Agent 嵌入已有网络权威控制器"的实践。</div>
+    <div class="dim"><div class="label">后续动作 / 解读</div>标志着 Agentic AI 从软件/互联网渗透到电信基础设施运维，未来网络运维或将大幅自动化。</div>
+  </div>
+</div>
+
+<!-- 11 -->
+<div class="news-card">
+  <div class="tag-row">
+    <span class="tag">民意调查</span>
+    <span class="tag">基础设施</span>
+  </div>
+  <h2>Reuters/Ipsos 民调：仅 1/3 美国人支持 AI 数据中心快速建设</h2>
+  <div class="meta">
+    📅 发布日期：2026-06-11 ｜ 来源：
+    <a href="https://www.reuters.com/world/us/americans-wary-ai-driven-data-center-boom-reutersipsos-poll-shows-2026-06-11/" target="_blank">Reuters</a>
+  </div>
+  <div class="dims">
+    <div class="dim"><div class="label">核心事件</div>Reuters/Ipsos 最新民调显示，仅 33% 美国人认可 AI 数据中心的快速建设速度，多数人反对在自家社区建设。77% 受访者（跨党派）担心 AI 将推高电价。</div>
+    <div class="dim"><div class="label">关键数据</div>共和党人、民主党人和独立选民的担忧比例高度一致，反映 AI 基础设施议题已超越党派。</div>
+    <div class="dim"><div class="label">影响范围</div>数据中心建设成为中期选举焦点议题，十余个州正在审议限制措施。</div>
+    <div class="dim"><div class="label">后续动作 / 解读</div>民调结果与 OpenAI 发现的"外国势力操纵数据中心辩论"形成呼应，凸显 AI 基础设施扩张面临的社会接受度挑战。</div>
+  </div>
+</div>
+
+<div class="footer">
+  <p>🤖 AI 新闻日报 · 自动采集 & 人工筛选 · 每日北京时间早晨更新</p>
+  <p>数据来源：Reuters · CNBC · TechCrunch · Axios · Forbes · NYT · Bloomberg · Politico 等</p>
+  <p style="margin-top:8px;">Generated at 2026-06-12T01:00Z | Report Date: 2026-06-11 (Beijing Time)</p>
+</div>
+
+</body>
+</html>
