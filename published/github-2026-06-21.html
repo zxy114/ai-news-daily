@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 - 2026-06-21</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --green: #3fb950; --purple: #bc8cff; --orange: #f0883e; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, 'Segoe UI', 'Noto Sans SC', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 2rem 1rem; }
+  h1 { font-size: 1.8rem; border-bottom: 1px solid var(--border); padding-bottom: .6rem; margin-bottom: .3rem; }
+  .date { color: var(--muted); font-size: .95rem; margin-bottom: 1.5rem; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.2rem 1.4rem; margin-bottom: 1rem; }
+  .card-header { display: flex; align-items: center; gap: .6rem; margin-bottom: .5rem; flex-wrap: wrap; }
+  .rank { background: var(--accent); color: #fff; border-radius: 50%; width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: .85rem; flex-shrink: 0; }
+  .repo-name a { color: var(--accent); font-size: 1.15rem; font-weight: 600; text-decoration: none; }
+  .repo-name a:hover { text-decoration: underline; }
+  .badge { font-size: .75rem; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--border); color: var(--muted); }
+  .lang { color: var(--purple); font-weight: 600; }
+  .desc { color: var(--text); margin: .4rem 0; }
+  .stats { display: flex; gap: 1.2rem; font-size: .85rem; color: var(--muted); }
+  .stats span { white-space: nowrap; }
+  .today { color: var(--green); font-weight: 600; }
+  .summary { background: linear-gradient(135deg, #1a1e2e, var(--card)); border-color: var(--accent); }
+  .summary h2 { font-size: 1.15rem; margin-bottom: .6rem; }
+  .summary p { color: var(--muted); }
+  .footer { text-align: center; color: var(--muted); font-size: .8rem; margin-top: 2rem; border-top: 1px solid var(--border); padding-top: 1rem; }
+</style>
+</head>
+<body>
+
+<h1>🐙 GitHub 开源日报</h1>
+<p class="date">📅 2026-06-21 · 今日趋势精选</p>
+
+<!-- Summary -->
+<div class="card summary">
+  <h2>📌 今日概览</h2>
+  <p>今日 GitHub 趋势榜呈现<strong>AI 基础设施全面升温</strong>的格局：LLM 上下文压缩工具单日飙涨 3,800 星；开源编程代理、数据库、网页打包桌面端工具齐发力。值得关注的是，面向开发者的 AI 效率工具正在从「尝鲜」走向「刚需」——从 Token 压缩到代码索引，从语音克隆到网页一键桌面化，每一个项目都在解决开发者的实际痛点。</p>
+</div>
+
+<!-- #1 Headroom -->
+<div class="card">
+  <div class="card-header">
+    <span class="rank">1</span>
+    <span class="repo-name"><a href="https://github.com/chopratejas/headroom" target="_blank">chopratejas/headroom</a></span>
+    <span class="badge lang">Python</span>
+  </div>
+  <p class="desc"><strong>LLM 上下文压缩引擎</strong>：在工具输出、日志、文件和 RAG 数据块进入大模型之前进行智能压缩，减少 60-95% 的 Token 消耗且不影响回答质量。提供库、代理服务器、MCP 服务器三种接入方式。</p>
+  <div class="stats">
+    <span>⭐ 41,877</span>
+    <span class="today">🔥 +3,795 今日</span>
+  </div>
+</div>
+
+<!-- #2 Pake -->
+<div class="card">
+  <div class="card-header">
+    <span class="rank">2</span>
+    <span class="repo-name"><a href="https://github.com/tw93/Pake" target="_blank">tw93/Pake</a></span>
+    <span class="badge lang">Rust</span>
+  </div>
+  <p class="desc"><strong>网页一键变桌面应用</strong>：用一条命令即可将任意网页打包为跨平台桌面客户端，基于 Tauri 构建，轻量且高性能。适合快速将 Web 工具、内部系统转为桌面端使用。</p>
+  <div class="stats">
+    <span>⭐ 54,772</span>
+    <span class="today">🔥 +2,546 今日</span>
+  </div>
+</div>
+
+<!-- #3 codebase-memory-mcp -->
+<div class="card">
+  <div class="card-header">
+    <span class="rank">3</span>
+    <span class="repo-name"><a href="https://github.com/DeusData/codebase-memory-mcp" target="_blank">DeusData/codebase-memory-mcp</a></span>
+    <span class="badge lang">C</span>
+  </div>
+  <p class="desc"><strong>代码库智能索引 MCP 服务</strong>：将代码仓库索引为持久化知识图谱，支持 158 种编程语言，查询延迟亚毫秒级，Token 消耗降低 99%。单静态二进制，零依赖部署。</p>
+  <div class="stats">
+    <span>⭐ 9,355</span>
+    <span class="today">🔥 +1,271 今日</span>
+  </div>
+</div>
+
+<!-- #4 palmier-pro -->
+<div class="card">
+  <div class="card-header">
+    <span class="rank">4</span>
+    <span class="repo-name"><a href="https://github.com/palmier-io/palmier-pro" target="_blank">palmier-io/palmier-pro</a></span>
+    <span class="badge lang">Swift</span>
+  </div>
+  <p class="desc"><strong>macOS AI 视频编辑器</strong>：原生构建于 Apple 生态，专为 AI 辅助视频剪辑设计的 macOS 应用，支持 AI 驱动的工作流优化。</p>
+  <div class="stats">
+    <span>⭐ 3,363</span>
+    <span class="today">🔥 +902 今日</span>
+  </div>
+</div>
+
+<!-- #5 kilocode -->
+<div class="card">
+  <div class="card-header">
+    <span class="rank">5</span>
+    <span class="repo-name"><a href="https://github.com/Kilo-Org/kilocode" target="_blank">Kilo-Org/kilocode</a></span>
+    <span class="badge lang">TypeScript</span>
+  </div>
+  <p class="desc"><strong>开源编程代理平台</strong>：目前最受欢迎的开源编码代理工具，集成多种专业 Agent，支持 VS Code / JetBrains 插件和命令行模式，可全自主运行于 CI/CD 流水线。</p>
+  <div class="stats">
+    <span>⭐ 23,360</span>
+    <span class="today">🔥 +513 今日</span>
+  </div>
+</div>
+
+<!-- #6 mattpocock/skills -->
+<div class="card">
+  <div class="card-header">
+    <span class="rank">6</span>
+    <span class="repo-name"><a href="https://github.com/mattpocock/skills" target="_blank">mattpocock/skills</a></span>
+    <span class="badge lang">Shell</span>
+  </div>
+  <p class="desc"><strong>实战型编程技能库</strong>：源自作者 .claude 配置目录的精选技能集合，涵盖 TypeScript、React、架构设计等工程实践中高频使用的模式与技巧，可直接集成到 AI 编程助手中。</p>
+  <div class="stats">
+    <span>⭐ 138,239</span>
+    <span class="today">🔥 +1,395 今日</span>
+  </div>
+</div>
+
+<!-- #7 Insomnia -->
+<div class="card">
+  <div class="card-header">
+    <span class="rank">7</span>
+    <span class="repo-name"><a href="https://github.com/Kong/insomnia" target="_blank">Kong/insomnia</a></span>
+    <span class="badge lang">TypeScript</span>
+  </div>
+  <p class="desc"><strong>跨平台 API 调试工具</strong>：开源的 REST / GraphQL / WebSocket / SSE / gRPC 全协议客户端，支持云端、本地和 Git 三种存储模式，是 Postman 的轻量开源替代。</p>
+  <div class="stats">
+    <span>⭐ 39,329</span>
+    <span class="today">🔥 +329 今日</span>
+  </div>
+</div>
+
+<!-- #8 Penpot -->
+<div class="card">
+  <div class="card-header">
+    <span class="rank">8</span>
+    <span class="repo-name"><a href="https://github.com/penpot/penpot" target="_blank">penpot/penpot</a></span>
+    <span class="badge lang">Clojure</span>
+  </div>
+  <p class="desc"><strong>开源设计与代码协作平台</strong>：面向设计与开发团队的在线协作工具，支持设计稿到代码的无缝衔接，对标 Figma 的开源方案。</p>
+  <div class="stats">
+    <span>⭐ 51,431</span>
+    <span class="today">🔥 +420 今日</span>
+  </div>
+</div>
+
+<!-- #9 voicebox -->
+<div class="card">
+  <div class="card-header">
+    <span class="rank">9</span>
+    <span class="repo-name"><a href="https://github.com/jamiepine/voicebox" target="_blank">jamiepine/voicebox</a></span>
+    <span class="badge lang">TypeScript</span>
+  </div>
+  <p class="desc"><strong>开源 AI 语音工作室</strong>：支持声音克隆、语音听写和语音内容创作的一体化平台，可快速复制音色并生成高质量语音内容。</p>
+  <div class="stats">
+    <span>⭐ 31,021</span>
+    <span class="today">🔥 +145 今日</span>
+  </div>
+</div>
+
+<!-- #10 Turso -->
+<div class="card">
+  <div class="card-header">
+    <span class="rank">10</span>
+    <span class="repo-name"><a href="https://github.com/tursodatabase/turso" target="_blank">tursodatabase/turso</a></span>
+    <span class="badge lang">Rust</span>
+  </div>
+  <p class="desc"><strong>嵌入式 SQL 数据库</strong>：基于 SQLite 协议的进程内数据库，兼容 SQLite 生态，用 Rust 构建，在保持 SQLite 轻量特性的同时提供更强的扩展能力。</p>
+  <div class="stats">
+    <span>⭐ 20,328</span>
+    <span class="today">🔥 +801 今日</span>
+  </div>
+</div>
+
+<div class="footer">
+  <p>数据来源：<a href="https://github.com/trending" target="_blank" style="color: var(--accent);">GitHub Trending</a> · 生成于 2026-06-21</p>
+</div>
+
+</body>
+</html>
