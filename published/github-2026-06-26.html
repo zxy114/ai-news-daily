@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub 开源热榜日报 · 2026-06-26</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --muted: #8b949e;
+            --accent: #58a6ff;
+            --green: #3fb950;
+            --orange: #d29922;
+            --purple: #bc8cff;
+            --red: #f85149;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            padding: 40px 0 30px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 32px;
+        }
+        header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text);
+        }
+        header .date {
+            color: var(--accent);
+            font-size: 16px;
+            margin-top: 8px;
+        }
+        header .subtitle {
+            color: var(--muted);
+            font-size: 14px;
+            margin-top: 4px;
+        }
+        .repo-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+            transition: border-color 0.2s;
+        }
+        .repo-card:hover { border-color: var(--accent); }
+        .repo-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .repo-title {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .repo-title a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        .repo-title a:hover { text-decoration: underline; }
+        .repo-lang {
+            display: inline-block;
+            font-size: 12px;
+            color: var(--muted);
+            background: var(--bg);
+            border: 1px solid var(--border);
+            padding: 2px 10px;
+            border-radius: 12px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+        .repo-stars {
+            font-size: 13px;
+            color: var(--green);
+            white-space: nowrap;
+        }
+        .repo-desc {
+            color: var(--text);
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+        .repo-zh {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+        .repo-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .tag {
+            font-size: 12px;
+            padding: 3px 10px;
+            border-radius: 6px;
+            background: rgba(88, 166, 255, 0.1);
+            color: var(--accent);
+            border: 1px solid rgba(88, 166, 255, 0.2);
+        }
+        .tag.green { background: rgba(63, 185, 80, 0.1); color: var(--green); border-color: rgba(63, 185, 80, 0.2); }
+        .tag.purple { background: rgba(188, 140, 255, 0.1); color: var(--purple); border-color: rgba(188, 140, 255, 0.2); }
+        .tag.orange { background: rgba(210, 153, 34, 0.1); color: var(--orange); border-color: rgba(210, 153, 34, 0.2); }
+        .highlight-box {
+            background: rgba(88, 166, 255, 0.05);
+            border: 1px solid rgba(88, 166, 255, 0.15);
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin: 10px 0;
+            font-size: 14px;
+            color: var(--muted);
+        }
+        .highlight-box strong { color: var(--text); }
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: var(--muted);
+            font-size: 13px;
+            border-top: 1px solid var(--border);
+            margin-top: 32px;
+        }
+        .summary-list {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+        .summary-list h2 {
+            font-size: 18px;
+            margin-bottom: 16px;
+            color: var(--accent);
+        }
+        .summary-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .summary-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 14px;
+        }
+        .summary-list li:last-child { border-bottom: none; }
+        .summary-list li strong { color: var(--green); }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🔥 GitHub 开源热榜日报</h1>
+        <div class="date">2026-06-26（北京时间）</div>
+        <div class="subtitle">数据来源：GitHub Trending · 聚焦实用工具与框架</div>
+    </header>
+
+    <div class="summary-list">
+        <h2>📋 今日精选摘要</h2>
+        <ul>
+            <li><strong>Apple 官方容器工具</strong> — 用轻量虚拟机在 Mac 上运行 Linux 容器，Swift 原生编写，OCI 兼容</li>
+            <li><strong>OpenMontage</strong> — 首个开源 AI Agent 视频制作系统，12 条流水线 + 52 个工具，零 API Key 可用</li>
+            <li><strong>Hermes Agent</strong> — 可成长的 AI Agent 框架，内置 cron 调度、子 Agent 并行、6 种终端后端</li>
+            <li><strong>DESIGN.md</strong> — Google Labs 设计系统规范，让 AI 编码 Agent 理解并保持视觉一致性</li>
+            <li><strong>Orca</strong> — 并行 AI Agent 开发 IDE，一个界面管理 20+ 编码 Agent 的 worktree</li>
+        </ul>
+    </div>
+
+    <!-- Repo 1: apple/container -->
+    <div class="repo-card">
+        <div class="repo-header">
+            <div class="repo-title">
+                <a href="https://github.com/apple/container" target="_blank">apple/container</a>
+                <span class="repo-lang">Swift</span>
+            </div>
+            <div class="repo-stars">⭐ 42,287 · 今日 +1,838</div>
+        </div>
+        <div class="repo-desc">Apple 官方 Linux 容器工具，使用轻量级虚拟机在 Mac 上创建和运行容器</div>
+        <div class="repo-zh">Apple 出品的原生容器方案，用 Swift 编写并针对 Apple Silicon 优化。它消费和产出 OCI 兼容的容器镜像，可以从任何标准容器注册表拉取和推送镜像。需要 macOS 26 及 Apple Silicon Mac。</div>
+        <div class="highlight-box">
+            <strong>核心亮点：</strong>OCI 兼容、Apple Silicon 原生优化、轻量级 VM 架构、官方签名安装包、内置系统服务
+        </div>
+        <div class="repo-tags">
+            <span class="tag">容器化</span>
+            <span class="tag green">Apple 官方</span>
+            <span class="tag">OCI 兼容</span>
+            <span class="tag purple">macOS 26</span>
+        </div>
+    </div>
+
+    <!-- Repo 2: calesthio/OpenMontage -->
+    <div class="repo-card">
+        <div class="repo-header">
+            <div class="repo-title">
+                <a href="https://github.com/calesthio/OpenMontage" target="_blank">calesthio/OpenMontage</a>
+                <span class="repo-lang">Python</span>
+            </div>
+            <div class="repo-stars">⭐ 19,582 · 今日 +3,719 🔥🔥🔥</div>
+        </div>
+        <div class="repo-desc">首个开源 AI Agent 视频制作系统 — 把你的 AI 编程助手变成完整视频制作工作室</div>
+        <div class="repo-zh">用自然语言描述你想要的视频，AI Agent 自动完成调研、编剧、素材生成、剪辑和最终合成。包含 12 条流水线（动画解说、纪录片蒙太奇、电影预告片等）、52 个工具和 500+ Agent 技能。支持 Claude Code、Cursor、Copilot、Windsurf、Codex 等主流 AI 编程助手。</div>
+        <div class="highlight-box">
+            <strong>零成本路径：</strong>无需任何付费 API Key 即可制作视频 — Piper TTS 离线配音、Archive.org/NASA/Wikimedia 免费素材、Remotion/HyperFrames 本地渲染。<br>
+            <strong>质量保障：</strong>7 维度供应商评分系统、决策审计日志、ffprobe 验证、WCAG 对比度检查
+        </div>
+        <div class="repo-tags">
+            <span class="tag">AI 视频制作</span>
+            <span class="tag green">开源首选</span>
+            <span class="tag">Agent 编排</span>
+            <span class="tag purple">12 条流水线</span>
+            <span class="tag orange">零 API 可用</span>
+        </div>
+    </div>
+
+    <!-- Repo 3: NousResearch/hermes-agent -->
+    <div class="repo-card">
+        <div class="repo-header">
+            <div class="repo-title">
+                <a href="https://github.com/NousResearch/hermes-agent" target="_blank">NousResearch/hermes-agent</a>
+                <span class="repo-lang">Python</span>
+            </div>
+            <div class="repo-stars">⭐ 20,112 · 今日 +1,178</div>
+        </div>
+        <div class="repo-desc">一个能持续成长的 AI Agent — 从使用中学习，自主创建技能并改进</div>
+        <div class="repo-zh">NousResearch 出品的自适应 Agent 框架。内置 cron 调度器可向任意平台投递；支持生成隔离子 Agent 进行并行工作流；提供 6 种终端后端（本地、Docker、SSH、Singularity、Modal、Daytona），其中 Modal 和 Daytona 支持 serverless 持久化。支持 Telegram、Discord、Slack、WhatsApp、Signal 等多平台。</div>
+        <div class="highlight-box">
+            <strong>学习闭环：</strong>Agent 自主管理记忆、定期回顾、复杂任务后自动创建技能、技能随使用自我改进。FTS5 全文搜索 + LLM 摘要实现跨会话回忆。兼容 agentskills.io 开放标准。
+        </div>
+        <div class="repo-tags">
+            <span class="tag">Agent 框架</span>
+            <span class="tag green">自学习</span>
+            <span class="tag">多平台</span>
+            <span class="tag purple">子 Agent 并行</span>
+            <span class="tag orange">serverless</span>
+        </div>
+    </div>
+
+    <!-- Repo 4: ZhuLinsen/daily_stock_analysis -->
+    <div class="repo-card">
+        <div class="repo-header">
+            <div class="repo-title">
+                <a href="https://github.com/ZhuLinsen/daily_stock_analysis" target="_blank">ZhuLinsen/daily_stock_analysis</a>
+                <span class="repo-lang">Python</span>
+            </div>
+            <div class="repo-stars">⭐ 48,592 · 今日 +1,468</div>
+        </div>
+        <div class="repo-desc">LLM 驱动的多市场股票智能分析系统</div>
+        <div class="repo-zh">整合多源行情数据、实时新闻抓取、决策看板和自动推送功能，支持零成本定时运行。用大语言模型对市场进行多维度分析，自动生成投资决策参考。适合学习 LLM 在金融领域的实际应用。</div>
+        <div class="highlight-box">
+            <strong>实用价值：</strong>多市场覆盖、多源数据整合、自动定时运行、决策看板可视化 — 一个完整的 LLM 金融分析工程参考实现
+        </div>
+        <div class="repo-tags">
+            <span class="tag">LLM 应用</span>
+            <span class="tag green">金融分析</span>
+            <span class="tag">多市场</span>
+            <span class="tag orange">零成本运行</span>
+        </div>
+    </div>
+
+    <!-- Repo 5: google-labs-code/design.md -->
+    <div class="repo-card">
+        <div class="repo-header">
+            <div class="repo-title">
+                <a href="https://github.com/google-labs-code/design.md" target="_blank">google-labs-code/design.md</a>
+                <span class="repo-lang">TypeScript</span>
+            </div>
+            <div class="repo-stars">⭐ 17,394 · 今日 +619</div>
+        </div>
+        <div class="repo-desc">Google Labs 设计系统规范 — 让 AI 编码 Agent 持续理解你的视觉设计语言</div>
+        <div class="repo-zh">定义了一种将设计令牌（YAML front matter）与设计理念（Markdown 文本）结合的文件格式。Agent 读取后能准确还原深色标题、暖色背景和特定按钮样式。提供 CLI 工具支持 lint 校验、diff 对比和导出为 Tailwind CSS / W3C Design Tokens 格式。</div>
+        <div class="highlight-box">
+            <strong>9 条 lint 规则：</strong>token 引用检查、WCAG 对比度校验、孤立 token 检测、节序校验等。<br>
+            <strong>导出格式：</strong>Tailwind v3 theme.extend、Tailwind v4 @theme CSS、W3C DTCG JSON
+        </div>
+        <div class="repo-tags">
+            <span class="tag">设计规范</span>
+            <span class="tag green">Google Labs</span>
+            <span class="tag">Design Tokens</span>
+            <span class="tag purple">AI Agent 友好</span>
+            <span class="tag">Tailwind 导出</span>
+        </div>
+    </div>
+
+    <!-- Repo 6: stablyai/orca -->
+    <div class="repo-card">
+        <div class="repo-header">
+            <div class="repo-title">
+                <a href="https://github.com/stablyai/orca" target="_blank">stablyai/orca</a>
+                <span class="repo-lang">TypeScript</span>
+            </div>
+            <div class="repo-stars">⭐ 6,835 · 今日 +331</div>
+        </div>
+        <div class="repo-desc">并行 AI Agent 开发 IDE — 一个界面管理 20+ 编码 Agent</div>
+        <div class="repo-zh">将同一个 prompt 分发给 5 个 Agent 在各自隔离的 git worktree 中并行执行，比较结果后合并最佳方案。支持 Claude Code、Codex、Cursor、GitHub Copilot、Grok 等 20+ CLI Agent。提供 SSH 远程 worktree、Design Mode（点击 UI 元素发送给 Agent）、移动端伴侣等特色功能。</div>
+        <div class="highlight-box">
+            <strong>核心能力：</strong>并行 worktree 编排、Ghostty 级终端（WebGL 渲染）、GitHub & Linear 原生集成、AI diff 标注、Orca CLI 脚本化
+        </div>
+        <div class="repo-tags">
+            <span class="tag">Agent IDE</span>
+            <span class="tag green">并行编排</span>
+            <span class="tag">20+ Agent 支持</span>
+            <span class="tag purple">SSH 远程</span>
+            <span class="tag orange">移动端</span>
+        </div>
+    </div>
+
+    <!-- Repo 7: JCodesMore/ai-website-cloner-template -->
+    <div class="repo-card">
+        <div class="repo-header">
+            <div class="repo-title">
+                <a href="https://github.com/JCodesMore/ai-website-cloner-template" target="_blank">JCodesMore/ai-website-cloner-template</a>
+                <span class="repo-lang">TypeScript</span>
+            </div>
+            <div class="repo-stars">⭐ 19,370 · 今日 +692</div>
+        </div>
+        <div class="repo-desc">一键用 AI 编码 Agent 克隆任意网站</div>
+        <div class="repo-zh">提供完整模板，让 AI 编程助手通过一条命令克隆目标网站的结构和样式。适合学习如何编排 AI Agent 进行前端开发、如何设计 Agent 模板以及如何将 AI 编码工具用于快速原型搭建。</div>
+        <div class="repo-tags">
+            <span class="tag">AI 前端开发</span>
+            <span class="tag green">一键克隆</span>
+            <span class="tag">Agent 模板</span>
+            <span class="tag purple">快速原型</span>
+        </div>
+    </div>
+
+    <!-- Repo 8: kunchenguid/no-mistakes -->
+    <div class="repo-card">
+        <div class="repo-header">
+            <div class="repo-title">
+                <a href="https://github.com/kunchenguid/no-mistakes" target="_blank">kunchenguid/no-mistakes</a>
+                <span class="repo-lang">Go</span>
+            </div>
+            <div class="repo-stars">⭐ 2,187 · 今日 +110</div>
+        </div>
+        <div class="repo-desc">Git 安全工具 — 防止误 push 到错误分支</div>
+        <div class="repo-zh">用 Go 编写的 Git 钩子工具，在 push 前进行安全校验，防止将代码推送到不该推送的分支。轻量实用，可以直接集成到团队 Git 工作流中。</div>
+        <div class="repo-tags">
+            <span class="tag">Git 工具</span>
+            <span class="tag green">安全防护</span>
+            <span class="tag">Go</span>
+            <span class="tag orange">轻量实用</span>
+        </div>
+    </div>
+
+    <footer>
+        <p>📊 数据来源：GitHub Trending · 生成时间：2026-06-26 北京时间</p>
+        <p>筛选标准：优先收录实际可用的工具/库/框架，排除纯学术论文和大模型 benchmark</p>
+    </footer>
+</body>
+</html>
