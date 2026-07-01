@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 · 2026-07-01</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --border: #30363d;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --accent: #58a6ff;
+    --green: #3fb950;
+    --orange: #d29922;
+    --red: #f85149;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 20px;
+    max-width: 920px;
+    margin: 0 auto;
+  }
+  header {
+    text-align: center;
+    padding: 32px 0 24px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 28px;
+  }
+  header h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent), #a371f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  header .date {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-top: 6px;
+  }
+  .repo-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin-bottom: 18px;
+    transition: border-color 0.2s;
+  }
+  .repo-card:hover { border-color: var(--accent); }
+  .repo-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .repo-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+  }
+  .repo-title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .repo-title a:hover { text-decoration: underline; }
+  .repo-lang {
+    background: #1f2937;
+    color: var(--muted);
+    font-size: 0.75rem;
+    padding: 2px 10px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+  }
+  .stars-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(63,185,80,0.1);
+    color: var(--green);
+    font-size: 0.8rem;
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(63,185,80,0.2);
+  }
+  .repo-desc {
+    color: var(--text);
+    font-size: 0.92rem;
+    margin: 8px 0 10px;
+  }
+  .repo-zh {
+    color: var(--muted);
+    font-size: 0.88rem;
+    margin-bottom: 10px;
+  }
+  .repo-stats {
+    display: flex;
+    gap: 18px;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  .repo-stats span { display: inline-flex; align-items: center; gap: 4px; }
+  .tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-right: 6px;
+    margin-top: 8px;
+  }
+  .tag-tool { background: rgba(88,166,255,0.12); color: var(--accent); }
+  .tag-lib { background: rgba(163,113,247,0.12); color: #a371f7; }
+  .tag-app { background: rgba(210,153,34,0.12); color: var(--orange); }
+  .tag-framework { background: rgba(63,185,80,0.12); color: var(--green); }
+  footer {
+    text-align: center;
+    padding: 28px 0 12px;
+    color: var(--muted);
+    font-size: 0.8rem;
+    border-top: 1px solid var(--border);
+    margin-top: 24px;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    .repo-card { padding: 16px; }
+    header h1 { font-size: 1.3rem; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>🔥 GitHub 开源日报</h1>
+  <div class="date">2026-07-01 · 每日精选趋势项目</div>
+</header>
+
+<!-- 1. herdr -->
+<div class="repo-card">
+  <div class="repo-header">
+    <div class="repo-title"><a href="https://github.com/ogulcancelik/herdr" target="_blank">ogulcancelik/herdr</a></div>
+    <span class="repo-lang">Rust</span>
+  </div>
+  <div class="repo-desc">Terminal-native agent multiplexer — run all your coding agents in one terminal with live status tracking.</div>
+  <div class="repo-zh">终端原生的 Agent 多路复用器：在一个终端里同时跑 Claude Code、Codex 等多个编码 Agent，实时显示每个 Agent 的状态（阻塞 / 工作中 / 完成）。类似 tmux，但为 Agent 时代重新设计。</div>
+  <div class="repo-stats">
+    <span>⭐ 9,047</span>
+    <span class="stars-badge">▲ 486 today</span>
+    <span>🍴 544</span>
+  </div>
+  <span class="tag tag-tool">开发工具</span>
+  <span class="tag tag-app">终端工具</span>
+</div>
+
+<!-- 2. OmniRoute -->
+<div class="repo-card">
+  <div class="repo-header">
+    <div class="repo-title"><a href="https://github.com/diegosouzapw/OmniRoute" target="_blank">diegosouzapw/OmniRoute</a></div>
+    <span class="repo-lang">TypeScript</span>
+  </div>
+  <div class="repo-desc">Free AI gateway: one endpoint, 231+ providers (50+ free), connect Claude Code / Codex / Cursor to free Claude/GPT/Gemini with auto-fallback & token compression.</div>
+  <div class="repo-zh">免费 AI 网关：一个端点聚合 231+ 个 AI 提供商（50+ 免费），支持自动故障转移和 15-95% 的 token 压缩，可将主流编码 Agent 接入免费模型。</div>
+  <div class="repo-stats">
+    <span>⭐ 8,593</span>
+    <span class="stars-badge">▲ 387 today</span>
+    <span>🍴 1,397</span>
+  </div>
+  <span class="tag tag-tool">AI 网关</span>
+  <span class="tag tag-framework">基础设施</span>
+</div>
+
+<!-- 3. agents-cli -->
+<div class="repo-card">
+  <div class="repo-header">
+    <div class="repo-title"><a href="https://github.com/google/agents-cli" target="_blank">google/agents-cli</a></div>
+    <span class="repo-lang">Python</span>
+  </div>
+  <div class="repo-desc">Google 官方 CLI：将任意编码助手变为 Google Cloud AI Agent 开发专家，覆盖创建、评估、部署全生命周期。</div>
+  <div class="repo-zh">Google 出品的 Agent 开发 CLI 工具，为 Claude Code、Codex 等编码 Agent 提供一整套 Skills，支持在 Google Cloud 上快速搭建、评估和部署企业级 AI Agent。</div>
+  <div class="repo-stats">
+    <span>⭐ 4,227</span>
+    <span class="stars-badge">▲ 445 today</span>
+    <span>🍴 459</span>
+  </div>
+  <span class="tag tag-tool">CLI 工具</span>
+  <span class="tag tag-framework">Google Cloud</span>
+</div>
+
+<!-- 4. video-use -->
+<div class="repo-card">
+  <div class="repo-header">
+    <div class="repo-title"><a href="https://github.com/browser-use/video-use" target="_blank">browser-use/video-use</a></div>
+    <span class="repo-lang">Python</span>
+  </div>
+  <div class="repo-desc">Edit videos with coding agents — drop raw footage in a folder, chat with Claude Code, get final.mp4 back.</div>
+  <div class="repo-zh">用编码 Agent 编辑视频：把原始素材丢进文件夹，跟 Claude Code 对话即可得到成品视频。自动剪口癖、调色、烧字幕，通过文字转录 + 视觉合成让 LLM "读懂"视频。</div>
+  <div class="repo-stats">
+    <span>⭐ 新项目</span>
+    <span class="stars-badge">▲ 趋势上升中</span>
+  </div>
+  <span class="tag tag-tool">视频编辑</span>
+  <span class="tag tag-app">AI Agent</span>
+</div>
+
+<!-- 5. ai-berkshire -->
+<div class="repo-card">
+  <div class="repo-header">
+    <div class="repo-title"><a href="https://github.com/xbtlin/ai-berkshire" target="_blank">xbtlin/ai-berkshire</a></div>
+    <span class="repo-lang">Python</span>
+  </div>
+  <div class="repo-desc">AI 时代的伯克希尔：基于 Claude Code / Codex 的价值投资研究框架，融合巴菲特、芒格、段永平、李录四大师方法论。</div>
+  <div class="repo-zh">将四位价值投资大师的方法论系统化为 AI Agent Skills，通过多 Agent 并行研究实现专业级投研分析。内置防骗机制、财务交叉验证和结构化输出，实盘两年跑赢标普 500 约 50 个百分点。</div>
+  <div class="repo-stats">
+    <span>⭐ 7,545</span>
+    <span class="stars-badge">▲ 969 today</span>
+    <span>🍴 960</span>
+  </div>
+  <span class="tag tag-tool">投研框架</span>
+  <span class="tag tag-app">多 Agent</span>
+</div>
+
+<!-- 6. Astryx -->
+<div class="repo-card">
+  <div class="repo-header">
+    <div class="repo-title"><a href="https://github.com/facebook/astryx" target="_blank">facebook/astryx</a></div>
+    <span class="repo-lang">TypeScript</span>
+  </div>
+  <div class="repo-desc">Meta 开源设计系统：150+ 可访问组件，基于 React + StyleX，支持深度定制和 AI Agent 协作开发。</div>
+  <div class="repo-zh">来自 Meta 内部八年沉淀的设计系统，已驱动 13,000+ 应用。提供 150+ 组件、7 套主题、CLI 工具链，API 专为人类与 AI 协作设计，无样式锁定。</div>
+  <div class="repo-stats">
+    <span>⭐ 1,816</span>
+    <span class="stars-badge">▲ 364 today</span>
+    <span>🍴 99</span>
+  </div>
+  <span class="tag tag-framework">设计系统</span>
+  <span class="tag tag-lib">React 组件库</span>
+</div>
+
+<!-- 7. Instatic -->
+<div class="repo-card">
+  <div class="repo-header">
+    <div class="repo-title"><a href="https://github.com/CoreBunch/Instatic" target="_blank">CoreBunch/Instatic</a></div>
+    <span class="repo-lang">TypeScript</span>
+  </div>
+  <div class="repo-desc">Modern self-hosted visual CMS — visual editor, content engine, and publisher in one Bun server.</div>
+  <div class="repo-zh">现代化自托管可视化 CMS：可视化编辑器、内容引擎和发布器集成在单个 Bun 服务器中。输出纯净语义化 HTML，无框架运行时负担，支持 SQLite / Postgres，一键部署。</div>
+  <div class="repo-stats">
+    <span>⭐ 1,556</span>
+    <span class="stars-badge">▲ 351 today</span>
+    <span>🍴 138</span>
+  </div>
+  <span class="tag tag-app">CMS</span>
+  <span class="tag tag-framework">自托管</span>
+</div>
+
+<!-- 8. FluidVoice -->
+<div class="repo-card">
+  <div class="repo-header">
+    <div class="repo-title"><a href="https://github.com/altic-dev/FluidVoice" target="_blank">altic-dev/FluidVoice</a></div>
+    <span class="repo-lang">Swift</span>
+  </div>
+  <div class="repo-desc">Fastest macOS dictation app with on-device STT and custom AI enhancement model — local Wispr Flow alternative.</div>
+  <div class="repo-zh">macOS 本地语音听写应用：端侧语音识别 + 自训练 AI 增强模型，完全离线运行，是 Wispr Flow 的本地替代方案。Windows / iOS / Linux 版本即将推出。</div>
+  <div class="repo-stats">
+    <span>⭐ 4,945</span>
+    <span class="stars-badge">▲ 588 today</span>
+    <span>🍴 303</span>
+  </div>
+  <span class="tag tag-app">macOS 应用</span>
+  <span class="tag tag-tool">语音识别</span>
+</div>
+
+<footer>
+  <p>📊 数据来源：<a href="https://github.com/trending" target="_blank">GitHub Trending</a> · 每日自动抓取</p>
+  <p style="margin-top:6px;">由 OpenClaw 自动生成 · 仅供学习参考</p>
+</footer>
+</body>
+</html>
