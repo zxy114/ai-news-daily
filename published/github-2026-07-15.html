@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 开源日报 · 2026-07-15</title>
+<style>
+  :root { --bg:#0f1115; --panel:#161a22; --border:#262b36; --text:#e6e8ee; --muted:#9aa3b2; --accent:#7c9cff; --good:#5dd39e; --warn:#ffb454; }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.6}
+  .wrap{max-width:980px;margin:0 auto;padding:32px 24px}
+  header{margin-bottom:28px;border-bottom:1px solid var(--border);padding-bottom:20px}
+  h1{font-size:28px;margin:0 0 6px}
+  .sub{color:var(--muted);font-size:14px}
+  .meta{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px;font-size:13px;color:var(--muted)}
+  .meta b{color:var(--text)}
+  .grid{display:grid;gap:14px}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:18px 20px;transition:border-color .2s}
+  .card:hover{border-color:#3a4356}
+  .rank{display:inline-block;width:28px;height:28px;line-height:28px;text-align:center;background:#2a3142;border-radius:6px;font-weight:600;color:var(--accent);margin-right:10px;font-size:13px}
+  .repo-title{font-size:17px;font-weight:600;margin:0 0 4px;display:flex;align-items:center;flex-wrap:wrap}
+  .repo-title a{color:#cfd6e4;text-decoration:none}
+  .repo-title a:hover{color:var(--accent)}
+  .repo-path{color:var(--muted);font-weight:400;font-size:14px;margin-left:6px}
+  .stars{font-size:12px;color:var(--good);margin-left:auto;background:rgba(93,211,158,.1);padding:2px 8px;border-radius:10px}
+  .desc{color:#c5cad4;margin:8px 0 10px;font-size:14px}
+  .tags{display:flex;gap:8px;flex-wrap:wrap;font-size:12px}
+  .tag{background:#222837;color:var(--muted);padding:3px 9px;border-radius:10px}
+  .tag.lang{color:var(--accent);background:rgba(124,156,255,.1)}
+  .tag.hot{color:var(--warn);background:rgba(255,180,84,.1)}
+  footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>🐙 GitHub 开源日报</h1>
+    <div class="sub">每日精选真正能上手用、有学习价值的开源项目</div>
+    <div class="meta">
+      <span><b>日期</b> 2026-07-15 (Asia/Shanghai · 周三)</span>
+      <span><b>来源</b> github.com/trending</span>
+      <span><b>收录</b> 8 个仓库</span>
+    </div>
+  </header>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">1</span><a href="https://github.com/OpenCut-app/OpenCut">OpenCut-app/OpenCut</a><span class="repo-path">— 开源视频剪辑(再升温)</span><span class="stars">🔥 4,276 ⭐ today</span></h3>
+      <p class="desc">今天热度最高的项目——开源 CapCut 替代品继续狂飙,单日 4,276 Star 已超越昨日,累计 69k+。核心看点依然是差异化的技术架构:Rust 写底层视频管线、多端共用一份代码、Web/桌面/移动同源;亮点功能是 MCP Server(让 AI Agent 直接调用剪辑 API)和 Headless 模式(批量自动渲染、CI 流水线可用)。适合研究跨平台多媒体框架、Rust + WebAssembly 视频管线、或探索"创作工具 + Agent"模式的同学,今天值得重点 Star 与围观。</p>
+      <div class="tags"><span class="tag lang">TypeScript</span><span class="tag lang">Rust</span><span class="tag">MCP Server</span><span class="tag">视频编辑</span><span class="tag hot">今日最热</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">2</span><a href="https://github.com/Dicklesworthstone/destructive_command_guard">Dicklesworthstone/destructive_command_guard</a><span class="repo-path">— AI Agent 危险命令拦截器(新晋)</span><span class="stars">🔥 473 ⭐ today</span></h3>
+      <p class="desc">面向 AI Agent 场景的安全护栏,专门拦截 rm -rf、dd、git push --force、chmod 777、curl | sh 等"动一下就翻车"的指令。Rust 写的高性能二进制,可在 Claude Code / Codex / Cursor / 任何 shell 调用链中作为前置守卫:既能静态规则匹配,也能加载 LLM 做语义复核,误判可加白名单覆盖。对日常用 agent 跑 shell 的开发者,这是把"重装系统就在一念之间"的风险前置的一道闸,做 Agent 产品风控的同学也建议直接集成。</p>
+      <div class="tags"><span class="tag lang">Rust</span><span class="tag">AI Agent 安全</span><span class="tag">CLI 防护</span><span class="tag hot">本日新晋</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">3</span><a href="https://github.com/HKUDS/Vibe-Trading">HKUDS/Vibe-Trading</a><span class="repo-path">— 个人交易智能体</span><span class="stars">🔥 1,256 ⭐ today</span></h3>
+      <p class="desc">港大数据智能实验室(LightSG)出品,定位"个人交易 Agent"的工程化框架:把研究(255 个 alpha101 + 158 个 qlib 因子)、撮合、税费与过户费核算、组合管理塞进同一套流水线,内置 OKX / Tushare / yfinance / Shoonya-Dhan 等多市场数据源。CLI 与 FastAPI 双形态,Provider 抽象已经接 Codex / Kimi / GLM / opencode 等多模型,工程结构干净。对量化研究者和 Agent 工程实践都很有参考价值,今天榜单 Top 5 持续在线。</p>
+      <div class="tags"><span class="tag lang">Python</span><span class="tag">量化交易</span><span class="tag">Agent</span><span class="tag">FastAPI</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">4</span><a href="https://github.com/Graphify-Labs/graphify">Graphify-Labs/graphify</a><span class="repo-path">— 代码 → 知识图谱</span><span class="stars">🔥 1,851 ⭐ today</span></h3>
+      <p class="desc">AI 编程助手的"代码理解 Skill":支持 Claude Code、Cursor、Codex、Gemini CLI、Copilot 等 15+ 工具链。能把任意代码目录、SQL schema、文档、图片甚至视频,构建成可查询的知识图谱。技术关键点是 tree-sitter AST + 完全本地 + 零 LLM 调用 + 零向量库(不是"伪图谱"而是真正能遍历、能区分 EXTRACTED / INFERRED 边类型)。安装一句话 `uv tool install graphifyy`,适合做影响面分析、新人 onboarding、架构梳理。热度连日走高,生态正在形成。</p>
+      <div class="tags"><span class="tag lang">Python</span><span class="tag">tree-sitter</span><span class="tag">知识图谱</span><span class="tag">Code Intelligence</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">5</span><a href="https://github.com/Nutlope/hallmark">Nutlope/hallmark</a><span class="repo-path">— 反 AI 味的设计 Skill</span><span class="stars">🔥 1,015 ⭐ today</span></h3>
+      <p class="desc">Together AI 出品,专注解决"AI 生成的 UI 一眼 AI"的行业通病。设计上故意拒绝 LLM 训练分布里的默认套路:内置 20 套差异化主题、4 个动词(build / audit / redesign / study)、57 个 slop 检测门禁 + 自检回环,同一份 brief 跑两遍出来的视觉指纹完全不同。可挂 Claude Code / Cursor,适合把 AI Coding 工作流里的"审美塌方"补回来,是研究 prompt 设计与"如何让模型输出突破舒适区"的好样本。</p>
+      <div class="tags"><span class="tag lang">CSS</span><span class="tag">Design Skill</span><span class="tag">Prompt Engineering</span><span class="tag">Claude Code</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">6</span><a href="https://github.com/penpot/penpot">penpot/penpot</a><span class="repo-path">— 开源设计协作平台(本日黑马)</span><span class="stars">🔥 395 ⭐ today</span></h3>
+      <p class="desc">由 Kaleidos 与 Mozilla 出品团队维护的开源设计工具,主打跨职能团队的设计/原型协作。和 Figma 相比的最大差异:完全自托管、SVG 原生、Clojure 全栈、对开发者友好(可直接 inspect 生成的 CSS / SVG 代码,可写 plugin 接入 CI)。今天突然冲进榜单意味着又有大版本或对接动态(值得刷一下 release notes)。对不想把设计资产交给 SaaS 的前端团队,以及研究 Clojure 实时协作架构的同学都很值得看。</p>
+      <div class="tags"><span class="tag lang">Clojure</span><span class="tag">自托管</span><span class="tag">设计协作</span><span class="tag hot">本日黑马</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">7</span><a href="https://github.com/par274/sharpemu">par274/sharpemu</a><span class="repo-path">— 全新 PS5 模拟器(C# / .NET)</span><span class="stars">🔥 332 ⭐ today</span></h3>
+      <p class="desc">今天冒出来的实验性 PS5 模拟器项目,用 C# / .NET 写。和现存 PS5 模拟器生态的差异:代码全新、不基于任何现有 fork,作者在跟社区同步开发日志。对想研究主机硬件模拟、JIT 编译、GPU 指令翻译或现代 .NET 跨平台图形栈的同学,是一个从零起步、好读懂、好参与的参考实现。需要注意的是"实验性" + "模拟器"涉及的法律灰色地带,这里只做技术目录推荐,不引导使用。</p>
+      <div class="tags"><span class="tag lang">C#</span><span class="tag">.NET</span><span class="tag">模拟器</span><span class="tag">JIT</span></div>
+    </div>
+
+    <div class="card">
+      <h3 class="repo-title"><span class="rank">8</span><a href="https://github.com/Raphire/Win11Debloat">Raphire/Win11Debloat</a><span class="repo-path">— Windows 10/11 精简脚本</span><span class="stars">🔥 783 ⭐ today</span></h3>
+      <p class="desc">老牌 Windows 优化 PowerShell 脚本(同时覆盖 Win10/Win11),纯命令行无需安装。可一键卸载预装应用、关闭遥测、清理开始菜单 / Cortana / 弹窗广告,并支持 CLI 模式、Audit Mode、跨用户配置、预设导入导出——批量装机和 IT 部署友好。今天再度回到榜单,既适合装机党拿来做新机第一件事,也是 PowerShell 自动化可学习的范例脚本,结构清晰、注释齐全。</p>
+      <div class="tags"><span class="tag lang">PowerShell</span><span class="tag">Windows</span><span class="tag">运维</span><span class="tag">Sysadmin</span></div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>每日由 Cron 自动抓取 github.com/trending,过滤纯学术论文 / benchmark / fork-only 仓库后整理。<br>本报告仅做信息整理与推荐,不构成投资或使用建议;模拟器等内容请遵守当地法律法规。</p>
+  </footer>
+</div>
+</body>
+</html>
