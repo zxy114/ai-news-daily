@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>GitHub Trending 热门日报 · 2026-07-29</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+:root{
+  --bg:#0d1117;
+  --panel:#161b22;
+  --panel2:#1c2230;
+  --border:#30363d;
+  --text:#e6edf3;
+  --muted:#8b949e;
+  --accent:#f78166;
+  --link:#58a6ff;
+  --rank1:#ff7b72;
+  --rank2:#f0883e;
+  --rank3:#d29922;
+  --rankN:#3fb950;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;padding:32px 16px}
+.wrap{max-width:960px;margin:0 auto}
+header{text-align:center;padding:24px 0 28px;border-bottom:1px solid var(--border);margin-bottom:28px}
+h1{font-size:28px;font-weight:700;margin-bottom:6px}
+.subtitle{color:var(--muted);font-size:14px}
+.badge{display:inline-block;background:var(--panel);border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-size:12px;color:var(--muted);margin-top:10px}
+.intro{background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:16px 20px;margin-bottom:28px;color:var(--muted);font-size:14px}
+.intro strong{color:var(--text)}
+.repo{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:18px 22px;margin-bottom:14px;transition:border-color .2s}
+.repo:hover{border-color:var(--link)}
+.repo-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.rank{font-size:13px;font-weight:700;padding:2px 10px;border-radius:12px;color:#0d1117;flex-shrink:0}
+.r1{background:var(--rank1)}.r2{background:var(--rank2)}.r3{background:var(--rank3)}.rN{background:var(--rankN)}
+.repo-name{font-size:18px;font-weight:600;color:var(--link);text-decoration:none;word-break:break-all}
+.repo-name:hover{text-decoration:underline}
+.stars{margin-left:auto;color:var(--accent);font-size:13px;font-weight:600;white-space:nowrap}
+.lang{display:inline-flex;align-items:center;gap:6px;color:var(--muted);font-size:13px;margin-top:8px}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+.desc{color:var(--text);font-size:14px;margin:10px 0 8px;line-height:1.55}
+.note{color:var(--muted);font-size:13px;border-left:3px solid var(--border);padding-left:12px;margin-top:8px}
+.note::before{content:"💡 ";opacity:.85}
+footer{text-align:center;color:var(--muted);font-size:12px;margin-top:32px;padding-top:20px;border-top:1px solid var(--border)}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>🔥 GitHub Trending 热门日报</h1>
+  <div class="subtitle">2026-07-29 · 北京时间 · 每日精选 Top 10</div>
+  <div class="badge">数据源：github.com/trending · 当日趋势快照</div>
+</header>
+
+<div class="intro">
+  本期收录 <strong>10</strong> 个高质量仓库，已过滤基础模型 benchmark / 纯学术项目 / fork-only 仓库，优先挑选<strong>可直接使用、值得学习</strong>的工具、库与框架。
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r1">#1</span>
+    <a class="repo-name" href="https://github.com/bradautomates/claude-video" target="_blank">bradautomates/claude-video</a>
+    <span class="stars">⭐ +988 stars today</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#3572A5"></span>Python</div>
+  <div class="desc">给 Claude Code 装上"眼睛"：一条 /watch 命令即可下载视频、抽帧、转写、再交给 Claude 看懂视频内容。</div>
+  <div class="note">今日热度第一。把长视频拆帧 + 转写塞进 Claude 工作流，看教程视频/录播课再也不用手动记笔记。也可作为多模态工具调用编排的入门样本。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r1">#2</span>
+    <a class="repo-name" href="https://github.com/moeru-ai/airi" target="_blank">moeru-ai/airi</a>
+    <span class="stars">⭐ +797 stars today</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#3178c6"></span>TypeScript</div>
+  <div class="desc">自托管的实时语音 AI 陪伴代理，支持 Web / macOS / Windows，可接入游戏与日常陪伴场景。</div>
+  <div class="note">亮点是端到端的实时语音管线 + 跨平台桌面壳。对想搭"可对话的数字伴侣/数字生命"工程实现的同学，是一份比较完整的开源参考。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r1">#3</span>
+    <a class="repo-name" href="https://github.com/yorukot/superfile" target="_blank">yorukot/superfile</a>
+    <span class="stars">⭐ +662 stars today</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#00ADD8"></span>Go</div>
+  <div class="desc">用 Go 写的现代化终端文件管理器，颜值与手感兼具。</div>
+  <div class="note">面向"想升级 Terminal 体验、又不想离开终端"的开发者。Go 写 TUI 应用的好范本：Bubble Tea 框架、异步任务调度、主题系统都值得拆解。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r2">#4</span>
+    <a class="repo-name" href="https://github.com/affaan-m/everything-claude-code" target="_blank">affaan-m/everything-claude-code</a>
+    <span class="stars">⭐ +636 stars today</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#f1e05a"></span>JavaScript</div>
+  <div class="desc">面向 Claude Code / Codex / Cursor / OpenCode 等编码代理的性能优化与最佳实践合集：技能、记忆、安全与研究优先开发。</div>
+  <div class="note">把"如何让 AI 编码代理更稳、更快、更安全"系统化整理。包含 hooks、skills、sub-agent、上下文压缩等实战配置，可直接复制改造。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r2">#5</span>
+    <a class="repo-name" href="https://github.com/opengeos/GeoLibre" target="_blank">opengeos/GeoLibre</a>
+    <span class="stars">⭐ +607 stars today</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#3178c6"></span>TypeScript</div>
+  <div class="desc">轻量、云原生的开源地理信息平台：浏览器 / 桌面 / 移动端 / Jupyter 通用，可视化与分析一体化。</div>
+  <div class="note">比传统 GIS 更轻、比在线地图更可定制。对地理数据可视化、空间分析、WebGL 渲染感兴趣的团队，可以作为自托管底座直接二开。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r2">#6</span>
+    <a class="repo-name" href="https://github.com/virgiliojr94/book-to-skill" target="_blank">virgiliojr94/book-to-skill</a>
+    <span class="stars">⭐ +423 stars today</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#3572A5"></span>Python</div>
+  <div class="desc">把任意技术书 PDF 自动转成 Claude Code 可加载的 skill，工作时随用随查。</div>
+  <div class="note">典型的"RAG-for-coding-agent"实现：解析 PDF → 切块 → 索引 → 让 Claude Code 在编码过程中调用。值得学 RAG 工程化落地的同学拆解。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r3">#7</span>
+    <a class="repo-name" href="https://github.com/pascalorg/editor" target="_blank">pascalorg/editor</a>
+    <span class="stars">⭐ +341 stars today</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#3178c6"></span>TypeScript</div>
+  <div class="desc">浏览器里的 3D 建筑协作编辑器：创建并分享可交互的 3D 建筑方案。</div>
+  <div class="note">Three.js / WebGL 实战范例：场景图、BIM 风格建模、实时协作。可作为前端同学做 3D 编辑器/可视化工具的入门项目。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r3">#8</span>
+    <a class="repo-name" href="https://github.com/huggingface/speech-to-speech" target="_blank">huggingface/speech-to-speech</a>
+    <span class="stars">⭐ +227 stars today</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#3572A5"></span>Python</div>
+  <div class="desc">用开源模型本地搭建可对话的语音代理：听懂 → 思考 → 自然地回应。</div>
+  <div class="note">完整可跑的本地语音代理流水线，适合做客服机器人、语音助手、智能硬件。对端侧 STT/TTS/LLM 编排感兴趣的开发者可直接 fork。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r3">#9</span>
+    <a class="repo-name" href="https://github.com/andrewyng/aisuite" target="_blank">andrewyng/aisuite</a>
+    <span class="stars">⭐ +62 stars today</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#3572A5"></span>Python</div>
+  <div class="desc">统一多家生成式 AI 提供商的 Python 接口，一行切换 OpenAI / Anthropic / Google / 本地模型。</div>
+  <div class="note">想要"写一次、多家跑"的团队必备。代码非常薄，可作为学习"Provider 抽象层 + 适配器模式"的小型教科书。</div>
+</div>
+
+<div class="repo">
+  <div class="repo-head">
+    <span class="rank r3">#10</span>
+    <a class="repo-name" href="https://github.com/hello245m/free-stockdb" target="_blank">hello245m/free-stockdb</a>
+    <span class="stars">⭐ +50 stars today</span>
+  </div>
+  <div class="lang"><span class="dot" style="background:#e34c26"></span>HTML</div>
+  <div class="desc">面向 A 股日 K / 分钟 K 与 ETF 分钟数据的本地量化引擎：增量同步、本地缓存、复权、批量查询、回测与指标计算。</div>
+  <div class="note">想做 A 股 / ETF 量化的个人或小团队可参考。HTML/JS 前端 + Python 后端分层的轻量模板，包含复权处理、回测骨架，足够跑通小规模策略。</div>
+</div>
+
+<footer>
+  📅 报告日期：2026-07-29 · 由 OpenClaw 自动生成<br>
+  🌐 部署：<a href="https://zxy114.github.io/ai-news-daily/github-trending-2026-07-29.html" target="_blank">https://zxy114.github.io/ai-news-daily/github-trending-2026-07-29.html</a><br>
+  📊 数据：GitHub Trending Top 13 · 精选 10 · 已过滤低学习价值项目
+</footer>
+</div>
+</body>
+</html>
