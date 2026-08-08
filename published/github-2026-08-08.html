@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 趋势日报 · 2026-08-08</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei",
+                 "Segoe UI", Helvetica, Arial, sans-serif;
+    background: #0d1117; color: #c9d1d9; line-height: 1.7;
+    padding: 24px 16px;
+  }
+  .container { max-width: 920px; margin: 0 auto; }
+  header {
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 20px;
+    margin-bottom: 32px;
+  }
+  h1 { color: #58a6ff; font-size: 2em; margin-bottom: 6px; }
+  .subtitle { color: #8b949e; font-size: 0.95em; }
+  .badge {
+    display: inline-block;
+    background: #238636; color: #fff;
+    padding: 2px 10px; border-radius: 12px;
+    font-size: 0.8em; margin-right: 6px;
+  }
+  .badge.lang { background: #1f6feb; }
+  .badge.stars { background: #f0883e; color: #1c1c1c; }
+  .repo {
+    background: #161b22; border: 1px solid #30363d;
+    border-radius: 10px; padding: 22px; margin-bottom: 18px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .repo:hover { border-color: #58a6ff; transform: translateY(-1px); }
+  .rank {
+    background: #238636; color: #fff;
+    width: 32px; height: 32px; border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-weight: bold; font-size: 14px;
+    vertical-align: middle; margin-right: 12px;
+  }
+  .rank.top { background: #da3633; }
+  .repo-header { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+  .repo-name { font-size: 1.25em; font-weight: 600; }
+  .repo-name a { color: #58a6ff; text-decoration: none; }
+  .repo-name a:hover { text-decoration: underline; }
+  .zh-title { color: #f0f6fc; font-size: 1.05em; font-weight: 500; margin: 8px 0 6px; }
+  .desc-en { color: #8b949e; font-size: 0.92em; font-style: italic; margin-bottom: 10px; }
+  .takeaway {
+    background: #0d1117; border-left: 3px solid #58a6ff;
+    padding: 10px 14px; border-radius: 4px;
+    color: #c9d1d9; font-size: 0.95em; margin-bottom: 12px;
+  }
+  .meta-row {
+    display: flex; flex-wrap: wrap; gap: 14px;
+    font-size: 0.85em; color: #8b949e;
+    padding-top: 10px; border-top: 1px solid #21262d;
+  }
+  .meta-item { display: inline-flex; align-items: center; gap: 4px; }
+  .lang-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    display: inline-block;
+  }
+  .topic {
+    background: #30363d; color: #58a6ff;
+    padding: 2px 10px; border-radius: 12px;
+    font-size: 0.78em; margin-right: 4px; margin-top: 4px;
+    display: inline-block;
+  }
+  .topics { margin-top: 10px; }
+  footer {
+    text-align: center; color: #484f58; margin-top: 40px;
+    padding: 20px; border-top: 1px solid #21262d;
+    font-size: 0.85em;
+  }
+  .nav { color: #58a6ff; text-decoration: none; }
+  .highlight {
+    background: #1f6feb22; border-left: 3px solid #f0883e;
+    padding: 12px 16px; border-radius: 4px;
+    margin-bottom: 24px; color: #c9d1d9; font-size: 0.92em;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>📈 GitHub 趋势日报</h1>
+  <p class="subtitle">
+    2026-08-08（北京时间）· 精选 7 个高质量项目 · 排除大模型基准 / 纯学术论文 / fork-only 仓库
+  </p>
+  <p class="subtitle" style="margin-top:6px">
+    <span class="badge lang">今日热点</span>
+    聚焦：AI 代理工程化 / 运行时与基础设施 / 可观测性工具
+  </p>
+</header>
+
+<div class="highlight">
+  <strong>今日主线：</strong>"给 AI 代理一个能干活的工程环境"成为最强叙事 —— 编码代理（prime-agent）、代理技能集（agent-skills / superpowers）、代理的"虚拟电脑"（cloudflare/computer）三件套同时冲榜。
+  底层基础设施侧，Deno 团队推出分布式 Durable Objects（celld）、Go 写的进程追溯工具 witr 也稳定上榜，说明工程化与可观测性需求持续旺盛。
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank top">1</span>
+    <span class="repo-name"><a href="https://github.com/PrimeIntellect-ai/prime-agent" target="_blank">PrimeIntellect-ai/prime-agent</a></span>
+    <span class="badge lang">TypeScript</span>
+    <span class="badge stars">⭐ +2,293/日</span>
+  </div>
+  <div class="zh-title">Prime Agent：自进化的长任务编码代理</div>
+  <div class="desc-en">A self-improving RLM agent for coding workflows and long-running autonomous tasks.</div>
+  <div class="takeaway">
+    围绕两个核心抽象构建：(1) 递归语言模型 RLM，把上下文当变量、子代理当函数调用，在持久化 IPython REPL 里"以编程方式"调工具；
+    (2) 持续改进框架 Continual Harness，把提示/记忆/技能作为可回滚的持久状态，通过小步证据化更新让代理越用越顺手。
+    内置 `/refine` 命令能基于当前轨迹自动调优技能，特别适合"需要跑很久、跨多轮对话"的工程类工作流。
+    配套 pi-mono 与 PRIME-RL 训练栈，是个把"代理自治"落到工程细节的尝试。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 6.6k+</span>
+    <span class="meta-item">🍴 526 forks</span>
+    <span class="meta-item">📜 开源</span>
+    <span class="meta-item"><a class="nav" href="https://primeintellect.ai/" target="_blank">官网</a></span>
+  </div>
+  <div class="topics">
+    <span class="topic">agent</span>
+    <span class="topic">coding-agent</span>
+    <span class="topic">recursive-language-model</span>
+    <span class="topic">long-running</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank top">2</span>
+    <span class="repo-name"><a href="https://github.com/addyosmani/agent-skills" target="_blank">addyosmani/agent-skills</a></span>
+    <span class="badge lang">JavaScript</span>
+    <span class="badge stars">⭐ +1,131/日</span>
+  </div>
+  <div class="zh-title">Agent Skills：把工程纪律灌给 AI 编码代理</div>
+  <div class="desc-en">Production-grade engineering skills for AI coding agents.</div>
+  <div class="takeaway">
+    Google Chrome 团队的 Addy Osmani 牵头维护的"代理技能包"，目标是把软件工程的最佳实践（设计评审、测试驱动、变更管理等）以可消费的形式交给 AI 编码代理。
+    8.4w 星 + 当日 1100+ 星，说明大量团队在尝试"用流程模板 + 技能脚本"约束代理行为，而不是放任它自由发挥。
+    对想要在公司/团队里推行"可控 AI 编码"的同学有直接参考价值。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 83.9k+</span>
+    <span class="meta-item">🍴 8.97k forks</span>
+    <span class="meta-item">📜 Apache-2.0</span>
+  </div>
+  <div class="topics">
+    <span class="topic">ai-agents</span>
+    <span class="topic">engineering-practices</span>
+    <span class="topic">coding-skills</span>
+    <span class="topic">workflow</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank top">3</span>
+    <span class="repo-name"><a href="https://github.com/cloudflare/computer" target="_blank">cloudflare/computer</a></span>
+    <span class="badge lang">TypeScript</span>
+    <span class="badge stars">⭐ +872/日</span>
+  </div>
+  <div class="zh-title">Cloudflare Computer：给 AI 代理一台云端电脑</div>
+  <div class="desc-en">Give your agent a computer 👾</div>
+  <div class="takeaway">
+    Cloudflare 官方推出的"代理运行环境"：把容器化的沙箱电脑（Shell、文件系统、浏览器）以 API 形式暴露出去，让 AI 代理像人一样去操作。
+    解决"代理只能调 API 但需要执行真实长任务（爬数据、跑脚本、操作 SaaS）"的痛点。
+    适合做浏览器自动化测试、网页信息采集、远程办公类代理工作流。
+    配合 Cloudflare Workers 全球边缘网络，部署和冷启动几乎无感。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 5.8k+</span>
+    <span class="meta-item">🍴 292 forks</span>
+    <span class="meta-item">📜 Apache-2.0</span>
+  </div>
+  <div class="topics">
+    <span class="topic">agent-runtime</span>
+    <span class="topic">sandbox</span>
+    <span class="topic">cloudflare</span>
+    <span class="topic">browser-automation</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank">4</span>
+    <span class="repo-name"><a href="https://github.com/denoland/celld" target="_blank">denoland/celld</a></span>
+    <span class="badge lang">Rust</span>
+    <span class="badge stars">⭐ +516/日</span>
+  </div>
+  <div class="zh-title">celld：自托管分布式 Durable Objects</div>
+  <div class="desc-en">self-hosted, distributed Durable Objects</div>
+  <div class="takeaway">
+    Deno 团队把 Cloudflare "Durable Objects" 这套"自带一致性的有状态计算单元"思路带回自托管世界。
+    适合需要"既能水平扩展又天然带状态"的场景：实时协作、限流计数器、分布式锁、在线游戏的房间状态等。
+    底层 Rust 性能可靠，对不想被 Cloudflare 绑死、又需要类似能力的团队是值得关注的开源替代方案。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 2.2k+</span>
+    <span class="meta-item">🍴 62 forks</span>
+    <span class="meta-item">📜 MIT</span>
+  </div>
+  <div class="topics">
+    <span class="topic">durable-objects</span>
+    <span class="topic">self-hosted</span>
+    <span class="topic">rust</span>
+    <span class="topic">distributed-systems</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank">5</span>
+    <span class="repo-name"><a href="https://github.com/obra/superpowers" target="_blank">obra/superpowers</a></span>
+    <span class="badge lang">Shell</span>
+    <span class="badge stars">⭐ 上榜</span>
+  </div>
+  <div class="zh-title">Superpowers：让 AI 代理"会写工程"的方法论</div>
+  <div class="desc-en">An agentic skills framework & software development methodology that works.</div>
+  <div class="takeaway">
+    给 Claude Code / Cursor / Codex CLI / Gemini CLI 等主流编码代理装上一套"开发方法论技能包"：从需求澄清、Spec 分块评审、
+    实现规划（TDD + YAGNI + DRY）、到子代理驱动的开发流程都被封装成可被代理调用的技能。
+    强调"代理先问清楚要做什么，再开干"，避免一上来就乱写代码。
+    对个人/小团队立刻能套用，相当于把资深工程师的"工作习惯"做成可复用模板。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 持续增长</span>
+    <span class="meta-item">🍴 上榜新项目</span>
+    <span class="meta-item">📜 MIT</span>
+    <span class="meta-item">🔌 兼容 Claude Code / Cursor / Codex / Gemini CLI 等</span>
+  </div>
+  <div class="topics">
+    <span class="topic">agentic-skills</span>
+    <span class="topic">methodology</span>
+    <span class="topic">tdd</span>
+    <span class="topic">coding-agents</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank">6</span>
+    <span class="repo-name"><a href="https://github.com/pranshuparmar/witr" target="_blank">pranshuparmar/witr</a></span>
+    <span class="badge lang">Go</span>
+    <span class="badge stars">⭐ +234/日</span>
+  </div>
+  <div class="zh-title">witr：进程溯源 CLI / TUI</div>
+  <div class="desc-en">Why is this running? Trace any process, port, container, or file back to what started it.</div>
+  <div class="takeaway">
+    "这玩意儿是谁启动的？"——运维/调试时高频问题。witr 把进程、端口、容器、文件一键溯源到启动源头，
+    同时提供交互式 TUI，适合快速排查"陌生服务器上某进程到底来自哪个服务/哪个用户"。
+    相比手动 `ps -ef` + `lsof` + `systemctl` 三连，能把排查时间从几分钟压到几秒。
+    日常 DevOps / SRE 工具箱值得收藏。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 19.8k+</span>
+    <span class="meta-item">🍴 641 forks</span>
+    <span class="meta-item">📜 开源</span>
+  </div>
+  <div class="topics">
+    <span class="topic">cli</span>
+    <span class="topic">tui</span>
+    <span class="topic">debugging</span>
+    <span class="topic">ops</span>
+    <span class="topic">go</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank">7</span>
+    <span class="repo-name"><a href="https://github.com/666ghj/MiroFish" target="_blank">666ghj/MiroFish</a></span>
+    <span class="badge lang">中文项目</span>
+    <span class="badge stars">⭐ 上榜</span>
+  </div>
+  <div class="zh-title">MiroFish：通用群体智能预测引擎</div>
+  <div class="desc-en">A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物。</div>
+  <div class="takeaway">
+    国内团队开源的"AI 预测引擎"：从新闻/政策/金融信号等真实世界的种子材料出发，自动构建一个高保真平行数字世界，
+    让上千个有独立人格、长期记忆和行为逻辑的智能体在其中社交演化；用户可"上帝视角"注入变量，看清未来走向。
+    用法非常接地气：上传资料 + 用自然语言说"我要预测 XX"，即可拿到详细预测报告 + 可深度交互的数字沙盒。
+    对市场分析、政策推演、剧情推演这类"想提前看后果"的场景是新颖尝试。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 增长中</span>
+    <span class="meta-item">🍴 上榜新项目</span>
+    <span class="meta-item">📜 开源</span>
+    <span class="meta-item"><a class="nav" href="https://github.com/666ghj/MiroFish/blob/main/README-ZH.md" target="_blank">中文文档</a></span>
+  </div>
+  <div class="topics">
+    <span class="topic">swarm-intelligence</span>
+    <span class="topic">multi-agent</span>
+    <span class="topic">prediction</span>
+    <span class="topic">数字孪生</span>
+  </div>
+</div>
+
+<footer>
+  <p>📅 报告时间：2026-08-08 10:04 (Asia/Shanghai) · 数据源：<a class="nav" href="https://github.com/trending">github.com/trending</a></p>
+  <p style="margin-top:6px;">由 OpenClaw 自动生成 · 仅收录有学习价值的项目，质量优先于数量</p>
+  <p style="margin-top:6px;">👀 查看往期：<a class="nav" href="https://zxy114.github.io/ai-news-daily/">zxy114.github.io/ai-news-daily</a></p>
+</footer>
+</div>
+</body>
+</html>
