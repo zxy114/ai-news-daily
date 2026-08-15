@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 趋势日报 · 2026-08-15</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei",
+                 "Segoe UI", Helvetica, Arial, sans-serif;
+    background: #0d1117; color: #c9d1d9; line-height: 1.7;
+    padding: 24px 16px;
+  }
+  .container { max-width: 920px; margin: 0 auto; }
+  header {
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 20px;
+    margin-bottom: 32px;
+  }
+  h1 { color: #58a6ff; font-size: 2em; margin-bottom: 6px; }
+  .subtitle { color: #8b949e; font-size: 0.95em; }
+  .badge {
+    display: inline-block;
+    background: #238636; color: #fff;
+    padding: 2px 10px; border-radius: 12px;
+    font-size: 0.8em; margin-right: 6px;
+  }
+  .badge.lang { background: #1f6feb; }
+  .badge.stars { background: #f0883e; color: #1c1c1c; }
+  .repo {
+    background: #161b22; border: 1px solid #30363d;
+    border-radius: 10px; padding: 22px; margin-bottom: 18px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .repo:hover { border-color: #58a6ff; transform: translateY(-1px); }
+  .rank {
+    background: #238636; color: #fff;
+    width: 32px; height: 32px; border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-weight: bold; font-size: 14px;
+    vertical-align: middle; margin-right: 12px;
+  }
+  .rank.top { background: #da3633; }
+  .repo-header { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+  .repo-name { font-size: 1.25em; font-weight: 600; }
+  .repo-name a { color: #58a6ff; text-decoration: none; }
+  .repo-name a:hover { text-decoration: underline; }
+  .zh-title { color: #f0f6fc; font-size: 1.05em; font-weight: 500; margin: 8px 0 6px; }
+  .desc-en { color: #8b949e; font-size: 0.92em; font-style: italic; margin-bottom: 10px; }
+  .takeaway {
+    background: #0d1117; border-left: 3px solid #58a6ff;
+    padding: 10px 14px; border-radius: 4px;
+    color: #c9d1d9; font-size: 0.95em; margin-bottom: 12px;
+  }
+  .meta-row {
+    display: flex; flex-wrap: wrap; gap: 14px;
+    font-size: 0.85em; color: #8b949e;
+    padding-top: 10px; border-top: 1px solid #21262d;
+  }
+  .meta-item { display: inline-flex; align-items: center; gap: 4px; }
+  .lang-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    display: inline-block;
+  }
+  .topic {
+    background: #30363d; color: #58a6ff;
+    padding: 2px 10px; border-radius: 12px;
+    font-size: 0.78em; margin-right: 4px; margin-top: 4px;
+    display: inline-block;
+  }
+  .topics { margin-top: 10px; }
+  footer {
+    text-align: center; color: #484f58; margin-top: 40px;
+    padding: 20px; border-top: 1px solid #21262d;
+    font-size: 0.85em;
+  }
+  .nav { color: #58a6ff; text-decoration: none; }
+  .highlight {
+    background: #1f6feb22; border-left: 3px solid #f0883e;
+    padding: 12px 16px; border-radius: 4px;
+    margin-bottom: 24px; color: #c9d1d9; font-size: 0.92em;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>📈 GitHub 趋势日报</h1>
+  <p class="subtitle">
+    2026-08-15（北京时间）· 精选 8 个高质量项目 · 排除大模型基准 / 纯学术论文 / fork-only 仓库
+  </p>
+  <p class="subtitle" style="margin-top:6px">
+    <span class="badge lang">今日热点</span>
+    聚焦：AI 代理基础设施 / 图原生 AI / 边缘模型 / 本地化创作工具
+  </p>
+</header>
+
+<div class="highlight">
+  <strong>今日主线：</strong>"AI 代理工程化"进入纵深 —— 从代理运行环境（holaOS、ego-lite）到图原生 AI 基础设施（semantica），
+  趋势明显从"炫酷 Demo"转向"完整可投产"。同时 GitHub 亲自下场推 spec-kit，
+  把"规范先行"作为新一代 AI 协作流程；边缘侧 14MB 的 needle 模型与本地化 3D 生成 modly，
+  代表"小而美"的本地化创作工具正在崛起。
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank top">1</span>
+    <span class="repo-name"><a href="https://github.com/semantica-agi/semantica" target="_blank">semantica-agi/semantica</a></span>
+    <span class="badge lang">Python</span>
+    <span class="badge stars">⭐ +1,181/日</span>
+  </div>
+  <div class="zh-title">Semantica：面向 AI 系统的图原生基础设施</div>
+  <div class="desc-en">Graph-Native Infrastructure for Context and Accountable AI Systems</div>
+  <div class="takeaway">
+    把"知识图谱"作为 AI 系统的底座，而不只是外挂的 RAG 数据源。
+    强调 Context（上下文工程）和 Accountable（可追溯、可问责）两个关键词，瞄准企业级 AI 系统最头疼的"幻觉溯源 + 知识治理"问题。
+    当日 +1,181 星说明开发者对"可解释 AI 基础设施"的需求被再次点燃。
+    适合做严肃 AI 应用、需要审计/合规能力的团队。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 7.5k+</span>
+    <span class="meta-item">🍴 783 forks</span>
+    <span class="meta-item">📜 开源</span>
+  </div>
+  <div class="topics">
+    <span class="topic">graph-database</span>
+    <span class="topic">ai-infrastructure</span>
+    <span class="topic">context-engineering</span>
+    <span class="topic">accountable-ai</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank top">2</span>
+    <span class="repo-name"><a href="https://github.com/holaboss-ai/holaOS" target="_blank">holaboss-ai/holaOS</a></span>
+    <span class="badge lang">TypeScript</span>
+    <span class="badge stars">⭐ +769/日</span>
+  </div>
+  <div class="zh-title">holaOS：一体化的 AI 代理工作空间</div>
+  <div class="desc-en">Open-source All in One AI agent workspace. Run any agent — Claude Code, Codex — across your tools (100+ integrations + MCP), apps, browser, and files, with shared memory.</div>
+  <div class="takeaway">
+    想把"Claude Code / Codex 等多种代理"装进同一个工作台？holaOS 直接给出答案。
+    一站式集成 100+ 工具 + MCP 协议、内置浏览器/文件/应用，支持多代理共享记忆（shared memory）。
+    解决了"代理工具链碎片化、上下文各管各的"的核心痛点。
+    既支持内置模型，也支持 BYOK（自带 Key），个人/团队都能落地。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 7.3k+</span>
+    <span class="meta-item">🍴 639 forks</span>
+    <span class="meta-item">📜 开源</span>
+    <span class="meta-item">🔌 100+ integrations · MCP</span>
+  </div>
+  <div class="topics">
+    <span class="topic">ai-agent</span>
+    <span class="topic">workspace</span>
+    <span class="topic">mcp</span>
+    <span class="topic">shared-memory</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank top">3</span>
+    <span class="repo-name"><a href="https://github.com/cactus-compute/needle" target="_blank">cactus-compute/needle</a></span>
+    <span class="badge lang">Python</span>
+    <span class="badge stars">⭐ +662/日</span>
+  </div>
+  <div class="zh-title">Needle：14MB 极小端侧 AI 模型</div>
+  <div class="desc-en">14MB foundation model for tiny devices; phones, wearables, smart home, and robots.</div>
+  <div class="takeaway">
+    在动辄数十 GB 的大模型时代，cactus-compute 反其道而行：14MB 的基础模型，专为手机、可穿戴、智能家居、机器人设计。
+    轻量到足以在端侧实时推理，离线可用，对隐私敏感场景（家庭、医疗、工业）是真正可落地的方案。
+    配套还发布了一整套端侧 AI 推理优化工具链。
+    关注"模型小型化 + 端侧推理"的同学不容错过。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 5.6k+</span>
+    <span class="meta-item">🍴 374 forks</span>
+    <span class="meta-item">📜 开源</span>
+    <span class="meta-item">📦 14MB · 端侧推理</span>
+  </div>
+  <div class="topics">
+    <span class="topic">edge-ai</span>
+    <span class="topic">small-model</span>
+    <span class="topic">on-device</span>
+    <span class="topic">tiny-ml</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank">4</span>
+    <span class="repo-name"><a href="https://github.com/lightningpixel/modly" target="_blank">lightningpixel/modly</a></span>
+    <span class="badge lang">TypeScript</span>
+    <span class="badge stars">⭐ +579/日</span>
+  </div>
+  <div class="zh-title">Modly：本地 GPU 跑 3D 模型生成</div>
+  <div class="desc-en">Desktop app to generate 3D models from images or prompt using local AI — runs entirely on your GPU.</div>
+  <div class="takeaway">
+    桌面端 3D 模型生成应用：上传图片或用 prompt 就能生成 3D 模型，全程在你的 GPU 上本地运行。
+    解决了 Meshy、Tripo 这类 SaaS 又贵又慢的痛点——创作者不必每次都上传云端、也不用担心版权问题。
+    对独立游戏开发者、3D 艺术家、3D 打印爱好者是即开即用的工具。
+    提供完整桌面客户端（TypeScript + 底层本地推理），对硬件支持也很友好。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 5.9k+</span>
+    <span class="meta-item">🍴 604 forks</span>
+    <span class="meta-item">📜 开源</span>
+    <span class="meta-item">🖥️ 本地 GPU 推理</span>
+  </div>
+  <div class="topics">
+    <span class="topic">3d-generation</span>
+    <span class="topic">local-ai</span>
+    <span class="topic">desktop-app</span>
+    <span class="topic">image-to-3d</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank">5</span>
+    <span class="repo-name"><a href="https://github.com/macro-inc/macro" target="_blank">macro-inc/macro</a></span>
+    <span class="badge lang">Rust</span>
+    <span class="badge stars">⭐ +436/日</span>
+  </div>
+  <div class="zh-title">Macro：统一团队协作空间</div>
+  <div class="desc-en">Macro is a unified workspace for teams: email, chat, docs, tasks, agents, calls, and CRM — @-linked together with shared AI memory.</div>
+  <div class="takeaway">
+    想把 Notion + Slack + Linear + HubSpot + Zoom + AI 代理全收编到一个工作空间？Macro 直接一锅端。
+    底层 Rust 写就，性能扛得住；核心卖点是"@ 链接 + 共享 AI 记忆"——任何元素都可以 @ 出来串成工作流。
+    等于把"AI 代理是团队成员"这件事落到产品层面，而不只是 PPT 概念。
+    对想自托管替代 Notion+Slack 的中小团队而言，潜力值得关注。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 3.0k+</span>
+    <span class="meta-item">🍴 307 forks</span>
+    <span class="meta-item">📜 开源</span>
+    <span class="meta-item">🦀 Rust</span>
+  </div>
+  <div class="topics">
+    <span class="topic">workspace</span>
+    <span class="topic">collaboration</span>
+    <span class="topic">crm</span>
+    <span class="topic">ai-memory</span>
+    <span class="topic">rust</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank">6</span>
+    <span class="repo-name"><a href="https://github.com/github/spec-kit" target="_blank">github/spec-kit</a></span>
+    <span class="badge lang">官方</span>
+    <span class="badge stars">⭐ 官方力推</span>
+  </div>
+  <div class="zh-title">Spec Kit：GitHub 官方"规范驱动开发"工具箱</div>
+  <div class="desc-en">💫 Toolkit to help you get started with Spec-Driven Development</div>
+  <div class="takeaway">
+    GitHub 亲自下场推"规范驱动开发"（Spec-Driven Development），配套工具箱直接开源。
+    理念：先写清楚"要做什么、为什么、怎么做"的规范，再让 AI 代理去执行 —— 与 vibe coding 形成鲜明对比。
+    本质是想解决"AI 写代码没人能 review、最后变成屎山"的工程难题。
+    配套提供 /specify、/plan、/tasks 等命令模板，从需求到落地的链路全打通。
+    适合想严肃把 AI 编码纳入工程流程的团队。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ GitHub 官方</span>
+    <span class="meta-item">📜 MIT</span>
+    <span class="meta-item">🤖 兼容主流 AI 编码代理</span>
+  </div>
+  <div class="topics">
+    <span class="topic">spec-driven-development</span>
+    <span class="topic">ai-coding</span>
+    <span class="topic">spec-kit</span>
+    <span class="topic">github</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank">7</span>
+    <span class="repo-name"><a href="https://github.com/citrolabs/ego-lite" target="_blank">citrolabs/ego-lite</a></span>
+    <span class="badge lang">JavaScript</span>
+    <span class="badge stars">⭐ +165/日</span>
+  </div>
+  <div class="zh-title">ego-lite：AI 代理专用的浏览器</div>
+  <div class="desc-en">The fastest browser for AI agents to run browser automation, built for sharing your logged-in browser state with your AI agents, like Codex or Claude Code, without disturbing you. Zero cost, zero config.</div>
+  <div class="takeaway">
+    浏览器自动化（Playwright/Puppeteer）跑 AI 代理经常卡在登录态、profile 隔离、调试麻烦这三大痛点。
+    ego-lite 直接做"为 AI 代理原生"的浏览器：共享你的登录态、零配置、零费用，代理操作时你完全不受打扰。
+    对做"代理接管浏览器"类应用（自动测试、数据采集、网页操作 AI）的开发者特别友好。
+    开源 + 轻量，避免付费 Browserless、Steel 之类 SaaS。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 10.3k+</span>
+    <span class="meta-item">🍴 528 forks</span>
+    <span class="meta-item">📜 开源</span>
+    <span class="meta-item">🆓 零成本</span>
+  </div>
+  <div class="topics">
+    <span class="topic">browser-automation</span>
+    <span class="topic">ai-agent</span>
+    <span class="topic">playwright</span>
+    <span class="topic">session-sharing</span>
+  </div>
+</div>
+
+<div class="repo">
+  <div class="repo-header">
+    <span class="rank">8</span>
+    <span class="repo-name"><a href="https://github.com/OpenCut-app/OpenCut" target="_blank">OpenCut-app/OpenCut</a></span>
+    <span class="badge lang">TypeScript</span>
+    <span class="badge stars">⭐ +255/日</span>
+  </div>
+  <div class="zh-title">OpenCut：开源剪映/CapCut 替代品</div>
+  <div class="desc-en">The open-source CapCut alternative</div>
+  <div class="takeaway">
+    简单直接 —— 开源版的剪映/CapCut，视频剪辑师的私有化救命稻草。
+    一次性解决"导出有水印 / 高级功能要订阅 / 数据上传云端担心泄漏"的问题。
+    8.3w Star + 持续活跃，说明社区对"无水印、可自托管、隐私可控"的视频工具需求是真实且持续的。
+    TypeScript 实现，对前端开发者也很友好做二次开发。
+  </div>
+  <div class="meta-row">
+    <span class="meta-item">⭐ 83.1k+</span>
+    <span class="meta-item">🍴 8.2k forks</span>
+    <span class="meta-item">📜 开源</span>
+    <span class="meta-item">🎬 视频剪辑</span>
+  </div>
+  <div class="topics">
+    <span class="topic">video-editing</span>
+    <span class="topic">open-source</span>
+    <span class="topic">capcut-alternative</span>
+    <span class="topic">privacy</span>
+  </div>
+</div>
+
+<footer>
+  <p>📅 生成于 2026-08-15 · 数据来源 <a class="nav" href="https://github.com/trending" target="_blank">GitHub Trending</a></p>
+  <p style="margin-top:6px">📧 精选 8 个高质量项目 · 排除大模型基准 / 纯学术论文 / fork-only 仓库</p>
+  <p style="margin-top:6px">🤖 由 GitHub 趋势日报自动汇总</p>
+</footer>
+</div>
+</body>
+</html>
